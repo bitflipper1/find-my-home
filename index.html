@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FindHome — AI Rental Scout</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #0f0f13;
+      --surface:  #1a1a24;
+      --card:     #22222f;
+      --border:   #2e2e40;
+      --accent:   #7c6af7;
+      --accent2:  #c084fc;
+      --gold:     #f4b942;
+      --green:    #4ade80;
+      --text:     #e8e8f0;
+      --muted:    #8888a8;
+      --radius:   12px;
+    }
+    html, body { height: 100%; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; }
+
+    /* ── Layout ───────────────────────────────────────────────── */
+    .app { display: grid; grid-template-rows: 64px 1fr; height: 100vh; }
+    .main { display: grid; grid-template-columns: 320px 1fr 360px; overflow: hidden; }
+
+    /* ── Header ───────────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; gap: 16px;
+    }
+    .logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+    .logo span { color: var(--accent); }
+    .logo em { color: var(--accent2); font-style: normal; }
+    .tagline { color: var(--muted); font-size: 0.82rem; }
+    .api-badge {
+      font-size: 0.72rem; background: linear-gradient(135deg,var(--accent),var(--accent2));
+      padding: 4px 10px; border-radius: 20px; font-weight: 600; letter-spacing: 0.5px;
+    }
+
+    /* ── Sidebar (Filters) ────────────────────────────────────── */
+    .sidebar {
+      background: var(--surface); border-right: 1px solid var(--border);
+      overflow-y: auto; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px;
+    }
+    .section-title {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px;
+    }
+    /* Area toggles */
+    .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .area-btn {
+      padding: 8px 6px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer;
+      font-size: 0.78rem; font-weight: 600; text-align: center; transition: all 0.15s;
+    }
+    .area-btn.active {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+    /* Type tabs */
+    .type-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+    .type-tab {
+      padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer;
+      font-size: 0.78rem; font-weight: 600; transition: all 0.15s;
+    }
+    .type-tab.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+
+    /* Beds */
+    .bed-row { display: flex; gap: 6px; }
+    .bed-btn {
+      flex: 1; padding: 7px 4px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer;
+      font-size: 0.82rem; font-weight: 600; text-align: center; transition: all 0.15s;
+    }
+    .bed-btn.active { background: var(--gold); border-color: var(--gold); color: #111; }
+
+    /* Slider */
+    .slider-wrap { display: flex; flex-direction: column; gap: 8px; }
+    .slider-labels { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); }
+    .slider-val { color: var(--accent2); font-weight: 700; }
+    input[type=range] {
+      width: 100%; accent-color: var(--accent); cursor: pointer; height: 4px;
+    }
+
+    /* Must-haves */
+    .must-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .must-item { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .must-item input[type=checkbox] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+    .must-item label { font-size: 0.8rem; color: var(--muted); cursor: pointer; }
+    .must-item input:checked + label { color: var(--text); }
+
+    /* Search btn */
+    .search-btn {
+      width: 100%; padding: 12px; border-radius: var(--radius); border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+      letter-spacing: 0.3px; transition: opacity 0.2s; margin-top: 4px;
+    }
+    .search-btn:hover { opacity: 0.88; }
+
+    /* ── Map + Listings center ────────────────────────────────── */
+    .center { display: flex; flex-direction: column; overflow: hidden; }
+
+    /* Map */
+    .map-container {
+      position: relative; height: 300px; background: #13131e; overflow: hidden;
+      border-bottom: 1px solid var(--border); flex-shrink: 0;
+    }
+    .map-bg {
+      width: 100%; height: 100%; object-fit: cover; opacity: 0.3;
+      background: radial-gradient(ellipse at 40% 60%, #1e1e35 0%, #0f0f18 100%);
+    }
+    /* SVG map overlay */
+    .map-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .map-dot {
+      cursor: pointer; transition: transform 0.15s;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));
+    }
+    .map-dot:hover { transform-origin: center; transform: scale(1.3); }
+    .map-dot.hidden { display: none; }
+    .map-label { font-size: 11px; font-weight: 700; fill: var(--muted); pointer-events: none; }
+    .map-tooltip {
+      position: absolute; background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; pointer-events: none;
+      opacity: 0; transition: opacity 0.15s; max-width: 180px; z-index: 10;
+    }
+    .map-tooltip.show { opacity: 1; }
+    .map-tooltip strong { color: var(--accent2); display: block; margin-bottom: 2px; }
+
+    /* Results count */
+    .results-bar {
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border); background: var(--surface);
+    }
+    .results-count { font-size: 0.82rem; color: var(--muted); }
+    .results-count strong { color: var(--text); }
+    .sort-select {
+      background: var(--card); border: 1px solid var(--border); color: var(--text);
+      border-radius: 6px; padding: 4px 8px; font-size: 0.78rem; cursor: pointer;
+    }
+
+    /* Listings grid */
+    .listings {
+      flex: 1; overflow-y: auto; padding: 16px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;
+      align-content: start;
+    }
+
+    /* Property card */
+    .prop-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; cursor: pointer; transition: all 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .prop-card:hover, .prop-card.selected {
+      border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(124,106,247,0.18);
+    }
+    .prop-img {
+      height: 160px; background: linear-gradient(135deg, #1e1e35, #0f0f18);
+      position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .prop-img .area-tag {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(0,0,0,0.7); border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 8px; font-size: 0.7rem; font-weight: 700;
+      color: var(--muted); backdrop-filter: blur(4px);
+    }
+    .prop-img .price-tag {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--accent); border-radius: 6px; padding: 3px 10px;
+      font-size: 0.8rem; font-weight: 800; color: #fff;
+    }
+    .prop-body { padding: 14px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .prop-name { font-weight: 700; font-size: 0.95rem; color: var(--text); }
+    .prop-address { font-size: 0.75rem; color: var(--muted); }
+    .prop-meta { display: flex; gap: 10px; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .prop-meta span { display: flex; align-items: center; gap: 3px; }
+    .unique-callout {
+      background: linear-gradient(135deg, rgba(124,106,247,0.12), rgba(192,132,252,0.08));
+      border: 1px solid rgba(124,106,247,0.25); border-radius: 8px;
+      padding: 8px 10px; font-size: 0.75rem; color: var(--accent2);
+      margin-top: 4px; line-height: 1.4;
+    }
+    .unique-callout .star { color: var(--gold); margin-right: 4px; }
+
+    /* No results */
+    .no-results {
+      grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--muted);
+    }
+    .no-results .icon { font-size: 3rem; margin-bottom: 12px; }
+    .no-results p { font-size: 0.9rem; }
+
+    /* ── AI Chat Panel ────────────────────────────────────────── */
+    .chat-panel {
+      background: var(--surface); border-left: 1px solid var(--border);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .chat-header {
+      padding: 14px 16px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+    }
+    .agent-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .agent-info { flex: 1; }
+    .agent-name { font-weight: 700; font-size: 0.9rem; }
+    .agent-status { font-size: 0.72rem; color: var(--green); display: flex; align-items: center; gap: 4px; }
+    .agent-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+    .api-key-btn {
+      background: var(--card); border: 1px solid var(--border); color: var(--muted);
+      border-radius: 6px; padding: 4px 10px; font-size: 0.72rem; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .api-key-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .chat-messages {
+      flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px;
+    }
+    .msg { display: flex; gap: 8px; max-width: 92%; }
+    .msg.user { flex-direction: row-reverse; align-self: flex-end; }
+    .msg-bubble {
+      padding: 10px 13px; border-radius: 12px; font-size: 0.82rem; line-height: 1.5;
+    }
+    .msg.alex .msg-bubble {
+      background: var(--card); border: 1px solid var(--border); border-radius: 4px 12px 12px 12px;
+      color: var(--text);
+    }
+    .msg.user .msg-bubble {
+      background: var(--accent); color: #fff; border-radius: 12px 4px 12px 12px;
+    }
+    .msg-avatar {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 0.8rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+    .msg.user .msg-avatar { background: var(--card); border: 1px solid var(--border); }
+    .msg-time { font-size: 0.65rem; color: var(--muted); margin-top: 3px; text-align: right; }
+
+    /* Typing indicator */
+    .typing-indicator { display: flex; gap: 4px; align-items: center; padding: 4px 0; }
+    .typing-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--muted);
+      animation: bounce 1.2s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+    /* Quick suggestions */
+    .quick-chips {
+      padding: 0 16px 10px; display: flex; flex-direction: column; gap: 6px; flex-shrink: 0;
+    }
+    .chips-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 2px; }
+    .chips-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip {
+      padding: 5px 10px; border-radius: 20px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); font-size: 0.72rem;
+      cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    }
+    .chip:hover { border-color: var(--accent2); color: var(--accent2); }
+
+    /* Chat input */
+    .chat-input-wrap {
+      padding: 12px 16px; border-top: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-end; flex-shrink: 0;
+    }
+    .chat-input {
+      flex: 1; background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 12px; color: var(--text);
+      font-size: 0.82rem; resize: none; outline: none; font-family: inherit;
+      line-height: 1.4; max-height: 100px; min-height: 40px;
+      transition: border-color 0.15s;
+    }
+    .chat-input:focus { border-color: var(--accent); }
+    .chat-input::placeholder { color: var(--muted); }
+    .send-btn {
+      width: 38px; height: 38px; border-radius: 10px; border: none;
+      background: var(--accent); color: #fff; cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: opacity 0.15s;
+    }
+    .send-btn:hover { opacity: 0.85; }
+    .send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* API Key Modal */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+      display: flex; align-items: center; justify-content: center; z-index: 100;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    }
+    .modal-overlay.show { opacity: 1; pointer-events: all; }
+    .modal {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 28px; max-width: 420px; width: 90%;
+    }
+    .modal h2 { font-size: 1.1rem; margin-bottom: 6px; }
+    .modal p { font-size: 0.82rem; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+    .modal input {
+      width: 100%; background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px; color: var(--text);
+      font-size: 0.85rem; outline: none; margin-bottom: 12px; font-family: monospace;
+    }
+    .modal input:focus { border-color: var(--accent); }
+    .modal-btns { display: flex; gap: 8px; }
+    .modal-btn {
+      flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);
+      cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.15s;
+    }
+    .modal-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .modal-btn.secondary { background: var(--card); color: var(--muted); }
+    .modal-btn:hover { opacity: 0.85; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* Selected property detail */
+    .prop-detail {
+      padding: 12px 16px; background: rgba(124,106,247,0.08);
+      border: 1px solid rgba(124,106,247,0.2); border-radius: var(--radius);
+      margin: 0 16px 8px; font-size: 0.78rem; display: none;
+    }
+    .prop-detail.show { display: block; }
+    .prop-detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .prop-detail-name { font-weight: 700; color: var(--accent2); }
+    .prop-detail-close { cursor: pointer; color: var(--muted); font-size: 1rem; }
+    .prop-detail-meta { display: flex; gap: 12px; color: var(--muted); flex-wrap: wrap; }
+
+    @media (max-width: 900px) {
+      .main { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; }
+      .chat-panel { height: 380px; border-left: none; border-top: 1px solid var(--border); }
+      .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <!-- Header -->
+  <header>
+    <div>
+      <div class="logo">Find<span>Home</span><em>✦</em></div>
+      <div class="tagline">AI-Powered Rental Scout · Charlotte Metro</div>
+    </div>
+    <div class="api-badge">⚡ Claude AI</div>
+  </header>
+
+  <div class="main">
+    <!-- Sidebar / Filters -->
+    <aside class="sidebar">
+      <div>
+        <div class="section-title">📍 Areas</div>
+        <div class="area-grid">
+          <button class="area-btn active" data-area="Charlotte">Charlotte</button>
+          <button class="area-btn active" data-area="Fort Mill">Fort Mill</button>
+          <button class="area-btn active" data-area="Belmont">Belmont</button>
+          <button class="area-btn active" data-area="Rock Hill">Rock Hill</button>
+          <button class="area-btn active" data-area="Tega Cay">Tega Cay</button>
+          <button class="area-btn active" data-area="Waxhaw">Waxhaw</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">🏠 Property Type</div>
+        <div class="type-tabs">
+          <button class="type-tab active" data-type="Any">Any</button>
+          <button class="type-tab" data-type="House">House</button>
+          <button class="type-tab" data-type="Apartment">Apartment</button>
+          <button class="type-tab" data-type="Townhouse">Townhouse</button>
+          <button class="type-tab" data-type="Unique">Unique</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">🛏 Bedrooms</div>
+        <div class="bed-row">
+          <button class="bed-btn active" data-beds="0">Any</button>
+          <button class="bed-btn" data-beds="1">1</button>
+          <button class="bed-btn" data-beds="2">2</button>
+          <button class="bed-btn" data-beds="3">3</button>
+          <button class="bed-btn" data-beds="4">4+</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">💰 Max Budget</div>
+        <div class="slider-wrap">
+          <div class="slider-labels">
+            <span>$800</span>
+            <span class="slider-val" id="budgetVal">$5,000</span>
+          </div>
+          <input type="range" id="budgetSlider" min="800" max="5000" step="100" value="5000" />
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">✅ Must-Haves</div>
+        <div class="must-grid">
+          <label class="must-item"><input type="checkbox" data-must="Pet Friendly" /><label>🐾 Pet Friendly</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Garage" /><label>🚗 Garage</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Pool" /><label>🏊 Pool</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Home Office" /><label>💼 Home Office</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Yard" /><label>🌿 Yard</label></label>
+          <label class="must-item"><input type="checkbox" data-must="W/D" /><label>🌀 W/D Incl.</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Hardwood" /><label>🪵 Hardwood</label></label>
+          <label class="must-item"><input type="checkbox" data-must="Modern Kitchen" /><label>🍳 Mod. Kitchen</label></label>
+        </div>
+      </div>
+
+      <button class="search-btn" id="searchBtn">✦ Find My Place</button>
+    </aside>
+
+    <!-- Center: Map + Listings -->
+    <div class="center">
+      <!-- Map -->
+      <div class="map-container">
+        <svg class="map-svg" viewBox="0 0 700 300" id="mapSvg">
+          <!-- Area labels -->
+          <text class="map-label" x="260" y="60">CHARLOTTE</text>
+          <text class="map-label" x="420" y="200">FORT MILL</text>
+          <text class="map-label" x="120" y="230">BELMONT</text>
+          <text class="map-label" x="300" y="265">ROCK HILL</text>
+          <text class="map-label" x="500" y="250">TEGA CAY</text>
+          <text class="map-label" x="450" y="280">WAXHAW</text>
+
+          <!-- Roads (decorative) -->
+          <line x1="200" y1="0" x2="350" y2="300" stroke="#2e2e40" stroke-width="2"/>
+          <line x1="0" y1="180" x2="700" y2="160" stroke="#2e2e40" stroke-width="2"/>
+          <line x1="350" y1="0" x2="380" y2="300" stroke="#2e2e40" stroke-width="1.5"/>
+          <line x1="0" y1="100" x2="700" y2="120" stroke="#2e2e40" stroke-width="1"/>
+
+          <!-- Property dots will be injected here by JS -->
+          <g id="mapDots"></g>
+        </svg>
+        <div class="map-tooltip" id="mapTooltip"></div>
+      </div>
+
+      <!-- Selected detail bar -->
+      <div class="prop-detail" id="propDetail">
+        <div class="prop-detail-header">
+          <span class="prop-detail-name" id="detailName"></span>
+          <span class="prop-detail-close" onclick="clearSelected()">✕</span>
+        </div>
+        <div class="prop-detail-meta" id="detailMeta"></div>
+      </div>
+
+      <!-- Results bar -->
+      <div class="results-bar">
+        <div class="results-count"><strong id="resultCount">8</strong> properties found</div>
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="beds">Most Bedrooms</option>
+        </select>
+      </div>
+
+      <!-- Listings -->
+      <div class="listings" id="listings"></div>
+    </div>
+
+    <!-- AI Chat Panel -->
+    <aside class="chat-panel">
+      <div class="chat-header">
+        <div class="agent-avatar">🏡</div>
+        <div class="agent-info">
+          <div class="agent-name">Alex · AI Realtor</div>
+          <div class="agent-status">Online · Knows Charlotte Metro</div>
+        </div>
+        <button class="api-key-btn" onclick="openApiModal()">🔑 API Key</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <div class="quick-chips">
+        <div class="chips-label">Quick questions</div>
+        <div class="chips-row">
+          <span class="chip" onclick="sendChip(this)">What's Belmont like for creatives?</span>
+          <span class="chip" onclick="sendChip(this)">Fort Mill vs Rock Hill?</span>
+          <span class="chip" onclick="sendChip(this)">Best home office setup?</span>
+          <span class="chip" onclick="sendChip(this)">Hidden gems in the area?</span>
+          <span class="chip" onclick="sendChip(this)">Commute to Charlotte from Fort Mill?</span>
+          <span class="chip" onclick="sendChip(this)">NoDa neighborhood vibe?</span>
+        </div>
+      </div>
+
+      <div class="chat-input-wrap">
+        <textarea class="chat-input" id="chatInput" placeholder="Ask Alex anything about these rentals or neighborhoods…" rows="1"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- API Key Modal -->
+<div class="modal-overlay" id="apiModal">
+  <div class="modal">
+    <h2>🔑 Anthropic API Key</h2>
+    <p>Enter your Anthropic API key to power Alex's AI chat. Your key is stored only in this browser session and never sent anywhere except directly to the Anthropic API.</p>
+    <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-…" />
+    <div class="modal-btns">
+      <button class="modal-btn secondary" onclick="closeApiModal()">Cancel</button>
+      <button class="modal-btn primary" onclick="saveApiKey()">Save Key</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────────────
+const PROPERTIES = [
+  {
+    id: 1,
+    name: "The Rail House",
+    address: "102 Depot St, Belmont, NC",
+    area: "Belmont",
+    type: "Unique",
+    beds: 2, baths: 1, sqft: 1100,
+    price: 1650,
+    emoji: "🚂",
+    mapX: 130, mapY: 195,
+    amenities: ["Pet Friendly","Yard","W/D","Hardwood"],
+    unique: "Converted 1920s train depot — original timber beams, arched windows, and a wraparound platform deck overlooking the Catawba River.",
+    desc: "A one-of-a-kind live/work rental in the heart of Old Town Belmont. Steps from Main Street coffee shops and the Belmont Abbey greenway.",
+    featured: true,
+  },
+  {
+    id: 2,
+    name: "The Carriage House",
+    address: "47 Oak Lane, Charlotte, NC",
+    area: "Charlotte",
+    type: "Unique",
+    beds: 1, baths: 1, sqft: 780,
+    price: 1450,
+    emoji: "🐴",
+    mapX: 285, mapY: 105,
+    amenities: ["Pet Friendly","Hardwood","Home Office","W/D"],
+    unique: "1890s converted carriage stable — exposed brick, original carriage doors converted to glass, private courtyard garden.",
+    desc: "Tucked behind a historic Myers Park estate, this cozy carriage house offers quiet city living with character you won't find anywhere else.",
+    featured: true,
+  },
+  {
+    id: 3,
+    name: "Fort Mill Craftsman Cottage",
+    address: "221 Main St, Fort Mill, SC",
+    area: "Fort Mill",
+    type: "House",
+    beds: 3, baths: 2, sqft: 1650,
+    price: 2100,
+    emoji: "🏡",
+    mapX: 440, mapY: 175,
+    amenities: ["Yard","Garage","Hardwood","W/D","Pet Friendly"],
+    unique: "Original 1940s hardwood floors throughout, a deep rocking-chair porch, and a detached studio perfect for creative work.",
+    desc: "Walkable to Fort Mill's charming downtown, this craftsman cottage blends old-school character with modern updates. Excellent schools nearby.",
+    featured: false,
+  },
+  {
+    id: 4,
+    name: "NoDa Artist Loft",
+    address: "3401 North Davidson St, Charlotte, NC",
+    area: "Charlotte",
+    type: "Apartment",
+    beds: 2, baths: 2, sqft: 1200,
+    price: 2350,
+    emoji: "🎨",
+    mapX: 310, mapY: 80,
+    amenities: ["Home Office","Modern Kitchen","W/D","Hardwood"],
+    unique: "In Charlotte's arts district — 14-ft ceilings, polished concrete floors, massive north-facing windows, steps from breweries and galleries.",
+    desc: "Live where Charlotte's creative class thrives. NoDa's walkable strip of art, music, and food is literally your backyard.",
+    featured: true,
+  },
+  {
+    id: 5,
+    name: "Tega Cay Lakefront",
+    address: "8 Shoreline Dr, Tega Cay, SC",
+    area: "Tega Cay",
+    type: "House",
+    beds: 4, baths: 3, sqft: 2800,
+    price: 3800,
+    emoji: "🌊",
+    mapX: 510, mapY: 215,
+    amenities: ["Pool","Yard","Garage","W/D","Pet Friendly","Home Office"],
+    unique: "Direct Lake Wylie frontage with a private dock, screened porch, and sunset views that will redefine your work-from-home experience.",
+    desc: "Resort-style living 30 min from Uptown Charlotte. Tega Cay's private peninsula community has its own trails, golf course, and beach.",
+    featured: false,
+  },
+  {
+    id: 6,
+    name: "Rock Hill Modern",
+    address: "554 Oakland Ave, Rock Hill, SC",
+    area: "Rock Hill",
+    type: "Townhouse",
+    beds: 3, baths: 2.5, sqft: 1900,
+    price: 1975,
+    emoji: "🏙",
+    mapX: 340, mapY: 240,
+    amenities: ["Garage","Modern Kitchen","W/D","Home Office"],
+    unique: "Brand-new construction with a dedicated fiber-connected home office nook, quartz countertops, and EV charging in the attached garage.",
+    desc: "Rock Hill's Innovation District is booming — this modern townhouse puts you near the new cultural park and a growing food scene.",
+    featured: false,
+  },
+  {
+    id: 7,
+    name: "Waxhaw Farmhouse",
+    address: "1800 Providence Rd S, Waxhaw, NC",
+    area: "Waxhaw",
+    type: "House",
+    beds: 4, baths: 3, sqft: 2400,
+    price: 2750,
+    emoji: "🌾",
+    mapX: 490, mapY: 265,
+    amenities: ["Yard","Pet Friendly","Garage","W/D","Hardwood"],
+    unique: "5-acre lot, restored farmhouse with wraparound porch, original longleaf pine floors, and a massive barn studio — rare rural escape near town.",
+    desc: "Waxhaw is one of the most charming small towns in the Carolinas. Antique shops, farm-to-table restaurants, and zero traffic.",
+    featured: false,
+  },
+  {
+    id: 8,
+    name: "Belmont Mill District Studio",
+    address: "25 Riverside Ave, Belmont, NC",
+    area: "Belmont",
+    type: "Apartment",
+    beds: 1, baths: 1, sqft: 680,
+    price: 1150,
+    emoji: "🏭",
+    mapX: 145, mapY: 220,
+    amenities: ["Hardwood","Modern Kitchen","W/D","Home Office"],
+    unique: "Converted historic textile mill — exposed original machinery art, 11-ft ceilings, and a river-view rooftop deck shared by residents.",
+    desc: "Belmont's most affordable character rental. Walk to coffee, yoga, and the South Fork River Trail. 20 min to Charlotte Uptown.",
+    featured: false,
+  },
+];
+
+// ── State ─────────────────────────────────────────────────────────────────
+let activeAreas = new Set(["Charlotte","Fort Mill","Belmont","Rock Hill","Tega Cay","Waxhaw"]);
+let activeType = "Any";
+let activeBeds = 0;
+let maxBudget = 5000;
+let mustHaves = new Set();
+let filteredProps = [...PROPERTIES];
+let selectedPropId = null;
+let apiKey = localStorage.getItem('findHomeApiKey') || '';
+let chatHistory = [];
+
+// ── Render Listings ───────────────────────────────────────────────────────
+function renderListings() {
+  const sort = document.getElementById('sortSelect').value;
+  let props = [...filteredProps];
+  if (sort === 'price-asc') props.sort((a,b) => a.price - b.price);
+  else if (sort === 'price-desc') props.sort((a,b) => b.price - a.price);
+  else if (sort === 'beds') props.sort((a,b) => b.beds - a.beds);
+
+  const el = document.getElementById('listings');
+  document.getElementById('resultCount').textContent = props.length;
+
+  if (props.length === 0) {
+    el.innerHTML = `<div class="no-results"><div class="icon">🔍</div><p>No properties match your filters.<br>Try adjusting your search.</p></div>`;
+    renderMap([]);
+    return;
+  }
+
+  el.innerHTML = props.map(p => `
+    <div class="prop-card ${selectedPropId === p.id ? 'selected' : ''}" onclick="selectProp(${p.id})" id="card-${p.id}">
+      <div class="prop-img">
+        <span>${p.emoji}</span>
+        <span class="area-tag">${p.area}</span>
+        <span class="price-tag">$${p.price.toLocaleString()}/mo</span>
+      </div>
+      <div class="prop-body">
+        <div class="prop-name">${p.name}</div>
+        <div class="prop-address">${p.address}</div>
+        <div class="prop-meta">
+          <span>🛏 ${p.beds} bd</span>
+          <span>🚿 ${p.baths} ba</span>
+          <span>📐 ${p.sqft.toLocaleString()} sqft</span>
+        </div>
+        <div class="unique-callout"><span class="star">✦</span>${p.unique}</div>
+      </div>
+    </div>
+  `).join('');
+  renderMap(props);
+}
+
+// ── Map ───────────────────────────────────────────────────────────────────
+function renderMap(props) {
+  const g = document.getElementById('mapDots');
+  g.innerHTML = '';
+  props.forEach(p => {
+    const g2 = document.createElementNS('http://www.w3.org/2000/svg','g');
+    g2.setAttribute('class','map-dot');
+    g2.setAttribute('transform',`translate(${p.mapX},${p.mapY})`);
+    g2.innerHTML = `
+      <circle r="14" fill="${selectedPropId===p.id?'#c084fc':'#7c6af7'}" opacity="0.25"/>
+      <circle r="8" fill="${selectedPropId===p.id?'#c084fc':'#7c6af7'}"/>
+      <text text-anchor="middle" dominant-baseline="central" font-size="10" fill="white" y="0">${p.emoji}</text>
+    `;
+    g2.addEventListener('click', () => selectProp(p.id));
+    g2.addEventListener('mouseenter', (e) => showTooltip(e, p));
+    g2.addEventListener('mouseleave', hideTooltip);
+    g.appendChild(g2);
+  });
+}
+
+const tooltip = document.getElementById('mapTooltip');
+function showTooltip(e, p) {
+  const svg = document.getElementById('mapSvg');
+  const rect = svg.getBoundingClientRect();
+  const mapCont = svg.closest('.map-container').getBoundingClientRect();
+  const x = (p.mapX / 700) * rect.width + rect.left - mapCont.left;
+  const y = (p.mapY / 300) * rect.height + rect.top - mapCont.top;
+  tooltip.innerHTML = `<strong>${p.name}</strong>$${p.price.toLocaleString()}/mo · ${p.beds}bd ${p.baths}ba`;
+  tooltip.style.left = Math.min(x + 14, mapCont.width - 200) + 'px';
+  tooltip.style.top = Math.max(y - 40, 0) + 'px';
+  tooltip.classList.add('show');
+}
+function hideTooltip() { tooltip.classList.remove('show'); }
+
+// ── Select Property ───────────────────────────────────────────────────────
+function selectProp(id) {
+  selectedPropId = id === selectedPropId ? null : id;
+  const p = PROPERTIES.find(x => x.id === id);
+  const detail = document.getElementById('propDetail');
+  if (selectedPropId && p) {
+    document.getElementById('detailName').textContent = `${p.emoji} ${p.name}`;
+    document.getElementById('detailMeta').innerHTML =
+      `<span>$${p.price.toLocaleString()}/mo</span><span>${p.beds}bd ${p.baths}ba</span><span>${p.sqft.toLocaleString()} sqft</span><span>${p.area}</span><span>${p.amenities.join(' · ')}</span>`;
+    detail.classList.add('show');
+    // Auto-ask Alex
+    if (p) setTimeout(() => askAboutProperty(p), 400);
+  } else {
+    detail.classList.remove('show');
+  }
+  renderListings();
+}
+function clearSelected() {
+  selectedPropId = null;
+  document.getElementById('propDetail').classList.remove('show');
+  renderListings();
+}
+
+function askAboutProperty(p) {
+  const q = `Tell me more about ${p.name} in ${p.area}. Is it a good fit for a UX designer who works remotely?`;
+  addMessage('user', q);
+  callAlex(q);
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────
+document.querySelectorAll('.area-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const area = btn.dataset.area;
+    if (activeAreas.has(area)) { activeAreas.delete(area); btn.classList.remove('active'); }
+    else { activeAreas.add(area); btn.classList.add('active'); }
+  });
+});
+
+document.querySelectorAll('.type-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    activeType = tab.dataset.type;
+  });
+});
+
+document.querySelectorAll('.bed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.bed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeBeds = parseInt(btn.dataset.beds);
+  });
+});
+
+document.getElementById('budgetSlider').addEventListener('input', function() {
+  maxBudget = parseInt(this.value);
+  document.getElementById('budgetVal').textContent = '$' + maxBudget.toLocaleString();
+});
+
+document.querySelectorAll('[data-must]').forEach(cb => {
+  cb.addEventListener('change', () => {
+    if (cb.checked) mustHaves.add(cb.dataset.must);
+    else mustHaves.delete(cb.dataset.must);
+  });
+});
+
+document.getElementById('sortSelect').addEventListener('change', renderListings);
+
+document.getElementById('searchBtn').addEventListener('click', () => {
+  filteredProps = PROPERTIES.filter(p => {
+    if (!activeAreas.has(p.area)) return false;
+    if (activeType !== 'Any' && p.type !== activeType) return false;
+    if (activeBeds > 0 && (activeBeds === 4 ? p.beds < 4 : p.beds !== activeBeds)) return false;
+    if (p.price > maxBudget) return false;
+    for (const m of mustHaves) {
+      if (!p.amenities.includes(m)) return false;
+    }
+    return true;
+  });
+  renderListings();
+  // Flash search button
+  const btn = document.getElementById('searchBtn');
+  btn.textContent = '✓ Found ' + filteredProps.length + ' places!';
+  setTimeout(() => btn.textContent = '✦ Find My Place', 2000);
+});
+
+// ── Chat ──────────────────────────────────────────────────────────────────
+function addMessage(role, content) {
+  const isAlex = role === 'alex' || role === 'assistant';
+  const now = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  const div = document.createElement('div');
+  div.className = `msg ${isAlex ? 'alex' : 'user'}`;
+  div.innerHTML = `
+    <div class="msg-avatar">${isAlex ? '🏡' : '👤'}</div>
+    <div>
+      <div class="msg-bubble">${content.replace(/\n/g,'<br>')}</div>
+      <div class="msg-time">${now}</div>
+    </div>
+  `;
+  const msgs = document.getElementById('chatMessages');
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const div = document.createElement('div');
+  div.className = 'msg alex';
+  div.id = 'typingMsg';
+  div.innerHTML = `
+    <div class="msg-avatar">🏡</div>
+    <div class="msg-bubble">
+      <div class="typing-indicator">
+        <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+      </div>
+    </div>
+  `;
+  const msgs = document.getElementById('chatMessages');
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function hideTyping() {
+  const el = document.getElementById('typingMsg');
+  if (el) el.remove();
+}
+
+async function callAlex(userMsg) {
+  showTyping();
+  document.getElementById('sendBtn').disabled = true;
+
+  chatHistory.push({ role: 'user', content: userMsg });
+
+  const systemPrompt = `You are Alex, a friendly and knowledgeable AI realtor specializing in the Charlotte Metro area — including Charlotte, Fort Mill, Belmont, Rock Hill, Tega Cay, and Waxhaw.
+
+You're chatting with Matt, a UX designer who works remotely from Fort Mill, SC. He values unique character homes, good home office setups, walkability, and creative neighborhoods.
+
+You have deep local knowledge:
+- Charlotte neighborhoods: NoDa (arts/music), Plaza Midwood (eclectic/foodies), South End (trendy/walkable), Myers Park (historic/upscale), Dilworth (bungalows/charm), University City (suburban/affordable)
+- Fort Mill: Growing fast, excellent schools (Fort Mill School District), suburban feel, 30 min to Uptown Charlotte, lower SC taxes, newer developments
+- Belmont, NC: Hidden gem, Old Town Main Street walkability, historic mill district, Catawba River access, artsy community, more affordable than Charlotte
+- Rock Hill, SC: Largest city in York County, growing Innovation District, Dave Lyle Blvd dining, affordable, strong arts scene
+- Tega Cay, SC: Private peninsula on Lake Wylie, resort-like community, trails and golf, great for outdoor lovers
+- Waxhaw, NC: Charming small-town feel, antique district, excellent schools, peaceful, growing food scene
+
+Current listings shown in the app:
+- The Rail House (Belmont) - $1,650/mo - Converted 1920s train depot
+- The Carriage House (Charlotte) - $1,450/mo - 1890s converted stable
+- Fort Mill Craftsman Cottage - $2,100/mo - Original hardwood floors
+- NoDa Artist Loft (Charlotte) - $2,350/mo - 14-ft ceilings in arts district
+- Tega Cay Lakefront - $3,800/mo - Direct Lake Wylie frontage
+- Rock Hill Modern - $1,975/mo - New townhouse with EV charging
+- Waxhaw Farmhouse - $2,750/mo - 5-acre lot with barn studio
+- Belmont Mill District Studio - $1,150/mo - Converted textile mill
+
+Keep responses conversational, warm, and insightful. Use concrete local knowledge. 2-4 sentences per response typically, unless asked for detail. Don't use excessive bullet points — talk like a real person who loves this area.`;
+
+  if (!apiKey) {
+    hideTyping();
+    addMessage('alex', "I'd love to help! To enable my AI responses, click the **🔑 API Key** button in the top right and enter your Anthropic API key. You can get one at console.anthropic.com.");
+    document.getElementById('sendBtn').disabled = false;
+    return;
+  }
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 400,
+        system: systemPrompt,
+        messages: chatHistory,
+      }),
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.error?.message || `HTTP ${resp.status}`);
+    }
+
+    const data = await resp.json();
+    const reply = data.content[0].text;
+    chatHistory.push({ role: 'assistant', content: reply });
+    hideTyping();
+    addMessage('alex', reply);
+  } catch (err) {
+    hideTyping();
+    addMessage('alex', `Oops — I hit a snag: ${err.message}. Check your API key and try again.`);
+  }
+
+  document.getElementById('sendBtn').disabled = false;
+}
+
+function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  addMessage('user', msg);
+  input.value = '';
+  input.style.height = 'auto';
+  callAlex(msg);
+}
+
+function sendChip(el) {
+  const msg = el.textContent;
+  addMessage('user', msg);
+  callAlex(msg);
+}
+
+// Auto-resize textarea
+document.getElementById('chatInput').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+});
+document.getElementById('chatInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
+
+// ── API Key Modal ─────────────────────────────────────────────────────────
+function openApiModal() {
+  document.getElementById('apiKeyInput').value = apiKey;
+  document.getElementById('apiModal').classList.add('show');
+}
+function closeApiModal() { document.getElementById('apiModal').classList.remove('show'); }
+function saveApiKey() {
+  apiKey = document.getElementById('apiKeyInput').value.trim();
+  localStorage.setItem('findHomeApiKey', apiKey);
+  closeApiModal();
+  if (apiKey) addMessage('alex', "API key saved! I'm now fully powered up. Ask me anything about these neighborhoods or properties!");
+}
+document.getElementById('apiModal').addEventListener('click', function(e) {
+  if (e.target === this) closeApiModal();
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────
+renderListings();
+// Welcome message
+setTimeout(() => {
+  addMessage('alex', `Hey Matt! 👋 I'm Alex, your local rental guide for the Charlotte Metro. I know these neighborhoods inside and out — from NoDa's art scene to Belmont's hidden gems.\n\nClick any property to learn more, or just ask me anything. What matters most to you in your next place?`);
+}, 500);
+</script>
+</body>
+</html>
