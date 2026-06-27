@@ -50,3 +50,24 @@ export async function fetchHealth() {
   const { data } = await api.get('/health');
   return data;
 }
+
+// --- Tracked places (personal tour tracker) ---
+export async function fetchTracked() {
+  const { data } = await api.get('/tracked');
+  return data;
+}
+
+export async function saveTracked(payload) {
+  const { data } = await api.post('/tracked', payload);
+  return data;
+}
+
+export async function updateTracked(id, payload) {
+  const { data } = await api.put(`/tracked/${id}`, payload);
+  return data;
+}
+
+export async function deleteTracked(id) {
+  const { data } = await api.delete(`/tracked/${id}`);
+  return data;
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, TrendingDown, Star, Hammer, Calendar } from 'lucide-react';
+import { Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, TrendingDown, Star, Hammer, Calendar, Heart } from 'lucide-react';
 
 const SOURCE_COLORS = {
   gmail: 'bg-rose-100 text-rose-700',
@@ -36,7 +36,7 @@ const SOURCE_NAMES = {
 const fmt = n => n ? `$${parseInt(n).toLocaleString()}` : 'N/A';
 const isNew = dateStr => dateStr && (Date.now() - new Date(dateStr).getTime()) < 48 * 60 * 60 * 1000;
 
-export default function ListingCard({ listing, onClick }) {
+export default function ListingCard({ listing, onClick, isTracked, onTrack }) {
   const [imgErr, setImgErr] = useState(false);
   const img = !imgErr && listing.images?.length > 0 ? listing.images[0] : null;
   const hasCut = listing.original_price > 0 && listing.price < listing.original_price;
@@ -90,6 +90,17 @@ export default function ListingCard({ listing, onClick }) {
             {SOURCE_NAMES[listing.source] || listing.source}
           </span>
         </div>
+
+        {/* Quick save to My Tours */}
+        {onTrack && (
+          <button
+            onClick={e => { e.stopPropagation(); onTrack(listing); }}
+            className="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 backdrop-blur shadow hover:bg-white transition"
+            title={isTracked ? 'In My Tours' : 'Save to My Tours'}
+          >
+            <Heart className={`w-4 h-4 ${isTracked ? 'fill-rose-500 text-rose-500' : 'text-gray-400'}`} />
+          </button>
+        )}
       </div>
 
       {/* Content */}
