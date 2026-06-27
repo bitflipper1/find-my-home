@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList } from 'lucide-react';
 import StatsBar from './components/StatsBar';
 import FilterPanel from './components/FilterPanel';
 import ListingCard from './components/ListingCard';
@@ -7,10 +7,15 @@ import ListingModal from './components/ListingModal';
 import SourceBreakdown from './components/SourceBreakdown';
 import EmailLeads from './components/EmailLeads';
 import ActivityLog from './components/ActivityLog';
-import { fetchListings, fetchStats, triggerRefresh, fetchLogs, fetchBuilders, fetchCities, fetchEmailLeads } from './api';
+import MyTours from './components/MyTours';
+import {
+  fetchListings, fetchStats, triggerRefresh, fetchLogs, fetchBuilders, fetchCities, fetchEmailLeads,
+  fetchTracked, saveTracked, deleteTracked,
+} from './api';
 
 const TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
+  { id: 'tours', label: 'My Tours', icon: ClipboardList },
   { id: 'analytics', label: 'Analytics', icon: Activity },
   { id: 'email', label: 'Email Leads', icon: Mail },
   { id: 'log', label: 'Activity Log', icon: Info },
@@ -24,6 +29,9 @@ export default function App() {
   const [builders, setBuilders] = useState([]);
   const [cities, setCities] = useState([]);
   const [emailLeads, setEmailLeads] = useState([]);
+  const [tracked, setTracked] = useState([]);
+  const [trackedIds, setTrackedIds] = useState([]);
+  const [trackedStats, setTrackedStats] = useState(null);
   const [filters, setFilters] = useState({});
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -57,8 +65,40 @@ export default function App() {
     } catch {}
   }, []);
 
+  const loadTracked = useCallback(async () => {
+    try {
+      const data = await fetchTracked();
+      setTracked(data.tracked || []);
+      setTrackedIds(data.ids || []);
+      setTrackedStats(data.stats || null);
+    } catch {}
+  }, []);
+
   useEffect(() => { loadListings(); }, [loadListings]);
   useEffect(() => { loadMeta(); }, [loadMeta]);
+  useEffect(() => { loadTracked(); }, [loadTracked]);
+
+  // Save/update a tracked place, then refresh the board
+  const handleSaveTrack = useCallback(async (payload) => {
+    await saveTracked(payload);
+    await loadTracked();
+  }, [loadTracked]);
+
+  // Quick heart-toggle from a card: add as "considering", or remove if already tracked
+  const handleQuickTrack = useCallback(async (listing) => {
+    const existing = tracked.find(t => t.listing_id === listing.id);
+    if (existing) {
+      await deleteTracked(existing.id);
+    } else {
+      await saveTracked({ listing_id: listing.id, status: 'considering' });
+    }
+    await loadTracked();
+  }, [tracked, loadTracked]);
+
+  const handleRemoveTrack = useCallback(async (id) => {
+    await deleteTracked(id);
+    await loadTracked();
+  }, [loadTracked]);
 
   // Poll for status if refreshing
   useEffect(() => {
@@ -117,6 +157,11 @@ export default function App() {
                 {t.id === 'email' && emailLeads.length > 0 && (
                   <span className="w-4 h-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">
                     {emailLeads.length > 9 ? '9+' : emailLeads.length}
+                  </span>
+                )}
+                {t.id === 'tours' && tracked.length > 0 && (
+                  <span className="w-4 h-4 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center font-bold">
+                    {tracked.length > 9 ? '9+' : tracked.length}
                   </span>
                 )}
               </button>
@@ -229,11 +274,22 @@ export default function App() {
                     key={l.id}
                     listing={l}
                     onClick={setSelected}
+                    isTracked={trackedIds.includes(l.id)}
+                    onTrack={handleQuickTrack}
                   />
                 ))}
               </div>
             )}
           </>
+        )}
+
+        {tab === 'tours' && (
+          <MyTours
+            tracked={tracked}
+            stats={trackedStats}
+            onSave={handleSaveTrack}
+            onRemove={handleRemoveTrack}
+          />
         )}
 
         {tab === 'analytics' && (
@@ -265,7 +321,13 @@ export default function App() {
 
       {/* Detail modal */}
       {selected && (
-        <ListingModal listing={selected} onClose={() => setSelected(null)} />
+        <ListingModal
+          listing={selected}
+          onClose={() => setSelected(null)}
+          trackedRecord={tracked.find(t => t.listing_id === selected.id) || null}
+          onSaveTrack={handleSaveTrack}
+          onRemoveTrack={handleRemoveTrack}
+        />
       )}
     </div>
   );

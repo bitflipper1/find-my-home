@@ -1,7 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { getListings, getStats, getScrapeLogs, db } = require('./src/db');
+const {
+  getListings, getStats, getScrapeLogs, db,
+  saveTrackedPlace, getTrackedPlaces, getTrackedIds, deleteTrackedPlace, getTrackedStats, TRACK_STATUSES,
+} = require('./src/db');
 const { runAllScrapers } = require('./src/aggregate');
 const { startScheduler, getIsRunning } = require('./src/scheduler');
 
@@ -129,6 +132,47 @@ app.get('/api/listings/:id/price-history', (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// --- Tracked places (personal tour tracker) ---
+app.get('/api/tracked', (req, res) => {
+  try {
+    res.json({ tracked: getTrackedPlaces(), ids: getTrackedIds(), stats: getTrackedStats() });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/tracked', (req, res) => {
+  try {
+    if (!req.body.listing_id && !req.body.address) {
+      return res.status(400).json({ error: 'A listing_id or an address is required' });
+    }
+    const result = saveTrackedPlace(req.body);
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put('/api/tracked/:id', (req, res) => {
+  try {
+    const result = saveTrackedPlace({ ...req.body, id: parseInt(req.params.id) });
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.delete('/api/tracked/:id', (req, res) => {
+  try {
+    const changes = deleteTrackedPlace(parseInt(req.params.id));
+    res.json({ deleted: changes });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/track-statuses', (req, res) => res.json(TRACK_STATUSES));
 
 // --- Health ---
 app.get('/api/health', (req, res) => {

@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { X, Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, Calendar, TrendingDown, Star, Hammer, CheckCircle2 } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { fetchListing } from '../api';
+import TrackEditor from './TrackEditor';
 
 const fmt = n => n ? `$${parseInt(n).toLocaleString()}` : 'N/A';
 
-export default function ListingModal({ listing, onClose }) {
+export default function ListingModal({ listing, onClose, trackedRecord, onSaveTrack, onRemoveTrack }) {
   const [detail, setDetail] = useState(null);
   const [imgIdx, setImgIdx] = useState(0);
 
@@ -193,6 +194,22 @@ export default function ListingModal({ listing, onClose }) {
 
           {/* Right col: actions */}
           <div className="space-y-3">
+            {/* Tour tracker */}
+            {onSaveTrack && (
+              <div className="bg-rose-50 border border-rose-100 rounded-xl p-3">
+                <p className="text-sm font-semibold text-rose-800 mb-2">
+                  {trackedRecord ? '📋 In your tour list' : '📋 Track this place'}
+                </p>
+                <TrackEditor
+                  listing={d}
+                  tracked={trackedRecord}
+                  onSave={onSaveTrack}
+                  onRemove={onRemoveTrack}
+                  compact
+                />
+              </div>
+            )}
+
             {d.phone && (
               <a
                 href={`tel:${d.phone}`}

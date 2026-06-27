@@ -83,11 +83,38 @@ db.exec(`
     processed_at TEXT DEFAULT (datetime('now'))
   );
 
+  CREATE TABLE IF NOT EXISTS tracked_places (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    listing_id TEXT UNIQUE,
+    status TEXT DEFAULT 'considering',
+    rating INTEGER,
+    notes TEXT,
+    visit_date TEXT,
+    -- snapshot so tracked places survive even if the listing goes inactive,
+    -- and so manually-added places (no listing_id) carry their own details
+    address TEXT,
+    city TEXT,
+    state TEXT,
+    zip TEXT,
+    price INTEGER,
+    beds INTEGER,
+    baths REAL,
+    sqft INTEGER,
+    builder TEXT,
+    community TEXT,
+    phone TEXT,
+    url TEXT,
+    source TEXT DEFAULT 'manual',
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+  );
+
   CREATE INDEX IF NOT EXISTS idx_listings_source ON listings(source);
   CREATE INDEX IF NOT EXISTS idx_listings_price ON listings(price);
   CREATE INDEX IF NOT EXISTS idx_listings_city ON listings(city);
   CREATE INDEX IF NOT EXISTS idx_listings_active ON listings(is_active);
   CREATE INDEX IF NOT EXISTS idx_price_history_listing ON price_history(listing_id);
+  CREATE INDEX IF NOT EXISTS idx_tracked_status ON tracked_places(status);
 `);
 
 // Upsert a listing, tracking price changes
@@ -245,4 +272,139 @@ function markStaleListings() {
   return result.changes;
 }
 
-module.exports = { db, upsertListing, getListings, getStats, logScrape, getScrapeLogs, markStaleListings };
+// ---- Tracked places (personal tour tracker) ----
+
+const TRACK_STATUSES = ['considering', 'scheduled', 'visited', 'favorite', 'passed'];
+
+// Save or update a tracked place. If a listing_id is provided and already
+// tracked, this updates it; otherwise it inserts a new row. Manual places
+// (no listing_id) are always inserted unless an `id` is supplied.
+function saveTrackedPlace(data) {
+  const status = TRACK_STATUSES.includes(data.status) ? data.status : 'considering';
+
+  // Pull a snapshot from the live listing when tracking by listing_id
+  let snap = {};
+  if (data.listing_id) {
+    const l = db.prepare('SELECT * FROM listings WHERE id = ?').get(data.listing_id);
+    if (l) {
+      snap = {
+        address: l.address, city: l.city, state: l.state, zip: l.zip,
+        price: l.price, beds: l.beds, baths: l.baths, sqft: l.sqft,
+        builder: l.builder, community: l.community, phone: l.phone,
+        url: l.url, source: l.source,
+      };
+    }
+  }
+
+  // Update path: by explicit id, or by existing listing_id. Load the full
+  // existing row so partial updates don't wipe snapshot fields.
+  let existing = null;
+  if (data.id) existing = db.prepare('SELECT * FROM tracked_places WHERE id = ?').get(data.id);
+  else if (data.listing_id) existing = db.prepare('SELECT * FROM tracked_places WHERE listing_id = ?').get(data.listing_id);
+
+  const prev = existing || {};
+  // Snapshot fields: explicit input → live-listing snapshot → existing row → default
+  const pick = (key, def = null) => data[key] ?? snap[key] ?? prev[key] ?? def;
+  // User fields: honor an explicitly-sent value (even null, so they can be
+  // cleared), but keep the existing value when the key is absent (e.g. the
+  // quick heart-toggle only sends status).
+  const userField = (key) => (key in data ? data[key] : (prev[key] ?? null));
+
+  const fields = {
+    status,
+    rating: userField('rating'),
+    notes: userField('notes'),
+    visit_date: userField('visit_date'),
+    address: pick('address'),
+    city: pick('city'),
+    state: pick('state', 'NC'),
+    zip: pick('zip'),
+    price: pick('price'),
+    beds: pick('beds'),
+    baths: pick('baths'),
+    sqft: pick('sqft'),
+    builder: pick('builder'),
+    community: pick('community'),
+    phone: pick('phone'),
+    url: pick('url'),
+    source: data.listing_id ? (snap.source || prev.source || 'tracked') : (prev.source || 'manual'),
+  };
+
+  if (existing) {
+    db.prepare(`
+      UPDATE tracked_places SET
+        status=@status, rating=@rating, notes=@notes, visit_date=@visit_date,
+        address=@address, city=@city, state=@state, zip=@zip, price=@price,
+        beds=@beds, baths=@baths, sqft=@sqft, builder=@builder, community=@community,
+        phone=@phone, url=@url, updated_at=datetime('now')
+      WHERE id=@id
+    `).run({ ...fields, id: existing.id });
+    return { action: 'updated', id: existing.id };
+  }
+
+  const info = db.prepare(`
+    INSERT INTO tracked_places (
+      listing_id, status, rating, notes, visit_date,
+      address, city, state, zip, price, beds, baths, sqft,
+      builder, community, phone, url, source
+    ) VALUES (
+      @listing_id, @status, @rating, @notes, @visit_date,
+      @address, @city, @state, @zip, @price, @beds, @baths, @sqft,
+      @builder, @community, @phone, @url, @source
+    )
+  `).run({ listing_id: data.listing_id ?? null, ...fields });
+  return { action: 'created', id: info.lastInsertRowid };
+}
+
+function getTrackedPlaces() {
+  // Join live listing data when available so prices/price-cuts stay fresh
+  return db.prepare(`
+    SELECT t.*,
+      l.price AS live_price,
+      l.original_price AS live_original_price,
+      l.is_active AS listing_active,
+      l.images AS images
+    FROM tracked_places t
+    LEFT JOIN listings l ON l.id = t.listing_id
+    ORDER BY
+      CASE t.status
+        WHEN 'scheduled' THEN 0
+        WHEN 'favorite' THEN 1
+        WHEN 'considering' THEN 2
+        WHEN 'visited' THEN 3
+        WHEN 'passed' THEN 4
+        ELSE 5 END,
+      t.updated_at DESC
+  `).all().map(r => ({
+    ...r,
+    price: r.live_price ?? r.price,
+    original_price: r.live_original_price ?? null,
+    images: r.images ? JSON.parse(r.images) : [],
+  }));
+}
+
+function getTrackedIds() {
+  return db.prepare('SELECT listing_id FROM tracked_places WHERE listing_id IS NOT NULL').all().map(r => r.listing_id);
+}
+
+function deleteTrackedPlace(id) {
+  return db.prepare('DELETE FROM tracked_places WHERE id = ?').run(id).changes;
+}
+
+function getTrackedStats() {
+  const rows = db.prepare('SELECT status, COUNT(*) as count FROM tracked_places GROUP BY status').all();
+  const byStatus = {};
+  rows.forEach(r => { byStatus[r.status] = r.count; });
+  return {
+    total: db.prepare('SELECT COUNT(*) as c FROM tracked_places').get().c,
+    by_status: byStatus,
+    upcoming_visits: db.prepare(
+      "SELECT COUNT(*) as c FROM tracked_places WHERE visit_date >= date('now') AND status='scheduled'"
+    ).get().c,
+  };
+}
+
+module.exports = {
+  db, upsertListing, getListings, getStats, logScrape, getScrapeLogs, markStaleListings,
+  saveTrackedPlace, getTrackedPlaces, getTrackedIds, deleteTrackedPlace, getTrackedStats, TRACK_STATUSES,
+};
