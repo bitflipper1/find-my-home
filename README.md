@@ -2,6 +2,17 @@
 
 A full-stack aggregator dashboard for new construction townhomes in the greater Charlotte, NC area — like Jome.com but built for you, focused on Charlotte, and connected to your Gmail.
 
+## Screenshots
+
+**Listings — every source in one grid, with live price-cut alerts**
+![Listings](docs-assets/01-listings.png)
+
+**My Tours — a personal board for places you visit or are considering**
+![My Tours](docs-assets/04-my-tours.png)
+
+**Listing detail — price history + one-tap tracking & contact**
+![Detail](docs-assets/03-detail-modal.png)
+
 ## What it does
 
 - **Aggregates** listings from Zillow, Realtor.com, Opendoor, Homes.com, NewHomeSource, and direct builder websites (D.R. Horton, Lennar, Ryan Homes, Meritage, Eastwood, Smith Douglas, and more)
@@ -21,6 +32,39 @@ npm run dev
 ```
 
 Then open **http://localhost:5173**
+
+## Hosting on GitHub Pages (static, read-only)
+
+GitHub Pages can't run the Node/SQLite backend, so there's a **static build**
+that bakes the current data into `client/public/data.json` and stores your tour
+tracker in the browser's `localStorage`. A GitHub Actions workflow
+(`.github/workflows/deploy-pages.yml`) builds and publishes it automatically.
+
+**One-time setup** (you only do this once, in the GitHub UI):
+
+1. Go to **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Push to the branch (or run the workflow manually from the **Actions** tab)
+
+The site publishes to:
+`https://bitflipper1.github.io/hello-world/`
+
+Build it locally to preview the exact static artifact:
+
+```bash
+npm run build:static
+npx serve client/dist   # or any static server
+```
+
+**What works in the static version:** browsing/filtering/sorting all listings,
+price-cut highlights, the listing detail modal with price history, the Email
+Leads tab, analytics, and the full **My Tours** tracker (saved per-browser).
+**What doesn't:** the live "Refresh" button and the daily Gmail/scraper updates —
+those need the backend. The data refreshes whenever the site is rebuilt (every
+push, or on demand from the Actions tab).
+
+For the always-fresh experience, run the full stack (`npm run dev`) or host the
+server somewhere that can run Node (Render, Railway, Fly.io, a VPS).
 
 ## Gmail — already wired up (no setup)
 
