@@ -1,6 +1,7 @@
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 
 const SOURCE_LABELS = {
+  gmail: 'Your Gmail Inbox',
   zillow: 'Zillow',
   realtor: 'Realtor.com',
   opendoor: 'Opendoor',

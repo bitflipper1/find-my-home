@@ -1,6 +1,29 @@
-// Gmail scanner — searches for real estate / new construction emails
-// Uses Gmail OAuth2. Set up credentials in .env (see .env.example)
+// Gmail scanner — surfaces real estate / new construction emails from your inbox.
+//
+// Two modes, in priority order:
+//   1. Connector mode (default, zero setup): a scheduled Claude task with access
+//      to your Gmail connector scans the inbox and writes the results to
+//      data/gmail-listings.json + data/gmail-leads.json. This module ingests
+//      those files — no OAuth credentials required.
+//   2. OAuth mode (optional): if GMAIL_* credentials are present in .env, the
+//      server queries the Gmail API directly on its daily cron.
 const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
+
+const LEADS_FILE = path.join(__dirname, '..', 'data', 'gmail-leads.json');
+
+// Load connector-extracted leads written by the scheduled Gmail scan.
+function loadConnectorLeads() {
+  try {
+    if (!fs.existsSync(LEADS_FILE)) return [];
+    const raw = JSON.parse(fs.readFileSync(LEADS_FILE, 'utf8'));
+    return (raw.leads || []).filter(l => l.gmail_id);
+  } catch (err) {
+    console.error('[Gmail] Could not read connector leads file:', err.message);
+    return [];
+  }
+}
 
 const KEYWORDS = [
   'new construction', 'townhome', 'townhouse', 'price reduction', 'price cut',
@@ -35,8 +58,14 @@ async function getAccessToken() {
 async function searchEmails() {
   const token = await getAccessToken();
   if (!token) {
-    console.log('[Gmail] No credentials configured — skipping email scan');
-    return { emails: [], error: 'No Gmail credentials configured. See .env.example to set up.' };
+    // Connector mode: ingest leads written by the scheduled Gmail scan.
+    const emails = loadConnectorLeads();
+    if (emails.length > 0) {
+      console.log(`[Gmail] Connector mode — loaded ${emails.length} leads from gmail-leads.json`);
+      return { emails, count: emails.length, mode: 'connector' };
+    }
+    console.log('[Gmail] No OAuth credentials and no connector leads file yet — skipping email scan');
+    return { emails: [], error: 'Awaiting first Gmail connector scan (data/gmail-leads.json).' };
   }
 
   const query = KEYWORDS.slice(0, 10).map(k => `"${k}"`).join(' OR ');

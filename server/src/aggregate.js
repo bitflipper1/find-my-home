@@ -6,8 +6,24 @@ const { scrapeHomes } = require('./scrapers/homes');
 const { scrapeAllBuilders } = require('./scrapers/builders');
 const { searchEmails } = require('./gmail');
 const { upsertListing, logScrape, markStaleListings, db } = require('./db');
+const fs = require('fs');
+const path = require('path');
+
+// Real listings extracted from your inbox by the Gmail connector scan.
+function loadGmailListings() {
+  const file = path.join(__dirname, '..', 'data', 'gmail-listings.json');
+  try {
+    if (!fs.existsSync(file)) return [];
+    const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return (raw.listings || []).filter(l => l.id && l.address);
+  } catch (err) {
+    console.error('[Aggregate] Could not read gmail-listings.json:', err.message);
+    return [];
+  }
+}
 
 const SOURCES = [
+  { name: 'gmail', fn: async () => loadGmailListings(), label: 'Your Gmail Inbox' },
   { name: 'zillow', fn: scrapeZillow, label: 'Zillow' },
   { name: 'realtor', fn: scrapeRealtor, label: 'Realtor.com' },
   { name: 'opendoor', fn: scrapeOpendoor, label: 'Opendoor' },

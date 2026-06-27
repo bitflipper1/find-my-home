@@ -9,7 +9,7 @@ export default function EmailLeads({ leads }) {
         <Mail className="w-8 h-8 text-gray-300 mx-auto mb-2" />
         <p className="text-sm text-gray-500 font-medium">No email leads yet</p>
         <p className="text-xs text-gray-400 mt-1">
-          Configure Gmail credentials in <code className="bg-gray-100 px-1 rounded">server/.env</code> to scan your inbox daily
+          The daily Gmail scan will populate this automatically — no setup needed
         </p>
       </div>
     );
