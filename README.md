@@ -22,22 +22,25 @@ npm run dev
 
 Then open **http://localhost:5173**
 
-## Gmail setup (optional but recommended)
+## Gmail — already wired up (no setup)
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a project → Enable Gmail API
-3. Create OAuth2 credentials (Desktop app type)
-4. Run the OAuth flow to get a refresh token
-5. Copy `server/.env.example` → `server/.env` and fill in your credentials
+This app reads your inbox through the **Gmail connector**, so there are no OAuth
+credentials to configure. A scheduled daily scan reads
+`mattmcg@bitfliptech.com` for builder emails (Ryan Homes, David Weekley…),
+Zillow/Redfin price-cut alerts, and open houses, then writes the results to:
 
-```env
-GMAIL_CLIENT_ID=...
-GMAIL_CLIENT_SECRET=...
-GMAIL_REFRESH_TOKEN=...
-GMAIL_USER_EMAIL=mattmcg@bitfliptech.com
-```
+- `server/data/gmail-listings.json` — full listings (price, beds/baths/sqft, builder, phone) → shown in the dashboard as the **📧 Your Inbox** source
+- `server/data/gmail-leads.json` — price-cut / open-house / builder alerts → shown in the **Email Leads** tab
 
-The server will then scan your inbox at mattmcg@bitfliptech.com for builder emails, Zillow alerts, price-drop notifications, and open house invites.
+The server ingests these files on every scrape, so your real inbox data flows
+straight into the listings grid alongside the other sources. See
+[`AUTOMATION.md`](AUTOMATION.md) for how the daily scan is scheduled.
+
+### Optional: direct OAuth mode
+If you'd rather have the server hit the Gmail API itself (instead of the
+connector-driven file refresh), copy `server/.env.example` → `server/.env` and
+fill in `GMAIL_CLIENT_ID` / `GMAIL_CLIENT_SECRET` / `GMAIL_REFRESH_TOKEN`. The
+server auto-detects credentials and uses them when present.
 
 ## Data sources
 

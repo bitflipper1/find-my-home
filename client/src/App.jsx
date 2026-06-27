@@ -242,9 +242,10 @@ export default function App() {
 
         {tab === 'email' && (
           <div className="space-y-4">
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
-              <strong>Gmail Integration:</strong> The server scans your inbox (mattmcg@bitfliptech.com) daily at 7 AM and noon for real estate emails.
-              To enable this, copy <code className="bg-blue-100 px-1 rounded">server/.env.example</code> to <code className="bg-blue-100 px-1 rounded">server/.env</code> and add your Gmail OAuth2 credentials.
+            <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-sm text-rose-800">
+              <strong>📧 Gmail connector is live.</strong> A scheduled daily scan reads your inbox (mattmcg@bitfliptech.com) for
+              Zillow/Redfin price-cut alerts, builder emails (Ryan Homes, David Weekley), and open houses — then feeds them
+              straight into your listings and the leads below. No credentials or setup needed; it runs on its own.
             </div>
             <EmailLeads leads={emailLeads} />
           </div>

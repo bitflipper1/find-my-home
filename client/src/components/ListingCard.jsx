@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, TrendingDown, Star, Hammer, Calendar } from 'lucide-react';
 
 const SOURCE_COLORS = {
+  gmail: 'bg-rose-100 text-rose-700',
   zillow: 'bg-blue-100 text-blue-700',
   realtor: 'bg-red-100 text-red-700',
   opendoor: 'bg-orange-100 text-orange-700',
@@ -17,6 +18,7 @@ const SOURCE_COLORS = {
 };
 
 const SOURCE_NAMES = {
+  gmail: '📧 Your Inbox',
   zillow: 'Zillow',
   realtor: 'Realtor.com',
   opendoor: 'Opendoor',
