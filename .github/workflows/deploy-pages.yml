@@ -1,0 +1,71 @@
+name: Deploy dashboard to GitHub Pages
+
+# Builds the static (read-only) version of the Charlotte Townhome Finder and
+# publishes it to GitHub Pages. The static build bakes a data.json snapshot and
+# uses the browser's localStorage for the tour tracker — no backend required.
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - claude/charlotte-townhome-aggregator-tf63sf
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress run
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Build the data snapshot from the committed scrapers + Gmail data files
+      - name: Install server deps
+        working-directory: server
+        run: npm ci || npm install
+
+      - name: Export static data snapshot
+        working-directory: server
+        run: node scripts/export-static.js --refresh
+
+      # Build the static frontend with the Pages base path
+      - name: Install client deps
+        working-directory: client
+        run: npm ci || npm install
+
+      - name: Build static site
+        working-directory: client
+        env:
+          VITE_STATIC: 'true'
+          VITE_BASE: '/${{ github.event.repository.name }}/'
+        run: npm run build
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: client/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
