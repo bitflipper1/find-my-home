@@ -47,7 +47,7 @@ tracker in the browser's `localStorage`. A GitHub Actions workflow
 3. Push to the branch (or run the workflow manually from the **Actions** tab)
 
 The site publishes to:
-`https://bitflipper1.github.io/hello-world/`
+`https://bitflipper1.github.io/find-my-home/`
 
 Build it locally to preview the exact static artifact:
 
