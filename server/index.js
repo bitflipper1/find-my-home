@@ -145,6 +145,18 @@ app.get('/api/market', (req, res) => {
   }
 });
 
+// --- Personal research intelligence (Drive docs, inbox, insights) ---
+const fs = require('fs');
+const path = require('path');
+app.get('/api/research', (req, res) => {
+  try {
+    const file = path.join(__dirname, 'data', 'research.json');
+    res.json(fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {});
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // --- Tracked places (personal tour tracker) ---
 app.get('/api/tracked', (req, res) => {
   try {

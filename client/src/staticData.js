@@ -78,6 +78,9 @@ export const staticApi = {
   async fetchMarket() {
     return (await loadSnapshot()).market || { submarkets: [], leaseback_programs: [], assumptions: {} };
   },
+  async fetchResearch() {
+    return (await loadSnapshot()).research || null;
+  },
   async triggerRefresh() {
     return { status: 'static', message: 'This is a static (read-only) snapshot — data refreshes when the site is rebuilt.' };
   },
