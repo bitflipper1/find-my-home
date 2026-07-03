@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, TrendingDown, Star, Hammer, Calendar, Heart } from 'lucide-react';
+import { Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, TrendingDown, Star, Hammer, Calendar, Heart, Sofa, KeyRound } from 'lucide-react';
+import { ScoreChip } from './InvestTab';
 
 const SOURCE_COLORS = {
   gmail: 'bg-rose-100 text-rose-700',
+  models: 'bg-teal-100 text-teal-800',
   zillow: 'bg-blue-100 text-blue-700',
   realtor: 'bg-red-100 text-red-700',
   opendoor: 'bg-orange-100 text-orange-700',
@@ -19,6 +21,7 @@ const SOURCE_COLORS = {
 
 const SOURCE_NAMES = {
   gmail: '📧 Your Inbox',
+  models: '🏠 Model Lead',
   zillow: 'Zillow',
   realtor: 'Realtor.com',
   opendoor: 'Opendoor',
@@ -82,6 +85,16 @@ export default function ListingCard({ listing, onClick, isTracked, onTrack }) {
           {listing.is_model === 1 && (
             <span className="badge-model">Model</span>
           )}
+          {listing.is_furnished === 1 && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">
+              <Sofa className="w-3 h-3" /> Furnished
+            </span>
+          )}
+          {listing.leaseback === 1 && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800">
+              <KeyRound className="w-3 h-3" /> Leaseback
+            </span>
+          )}
         </div>
 
         {/* Source tag */}
@@ -105,7 +118,7 @@ export default function ListingCard({ listing, onClick, isTracked, onTrack }) {
 
       {/* Content */}
       <div className="p-4">
-        {/* Price */}
+        {/* Price + investment score */}
         <div className="flex items-baseline gap-2 mb-1">
           <span className="text-xl font-bold text-gray-900">{fmt(listing.price)}</span>
           {hasCut && (
@@ -113,6 +126,9 @@ export default function ListingCard({ listing, onClick, isTracked, onTrack }) {
           )}
           {hasCut && (
             <span className="text-xs font-semibold text-red-600">-{fmt(cutAmt)}</span>
+          )}
+          {listing.invest?.score != null && (
+            <span className="ml-auto"><ScoreChip score={listing.invest.score} /></span>
           )}
         </div>
 

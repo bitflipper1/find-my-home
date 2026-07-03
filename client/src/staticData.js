@@ -22,6 +22,8 @@ function applyFilters(listings, f = {}) {
   if (f.beds) out = out.filter(l => l.beds >= +f.beds);
   if (f.priceCut) out = out.filter(l => l.original_price > 0 && l.price < l.original_price);
   if (f.isModel) out = out.filter(l => l.is_model === 1);
+  if (f.furnished) out = out.filter(l => l.is_furnished === 1);
+  if (f.leaseback) out = out.filter(l => l.leaseback === 1);
   if (f.search) {
     const s = f.search.toLowerCase();
     out = out.filter(l =>
@@ -72,6 +74,9 @@ export const staticApi = {
   async fetchEmailLeads() {
     const snap = await loadSnapshot();
     return { leads: snap.leads || [], count: (snap.leads || []).length };
+  },
+  async fetchMarket() {
+    return (await loadSnapshot()).market || { submarkets: [], leaseback_programs: [], assumptions: {} };
   },
   async triggerRefresh() {
     return { status: 'static', message: 'This is a static (read-only) snapshot — data refreshes when the site is rebuilt.' };

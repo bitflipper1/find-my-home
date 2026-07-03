@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target } from 'lucide-react';
+import InvestTab from './components/InvestTab';
 import StatsBar from './components/StatsBar';
 import FilterPanel from './components/FilterPanel';
 import ListingCard from './components/ListingCard';
@@ -10,11 +11,12 @@ import ActivityLog from './components/ActivityLog';
 import MyTours from './components/MyTours';
 import {
   fetchListings, fetchStats, triggerRefresh, fetchLogs, fetchBuilders, fetchCities, fetchEmailLeads,
-  fetchTracked, saveTracked, deleteTracked,
+  fetchTracked, saveTracked, deleteTracked, fetchMarket,
 } from './api';
 
 const TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
+  { id: 'invest', label: 'Invest', icon: Target },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
   { id: 'analytics', label: 'Analytics', icon: Activity },
   { id: 'email', label: 'Email Leads', icon: Mail },
@@ -32,6 +34,8 @@ export default function App() {
   const [tracked, setTracked] = useState([]);
   const [trackedIds, setTrackedIds] = useState([]);
   const [trackedStats, setTrackedStats] = useState(null);
+  const [market, setMarket] = useState(null);
+  const [allListings, setAllListings] = useState([]);
   const [filters, setFilters] = useState({});
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -65,6 +69,14 @@ export default function App() {
     } catch {}
   }, []);
 
+  const loadInvest = useCallback(async () => {
+    try {
+      const [m, all] = await Promise.allSettled([fetchMarket(), fetchListings({ limit: 1000 })]);
+      if (m.status === 'fulfilled') setMarket(m.value);
+      if (all.status === 'fulfilled') setAllListings(all.value.listings || []);
+    } catch {}
+  }, []);
+
   const loadTracked = useCallback(async () => {
     try {
       const data = await fetchTracked();
@@ -77,6 +89,7 @@ export default function App() {
   useEffect(() => { loadListings(); }, [loadListings]);
   useEffect(() => { loadMeta(); }, [loadMeta]);
   useEffect(() => { loadTracked(); }, [loadTracked]);
+  useEffect(() => { loadInvest(); }, [loadInvest]);
 
   // Save/update a tracked place, then refresh the board
   const handleSaveTrack = useCallback(async (payload) => {
@@ -281,6 +294,10 @@ export default function App() {
               </div>
             )}
           </>
+        )}
+
+        {tab === 'invest' && (
+          <InvestTab listings={allListings} market={market} onOpen={setSelected} />
         )}
 
         {tab === 'tours' && (
