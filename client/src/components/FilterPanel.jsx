@@ -2,6 +2,7 @@ import { Search, SlidersHorizontal, X } from 'lucide-react';
 
 const SOURCE_LABELS = {
   gmail: 'Your Gmail Inbox',
+  models: 'Model Home Leads',
   zillow: 'Zillow',
   realtor: 'Realtor.com',
   opendoor: 'Opendoor',
@@ -154,6 +155,26 @@ export default function FilterPanel({ filters, onChange, cities, builders }) {
             className="w-4 h-4 rounded text-purple-500 border-gray-300 focus:ring-purple-500"
           />
           <span className="text-sm text-gray-700">Model homes</span>
+        </label>
+
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={!!filters.furnished}
+            onChange={e => set('furnished', e.target.checked)}
+            className="w-4 h-4 rounded text-purple-500 border-gray-300 focus:ring-purple-500"
+          />
+          <span className="text-sm text-gray-700">Furnished</span>
+        </label>
+
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={!!filters.leaseback}
+            onChange={e => set('leaseback', e.target.checked)}
+            className="w-4 h-4 rounded text-teal-500 border-gray-300 focus:ring-teal-500"
+          />
+          <span className="text-sm text-gray-700">Leaseback</span>
         </label>
       </div>
     </div>
