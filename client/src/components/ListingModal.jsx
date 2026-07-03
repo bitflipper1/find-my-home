@@ -3,6 +3,8 @@ import { X, Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, Calendar, Trend
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { fetchListing } from '../api';
 import TrackEditor from './TrackEditor';
+import { ScoreChip } from './InvestTab';
+import { AlertTriangle } from 'lucide-react';
 
 const fmt = n => n ? `$${parseInt(n).toLocaleString()}` : 'N/A';
 
@@ -171,6 +173,47 @@ export default function ListingModal({ listing, onClose, trackedRecord, onSaveTr
                 </div>
               </div>
             )}
+
+            {/* Investment analysis (computed server-side from submarket intel) */}
+            {listing.invest?.score != null && (() => {
+              const inv = listing.invest;
+              const fmtN = n => `$${Math.round(n).toLocaleString()}`;
+              const rows = [
+                ['Est. market rent', `${fmtN(inv.rent_estimate)}/mo`],
+                ['Gross yield', `${inv.gross_yield_pct}%`],
+                ['Cap rate (est.)', `${inv.cap_rate_pct}%`],
+                ['Est. PITI + HOA (20% down, investor rate)', `${fmtN(inv.piti_monthly)}/mo`],
+                ['Est. cash flow', `${inv.cash_flow_monthly >= 0 ? '+' : ''}${fmtN(inv.cash_flow_monthly)}/mo`],
+                ['$/sqft vs submarket', `$${inv.ppsf} vs $${inv.market_ppsf} (${inv.ppsf_vs_market_pct > 0 ? '+' : ''}${inv.ppsf_vs_market_pct}%)`],
+                ['Submarket appreciation', `${inv.yoy_appreciation}% YoY · ${inv.forecast_3yr}%/yr 3-yr forecast`],
+                ['Property tax (investor)', `${fmtN(inv.tax_annual_investor)}/yr`],
+              ];
+              return (
+                <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-sm font-semibold text-gray-700">
+                      Investment analysis — {inv.submarket_label}
+                    </p>
+                    <ScoreChip score={inv.score} size="lg" />
+                  </div>
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5">
+                    {rows.map(([k, v]) => (
+                      <div key={k} className="flex justify-between gap-3 text-xs">
+                        <dt className="text-gray-500">{k}</dt>
+                        <dd className="font-semibold text-gray-800 text-right">{v}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  {inv.sc_investor_tax_warning && (
+                    <p className="flex items-start gap-1.5 text-xs text-red-700 bg-red-50 rounded-lg p-2 mt-2">
+                      <AlertTriangle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                      South Carolina assesses non-owner-occupied property at a 6% ratio — during a leaseback (you don't occupy), the tax bill shown is roughly triple the owner-occupied figure. Factor this before comparing to NC deals.
+                    </p>
+                  )}
+                  <p className="text-[11px] text-gray-400 mt-2">Curated estimates, not an appraisal — verify rent comps and the actual tax bill before offering.</p>
+                </div>
+              );
+            })()}
 
             {/* Price History Chart */}
             {chartData.length > 1 && (

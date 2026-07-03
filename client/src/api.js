@@ -69,6 +69,18 @@ export async function fetchHealth() {
   return data;
 }
 
+export async function fetchMarket() {
+  if (S) return S.fetchMarket();
+  const { data } = await api.get('/market');
+  return data;
+}
+
+export async function fetchResearch() {
+  if (S) return S.fetchResearch();
+  const { data } = await api.get('/research');
+  return data;
+}
+
 // --- Tracked places (personal tour tracker) ---
 export async function fetchTracked() {
   if (S) return S.fetchTracked();

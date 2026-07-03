@@ -26,6 +26,8 @@ app.get('/api/listings', (req, res) => {
       beds: req.query.beds ? parseInt(req.query.beds) : undefined,
       priceCut: req.query.priceCut === 'true',
       isModel: req.query.isModel === 'true',
+      furnished: req.query.furnished === 'true',
+      leaseback: req.query.leaseback === 'true',
       search: req.query.search,
       sort: req.query.sort,
       order: req.query.order,
@@ -128,6 +130,28 @@ app.get('/api/listings/:id/price-history', (req, res) => {
       'SELECT price, recorded_at FROM price_history WHERE listing_id = ? ORDER BY recorded_at'
     ).all(req.params.id);
     res.json(history);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- Market intelligence (submarkets, leaseback programs, assumptions) ---
+const { getMarketIntel } = require('./src/market');
+app.get('/api/market', (req, res) => {
+  try {
+    res.json(getMarketIntel());
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- Personal research intelligence (Drive docs, inbox, insights) ---
+const fs = require('fs');
+const path = require('path');
+app.get('/api/research', (req, res) => {
+  try {
+    const file = path.join(__dirname, 'data', 'research.json');
+    res.json(fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {});
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

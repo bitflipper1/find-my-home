@@ -110,12 +110,18 @@ db.exec(`
   );
 
   CREATE INDEX IF NOT EXISTS idx_listings_source ON listings(source);
+  CREATE INDEX IF NOT EXISTS idx_listings_model ON listings(is_model);
   CREATE INDEX IF NOT EXISTS idx_listings_price ON listings(price);
   CREATE INDEX IF NOT EXISTS idx_listings_city ON listings(city);
   CREATE INDEX IF NOT EXISTS idx_listings_active ON listings(is_active);
   CREATE INDEX IF NOT EXISTS idx_price_history_listing ON price_history(listing_id);
   CREATE INDEX IF NOT EXISTS idx_tracked_status ON tracked_places(status);
 `);
+
+// Migration: leaseback flag for model-home sale-leaseback opportunities
+try { db.exec('ALTER TABLE listings ADD COLUMN leaseback INTEGER DEFAULT 0'); } catch { /* exists */ }
+
+const { enrichListing } = require('./market');
 
 // Upsert a listing, tracking price changes
 function upsertListing(listing) {
@@ -164,7 +170,7 @@ function upsertListing(listing) {
         type, status, builder, community,
         description, features, images,
         latitude, longitude, phone, email,
-        days_on_market, is_new_construction, is_model, is_furnished,
+        days_on_market, is_new_construction, is_model, is_furnished, leaseback,
         move_in_date, last_seen
       ) VALUES (
         ?, ?, ?, ?, ?, ?, ?, ?,
@@ -173,7 +179,7 @@ function upsertListing(listing) {
         ?, ?, ?, ?,
         ?, ?, ?,
         ?, ?, ?, ?,
-        ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
         ?, datetime('now')
       )
     `).run(
@@ -192,6 +198,7 @@ function upsertListing(listing) {
       listing.is_new_construction !== false ? 1 : 0,
       listing.is_model ? 1 : 0,
       listing.is_furnished ? 1 : 0,
+      listing.leaseback ? 1 : 0,
       listing.move_in_date
     );
     return { action: 'created', id: listing.id };
@@ -220,6 +227,8 @@ function getListings(filters = {}) {
   if (filters.beds) { query += ' AND l.beds >= ?'; params.push(filters.beds); }
   if (filters.priceCut) { query += ' AND l.price < l.original_price AND l.original_price > 0'; }
   if (filters.isModel) { query += ' AND l.is_model = 1'; }
+  if (filters.furnished) { query += ' AND l.is_furnished = 1'; }
+  if (filters.leaseback) { query += ' AND l.leaseback = 1'; }
   if (filters.search) {
     query += ' AND (l.address LIKE ? OR l.community LIKE ? OR l.builder LIKE ? OR l.neighborhood LIKE ?)';
     const s = `%${filters.search}%`;
@@ -238,6 +247,7 @@ function getListings(filters = {}) {
     images: JSON.parse(row.images || '[]'),
     features: JSON.parse(row.features || '[]'),
     price_history: JSON.parse(row.price_history || '[]'),
+    invest: enrichListing(row),
   }));
 }
 
