@@ -570,5 +570,60 @@
       "3. Register of Deeds — deed chain to 1990",
       "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price"
     ]
+  },
+  "key_insights": {
+    "generated": "2026-07-03",
+    "method": "Cross-source triangulation: inbox threads × Drive research docs × comparison dashboard × 2027 upside rankings × market model × tour archive",
+    "insights": [
+      {
+        "n": 1,
+        "title": "Your alpha is the incentive package, not the asset",
+        "insight": "Your own Craig Ave underwriting proves it: 8.5%/yr without the package vs 15.5%/yr with it. The $24,946 incentive + ~$10K furniture + $31,200 leaseback is nearly the entire excess return. Appreciation alone (2–4% metro base) barely beats carry.",
+        "action": "Only write offers with a ≥5%-of-price package. Hunt quarter-ends — Taylor Shane's flexibility appeared in writing on Jun 22, eight days before quarter close. Next window: Sep 22–30.",
+        "sources": "Craig Ave Investment Analysis · Archer Row thread · comparison dashboard"
+      },
+      {
+        "n": 2,
+        "title": "One zone triangulates across every source: West Charlotte 28216/28208",
+        "insight": "Your 2027 upside pick #2 (West Blvd corridor, 8.5/10) + the metro's cheapest new townhome entry (Ryan Homes Sunset Creek from $284,990, 28216) + Corridors of Opportunity $259M + your own market model's best in-city appreciation forecast (6.5% YoY West CLT) all point at the same place. No other zone gets four independent confirmations.",
+        "action": "Tour Sunset Creek and the Lennar Sterling Pointe model (28216, furnished+leaseback lead, invest score 81). This corridor is the strongest new-money candidate in your data.",
+        "sources": "2027 upside doc · Ryan Homes communities doc · market model · Corridors of Opportunity"
+      },
+      {
+        "n": 3,
+        "title": "Cherry Grove violates your own avoid rule",
+        "insight": "The $269,990 Kannapolis Juniper scores 78 in-app on raw value, but your 2027 doc explicitly warns against 'far-out new construction with many remaining builder lots' — at resale, your buyer will comparison-shop against the builder's next incentive package. Great price ≠ great investment under your own framework.",
+        "action": "Treat Cherry Grove as a long-hold cash-flow play only, or pass. Don't let the price chip distract from the corridor plays.",
+        "sources": "2027 upside doc (avoid list) · Cherry Grove inbox thread"
+      },
+      {
+        "n": 4,
+        "title": "The Tri Pointe paradox: negotiate motivated, contract paranoid",
+        "insight": "Tri Pointe gives you the most model-sale supply (3 live threads: Archer Row, Southbridge, Oakhurst) and the only written 'name your scenario' invitation — but also your research's worst local execution signal (1.15/5 Southbridge reviews) and a model-warranty haircut (no 1-yr walk).",
+        "action": "Press hard on price/leaseback/furniture AND require: independent inspection, written warranty terms, CC&R rental-restriction check (your red-flags list), and the 11-month-walk equivalent in the contract.",
+        "sources": "True Homes and Tripointe doc · Archer Row thread · contract red-flags chat"
+      },
+      {
+        "n": 5,
+        "title": "SC leaseback carries a hidden ~$3–4K/yr tax penalty",
+        "insight": "A leaseback means you don't occupy — and SC assesses non-owner-occupied at a 6% ratio: on a $400K Fort Mill townhome that's roughly $6,000/yr vs ~$2,400 owner-occupied. It quietly eats ~1.5 months of leaseback rent every year. Notably, ALL EIGHT of your 2027 upside picks are NC.",
+        "action": "Run leaseback holds in NC. Consider SC (Fort Mill/Indian Land) only for school-premium exit plays where you'll occupy or flip fast.",
+        "sources": "Tax model · Southbridge thread · 2027 upside doc"
+      },
+      {
+        "n": 6,
+        "title": "Model homes clear in weeks — pre-stage, don't deliberate",
+        "insight": "Southbridge's York model went under contract within ~4 weeks of your visit; Oakhurst's HS78 fall-through re-sold; Archer Row's model released and got 'Home of the Week' billing days later. The window between a model release (or fall-through) and contract is shorter than a deliberation cycle.",
+        "action": "Keep offers pre-staged per builder (price + terms + contingencies ready). The daily scan is your first-mover edge — when it flags a release or fall-through, call the same day.",
+        "sources": "Southbridge thread · Oakhurst thread · Archer Row thread"
+      },
+      {
+        "n": 7,
+        "title": "Craig Ave is the template — you already beat your own threshold",
+        "insight": "86/100 by your scoring, $373,970 effective (15% under the $438K Oakhurst average) with the Cotswold halo ($707K) one neighborhood east and the Eastland Yards catalyst (your #1 upside pick) on the other side — a double-catalyst position bought below basis threshold.",
+        "action": "Replicate the pattern, not the address: model + leaseback + ≥5% incentive + a submarket with a documented value gap and a visible catalyst. DW's second model (Jon Wian) is the nearest repeat.",
+        "sources": "Comparison dashboard · Oakhurst/Cotswold thesis · 2027 upside doc"
+      }
+    ]
   }
 }

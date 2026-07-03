@@ -27,7 +27,14 @@
       "leaseback": 1,
       "move_in_date": "Closing ~July 17, 2026",
       "description": "YOUR BENCHMARK DEAL (exact terms from your comparison dashboard): $398,916 with $24,945.80 incentive (5% + $5K via approved lender) → $373,970 effective, clearing your ≤$380-390K buy threshold. Leaseback $2,600/mo × 12 with two 3-month extension options ($31,200+ gross). Furniture + appliances included; NO blinds ($1,177) or washer/dryer ($1,976) — negotiated in lieu of commission cut. Warranty: 2/10 balance from CO 1/3/2025, no 1-year walk. Modeled 15.5%/yr on cash with incentives (8.5% without).",
-      "features": ["$24,946 incentive (5% + $5K)", "$2,600/mo × 12 + two 3-mo extensions", "Furniture + appliances included", "Effective $373,970 — clears buy threshold", "Myers Park High assignment (verify w/ CMS)", "HOA $250/mo · tax $3,000/yr"]
+      "features": [
+        "$24,946 incentive (5% + $5K)",
+        "$2,600/mo × 12 + two 3-mo extensions",
+        "Furniture + appliances included",
+        "Effective $373,970 — clears buy threshold",
+        "Myers Park High assignment (verify w/ CMS)",
+        "HOA $250/mo · tax $3,000/yr"
+      ]
     },
     {
       "id": "target_tripointe_archer_row_beau",
@@ -52,7 +59,13 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CONFIRMED IN WRITING (Taylor Shane, 6/20): decorated model released for sale at $479,990 with EVERYTHING — furniture, appliances, decorations — plus $10K closing w/ TPC. Warranty: 1-yr Old Republic + ~8 yrs structural remainder (no 1/2/10). Community is in FINAL closeout and Taylor signaled quarter-end flexibility (6/22) and invited a custom scenario. Negotiate: your price + leaseback while they sell the final homes + keep the furniture.",
-      "features": ["Fully furnished + decorated", "$10K closing w/ TPC", "Quarter-end flexibility signaled in writing", "Custom-scenario invitation from rep", "Sister lot 5 Sparrow model $452,990 as fallback"]
+      "features": [
+        "Fully furnished + decorated",
+        "$10K closing w/ TPC",
+        "Quarter-end flexibility signaled in writing",
+        "Custom-scenario invitation from rep",
+        "Sister lot 5 Sparrow model $452,990 as fallback"
+      ]
     },
     {
       "id": "target_dw_second_model",
@@ -76,7 +89,12 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "Jon Wian wrote on 5/29: 'I had someone asking about my OTHER model' — he manages a second model beyond your Craig Ave deal. DW's leaseback structure is proven on your own contract (builder pays rent + HOA until closing; appliances negotiable vs commission). As a repeat buyer mid-closing, you have maximum leverage to ask for the same terms on model #2 before it's marketed.",
-      "features": ["Proven DW leaseback terms (your own deal)", "Repeat-buyer leverage", "Not yet publicly marketed", "Ask Jon for first refusal"]
+      "features": [
+        "Proven DW leaseback terms (your own deal)",
+        "Repeat-buyer leverage",
+        "Not yet publicly marketed",
+        "Ask Jon for first refusal"
+      ]
     },
     {
       "id": "target_tripointe_southbridge_next",
@@ -100,7 +118,13 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "The Fort Mill play: the York model (HS24, fully decorated turnkey) went under contract within weeks — proof Tri Pointe sells Southbridge models and they move fast. Community still has to-be-built inventory (HS 10/44/46/47 closing Sep–Dec), so a sales model stays open for months = leaseback runway. Ask Debbie for FIRST REFUSAL on the next model release (Grahym or the next Southbridge collection) with York-style turnkey terms + leaseback. Incentive precedent: $20K flex on move-in-ready. ⚠ SC 6% investor assessment applies during any leaseback.",
-      "features": ["Fort Mill anchor", "York model sold fast — proven program", "$20K flex precedent", "Months of leaseback runway (community sells thru Dec)", "⚠ SC 6% investor tax"]
+      "features": [
+        "Fort Mill anchor",
+        "York model sold fast — proven program",
+        "$20K flex precedent",
+        "Months of leaseback runway (community sells thru Dec)",
+        "⚠ SC 6% investor tax"
+      ]
     },
     {
       "id": "model_tripointe_oakhurst_rockwell",
@@ -123,7 +147,12 @@
       "is_furnished": 1,
       "leaseback": 0,
       "description": "Rob Dybec offered the furnished Rockwell (HS13) with furniture FREE (5/30), then the incentive structure shifted and you walked (6/15) — cleanly, with your interest on record. If Archer Row and Fort Mill stall, re-enter at YOUR number: prior $20K precedent + furniture + the deal that fell through on HS78 gives Rob motivation. Their actual model home (furniture 'stays with the model') is also still upstream for release.",
-      "features": ["Furniture offered free previously", "$20K incentive precedent", "You hold walk-away leverage", "Oakhurst/Plaza Midwood submarket"]
+      "features": [
+        "Furniture offered free previously",
+        "$20K incentive precedent",
+        "You hold walk-away leverage",
+        "Oakhurst/Plaza Midwood submarket"
+      ]
     },
     {
       "id": "lead_ryan_sunset_creek",
@@ -147,7 +176,12 @@
       "is_furnished": 0,
       "leaseback": 0,
       "description": "From your 'Ryan Homes Communities of Charlotte' doc: from $284,990, 1,576–1,681 sqft — sits in 28216, inside your #2-ranked 2027 upside corridor (West Blvd/West CLT momentum) at the cheapest Mecklenburg new-TH entry. Price play, not a leaseback play; incentives tied to NVR Mortgage. Ask about closeout models as the community sells through.",
-      "features": ["From $284,990 — cheapest Meck new TH", "28216 upside corridor", "Ask about model at closeout", "NVR Mortgage incentives"]
+      "features": [
+        "From $284,990 — cheapest Meck new TH",
+        "28216 upside corridor",
+        "Ask about model at closeout",
+        "NVR Mortgage incentives"
+      ]
     },
     {
       "id": "model_ryan_cherrygrove_juniper",
@@ -173,8 +207,13 @@
       "is_furnished": 0,
       "leaseback": 0,
       "move_in_date": "Spring move-in",
-      "description": "Home-of-the-Month from your inbox: $269,990 with $5K incentive (NVR Mortgage). Best raw price-per-foot on the board ($137/sqft) in the metro's best growth-to-price submarket. Leaseback unlikely (NVR runs asset-light) — this is a price play, not a leaseback play. Rep: Vineta Pritchard.",
-      "features": ["$5,000 incentive", "1,976 sqft — huge for the price", "Cabarrus growth corridor", "1-car garage"]
+      "description": "Home-of-the-Month from your inbox: $269,990 with $5K incentive (NVR Mortgage). Best raw price-per-foot on the board ($137/sqft) in the metro's best growth-to-price submarket. Leaseback unlikely (NVR runs asset-light) — this is a price play, not a leaseback play. Rep: Vineta Pritchard. ⚠ INSIGHT CHECK: conflicts with your own avoid rule — far-out new construction with remaining builder lots; treat as long-hold cash-flow only.",
+      "features": [
+        "$5,000 incentive",
+        "1,976 sqft — huge for the price",
+        "Cabarrus growth corridor",
+        "1-car garage"
+      ]
     },
     {
       "id": "model_lennar_sterling_pointe",
@@ -199,7 +238,12 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CURATED LEAD (verify by phone): Lennar community approaching closeout in the West Charlotte path-of-progress corridor. Lennar's model program commonly includes 9–18 month leaseback and furniture conveyance at closeout. Ask: 'When does the Sterling Pointe model release, and is it sold furnished with leaseback?'",
-      "features": ["Lennar leaseback program", "Furnished models typical at closeout", "West CLT 6.5% YoY submarket", "Under $300K"]
+      "features": [
+        "Lennar leaseback program",
+        "Furnished models typical at closeout",
+        "West CLT 6.5% YoY submarket",
+        "Under $300K"
+      ]
     },
     {
       "id": "model_tm_bryton",
@@ -224,7 +268,12 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CURATED LEAD (verify by phone): Taylor Morrison runs a marketed model-home sale-leaseback program (typically 12–24 months, builder maintains the home, ~5-7% leaseback yield). Bryton is their north-corridor master-plan with townhome product near your ceiling. Ask for the model home investment program sheet.",
-      "features": ["Marketed leaseback program", "Designer-furnished model", "12–24 mo builder tenancy", "At budget ceiling"]
+      "features": [
+        "Marketed leaseback program",
+        "Designer-furnished model",
+        "12–24 mo builder tenancy",
+        "At budget ceiling"
+      ]
     },
     {
       "id": "model_drh_mallard_pointe",
@@ -249,7 +298,11 @@
       "is_furnished": 1,
       "leaseback": 0,
       "description": "CURATED LEAD (verify by phone): DRH sells models at community closeout, sometimes with furnishings. University submarket rents well (UNCC + light rail). Leaseback only if the sales office still needs the space — ask about the closeout timeline.",
-      "features": ["Furnished at closeout (typical)", "University submarket 5% YoY", "Largest builder = most model supply"]
+      "features": [
+        "Furnished at closeout (typical)",
+        "University submarket 5% YoY",
+        "Largest builder = most model supply"
+      ]
     },
     {
       "id": "model_sd_university_townes",
@@ -274,7 +327,11 @@
       "is_furnished": 0,
       "leaseback": 0,
       "description": "CURATED LEAD (verify by phone): affordable-segment model at closeout with a small cut already on the board. Furniture occasionally negotiable; leaseback unusual for this builder. A price-first fallback if the leaseback hunts stall.",
-      "features": ["Price cut", "Closeout model", "Furniture negotiable — ask"]
+      "features": [
+        "Price cut",
+        "Closeout model",
+        "Furniture negotiable — ask"
+      ]
     },
     {
       "id": "model_true_monroe",
@@ -299,7 +356,11 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CURATED LEAD (verify by phone): True Homes is the big local builder (Monroe HQ) — local decision-makers say yes/no fast. Model leasebacks negotiable at grand openings of successor communities; Union County's low taxes (0.77%) flatter the cash flow.",
-      "features": ["Local builder — fast answers", "Union Co. low taxes", "Leaseback negotiable at grand openings"]
+      "features": [
+        "Local builder — fast answers",
+        "Union Co. low taxes",
+        "Leaseback negotiable at grand openings"
+      ]
     },
     {
       "id": "model_meritage_concord",
@@ -324,7 +385,11 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CURATED LEAD (verify by phone): Meritage does model-sale leasebacks near closeout case-by-case; energy-spec homes rent at a premium and Cabarrus is the metro's best growth-to-price county. Under budget with furniture.",
-      "features": ["Energy Star spec", "Cabarrus 6% YoY submarket", "Case-by-case leaseback"]
+      "features": [
+        "Energy Star spec",
+        "Cabarrus 6% YoY submarket",
+        "Case-by-case leaseback"
+      ]
     },
     {
       "id": "model_mattamy_indianland",
@@ -349,7 +414,11 @@
       "is_furnished": 1,
       "leaseback": 1,
       "description": "CURATED LEAD (verify by phone): Mattamy does Carolinas model leasebacks — BUT this one carries the SC trap: non-owner-occupied SC property is assessed at a 6% ratio, roughly tripling property tax vs an NC equivalent during the leaseback. Run the numbers tab before pursuing.",
-      "features": ["Leaseback offered", "Furnished model", "⚠ SC 6% investor assessment"]
+      "features": [
+        "Leaseback offered",
+        "Furnished model",
+        "⚠ SC 6% investor assessment"
+      ]
     },
     {
       "id": "model_century_gastonia",
@@ -374,7 +443,11 @@
       "is_furnished": 0,
       "leaseback": 0,
       "description": "CURATED LEAD (verify by phone): cheapest model-candidate on the board. Usually sold unfurnished without leaseback — pure entry-price play in the I-85 momentum corridor.",
-      "features": ["Cheapest entry", "I-85 corridor", "Unfurnished (typical)"]
+      "features": [
+        "Cheapest entry",
+        "I-85 corridor",
+        "Unfurnished (typical)"
+      ]
     }
   ]
 }
