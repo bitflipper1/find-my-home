@@ -23,10 +23,36 @@ export default function ResearchTab({ research }) {
     sources = [], builder_intel = [], your_deal, thesis, innovation_watch,
     negotiation_playbook, best_builders_to_talk_to = [],
     upside_2027, contract_red_flags, rental_playbook, tripointe_roster, tour_archive, records_toolkit,
+    key_insights,
   } = research;
 
   return (
     <div className="space-y-6">
+      {/* Key insights — the cross-source synthesis */}
+      {key_insights && (
+        <section>
+          <h2 className="text-base font-bold text-gray-900 flex items-center gap-2 mb-1">
+            <Lightbulb className="w-4 h-4 text-amber-500" /> Key insights — what all your data says together
+          </h2>
+          <p className="text-xs text-gray-400 mb-3">{key_insights.method}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            {key_insights.insights.map(i => (
+              <div key={i.n} className="bg-gradient-to-br from-amber-50 to-white rounded-xl border border-amber-200 p-4">
+                <div className="flex items-start gap-2.5">
+                  <span className="w-6 h-6 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{i.n}</span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-gray-900 leading-tight">{i.title}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed mt-1.5">{i.insight}</p>
+                    <p className="text-xs font-medium text-amber-900 bg-amber-100/60 rounded-lg p-2 mt-2">→ {i.action}</p>
+                    <p className="text-[10px] text-gray-400 mt-1.5">Sources: {i.sources}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Best builders to talk to */}
       <section>
         <h2 className="text-base font-bold text-gray-900 flex items-center gap-2 mb-3">
