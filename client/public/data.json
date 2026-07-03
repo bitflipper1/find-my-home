@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T06:12:20.625Z",
+  "generated_at": "2026-07-03T21:30:23.399Z",
   "listings": [
     {
       "id": "builder_drhorton_1",
@@ -39,9 +39,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.6,
@@ -103,9 +103,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -167,9 +167,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.3,
@@ -231,9 +231,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -295,9 +295,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4,
@@ -359,9 +359,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -423,9 +423,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.1,
@@ -487,9 +487,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.1,
@@ -551,9 +551,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -615,9 +615,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.6,
@@ -679,9 +679,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -743,9 +743,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.3,
@@ -807,9 +807,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -871,9 +871,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.3,
@@ -935,9 +935,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -999,9 +999,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.9,
@@ -1063,9 +1063,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1127,9 +1127,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1191,9 +1191,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.3,
@@ -1255,9 +1255,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:15",
-      "updated_at": "2026-07-03 06:11:15",
-      "last_seen": "2026-07-03 06:11:15",
+      "created_at": "2026-07-03 21:30:21",
+      "updated_at": "2026-07-03 21:30:21",
+      "last_seen": "2026-07-03 21:30:21",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1314,9 +1314,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1373,9 +1373,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 5.9,
@@ -1432,9 +1432,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1491,9 +1491,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1550,9 +1550,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 6.7,
@@ -1609,9 +1609,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:12",
-      "updated_at": "2026-07-03 06:11:12",
-      "last_seen": "2026-07-03 06:11:12",
+      "created_at": "2026-07-03 21:30:19",
+      "updated_at": "2026-07-03 21:30:19",
+      "last_seen": "2026-07-03 21:30:19",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1673,9 +1673,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.5,
@@ -1737,9 +1737,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1801,9 +1801,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -1865,9 +1865,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1929,9 +1929,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -1993,9 +1993,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2057,9 +2057,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.8,
@@ -2121,9 +2121,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2185,9 +2185,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.9,
@@ -2249,9 +2249,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2313,9 +2313,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -2377,9 +2377,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:10",
-      "updated_at": "2026-07-03 06:11:10",
-      "last_seen": "2026-07-03 06:11:10",
+      "created_at": "2026-07-03 21:30:16",
+      "updated_at": "2026-07-03 21:30:16",
+      "last_seen": "2026-07-03 21:30:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2436,9 +2436,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:08",
-      "updated_at": "2026-07-03 06:11:08",
-      "last_seen": "2026-07-03 06:11:08",
+      "created_at": "2026-07-03 21:30:14",
+      "updated_at": "2026-07-03 21:30:14",
+      "last_seen": "2026-07-03 21:30:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 5.2,
@@ -2495,9 +2495,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:08",
-      "updated_at": "2026-07-03 06:11:08",
-      "last_seen": "2026-07-03 06:11:08",
+      "created_at": "2026-07-03 21:30:14",
+      "updated_at": "2026-07-03 21:30:14",
+      "last_seen": "2026-07-03 21:30:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.7,
@@ -2554,9 +2554,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:08",
-      "updated_at": "2026-07-03 06:11:08",
-      "last_seen": "2026-07-03 06:11:08",
+      "created_at": "2026-07-03 21:30:14",
+      "updated_at": "2026-07-03 21:30:14",
+      "last_seen": "2026-07-03 21:30:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2618,9 +2618,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.6,
@@ -2682,9 +2682,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2746,9 +2746,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2810,9 +2810,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2874,9 +2874,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.5,
@@ -2938,9 +2938,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:05",
-      "updated_at": "2026-07-03 06:11:05",
-      "last_seen": "2026-07-03 06:11:05",
+      "created_at": "2026-07-03 21:30:12",
+      "updated_at": "2026-07-03 21:30:12",
+      "last_seen": "2026-07-03 21:30:12",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3004,9 +3004,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.7,
@@ -3070,9 +3070,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3136,9 +3136,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3202,9 +3202,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.8,
@@ -3268,9 +3268,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3334,9 +3334,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3400,9 +3400,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.2,
@@ -3466,9 +3466,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:03",
-      "updated_at": "2026-07-03 06:11:03",
-      "last_seen": "2026-07-03 06:11:03",
+      "created_at": "2026-07-03 21:30:09",
+      "updated_at": "2026-07-03 21:30:09",
+      "last_seen": "2026-07-03 21:30:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3532,9 +3532,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": "Closing ~July 17, 2026",
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3597,9 +3597,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3661,9 +3661,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3713,9 +3713,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3764,9 +3764,9 @@
       "is_model": 0,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3775,6 +3775,70 @@
         "submarket": "plaza-noda",
         "submarket_label": "Plaza Midwood / NoDa",
         "score": null
+      }
+    },
+    {
+      "id": "lead_ryan_sunset_creek",
+      "source": "models",
+      "url": "https://www.ryanhomes.com/new-homes/communities/north-carolina/charlotte",
+      "address": "Sunset Creek Townhomes, Charlotte, NC 28216",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28216",
+      "neighborhood": null,
+      "price": 284990,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1576,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "From your Ryan Homes research",
+      "builder": "Ryan Homes",
+      "community": "Sunset Creek Townhomes",
+      "description": "From your 'Ryan Homes Communities of Charlotte' doc: from $284,990, 1,576–1,681 sqft — sits in 28216, inside your #2-ranked 2027 upside corridor (West Blvd/West CLT momentum) at the cheapest Mecklenburg new-TH entry. Price play, not a leaseback play; incentives tied to NVR Mortgage. Ask about closeout models as the community sells through.",
+      "features": [
+        "From $284,990 — cheapest Meck new TH",
+        "28216 upside corridor",
+        "Ask about model at closeout",
+        "NVR Mortgage incentives"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "email": "carolinasteam@ryanhomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 0,
+      "is_furnished": 0,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 181,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -15.9,
+        "rent_estimate": 1970,
+        "gross_yield_pct": 8.3,
+        "cap_rate_pct": 5.03,
+        "piti_monthly": 2041,
+        "cash_flow_monthly": -268,
+        "tax_annual_investor": 2793,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 64
       }
     },
     {
@@ -3815,9 +3879,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": "Spring move-in",
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.8,
@@ -3879,9 +3943,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3943,9 +4007,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4006,9 +4070,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4069,9 +4133,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.3,
@@ -4132,9 +4196,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4195,9 +4259,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4258,9 +4322,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4321,9 +4385,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:11:00",
-      "updated_at": "2026-07-03 06:11:00",
-      "last_seen": "2026-07-03 06:11:00",
+      "created_at": "2026-07-03 21:30:07",
+      "updated_at": "2026-07-03 21:30:07",
+      "last_seen": "2026-07-03 21:30:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4387,9 +4451,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": "Spring 2026",
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.8,
@@ -4450,9 +4514,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4500,9 +4564,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4563,9 +4627,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4626,9 +4690,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4685,9 +4749,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4744,9 +4808,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4805,9 +4869,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1,
@@ -4866,9 +4930,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 06:10:58",
-      "updated_at": "2026-07-03 06:10:58",
-      "last_seen": "2026-07-03 06:10:58",
+      "created_at": "2026-07-03 21:30:05",
+      "updated_at": "2026-07-03 21:30:05",
+      "last_seen": "2026-07-03 21:30:05",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.8,
@@ -4894,10 +4958,10 @@
     }
   ],
   "stats": {
-    "total": 78,
+    "total": 79,
     "price_cuts": 30,
-    "new_today": 78,
-    "avg_price": 362120.4864864865,
+    "new_today": 79,
+    "avg_price": 361092.08,
     "by_source": [
       {
         "source": "drhorton",
@@ -4925,7 +4989,7 @@
       },
       {
         "source": "models",
-        "count": 14
+        "count": 15
       },
       {
         "source": "newhomesource",
@@ -4955,7 +5019,7 @@
     "by_builder": [
       {
         "builder": "Ryan Homes",
-        "count": 10
+        "count": 11
       },
       {
         "builder": "Lennar",
@@ -5008,7 +5072,7 @@
       "listings_new": 20,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:15"
+      "ran_at": "2026-07-03 21:30:21"
     },
     {
       "id": 7,
@@ -5018,7 +5082,7 @@
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:12"
+      "ran_at": "2026-07-03 21:30:19"
     },
     {
       "id": 6,
@@ -5028,7 +5092,7 @@
       "listings_new": 12,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:10"
+      "ran_at": "2026-07-03 21:30:16"
     },
     {
       "id": 5,
@@ -5038,7 +5102,7 @@
       "listings_new": 3,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:08"
+      "ran_at": "2026-07-03 21:30:14"
     },
     {
       "id": 4,
@@ -5048,7 +5112,7 @@
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:05"
+      "ran_at": "2026-07-03 21:30:12"
     },
     {
       "id": 3,
@@ -5058,17 +5122,17 @@
       "listings_new": 8,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:03"
+      "ran_at": "2026-07-03 21:30:09"
     },
     {
       "id": 2,
       "source": "models",
       "status": "success",
-      "listings_found": 14,
-      "listings_new": 14,
+      "listings_found": 15,
+      "listings_new": 15,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:11:00"
+      "ran_at": "2026-07-03 21:30:07"
     },
     {
       "id": 1,
@@ -5078,7 +5142,7 @@
       "listings_new": 9,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 06:10:58"
+      "ran_at": "2026-07-03 21:30:05"
     }
   ],
   "leads": [
@@ -5093,7 +5157,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T18:58:33Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 18,
@@ -5106,7 +5170,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T17:10:07Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 5,
@@ -5119,7 +5183,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T16:48:37Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 16,
@@ -5132,7 +5196,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:31:00Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 17,
@@ -5145,7 +5209,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:30:47Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 20,
@@ -5158,7 +5222,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T18:00:20Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 13,
@@ -5171,7 +5235,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T16:13:45Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 2,
@@ -5184,7 +5248,7 @@
       "builder": "Ryan Homes",
       "url": null,
       "received_at": "2026-06-25T15:34:14Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 4,
@@ -5197,7 +5261,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T15:14:02Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 14,
@@ -5210,7 +5274,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T13:48:44Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 6,
@@ -5223,7 +5287,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:38:26Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 7,
@@ -5236,7 +5300,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:33:33Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 8,
@@ -5249,7 +5313,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T00:28:37Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 9,
@@ -5262,7 +5326,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T18:47:57Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 19,
@@ -5275,7 +5339,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T17:33:07Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 10,
@@ -5288,7 +5352,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T13:33:58Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 11,
@@ -5301,7 +5365,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T11:38:33Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 15,
@@ -5314,7 +5378,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T21:33:24Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 12,
@@ -5327,7 +5391,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T12:08:38Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     },
     {
       "id": 1,
@@ -5340,16 +5404,16 @@
       "builder": "David Weekley Homes",
       "url": null,
       "received_at": "2026-06-22T16:59:21Z",
-      "processed_at": "2026-07-03 06:11:17"
+      "processed_at": "2026-07-03 21:30:23"
     }
   ],
   "builders": [
     {
       "builder": "Ryan Homes",
-      "count": 10,
+      "count": 11,
       "min_price": 269990,
       "max_price": 445000,
-      "avg_price": 328997.77777777775
+      "avg_price": 324597
     },
     {
       "builder": "Lennar",
@@ -5481,7 +5545,7 @@
   "cities": [
     {
       "city": "Charlotte",
-      "count": 46
+      "count": 47
     },
     {
       "city": "Huntersville",
@@ -5957,10 +6021,34 @@
         "status": "ingested"
       },
       {
-        "name": "Apple Voice Memos / Apple Notes",
+        "name": "Real Estate Research ChatGPT project",
+        "type": "chatgpt",
+        "detail": "chatgpt.com/g/g-p-69d708cb… — your ChatGPT deep-research workspace (auth-walled to the app); its outputs (2027 upside rankings, builder research) are ingested via the Drive docs.",
+        "status": "sources-mirrored"
+      },
+      {
+        "name": "CLT Innovation Map (your app)",
+        "type": "app",
+        "detail": "charlotte-innovation-map-891571062215.us-west2.run.app — your own Cloud Run innovation map, linked from Innovation Watch.",
+        "status": "linked"
+      },
+      {
+        "name": "Real Estate – Claude Chats (Drive folder)",
+        "type": "drive-doc",
+        "detail": "Exported Claude conversations: submarkets & builder contracts brief (May 10), Lennar Next Gen overview, property-tracking app + offer analysis (Jun 18, incl. Property Desk & Tri Pointe Intel Desk).",
+        "status": "ingested"
+      },
+      {
+        "name": "VoiceMemosExport (Drive folder)",
         "type": "apple",
-        "detail": "Not reachable from any connected source (Apple doesn't sync them to Google Drive). Export or paste them in and the next research pass folds them in.",
-        "status": "unavailable"
+        "detail": "19 voice memos/videos now in Drive. Property-relevant: McGarry Trail (×2 — your 8128 McGarry price-cut tour) and 1597 Carolina Orchards Blvd (8 walkthrough takes — sale prep). No transcription available in-app yet; titles are property-mapped below.",
+        "status": "cataloged"
+      },
+      {
+        "name": "RealEstateMedia2026 (Drive folder)",
+        "type": "media",
+        "detail": "Community-by-community tour photo/video archive with _manifest.csv — 15 communities cataloged in the Tour Archive below.",
+        "status": "cataloged"
       }
     ],
     "builder_intel": [
@@ -5978,7 +6066,8 @@
         "market_share_pct": 10.8,
         "volume_rank": 2,
         "trust_rank_national": null,
-        "risk_flag": null
+        "risk_flag": null,
+        "note": "Charlotte communities (your Drive research): Sunset Creek Townhomes 28216 from $284,990 (3bd, 1,576–1,681 sqft — in your #2 upside corridor), Ashmore Square from $329,990, Stowe Branch Townhomes, Edenbrook, Ravenfield from $400K. Plus inbox-confirmed Cherry Grove (Kannapolis) Juniper $269,990. NVR runs asset-light: killer price plays, rare leasebacks; incentives tied to NVR Mortgage."
       },
       {
         "builder": "Lennar",
@@ -6085,7 +6174,10 @@
         "Lender allows 12-month leaseback; owner-occupied vs investment classification",
         "Whether comparable townhomes get similar incentives (comps pressure)",
         "3% selling-cost assumption realistic at exit"
-      ]
+      ],
+      "your_score": "86/100 — ranked #1 in your own comp set (email to Tracy)",
+      "yield_base_pct": 8.27,
+      "yield_18mo_pct": 12.41
     },
     "thesis": {
       "name": "Oakhurst / Cotswold value-gap thesis",
@@ -6241,6 +6333,201 @@
         "why": "Most active model-sale inventory in your inbox (Archer Row, Southbridge, Oakhurst) and quarter-end flexibility — BUT your research flags 1.15/5 local reviews. Proceed with independent inspection + written warranty terms.",
         "contact": "Taylor Shane 704-898-0338 · Debbie Coccia 803-487-0416"
       }
-    ]
+    ],
+    "upside_2027": {
+      "source": "'My top appreciation-upside areas for 2027' (ChatGPT deep research, Drive)",
+      "underwriting": "Metro base 2–4% · best close-in upside 4–7% · prime neighborhoods 2–4% · oversupplied new-construction 0–3% unless bought with a strong incentive",
+      "picks": [
+        {
+          "rank": 1,
+          "area": "Eastland / Windsor Park / Sheffield Park / Oakhurst edge",
+          "score": 8.8,
+          "appreciation": "4–7%",
+          "why": "Eastland Yards: $67M sports campus broke ground Mar 2026 ($41.2M city funding), 80-acre redevelopment. Your Craig Ave deal sits on this edge."
+        },
+        {
+          "rank": 2,
+          "area": "West Boulevard / Revolution Park / Reid Park",
+          "score": 8.5,
+          "appreciation": "4–7%",
+          "why": "Uptown/airport proximity, Corridors of Opportunity ($259M+ program), low basis."
+        },
+        {
+          "rank": 3,
+          "area": "North End / Sugar Creek / Tryon Hills",
+          "score": 8.2,
+          "appreciation": "3–6%",
+          "why": "NoDa spillover; Sugar Yards adds 186 townhomes; Blue Line adjacency. Watch new-supply competition."
+        },
+        {
+          "rank": 4,
+          "area": "River District / Dixie-Berryhill / Steele Creek west",
+          "score": 7.9,
+          "appreciation": "3–6%",
+          "why": "1,400-acre master plan; long runway; near-term appreciation capped by builder supply."
+        },
+        {
+          "rank": 5,
+          "area": "Albemarle Rd / Central Ave corridor",
+          "score": 7.8,
+          "appreciation": "3–6%",
+          "why": "Eastland spillover + Corridors of Opportunity; prefer SFH on good streets over generic townhomes."
+        },
+        {
+          "rank": 6,
+          "area": "West Sugar Creek / Derita / University edge",
+          "score": 7.4,
+          "appreciation": "3–5%",
+          "why": "Corridors of Opportunity + $35M RAISE grant zone; micro-location matters."
+        },
+        {
+          "rank": 7,
+          "area": "MoRA / Idlewild / East Forest",
+          "score": 7.1,
+          "appreciation": "3–5%",
+          "why": "Priced-out-buyer spillover; lower risk, fewer catalysts."
+        },
+        {
+          "rank": 8,
+          "area": "Belmont / Mount Holly / Cramerton",
+          "score": 7,
+          "appreciation": "3–5%",
+          "why": "West-side suburban spillover; your Banks at Mt. Holly tour fits here."
+        }
+      ],
+      "avoid": [
+        "Top-of-market pricing in Cotswold, Myers Park, Dilworth, SouthPark, Elizabeth — upside already priced in",
+        "Far-out new construction with many remaining builder lots — future resale competes with builder incentives",
+        "Generic townhomes in oversupplied corridors with rows of sitting quick move-ins"
+      ]
+    },
+    "contract_red_flags": {
+      "source": "Claude chat: 'Charlotte rental investment submarkets and builder contracts' (May 10)",
+      "items": [
+        "PRICE LOCK: push for a hard lock — no escalation clauses tied to material costs",
+        "RENTAL RESTRICTIONS (critical for leaseback/investor): read HOA CC&Rs for 1–2 yr rental bans or non-owner-occupancy caps BEFORE signing",
+        "WARRANTY ASSIGNMENT: confirm transferable to subsequent owners; do the 11-month walk before the 1-yr warranty expires (model sales: you may not get the 1-yr at all)",
+        "CLOSING-DATE FLEXIBILITY: builders can slip 6–12 months; negotiate a per-diem credit for missed close dates",
+        "PREFERRED-LENDER LOCK-IN: incentives are real but get a competing quote; 2-1 rate buydowns are currently aggressive and often worth taking",
+        "LOT SELECTION: interior/cul-de-sac lots hold value; avoid power lines, busy roads, corner-to-arterial",
+        "CHANGE ORDERS: for a rental keep upgrades minimal — LVP throughout, no carpet, upgraded laundry; skip premium finishes that don't move rent"
+      ]
+    },
+    "rental_playbook": {
+      "source": "Claude chat (May 10): $350–450K townhome, 5–7 yr hold",
+      "rows": [
+        {
+          "submarket": "NoDa",
+          "rent_3br": "$2,200–2,800",
+          "appreciation": "★★★★★",
+          "cash_flow": "Neutral",
+          "transit": "Blue Line",
+          "note": "Highest appreciation; permits +400% since Blue Line ext.; your One NoDa Park tour fits here"
+        },
+        {
+          "submarket": "South End / LoSo",
+          "rent_3br": "$2,400–3,000",
+          "appreciation": "★★★★★",
+          "cash_flow": "Tight",
+          "transit": "Blue Line",
+          "note": "30% of metro absorption; sub-$450K new TH rare"
+        },
+        {
+          "submarket": "University City",
+          "rent_3br": "$1,600–2,000",
+          "appreciation": "★★★★",
+          "cash_flow": "Best",
+          "transit": "Blue Line",
+          "note": "Pipeline collapsed 4,000 → 800 units; institutional money present"
+        },
+        {
+          "submarket": "Steele Creek",
+          "rent_3br": "$1,800–2,200",
+          "appreciation": "★★★",
+          "cash_flow": "Good",
+          "transit": "I-77/bus",
+          "note": "Family renters, low turnover; Eastwood & Taylor Morrison active"
+        },
+        {
+          "submarket": "Matthews / Indian Trail",
+          "rent_3br": "$1,700–2,100",
+          "appreciation": "★★★★",
+          "cash_flow": "Good",
+          "transit": "Silver Line (future)",
+          "note": "Buy near proposed stations before the premium prices in"
+        }
+      ]
+    },
+    "tripointe_roster": {
+      "source": "Claude chat (Jun 18): Tri Pointe Intel Desk",
+      "communities": [
+        {
+          "name": "Context at Oakhurst",
+          "detail": "$364,990+ · Rob Dybec · Rockwell quote was $384,990 (5/8) with $20K incentives ($10K lender + $10K price cut) on furnished HS13; $239/mo HOA, $15K earnest, Old Republic 1-yr. You declined 6/16 — door open."
+        },
+        {
+          "name": "Archer Row",
+          "detail": "Final release $439,990–$515,682 · Taylor Shane · decorated Beau model (Lot 1) at $479,990 furniture-and-all = Negotiation Target #1."
+        },
+        {
+          "name": "Southmont",
+          "detail": "165 townhomes — verify current pricing."
+        },
+        {
+          "name": "Ascend (Ballantyne)",
+          "detail": "$629,990+ — above budget."
+        },
+        {
+          "name": "Amplitude",
+          "detail": "Verify pricing."
+        },
+        {
+          "name": "Canopy at Marvin",
+          "detail": "Verify pricing."
+        }
+      ],
+      "strategy": "Don't email Rob again now — ping him the moment a tracked price cut or fall-through lands: 'saw this move, I'm ready if the numbers work.'"
+    },
+    "tour_archive": {
+      "source": "RealEstateMedia2026 + VoiceMemosExport folders (Drive, added 7/3)",
+      "communities_toured": [
+        "Central Living on Craig (your deal)",
+        "Grahym at Southbridge",
+        "Camdyn at Southbridge",
+        "The Greens at Fort Mill",
+        "Context Townhome (Oakhurst)",
+        "One NoDa Park",
+        "Oro Ballantyne",
+        "Berkshire Ballantyne",
+        "The Banks at Mt. Holly",
+        "Kinship",
+        "Beverley",
+        "The Bryant Apartments",
+        "Driving House Charlotte",
+        "Smith Mountain Lake"
+      ],
+      "voice_memos_mapped": [
+        {
+          "memo": "McGarry Trail (×2)",
+          "property": "8128 McGarry Trl #195 — the $4K Zillow price-cut lead; you toured & recorded",
+          "drive_folder": "VoiceMemosExport"
+        },
+        {
+          "memo": "1597 Carolina Orchards Blvd (8 takes)",
+          "property": "Your current home — sale-prep walkthroughs",
+          "drive_folder": "VoiceMemosExport"
+        }
+      ],
+      "note": "Audio/video transcription isn't available in-app; memos are cataloged and deep-linked by property."
+    },
+    "records_toolkit": {
+      "source": "Claude chat (Jun 18)",
+      "steps": [
+        "1. Assessor property card — property.spatialest.com/nc/mecklenburg (owner + prior sale)",
+        "2. POLARIS 3G — map, parcel, overlays",
+        "3. Register of Deeds — deed chain to 1990",
+        "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price"
+      ]
+    }
   }
 }

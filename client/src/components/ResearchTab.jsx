@@ -1,4 +1,4 @@
-import { BookOpen, Database, AlertTriangle, CheckCircle2, XCircle, Trophy, FileText, Lightbulb, ClipboardCheck, Phone } from 'lucide-react';
+import { BookOpen, Database, AlertTriangle, CheckCircle2, XCircle, Trophy, FileText, Lightbulb, ClipboardCheck, Phone, TrendingUp } from 'lucide-react';
 
 const fmt = n => (n || n === 0) ? `$${Math.round(n).toLocaleString()}` : '—';
 
@@ -19,7 +19,11 @@ export default function ResearchTab({ research }) {
     return <p className="text-sm text-gray-400 text-center py-12">Research data not loaded yet.</p>;
   }
 
-  const { sources = [], builder_intel = [], your_deal, thesis, innovation_watch, negotiation_playbook, best_builders_to_talk_to = [] } = research;
+  const {
+    sources = [], builder_intel = [], your_deal, thesis, innovation_watch,
+    negotiation_playbook, best_builders_to_talk_to = [],
+    upside_2027, contract_red_flags, rental_playbook, tripointe_roster, tour_archive, records_toolkit,
+  } = research;
 
   return (
     <div className="space-y-6">
@@ -142,6 +146,119 @@ export default function ResearchTab({ research }) {
               ))}
             </div>
             <p className="text-xs text-gray-500 mt-2">{thesis.resale_signal}</p>
+          </section>
+        )}
+      </div>
+
+      {/* 2027 upside picks */}
+      {upside_2027 && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-4 py-3 border-b border-gray-100 flex items-center gap-2 flex-wrap">
+            <TrendingUp className="w-4 h-4 text-green-600" />
+            <h3 className="text-sm font-semibold text-gray-700">Your 2027 appreciation-upside picks</h3>
+            <span className="ml-auto text-xs text-gray-400">{upside_2027.source}</span>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-xs text-gray-500 border-b border-gray-100">
+                  <th className="text-left font-medium px-4 py-2">#</th>
+                  <th className="text-left font-medium px-3 py-2">Area</th>
+                  <th className="text-right font-medium px-3 py-2">Upside score</th>
+                  <th className="text-right font-medium px-3 py-2">2027 appr.</th>
+                  <th className="text-left font-medium px-4 py-2">Catalyst</th>
+                </tr>
+              </thead>
+              <tbody>
+                {upside_2027.picks.map(p => (
+                  <tr key={p.rank} className="border-b border-gray-50 hover:bg-gray-50">
+                    <td className="px-4 py-2 font-bold text-gray-400">{p.rank}</td>
+                    <td className="px-3 py-2 font-medium text-gray-800">{p.area}</td>
+                    <td className="px-3 py-2 text-right font-semibold text-gray-900">{p.score}/10</td>
+                    <td className="px-3 py-2 text-right text-green-700 font-medium">{p.appreciation}</td>
+                    <td className="px-4 py-2 text-xs text-gray-500 max-w-md">{p.why}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="px-4 py-2.5 bg-amber-50 border-t border-amber-100">
+            <p className="text-xs font-semibold text-amber-800 mb-0.5">Avoid list:</p>
+            {upside_2027.avoid.map(a => <p key={a} className="text-xs text-amber-700">• {a}</p>)}
+          </div>
+        </section>
+      )}
+
+      {/* Rental playbook + contract red flags */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {rental_playbook && (
+          <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">Rental submarket playbook <span className="text-xs font-normal text-gray-400">({rental_playbook.source})</span></h3>
+            <div className="space-y-2">
+              {rental_playbook.rows.map(r2 => (
+                <div key={r2.submarket} className="bg-gray-50 rounded-lg p-2.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-semibold text-gray-800">{r2.submarket}</span>
+                    <span className="text-gray-600">{r2.rent_3br} · {r2.appreciation} · CF: {r2.cash_flow} · {r2.transit}</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">{r2.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {contract_red_flags && (
+          <section className="bg-red-50 rounded-xl border border-red-100 p-4">
+            <h3 className="text-sm font-semibold text-red-900 flex items-center gap-2 mb-2">
+              <AlertTriangle className="w-4 h-4" /> Builder contract red flags — check before signing
+            </h3>
+            <ul className="space-y-1.5">
+              {contract_red_flags.items.map(i => (
+                <li key={i} className="flex items-start gap-1.5 text-xs text-red-900/80">
+                  <ClipboardCheck className="w-3.5 h-3.5 mt-0.5 shrink-0 text-red-500" />{i}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+
+      {/* Tri Pointe roster + tour archive */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {tripointe_roster && (
+          <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">Tri Pointe Charlotte roster <span className="text-xs font-normal text-gray-400">(your Intel Desk chat)</span></h3>
+            <div className="space-y-1.5">
+              {tripointe_roster.communities.map(c => (
+                <div key={c.name} className="text-xs">
+                  <span className="font-semibold text-gray-800">{c.name}</span>
+                  <span className="text-gray-500"> — {c.detail}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-blue-700 bg-blue-50 rounded-lg p-2 mt-2">💡 {tripointe_roster.strategy}</p>
+          </section>
+        )}
+
+        {tour_archive && (
+          <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">🎞️ Tour media archive <span className="text-xs font-normal text-gray-400">(RealEstateMedia2026 + VoiceMemosExport)</span></h3>
+            <div className="flex flex-wrap gap-1.5 mb-2">
+              {tour_archive.communities_toured.map(c => (
+                <span key={c} className="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-700">{c}</span>
+              ))}
+            </div>
+            {(tour_archive.voice_memos_mapped || []).map(m => (
+              <p key={m.memo} className="text-xs text-gray-600 mt-1">🎙️ <strong>{m.memo}</strong> → {m.property}</p>
+            ))}
+            <p className="text-xs text-gray-400 mt-1.5">{tour_archive.note}</p>
+            {records_toolkit && (
+              <div className="mt-2 pt-2 border-t border-gray-100">
+                <p className="text-xs font-semibold text-gray-600 mb-1">Mecklenburg records lookup path:</p>
+                {records_toolkit.steps.map(s => <p key={s} className="text-xs text-gray-500">{s}</p>)}
+              </div>
+            )}
           </section>
         )}
       </div>
