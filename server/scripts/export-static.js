@@ -38,6 +38,10 @@ async function main() {
     builders,
     cities,
     market: getMarketIntel(),
+    research: (() => {
+      const f = path.join(__dirname, '..', 'data', 'research.json');
+      return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+    })(),
   };
 
   const outPath = path.join(__dirname, '..', '..', 'client', 'public', 'data.json');
