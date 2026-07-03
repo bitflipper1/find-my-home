@@ -1,7 +1,7 @@
 import { CheckCircle2, XCircle, Clock } from 'lucide-react';
 
 const SOURCE_LABELS = {
-  gmail: 'Your Gmail Inbox',
+  gmail: 'Your Gmail Inbox', models: 'Model Home Leads',
   zillow: 'Zillow', realtor: 'Realtor.com', opendoor: 'Opendoor',
   newhomesource: 'NewHomeSource', homes: 'Homes.com', builders: 'Builder Sites',
 };

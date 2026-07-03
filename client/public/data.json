@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T17:45:48.006Z",
+  "generated_at": "2026-07-03T21:45:09.436Z",
   "listings": [
     {
       "id": "builder_drhorton_1",
@@ -39,12 +39,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.6,
-      "price_cut_amt": 13000
+      "price_cut_amt": 13000,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 195,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -9.3,
+        "rent_estimate": 1744,
+        "gross_yield_pct": 7.69,
+        "cap_rate_pct": 4.42,
+        "piti_monthly": 1964,
+        "cash_flow_monthly": -394,
+        "tax_annual_investor": 2666,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 78
+      }
     },
     {
       "id": "builder_drhorton_2",
@@ -84,12 +103,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 198,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 6.9,
+        "rent_estimate": 1850,
+        "gross_yield_pct": 7.28,
+        "cap_rate_pct": 4.21,
+        "piti_monthly": 2160,
+        "cash_flow_monthly": -495,
+        "tax_annual_investor": 2989,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 37
+      }
     },
     {
       "id": "builder_drhorton_3",
@@ -129,12 +167,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.3,
-      "price_cut_amt": 13000
+      "price_cut_amt": 13000,
+      "invest": {
+        "submarket": "steele-creek",
+        "submarket_label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 197,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 1.1,
+        "rent_estimate": 1742,
+        "gross_yield_pct": 7.18,
+        "cap_rate_pct": 4.06,
+        "piti_monthly": 2077,
+        "cash_flow_monthly": -509,
+        "tax_annual_investor": 2852,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 57
+      }
     },
     {
       "id": "builder_lennar_1",
@@ -174,12 +231,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "steele-creek",
+        "submarket_label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 200,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 2.4,
+        "rent_estimate": 1827,
+        "gross_yield_pct": 7.1,
+        "cap_rate_pct": 4.07,
+        "piti_monthly": 2184,
+        "cash_flow_monthly": -540,
+        "tax_annual_investor": 3028,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 42
+      }
     },
     {
       "id": "builder_lennar_2",
@@ -219,12 +295,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4,
-      "price_cut_amt": 14000
+      "price_cut_amt": 14000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 4.8,
+        "rent_estimate": 2072,
+        "gross_yield_pct": 7.36,
+        "cap_rate_pct": 4.42,
+        "piti_monthly": 2357,
+        "cash_flow_monthly": -492,
+        "tax_annual_investor": 3312,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 53
+      }
     },
     {
       "id": "builder_lennar_3",
@@ -264,12 +359,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "concord-kannapolis",
+        "submarket_label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 198,
+        "market_ppsf": 170,
+        "ppsf_vs_market_pct": 16.5,
+        "rent_estimate": 1565,
+        "gross_yield_pct": 6.37,
+        "cap_rate_pct": 3.44,
+        "piti_monthly": 2079,
+        "cash_flow_monthly": -670,
+        "tax_annual_investor": 2626,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "score": 29
+      }
     },
     {
       "id": "builder_lennar_4",
@@ -309,12 +423,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.1,
-      "price_cut_amt": 12000
+      "price_cut_amt": 12000,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -7.5,
+        "rent_estimate": 1748,
+        "gross_yield_pct": 7.55,
+        "cap_rate_pct": 4.32,
+        "piti_monthly": 2000,
+        "cash_flow_monthly": -427,
+        "tax_annual_investor": 2724,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 75
+      }
     },
     {
       "id": "builder_ryanhomes_1",
@@ -354,12 +487,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.1,
-      "price_cut_amt": 16000
+      "price_cut_amt": 16000,
+      "invest": {
+        "submarket": "matthews",
+        "submarket_label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 211,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -2,
+        "rent_estimate": 2030,
+        "gross_yield_pct": 6.55,
+        "cap_rate_pct": 3.8,
+        "piti_monthly": 2559,
+        "cash_flow_monthly": -732,
+        "tax_annual_investor": 3646,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 55
+      }
     },
     {
       "id": "builder_ryanhomes_2",
@@ -399,12 +551,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 201,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 8.8,
+        "rent_estimate": 1896,
+        "gross_yield_pct": 7.15,
+        "cap_rate_pct": 4.16,
+        "piti_monthly": 2238,
+        "cash_flow_monthly": -531,
+        "tax_annual_investor": 3116,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 34
+      }
     },
     {
       "id": "builder_ryanhomes_3",
@@ -444,12 +615,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.6,
-      "price_cut_amt": 13000
+      "price_cut_amt": 13000,
+      "invest": {
+        "submarket": "matthews",
+        "submarket_label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 187,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -13.2,
+        "rent_estimate": 2151,
+        "gross_yield_pct": 7.4,
+        "cap_rate_pct": 4.49,
+        "piti_monthly": 2422,
+        "cash_flow_monthly": -486,
+        "tax_annual_investor": 3420,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 70
+      }
     },
     {
       "id": "builder_meritage_1",
@@ -489,12 +679,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "huntersville",
+        "submarket_label": "Huntersville",
+        "county": "NC-Mecklenburg",
+        "ppsf": 211,
+        "market_ppsf": 220,
+        "ppsf_vs_market_pct": -4.1,
+        "rent_estimate": 2283,
+        "gross_yield_pct": 6.54,
+        "cap_rate_pct": 3.92,
+        "piti_monthly": 2839,
+        "cash_flow_monthly": -784,
+        "tax_annual_investor": 4106,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 46
+      }
     },
     {
       "id": "builder_meritage_2",
@@ -534,12 +743,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.3,
-      "price_cut_amt": 17000
+      "price_cut_amt": 17000,
+      "invest": {
+        "submarket": "lake-norman",
+        "submarket_label": "Cornelius / Lake Norman",
+        "county": "NC-Mecklenburg",
+        "ppsf": 222,
+        "market_ppsf": 250,
+        "ppsf_vs_market_pct": -11.3,
+        "rent_estimate": 2694,
+        "gross_yield_pct": 6.49,
+        "cap_rate_pct": 4.03,
+        "piti_monthly": 3309,
+        "cash_flow_monthly": -885,
+        "tax_annual_investor": 4880,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3.2,
+        "score": 61
+      }
     },
     {
       "id": "builder_meritage_3",
@@ -579,12 +807,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "lake-norman",
+        "submarket_label": "Cornelius / Lake Norman",
+        "county": "NC-Mecklenburg",
+        "ppsf": 227,
+        "market_ppsf": 250,
+        "ppsf_vs_market_pct": -9.3,
+        "rent_estimate": 2430,
+        "gross_yield_pct": 6.35,
+        "cap_rate_pct": 3.84,
+        "piti_monthly": 3077,
+        "cash_flow_monthly": -890,
+        "tax_annual_investor": 4498,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3.2,
+        "score": 50
+      }
     },
     {
       "id": "builder_eastwood_1",
@@ -624,12 +871,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.3,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 202,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 9.3,
+        "rent_estimate": 1982,
+        "gross_yield_pct": 7.12,
+        "cap_rate_pct": 4.19,
+        "piti_monthly": 2333,
+        "cash_flow_monthly": -549,
+        "tax_annual_investor": 3273,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 47
+      }
     },
     {
       "id": "builder_eastwood_2",
@@ -669,12 +935,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 7.5,
+        "rent_estimate": 1798,
+        "gross_yield_pct": 7.24,
+        "cap_rate_pct": 4.15,
+        "piti_monthly": 2119,
+        "cash_flow_monthly": -501,
+        "tax_annual_investor": 2920,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 36
+      }
     },
     {
       "id": "builder_eastwood_3",
@@ -714,12 +999,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.9,
-      "price_cut_amt": 13000
+      "price_cut_amt": 13000,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 201,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 8.8,
+        "rent_estimate": 1902,
+        "gross_yield_pct": 7.15,
+        "cap_rate_pct": 4.16,
+        "piti_monthly": 2244,
+        "cash_flow_monthly": -532,
+        "tax_annual_investor": 3126,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 46
+      }
     },
     {
       "id": "builder_eastwood_4",
@@ -759,12 +1063,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "ballantyne",
+        "submarket_label": "Ballantyne / South Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 224,
+        "market_ppsf": 265,
+        "ppsf_vs_market_pct": -15.4,
+        "rent_estimate": 2725,
+        "gross_yield_pct": 6.69,
+        "cap_rate_pct": 4.19,
+        "piti_monthly": 3256,
+        "cash_flow_monthly": -803,
+        "tax_annual_investor": 4792,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3,
+        "forecast_3yr": 3,
+        "score": 52
+      }
     },
     {
       "id": "builder_smdi_1",
@@ -804,12 +1127,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 197,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -8.3,
+        "rent_estimate": 1706,
+        "gross_yield_pct": 7.61,
+        "cap_rate_pct": 4.33,
+        "piti_monthly": 1946,
+        "cash_flow_monthly": -411,
+        "tax_annual_investor": 2636,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 64
+      }
     },
     {
       "id": "builder_smdi_2",
@@ -849,12 +1191,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.3,
-      "price_cut_amt": 10000
+      "price_cut_amt": 10000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 200,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 5,
+        "rent_estimate": 1767,
+        "gross_yield_pct": 7.34,
+        "cap_rate_pct": 4.19,
+        "piti_monthly": 2065,
+        "cash_flow_monthly": -475,
+        "tax_annual_investor": 2832,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 50
+      }
     },
     {
       "id": "builder_smdi_3",
@@ -894,12 +1255,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:45",
-      "updated_at": "2026-06-27 17:45:45",
-      "last_seen": "2026-06-27 17:45:45",
+      "created_at": "2026-07-03 21:45:07",
+      "updated_at": "2026-07-03 21:45:07",
+      "last_seen": "2026-07-03 21:45:07",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -7.6,
+        "rent_estimate": 1623,
+        "gross_yield_pct": 7.55,
+        "cap_rate_pct": 4.21,
+        "piti_monthly": 1881,
+        "cash_flow_monthly": -420,
+        "tax_annual_investor": 2528,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 63
+      }
     },
     {
       "id": "homes_s1",
@@ -934,12 +1314,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "steele-creek",
+        "submarket_label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 204,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 4.5,
+        "rent_estimate": 1847,
+        "gross_yield_pct": 6.95,
+        "cap_rate_pct": 3.98,
+        "piti_monthly": 2244,
+        "cash_flow_monthly": -582,
+        "tax_annual_investor": 3126,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 37
+      }
     },
     {
       "id": "homes_s2",
@@ -974,12 +1373,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 5.9,
-      "price_cut_amt": 18000
+      "price_cut_amt": 18000,
+      "invest": {
+        "submarket": "concord-kannapolis",
+        "submarket_label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 194,
+        "market_ppsf": 170,
+        "ppsf_vs_market_pct": 14.1,
+        "rent_estimate": 1554,
+        "gross_yield_pct": 6.5,
+        "cap_rate_pct": 3.52,
+        "piti_monthly": 2032,
+        "cash_flow_monthly": -633,
+        "tax_annual_investor": 2554,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "score": 45
+      }
     },
     {
       "id": "homes_s3",
@@ -1014,12 +1432,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "indian-land",
+        "submarket_label": "Indian Land, SC",
+        "county": "SC-Lancaster",
+        "ppsf": 200,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 8.1,
+        "rent_estimate": 1939,
+        "gross_yield_pct": 6.48,
+        "cap_rate_pct": 3.33,
+        "piti_monthly": 2593,
+        "cash_flow_monthly": -847,
+        "tax_annual_investor": 4847,
+        "sc_investor_tax_warning": true,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 29
+      }
     },
     {
       "id": "homes_s4",
@@ -1054,12 +1491,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "matthews",
+        "submarket_label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 189,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -12.3,
+        "rent_estimate": 2409,
+        "gross_yield_pct": 7.32,
+        "cap_rate_pct": 4.56,
+        "piti_monthly": 2696,
+        "cash_flow_monthly": -528,
+        "tax_annual_investor": 3871,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 59
+      }
     },
     {
       "id": "homes_s5",
@@ -1094,12 +1550,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 6.7,
-      "price_cut_amt": 18000
+      "price_cut_amt": 18000,
+      "invest": {
+        "submarket": "gastonia",
+        "submarket_label": "Gastonia / Belmont",
+        "county": "NC-Gaston",
+        "ppsf": 184,
+        "market_ppsf": 160,
+        "ppsf_vs_market_pct": 14.9,
+        "rent_estimate": 1355,
+        "gross_yield_pct": 6.53,
+        "cap_rate_pct": 3.16,
+        "piti_monthly": 1842,
+        "cash_flow_monthly": -622,
+        "tax_annual_investor": 2615,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4.2,
+        "score": 45
+      }
     },
     {
       "id": "homes_s6",
@@ -1134,12 +1609,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:43",
-      "updated_at": "2026-06-27 17:45:43",
-      "last_seen": "2026-06-27 17:45:43",
+      "created_at": "2026-07-03 21:45:05",
+      "updated_at": "2026-07-03 21:45:05",
+      "last_seen": "2026-07-03 21:45:05",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "waxhaw-monroe",
+        "submarket_label": "Waxhaw / Monroe",
+        "county": "NC-Union",
+        "ppsf": 205,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 5.3,
+        "rent_estimate": 2394,
+        "gross_yield_pct": 6.14,
+        "cap_rate_pct": 3.87,
+        "piti_monthly": 3049,
+        "cash_flow_monthly": -894,
+        "tax_annual_investor": 3604,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 30
+      }
     },
     {
       "id": "nhs_sample_1",
@@ -1179,12 +1673,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.5,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 197,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 3.9,
+        "rent_estimate": 1946,
+        "gross_yield_pct": 7.41,
+        "cap_rate_pct": 4.38,
+        "piti_monthly": 2220,
+        "cash_flow_monthly": -469,
+        "tax_annual_investor": 3087,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 56
+      }
     },
     {
       "id": "nhs_sample_2",
@@ -1224,12 +1737,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "mooresville",
+        "submarket_label": "Mooresville",
+        "county": "NC-Iredell",
+        "ppsf": 198,
+        "market_ppsf": 210,
+        "ppsf_vs_market_pct": -5.8,
+        "rent_estimate": 2475,
+        "gross_yield_pct": 6.67,
+        "cap_rate_pct": 4.33,
+        "piti_monthly": 2909,
+        "cash_flow_monthly": -681,
+        "tax_annual_investor": 3338,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 51
+      }
     },
     {
       "id": "nhs_sample_3",
@@ -1269,12 +1801,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.2,
-      "price_cut_amt": 13000
+      "price_cut_amt": 13000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 198,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 4.2,
+        "rent_estimate": 1842,
+        "gross_yield_pct": 7.39,
+        "cap_rate_pct": 4.29,
+        "piti_monthly": 2125,
+        "cash_flow_monthly": -467,
+        "tax_annual_investor": 2930,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 55
+      }
     },
     {
       "id": "nhs_sample_4",
@@ -1314,12 +1865,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 203,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 6.7,
+        "rent_estimate": 1739,
+        "gross_yield_pct": 7.22,
+        "cap_rate_pct": 4.09,
+        "piti_monthly": 2065,
+        "cash_flow_monthly": -500,
+        "tax_annual_investor": 2832,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 37
+      }
     },
     {
       "id": "nhs_sample_5",
@@ -1359,12 +1929,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.2,
-      "price_cut_amt": 26000
+      "price_cut_amt": 26000,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 226,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -27.1,
+        "rent_estimate": 3710,
+        "gross_yield_pct": 7.43,
+        "cap_rate_pct": 5.02,
+        "piti_monthly": 3910,
+        "cash_flow_monthly": -571,
+        "tax_annual_investor": 5870,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 71
+      }
     },
     {
       "id": "nhs_sample_6",
@@ -1404,12 +1993,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "huntersville",
+        "submarket_label": "Huntersville",
+        "county": "NC-Mecklenburg",
+        "ppsf": 210,
+        "market_ppsf": 220,
+        "ppsf_vs_market_pct": -4.4,
+        "rent_estimate": 2128,
+        "gross_yield_pct": 6.56,
+        "cap_rate_pct": 3.86,
+        "piti_monthly": 2660,
+        "cash_flow_monthly": -745,
+        "tax_annual_investor": 3812,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 47
+      }
     },
     {
       "id": "nhs_sample_7",
@@ -1449,12 +2057,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.8,
-      "price_cut_amt": 14000
+      "price_cut_amt": 14000,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 197,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -8.5,
+        "rent_estimate": 1748,
+        "gross_yield_pct": 7.63,
+        "cap_rate_pct": 4.38,
+        "piti_monthly": 1982,
+        "cash_flow_monthly": -409,
+        "tax_annual_investor": 2695,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 79
+      }
     },
     {
       "id": "nhs_sample_8",
@@ -1494,12 +2121,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "lake-norman",
+        "submarket_label": "Cornelius / Lake Norman",
+        "county": "NC-Mecklenburg",
+        "ppsf": 218,
+        "market_ppsf": 250,
+        "ppsf_vs_market_pct": -12.8,
+        "rent_estimate": 2856,
+        "gross_yield_pct": 6.6,
+        "cap_rate_pct": 4.17,
+        "piti_monthly": 3434,
+        "cash_flow_monthly": -864,
+        "tax_annual_investor": 5086,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3.2,
+        "score": 52
+      }
     },
     {
       "id": "nhs_sample_9",
@@ -1539,12 +2185,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.9,
-      "price_cut_amt": 14000
+      "price_cut_amt": 14000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 207,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 9,
+        "rent_estimate": 2050,
+        "gross_yield_pct": 7.07,
+        "cap_rate_pct": 4.19,
+        "piti_monthly": 2416,
+        "cash_flow_monthly": -571,
+        "tax_annual_investor": 3410,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 45
+      }
     },
     {
       "id": "nhs_sample_10",
@@ -1584,12 +2249,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "steele-creek",
+        "submarket_label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 198,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 1.4,
+        "rent_estimate": 1558,
+        "gross_yield_pct": 7.16,
+        "cap_rate_pct": 3.88,
+        "piti_monthly": 1899,
+        "cash_flow_monthly": -496,
+        "tax_annual_investor": 2558,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 44
+      }
     },
     {
       "id": "nhs_sample_11",
@@ -1629,12 +2313,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.2,
-      "price_cut_amt": 18000
+      "price_cut_amt": 18000,
+      "invest": {
+        "submarket": "matthews",
+        "submarket_label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 205,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -4.7,
+        "rent_estimate": 2312,
+        "gross_yield_pct": 6.73,
+        "cap_rate_pct": 4.08,
+        "piti_monthly": 2797,
+        "cash_flow_monthly": -717,
+        "tax_annual_investor": 4038,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 61
+      }
     },
     {
       "id": "nhs_sample_12",
@@ -1674,12 +2377,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:41",
-      "updated_at": "2026-06-27 17:45:41",
-      "last_seen": "2026-06-27 17:45:41",
+      "created_at": "2026-07-03 21:45:02",
+      "updated_at": "2026-07-03 21:45:02",
+      "last_seen": "2026-07-03 21:45:02",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 197,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -8.2,
+        "rent_estimate": 1950,
+        "gross_yield_pct": 7.6,
+        "cap_rate_pct": 4.51,
+        "piti_monthly": 2178,
+        "cash_flow_monthly": -423,
+        "tax_annual_investor": 3018,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 64
+      }
     },
     {
       "id": "opendoor_sample_1",
@@ -1714,12 +2436,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:39",
-      "updated_at": "2026-06-27 17:45:39",
-      "last_seen": "2026-06-27 17:45:39",
+      "created_at": "2026-07-03 21:45:00",
+      "updated_at": "2026-07-03 21:45:00",
+      "last_seen": "2026-07-03 21:45:00",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 5.2,
-      "price_cut_amt": 16000
+      "price_cut_amt": 16000,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 195,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -9.2,
+        "rent_estimate": 1850,
+        "gross_yield_pct": 7.68,
+        "cap_rate_pct": 4.5,
+        "piti_monthly": 2065,
+        "cash_flow_monthly": -400,
+        "tax_annual_investor": 2832,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 79
+      }
     },
     {
       "id": "opendoor_sample_2",
@@ -1754,12 +2495,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:39",
-      "updated_at": "2026-06-27 17:45:39",
-      "last_seen": "2026-06-27 17:45:39",
+      "created_at": "2026-07-03 21:45:00",
+      "updated_at": "2026-07-03 21:45:00",
+      "last_seen": "2026-07-03 21:45:00",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.7,
-      "price_cut_amt": 17000
+      "price_cut_amt": 17000,
+      "invest": {
+        "submarket": "huntersville",
+        "submarket_label": "Huntersville",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 220,
+        "ppsf_vs_market_pct": -9.6,
+        "rent_estimate": 1978,
+        "gross_yield_pct": 6.94,
+        "cap_rate_pct": 4.06,
+        "piti_monthly": 2381,
+        "cash_flow_monthly": -601,
+        "tax_annual_investor": 3352,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 70
+      }
     },
     {
       "id": "opendoor_sample_3",
@@ -1794,12 +2554,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:39",
-      "updated_at": "2026-06-27 17:45:39",
-      "last_seen": "2026-06-27 17:45:39",
+      "created_at": "2026-07-03 21:45:00",
+      "updated_at": "2026-07-03 21:45:00",
+      "last_seen": "2026-07-03 21:45:00",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "indian-land",
+        "submarket_label": "Indian Land, SC",
+        "county": "SC-Lancaster",
+        "ppsf": 194,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 4.9,
+        "rent_estimate": 2214,
+        "gross_yield_pct": 6.68,
+        "cap_rate_pct": 3.62,
+        "piti_monthly": 2837,
+        "cash_flow_monthly": -844,
+        "tax_annual_investor": 5373,
+        "sc_investor_tax_warning": true,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 35
+      }
     },
     {
       "id": "realtor_sample_1",
@@ -1839,12 +2618,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.6,
-      "price_cut_amt": 20000
+      "price_cut_amt": 20000,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 222,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -28.5,
+        "rent_estimate": 2646,
+        "gross_yield_pct": 7.58,
+        "cap_rate_pct": 4.85,
+        "piti_monthly": 2839,
+        "cash_flow_monthly": -458,
+        "tax_annual_investor": 4106,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 73
+      }
     },
     {
       "id": "realtor_sample_2",
@@ -1884,12 +2682,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "matthews",
+        "submarket_label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 218,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": 1.4,
+        "rent_estimate": 1978,
+        "gross_yield_pct": 6.33,
+        "cap_rate_pct": 3.61,
+        "piti_monthly": 2577,
+        "cash_flow_monthly": -797,
+        "tax_annual_investor": 3675,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 36
+      }
     },
     {
       "id": "realtor_sample_3",
@@ -1929,12 +2746,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "lake-norman",
+        "submarket_label": "Cornelius / Lake Norman",
+        "county": "NC-Mecklenburg",
+        "ppsf": 233,
+        "market_ppsf": 250,
+        "ppsf_vs_market_pct": -6.9,
+        "rent_estimate": 2520,
+        "gross_yield_pct": 6.18,
+        "cap_rate_pct": 3.74,
+        "piti_monthly": 3256,
+        "cash_flow_monthly": -988,
+        "tax_annual_investor": 4792,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3.2,
+        "score": 46
+      }
     },
     {
       "id": "realtor_sample_4",
@@ -1974,12 +2810,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 208,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 9.6,
+        "rent_estimate": 1928,
+        "gross_yield_pct": 7.03,
+        "cap_rate_pct": 4.09,
+        "piti_monthly": 2303,
+        "cash_flow_monthly": -568,
+        "tax_annual_investor": 3224,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 33
+      }
     },
     {
       "id": "realtor_sample_5",
@@ -2019,12 +2874,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.5,
-      "price_cut_amt": 20000
+      "price_cut_amt": 20000,
+      "invest": {
+        "submarket": "ballantyne",
+        "submarket_label": "Ballantyne / South Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 229,
+        "market_ppsf": 265,
+        "ppsf_vs_market_pct": -13.5,
+        "rent_estimate": 3000,
+        "gross_yield_pct": 6.55,
+        "cap_rate_pct": 4.16,
+        "piti_monthly": 3619,
+        "cash_flow_monthly": -919,
+        "tax_annual_investor": 5390,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3,
+        "forecast_3yr": 3,
+        "score": 61
+      }
     },
     {
       "id": "realtor_sample_6",
@@ -2064,12 +2938,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:36",
-      "updated_at": "2026-06-27 17:45:36",
-      "last_seen": "2026-06-27 17:45:36",
+      "created_at": "2026-07-03 21:44:58",
+      "updated_at": "2026-07-03 21:44:58",
+      "last_seen": "2026-07-03 21:44:58",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "steele-creek",
+        "submarket_label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 196,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 0.5,
+        "rent_estimate": 1794,
+        "gross_yield_pct": 7.22,
+        "cap_rate_pct": 4.13,
+        "piti_monthly": 2119,
+        "cash_flow_monthly": -504,
+        "tax_annual_investor": 2920,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 46
+      }
     },
     {
       "id": "zillow_sample_1",
@@ -2111,12 +3004,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 4.7,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "fort-mill",
+        "submarket_label": "Fort Mill / Tega Cay, SC",
+        "county": "SC-York",
+        "ppsf": 185,
+        "market_ppsf": 210,
+        "ppsf_vs_market_pct": -12,
+        "rent_estimate": 1815,
+        "gross_yield_pct": 7.14,
+        "cap_rate_pct": 3.57,
+        "piti_monthly": 2293,
+        "cash_flow_monthly": -659,
+        "tax_annual_investor": 4575,
+        "sc_investor_tax_warning": true,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 72
+      }
     },
     {
       "id": "zillow_sample_2",
@@ -2158,12 +3070,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 199,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 7.8,
+        "rent_estimate": 2076,
+        "gross_yield_pct": 7.22,
+        "cap_rate_pct": 4.32,
+        "piti_monthly": 2399,
+        "cash_flow_monthly": -530,
+        "tax_annual_investor": 3381,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 35
+      }
     },
     {
       "id": "zillow_sample_3",
@@ -2205,12 +3136,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "uptown",
+        "submarket_label": "Uptown / South End",
+        "county": "NC-Mecklenburg",
+        "ppsf": 204,
+        "market_ppsf": 340,
+        "ppsf_vs_market_pct": -39.9,
+        "rent_estimate": 2987,
+        "gross_yield_pct": 9.69,
+        "cap_rate_pct": 6.62,
+        "piti_monthly": 2547,
+        "cash_flow_monthly": 141,
+        "tax_annual_investor": 3626,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 2.5,
+        "forecast_3yr": 3,
+        "score": 60
+      }
     },
     {
       "id": "zillow_sample_4",
@@ -2252,12 +3202,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.8,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "uptown",
+        "submarket_label": "Uptown / South End",
+        "county": "NC-Mecklenburg",
+        "ppsf": 201,
+        "market_ppsf": 340,
+        "ppsf_vs_market_pct": -40.9,
+        "rent_estimate": 3119,
+        "gross_yield_pct": 9.85,
+        "cap_rate_pct": 6.8,
+        "piti_monthly": 2607,
+        "cash_flow_monthly": 200,
+        "tax_annual_investor": 3724,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 2.5,
+        "forecast_3yr": 3,
+        "score": 71
+      }
     },
     {
       "id": "zillow_sample_5",
@@ -2299,12 +3268,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "uptown",
+        "submarket_label": "Uptown / South End",
+        "county": "NC-Mecklenburg",
+        "ppsf": 213,
+        "market_ppsf": 340,
+        "ppsf_vs_market_pct": -37.3,
+        "rent_estimate": 3251,
+        "gross_yield_pct": 9.29,
+        "cap_rate_pct": 6.39,
+        "piti_monthly": 2845,
+        "cash_flow_monthly": 81,
+        "tax_annual_investor": 4116,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 2.5,
+        "forecast_3yr": 3,
+        "score": 60
+      }
     },
     {
       "id": "zillow_sample_6",
@@ -2346,12 +3334,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "plaza-noda",
+        "submarket_label": "Plaza Midwood / NoDa",
+        "county": "NC-Mecklenburg",
+        "ppsf": 217,
+        "market_ppsf": 290,
+        "ppsf_vs_market_pct": -25.1,
+        "rent_estimate": 2973,
+        "gross_yield_pct": 8.02,
+        "cap_rate_pct": 5.31,
+        "piti_monthly": 2994,
+        "cash_flow_monthly": -318,
+        "tax_annual_investor": 4361,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 61
+      }
     },
     {
       "id": "zillow_sample_7",
@@ -2393,12 +3400,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.2,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "plaza-noda",
+        "submarket_label": "Plaza Midwood / NoDa",
+        "county": "NC-Mecklenburg",
+        "ppsf": 214,
+        "market_ppsf": 290,
+        "ppsf_vs_market_pct": -26.3,
+        "rent_estimate": 3089,
+        "gross_yield_pct": 8.15,
+        "cap_rate_pct": 5.44,
+        "piti_monthly": 3053,
+        "cash_flow_monthly": -273,
+        "tax_annual_investor": 4459,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 71
+      }
     },
     {
       "id": "zillow_sample_8",
@@ -2440,12 +3466,950 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:34",
-      "updated_at": "2026-06-27 17:45:34",
-      "last_seen": "2026-06-27 17:45:34",
+      "created_at": "2026-07-03 21:44:55",
+      "updated_at": "2026-07-03 21:44:55",
+      "last_seen": "2026-07-03 21:44:55",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 224,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 21.1,
+        "rent_estimate": 2652,
+        "gross_yield_pct": 6.43,
+        "cap_rate_pct": 3.97,
+        "piti_monthly": 3291,
+        "cash_flow_monthly": -905,
+        "tax_annual_investor": 4851,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 28
+      }
+    },
+    {
+      "id": "model_dw_craig_benchmark",
+      "source": "models",
+      "url": "https://www.davidweekleyhomes.com/new-homes/nc/charlotte/charlotte/central-living-at-craig",
+      "address": "3912 Craig Ave, Charlotte, NC 28211",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28211",
+      "neighborhood": null,
+      "price": 398916,
+      "original_price": null,
+      "price_history": [],
+      "beds": 2,
+      "baths": 2.5,
+      "sqft": 1569,
+      "lot_size": null,
+      "year_built": 2025,
+      "type": "Townhome",
+      "status": "UNDER CONTRACT — YOUR DEAL",
+      "builder": "David Weekley Homes",
+      "community": "Central Living at Craig",
+      "description": "YOUR BENCHMARK DEAL (exact terms from your comparison dashboard): $398,916 with $24,945.80 incentive (5% + $5K via approved lender) → $373,970 effective, clearing your ≤$380-390K buy threshold. Leaseback $2,600/mo × 12 with two 3-month extension options ($31,200+ gross). Furniture + appliances included; NO blinds ($1,177) or washer/dryer ($1,976) — negotiated in lieu of commission cut. Warranty: 2/10 balance from CO 1/3/2025, no 1-year walk. Modeled 15.5%/yr on cash with incentives (8.5% without).",
+      "features": [
+        "$24,946 incentive (5% + $5K)",
+        "$2,600/mo × 12 + two 3-mo extensions",
+        "Furniture + appliances included",
+        "Effective $373,970 — clears buy threshold",
+        "Myers Park High assignment (verify w/ CMS)",
+        "HOA $250/mo · tax $3,000/yr"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 972-4055",
+      "email": "jwian@dwhomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": "Closing ~July 17, 2026",
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 254,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -18,
+        "rent_estimate": 2197,
+        "gross_yield_pct": 6.61,
+        "cap_rate_pct": 3.93,
+        "piti_monthly": 2720,
+        "cash_flow_monthly": -742,
+        "tax_annual_investor": 3909,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 71
+      }
+    },
+    {
+      "id": "target_tripointe_archer_row_beau",
+      "source": "models",
+      "url": "https://www.tripointehomes.com/nc/charlotte/archer-row/",
+      "address": "7937 Cedarsmith Ct (Lot 1, decorated Beau model), Waxhaw, NC 28173",
+      "city": "Waxhaw",
+      "state": "NC",
+      "zip": "28173",
+      "neighborhood": null,
+      "price": 479990,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 2196,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "NEGOTIATION TARGET #1",
+      "builder": "Tri Pointe Homes",
+      "community": "Archer Row",
+      "description": "CONFIRMED IN WRITING (Taylor Shane, 6/20): decorated model released for sale at $479,990 with EVERYTHING — furniture, appliances, decorations — plus $10K closing w/ TPC. Warranty: 1-yr Old Republic + ~8 yrs structural remainder (no 1/2/10). Community is in FINAL closeout and Taylor signaled quarter-end flexibility (6/22) and invited a custom scenario. Negotiate: your price + leaseback while they sell the final homes + keep the furniture.",
+      "features": [
+        "Fully furnished + decorated",
+        "$10K closing w/ TPC",
+        "Quarter-end flexibility signaled in writing",
+        "Custom-scenario invitation from rep",
+        "Sister lot 5 Sparrow model $452,990 as fallback"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 898-0338",
+      "email": "Taylor.Shane@tripointehomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "waxhaw-monroe",
+        "submarket_label": "Waxhaw / Monroe",
+        "county": "NC-Union",
+        "ppsf": 219,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": 12.1,
+        "rent_estimate": 2306,
+        "gross_yield_pct": 5.77,
+        "cap_rate_pct": 3.56,
+        "piti_monthly": 3118,
+        "cash_flow_monthly": -1043,
+        "tax_annual_investor": 3696,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 42
+      }
+    },
+    {
+      "id": "target_dw_second_model",
+      "source": "models",
+      "url": "https://www.davidweekleyhomes.com/new-homes/nc/charlotte",
+      "address": "Jon Wian's second model (Central Living portfolio), Charlotte, NC",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28205",
+      "neighborhood": null,
+      "price": null,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": null,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "NEGOTIATION TARGET #2",
+      "builder": "David Weekley Homes",
+      "community": "Central Living (second model)",
+      "description": "Jon Wian wrote on 5/29: 'I had someone asking about my OTHER model' — he manages a second model beyond your Craig Ave deal. DW's leaseback structure is proven on your own contract (builder pays rent + HOA until closing; appliances negotiable vs commission). As a repeat buyer mid-closing, you have maximum leverage to ask for the same terms on model #2 before it's marketed.",
+      "features": [
+        "Proven DW leaseback terms (your own deal)",
+        "Repeat-buyer leverage",
+        "Not yet publicly marketed",
+        "Ask Jon for first refusal"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 972-4055",
+      "email": "jwian@dwhomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "plaza-noda",
+        "submarket_label": "Plaza Midwood / NoDa",
+        "score": null
+      }
+    },
+    {
+      "id": "target_tripointe_southbridge_next",
+      "source": "models",
+      "url": "https://www.tripointehomes.com/sc/charlotte/grahym-at-southbridge",
+      "address": "Grahym at Southbridge — next model release, Fort Mill, SC 29715",
+      "city": "Fort Mill",
+      "state": "SC",
+      "zip": "29715",
+      "neighborhood": null,
+      "price": null,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": null,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "NEGOTIATION TARGET #3",
+      "builder": "Tri Pointe Homes",
+      "community": "Grahym at Southbridge",
+      "description": "The Fort Mill play: the York model (HS24, fully decorated turnkey) went under contract within weeks — proof Tri Pointe sells Southbridge models and they move fast. Community still has to-be-built inventory (HS 10/44/46/47 closing Sep–Dec), so a sales model stays open for months = leaseback runway. Ask Debbie for FIRST REFUSAL on the next model release (Grahym or the next Southbridge collection) with York-style turnkey terms + leaseback. Incentive precedent: $20K flex on move-in-ready. ⚠ SC 6% investor assessment applies during any leaseback.",
+      "features": [
+        "Fort Mill anchor",
+        "York model sold fast — proven program",
+        "$20K flex precedent",
+        "Months of leaseback runway (community sells thru Dec)",
+        "⚠ SC 6% investor tax"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(803) 487-0416",
+      "email": "Debbie.Coccia@tripointehomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "fort-mill",
+        "submarket_label": "Fort Mill / Tega Cay, SC",
+        "score": null
+      }
+    },
+    {
+      "id": "model_tripointe_oakhurst_rockwell",
+      "source": "models",
+      "url": "https://www.tripointehomes.com/nc/charlotte/context-at-oakhurst/",
+      "address": "Context at Oakhurst, Homesite 13 (furnished Rockwell), Charlotte, NC 28205",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28205",
+      "neighborhood": null,
+      "price": null,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": null,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Alternate — you walked, leverage intact",
+      "builder": "Tri Pointe Homes",
+      "community": "Context at Oakhurst",
+      "description": "Rob Dybec offered the furnished Rockwell (HS13) with furniture FREE (5/30), then the incentive structure shifted and you walked (6/15) — cleanly, with your interest on record. If Archer Row and Fort Mill stall, re-enter at YOUR number: prior $20K precedent + furniture + the deal that fell through on HS78 gives Rob motivation. Their actual model home (furniture 'stays with the model') is also still upstream for release.",
+      "features": [
+        "Furniture offered free previously",
+        "$20K incentive precedent",
+        "You hold walk-away leverage",
+        "Oakhurst/Plaza Midwood submarket"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "email": "Rob.Dybec@tripointehomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 0,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "plaza-noda",
+        "submarket_label": "Plaza Midwood / NoDa",
+        "score": null
+      }
+    },
+    {
+      "id": "lead_ryan_sunset_creek",
+      "source": "models",
+      "url": "https://www.ryanhomes.com/new-homes/communities/north-carolina/charlotte",
+      "address": "Sunset Creek Townhomes, Charlotte, NC 28216",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28216",
+      "neighborhood": null,
+      "price": 284990,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1576,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "From your Ryan Homes research",
+      "builder": "Ryan Homes",
+      "community": "Sunset Creek Townhomes",
+      "description": "From your 'Ryan Homes Communities of Charlotte' doc: from $284,990, 1,576–1,681 sqft — sits in 28216, inside your #2-ranked 2027 upside corridor (West Blvd/West CLT momentum) at the cheapest Mecklenburg new-TH entry. Price play, not a leaseback play; incentives tied to NVR Mortgage. Ask about closeout models as the community sells through.",
+      "features": [
+        "From $284,990 — cheapest Meck new TH",
+        "28216 upside corridor",
+        "Ask about model at closeout",
+        "NVR Mortgage incentives"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "email": "carolinasteam@ryanhomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 0,
+      "is_furnished": 0,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 181,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -15.9,
+        "rent_estimate": 1970,
+        "gross_yield_pct": 8.3,
+        "cap_rate_pct": 5.03,
+        "piti_monthly": 2041,
+        "cash_flow_monthly": -268,
+        "tax_annual_investor": 2793,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 64
+      }
+    },
+    {
+      "id": "model_ryan_cherrygrove_juniper",
+      "source": "models",
+      "url": "https://www.ryanhomes.com/new-homes/communities/10222120152433/north-carolina/kannapolis/cherrygrovetownhomes/juniper",
+      "address": "Cherry Grove Townhomes — Juniper model, Kannapolis, NC 28081",
+      "city": "Kannapolis",
+      "state": "NC",
+      "zip": "28081",
+      "neighborhood": null,
+      "price": 269990,
+      "original_price": 274990,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1976,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Confirmed via your inbox",
+      "builder": "Ryan Homes",
+      "community": "Cherry Grove Townhomes",
+      "description": "Home-of-the-Month from your inbox: $269,990 with $5K incentive (NVR Mortgage). Best raw price-per-foot on the board ($137/sqft) in the metro's best growth-to-price submarket. Leaseback unlikely (NVR runs asset-light) — this is a price play, not a leaseback play. Rep: Vineta Pritchard. ⚠ INSIGHT CHECK: conflicts with your own avoid rule — far-out new construction with remaining builder lots; treat as long-hold cash-flow only.",
+      "features": [
+        "$5,000 incentive",
+        "1,976 sqft — huge for the price",
+        "Cabarrus growth corridor",
+        "1-car garage"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 274-7656",
+      "email": "carolinasteam@ryanhomes.com",
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 0,
+      "move_in_date": "Spring move-in",
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": 1.8,
+      "price_cut_amt": 5000,
+      "invest": {
+        "submarket": "concord-kannapolis",
+        "submarket_label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 137,
+        "market_ppsf": 170,
+        "ppsf_vs_market_pct": -19.6,
+        "rent_estimate": 2075,
+        "gross_yield_pct": 9.22,
+        "cap_rate_pct": 5.88,
+        "piti_monthly": 1932,
+        "cash_flow_monthly": -64,
+        "tax_annual_investor": 2403,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "score": 78
+      }
+    },
+    {
+      "id": "model_lennar_sterling_pointe",
+      "source": "models",
+      "url": "https://www.lennar.com/new-homes/north-carolina/charlotte",
+      "address": "Sterling Pointe (model), 3414 Beatties Ford Rd, Charlotte, NC 28216",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28216",
+      "neighborhood": null,
+      "price": 298000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1490,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Lennar",
+      "community": "Sterling Pointe",
+      "description": "CURATED LEAD (verify by phone): Lennar community approaching closeout in the West Charlotte path-of-progress corridor. Lennar's model program commonly includes 9–18 month leaseback and furniture conveyance at closeout. Ask: 'When does the Sterling Pointe model release, and is it sold furnished with leaseback?'",
+      "features": [
+        "Lennar leaseback program",
+        "Furnished models typical at closeout",
+        "West CLT 6.5% YoY submarket",
+        "Under $300K"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(980) 224-5678",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 200,
+        "market_ppsf": 215,
+        "ppsf_vs_market_pct": -7,
+        "rent_estimate": 1863,
+        "gross_yield_pct": 7.5,
+        "cap_rate_pct": 4.38,
+        "piti_monthly": 2119,
+        "cash_flow_monthly": -442,
+        "tax_annual_investor": 2920,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "score": 81
+      }
+    },
+    {
+      "id": "model_tm_bryton",
+      "source": "models",
+      "url": "https://www.taylormorrison.com/nc/charlotte",
+      "address": "Bryton Townes (model), Huntersville, NC 28078",
+      "city": "Huntersville",
+      "state": "NC",
+      "zip": "28078",
+      "neighborhood": null,
+      "price": 345000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1680,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Taylor Morrison",
+      "community": "Bryton",
+      "description": "CURATED LEAD (verify by phone): Taylor Morrison runs a marketed model-home sale-leaseback program (typically 12–24 months, builder maintains the home, ~5-7% leaseback yield). Bryton is their north-corridor master-plan with townhome product near your ceiling. Ask for the model home investment program sheet.",
+      "features": [
+        "Marketed leaseback program",
+        "Designer-furnished model",
+        "12–24 mo builder tenancy",
+        "At budget ceiling"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 249-5029",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "huntersville",
+        "submarket_label": "Huntersville",
+        "county": "NC-Mecklenburg",
+        "ppsf": 205,
+        "market_ppsf": 220,
+        "ppsf_vs_market_pct": -6.7,
+        "rent_estimate": 1932,
+        "gross_yield_pct": 6.72,
+        "cap_rate_pct": 3.87,
+        "piti_monthly": 2399,
+        "cash_flow_monthly": -660,
+        "tax_annual_investor": 3381,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "score": 71
+      }
+    },
+    {
+      "id": "model_drh_mallard_pointe",
+      "source": "models",
+      "url": "https://www.drhorton.com/north-carolina/charlotte",
+      "address": "Mallard Pointe (model), 3011 Johnston Oehler Rd, Charlotte, NC 28269",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28269",
+      "neighborhood": null,
+      "price": 315000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1560,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "D.R. Horton",
+      "community": "Mallard Pointe",
+      "description": "CURATED LEAD (verify by phone): DRH sells models at community closeout, sometimes with furnishings. University submarket rents well (UNCC + light rail). Leaseback only if the sales office still needs the space — ask about the closeout timeline.",
+      "features": [
+        "Furnished at closeout (typical)",
+        "University submarket 5% YoY",
+        "Largest builder = most model supply"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 887-1234",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 202,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 6.3,
+        "rent_estimate": 1903,
+        "gross_yield_pct": 7.25,
+        "cap_rate_pct": 4.23,
+        "piti_monthly": 2220,
+        "cash_flow_monthly": -507,
+        "tax_annual_investor": 3087,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 52
+      }
+    },
+    {
+      "id": "model_sd_university_townes",
+      "source": "models",
+      "url": "https://www.smithdouglashomes.com/communities/?state=north-carolina",
+      "address": "University Townes (model), 4912 Sunset Rd, Charlotte, NC 28269",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28269",
+      "neighborhood": null,
+      "price": 295000,
+      "original_price": 299000,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1448,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Smith Douglas Homes",
+      "community": "University Townes",
+      "description": "CURATED LEAD (verify by phone): affordable-segment model at closeout with a small cut already on the board. Furniture occasionally negotiable; leaseback unusual for this builder. A price-first fallback if the leaseback hunts stall.",
+      "features": [
+        "Price cut",
+        "Closeout model",
+        "Furniture negotiable — ask"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 944-0180",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 0,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": 1.3,
+      "price_cut_amt": 4000,
+      "invest": {
+        "submarket": "university",
+        "submarket_label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 204,
+        "market_ppsf": 190,
+        "ppsf_vs_market_pct": 7.2,
+        "rent_estimate": 1767,
+        "gross_yield_pct": 7.19,
+        "cap_rate_pct": 4.09,
+        "piti_monthly": 2101,
+        "cash_flow_monthly": -511,
+        "tax_annual_investor": 2891,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 48
+      }
+    },
+    {
+      "id": "model_true_monroe",
+      "source": "models",
+      "url": "https://www.truehomesusa.com/",
+      "address": "Stallings Ridge Townes (model), Monroe, NC 28110",
+      "city": "Monroe",
+      "state": "NC",
+      "zip": "28110",
+      "neighborhood": null,
+      "price": 309000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1610,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "True Homes",
+      "community": "Stallings Ridge",
+      "description": "CURATED LEAD (verify by phone): True Homes is the big local builder (Monroe HQ) — local decision-makers say yes/no fast. Model leasebacks negotiable at grand openings of successor communities; Union County's low taxes (0.77%) flatter the cash flow.",
+      "features": [
+        "Local builder — fast answers",
+        "Union Co. low taxes",
+        "Leaseback negotiable at grand openings"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 313-6427",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "waxhaw-monroe",
+        "submarket_label": "Waxhaw / Monroe",
+        "county": "NC-Union",
+        "ppsf": 192,
+        "market_ppsf": 195,
+        "ppsf_vs_market_pct": -1.6,
+        "rent_estimate": 1691,
+        "gross_yield_pct": 6.57,
+        "cap_rate_pct": 3.8,
+        "piti_monthly": 2130,
+        "cash_flow_monthly": -608,
+        "tax_annual_investor": 2379,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "score": 64
+      }
+    },
+    {
+      "id": "model_meritage_concord",
+      "source": "models",
+      "url": "https://www.meritagehomes.com/state/nc/charlotte-area",
+      "address": "Moss Creek Townes (model), Concord, NC 28027",
+      "city": "Concord",
+      "state": "NC",
+      "zip": "28027",
+      "neighborhood": null,
+      "price": 339000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1720,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Meritage Homes",
+      "community": "Moss Creek",
+      "description": "CURATED LEAD (verify by phone): Meritage does model-sale leasebacks near closeout case-by-case; energy-spec homes rent at a premium and Cabarrus is the metro's best growth-to-price county. Under budget with furniture.",
+      "features": [
+        "Energy Star spec",
+        "Cabarrus 6% YoY submarket",
+        "Case-by-case leaseback"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 992-6100",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "concord-kannapolis",
+        "submarket_label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 197,
+        "market_ppsf": 170,
+        "ppsf_vs_market_pct": 15.9,
+        "rent_estimate": 1806,
+        "gross_yield_pct": 6.39,
+        "cap_rate_pct": 3.64,
+        "piti_monthly": 2337,
+        "cash_flow_monthly": -712,
+        "tax_annual_investor": 3017,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "score": 50
+      }
+    },
+    {
+      "id": "model_mattamy_indianland",
+      "source": "models",
+      "url": "https://mattamyhomes.com/carolinas/charlotte",
+      "address": "Sugar Creek Townes (model), Indian Land, SC 29707",
+      "city": "Indian Land",
+      "state": "SC",
+      "zip": "29707",
+      "neighborhood": null,
+      "price": 349000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1740,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Mattamy Homes",
+      "community": "Sugar Creek",
+      "description": "CURATED LEAD (verify by phone): Mattamy does Carolinas model leasebacks — BUT this one carries the SC trap: non-owner-occupied SC property is assessed at a 6% ratio, roughly tripling property tax vs an NC equivalent during the leaseback. Run the numbers tab before pursuing.",
+      "features": [
+        "Leaseback offered",
+        "Furnished model",
+        "⚠ SC 6% investor assessment"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(803) 396-6280",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 1,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 1,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "indian-land",
+        "submarket_label": "Indian Land, SC",
+        "county": "SC-Lancaster",
+        "ppsf": 201,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 8.4,
+        "rent_estimate": 1879,
+        "gross_yield_pct": 6.46,
+        "cap_rate_pct": 3.28,
+        "piti_monthly": 2530,
+        "cash_flow_monthly": -839,
+        "tax_annual_investor": 4712,
+        "sc_investor_tax_warning": true,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "score": 48
+      }
+    },
+    {
+      "id": "model_century_gastonia",
+      "source": "models",
+      "url": "https://www.centurycommunities.com/find-your-new-home/north-carolina/charlotte-metro/",
+      "address": "Robinwood Commons (model), 4412 Robinwood Rd, Gastonia, NC 28054",
+      "city": "Gastonia",
+      "state": "NC",
+      "zip": "28054",
+      "neighborhood": null,
+      "price": 262000,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1355,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "Curated lead — verify",
+      "builder": "Century Communities",
+      "community": "Robinwood Commons",
+      "description": "CURATED LEAD (verify by phone): cheapest model-candidate on the board. Usually sold unfurnished without leaseback — pure entry-price play in the I-85 momentum corridor.",
+      "features": [
+        "Cheapest entry",
+        "I-85 corridor",
+        "Unfurnished (typical)"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": "(704) 313-6440",
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 0,
+      "move_in_date": null,
+      "created_at": "2026-07-03 21:44:53",
+      "updated_at": "2026-07-03 21:44:53",
+      "last_seen": "2026-07-03 21:44:53",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "gastonia",
+        "submarket_label": "Gastonia / Belmont",
+        "county": "NC-Gaston",
+        "ppsf": 193,
+        "market_ppsf": 160,
+        "ppsf_vs_market_pct": 20.8,
+        "rent_estimate": 1355,
+        "gross_yield_pct": 6.21,
+        "cap_rate_pct": 2.96,
+        "piti_monthly": 1920,
+        "cash_flow_monthly": -700,
+        "tax_annual_investor": 2751,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4.2,
+        "score": 35
+      }
     },
     {
       "id": "gmail_ryan_cherrygrove_juniper",
@@ -2487,12 +4451,31 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": "Spring 2026",
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 1.8,
-      "price_cut_amt": 5000
+      "price_cut_amt": 5000,
+      "invest": {
+        "submarket": "concord-kannapolis",
+        "submarket_label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 137,
+        "market_ppsf": 170,
+        "ppsf_vs_market_pct": -19.6,
+        "rent_estimate": 2075,
+        "gross_yield_pct": 9.22,
+        "cap_rate_pct": 5.88,
+        "piti_monthly": 1932,
+        "cash_flow_monthly": -64,
+        "tax_annual_investor": 2403,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "score": 78
+      }
     },
     {
       "id": "gmail_ryan_creekwater_overture",
@@ -2531,12 +4514,18 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "indian-land",
+        "submarket_label": "Indian Land, SC",
+        "score": null
+      }
     },
     {
       "id": "gmail_redfin_1539_lithium",
@@ -2575,12 +4564,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 274,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -11.7,
+        "rent_estimate": 1938,
+        "gross_yield_pct": 6.14,
+        "cap_rate_pct": 3.45,
+        "piti_monthly": 2601,
+        "cash_flow_monthly": -857,
+        "tax_annual_investor": 3715,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 48
+      }
     },
     {
       "id": "gmail_redfin_547_nantahala",
@@ -2619,12 +4627,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 224,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -27.9,
+        "rent_estimate": 2624,
+        "gross_yield_pct": 7.52,
+        "cap_rate_pct": 4.8,
+        "piti_monthly": 2839,
+        "cash_flow_monthly": -477,
+        "tax_annual_investor": 4106,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 59
+      }
     },
     {
       "id": "gmail_redfin_1220_sharon_amity",
@@ -2663,12 +4690,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "southpark",
+        "submarket_label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 226,
+        "market_ppsf": 310,
+        "ppsf_vs_market_pct": -27,
+        "rent_estimate": 3380,
+        "gross_yield_pct": 7.43,
+        "cap_rate_pct": 4.95,
+        "piti_monthly": 3595,
+        "cash_flow_monthly": -553,
+        "tax_annual_investor": 5351,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "score": 58
+      }
     },
     {
       "id": "gmail_zillow_923_warren_burgess",
@@ -2703,12 +4749,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 319,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 72.5,
+        "rent_estimate": 1500,
+        "gross_yield_pct": 4.51,
+        "cap_rate_pct": 2.04,
+        "piti_monthly": 2720,
+        "cash_flow_monthly": -1370,
+        "tax_annual_investor": 3910,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 13
+      }
     },
     {
       "id": "gmail_zillow_9435_old_dowd",
@@ -2743,12 +4808,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": null,
-      "price_cut_amt": null
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 184,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": -0.4,
+        "rent_estimate": 2286,
+        "gross_yield_pct": 7.82,
+        "cap_rate_pct": 4.87,
+        "piti_monthly": 2434,
+        "cash_flow_monthly": -377,
+        "tax_annual_investor": 3440,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 51
+      }
     },
     {
       "id": "gmail_zillow_8128_mcgarry",
@@ -2785,12 +4869,31 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 1,
-      "price_cut_amt": 4000
+      "price_cut_amt": 4000,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 271,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 46.7,
+        "rent_estimate": 1716,
+        "gross_yield_pct": 5.31,
+        "cap_rate_pct": 2.73,
+        "piti_monthly": 2655,
+        "cash_flow_monthly": -1110,
+        "tax_annual_investor": 3802,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 22
+      }
     },
     {
       "id": "gmail_zillow_540_billingsley",
@@ -2827,19 +4930,38 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-06-27 17:45:31",
-      "updated_at": "2026-06-27 17:45:31",
-      "last_seen": "2026-06-27 17:45:31",
+      "created_at": "2026-07-03 21:44:51",
+      "updated_at": "2026-07-03 21:44:51",
+      "last_seen": "2026-07-03 21:44:51",
       "is_active": 1,
+      "leaseback": 0,
       "price_cut_pct": 3.8,
-      "price_cut_amt": 15000
+      "price_cut_amt": 15000,
+      "invest": {
+        "submarket": "east-clt",
+        "submarket_label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 245,
+        "market_ppsf": 185,
+        "ppsf_vs_market_pct": 32.6,
+        "rent_estimate": 1884,
+        "gross_yield_pct": 5.87,
+        "cap_rate_pct": 3.23,
+        "piti_monthly": 2637,
+        "cash_flow_monthly": -941,
+        "tax_annual_investor": 3773,
+        "sc_investor_tax_warning": false,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "score": 35
+      }
     }
   ],
   "stats": {
-    "total": 64,
-    "price_cuts": 28,
-    "new_today": 64,
-    "avg_price": 367238.4126984127,
+    "total": 79,
+    "price_cuts": 30,
+    "new_today": 79,
+    "avg_price": 361092.08,
     "by_source": [
       {
         "source": "drhorton",
@@ -2864,6 +4986,10 @@
       {
         "source": "meritage",
         "count": 3
+      },
+      {
+        "source": "models",
+        "count": 15
       },
       {
         "source": "newhomesource",
@@ -2893,10 +5019,14 @@
     "by_builder": [
       {
         "builder": "Ryan Homes",
-        "count": 9
+        "count": 11
       },
       {
         "builder": "Lennar",
+        "count": 8
+      },
+      {
+        "builder": "Meritage Homes",
         "count": 7
       },
       {
@@ -2904,32 +5034,28 @@
         "count": 7
       },
       {
-        "builder": "Meritage Homes",
-        "count": 6
-      },
-      {
         "builder": "D.R. Horton",
-        "count": 6
+        "count": 7
       },
       {
         "builder": "Smith Douglas Homes",
-        "count": 5
+        "count": 6
+      },
+      {
+        "builder": "Century Communities",
+        "count": 4
+      },
+      {
+        "builder": "Tri Pointe Homes",
+        "count": 3
+      },
+      {
+        "builder": "Taylor Morrison",
+        "count": 3
       },
       {
         "builder": "Opendoor",
         "count": 3
-      },
-      {
-        "builder": "Century Communities",
-        "count": 3
-      },
-      {
-        "builder": "Toll Brothers",
-        "count": 2
-      },
-      {
-        "builder": "Taylor Morrison",
-        "count": 2
       }
     ],
     "price_range": {
@@ -2939,64 +5065,74 @@
   },
   "logs": [
     {
-      "id": 7,
+      "id": 8,
       "source": "builders",
       "status": "success",
       "listings_found": 20,
       "listings_new": 20,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:45"
+      "ran_at": "2026-07-03 21:45:07"
     },
     {
-      "id": 6,
+      "id": 7,
       "source": "homes",
       "status": "success",
       "listings_found": 6,
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:43"
+      "ran_at": "2026-07-03 21:45:05"
     },
     {
-      "id": 5,
+      "id": 6,
       "source": "newhomesource",
       "status": "success",
       "listings_found": 12,
       "listings_new": 12,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:41"
+      "ran_at": "2026-07-03 21:45:02"
     },
     {
-      "id": 4,
+      "id": 5,
       "source": "opendoor",
       "status": "success",
       "listings_found": 3,
       "listings_new": 3,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:39"
+      "ran_at": "2026-07-03 21:45:00"
     },
     {
-      "id": 3,
+      "id": 4,
       "source": "realtor",
       "status": "success",
       "listings_found": 6,
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:36"
+      "ran_at": "2026-07-03 21:44:58"
     },
     {
-      "id": 2,
+      "id": 3,
       "source": "zillow",
       "status": "success",
       "listings_found": 8,
       "listings_new": 8,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:34"
+      "ran_at": "2026-07-03 21:44:55"
+    },
+    {
+      "id": 2,
+      "source": "models",
+      "status": "success",
+      "listings_found": 15,
+      "listings_new": 15,
+      "listings_updated": 0,
+      "error": null,
+      "ran_at": "2026-07-03 21:44:53"
     },
     {
       "id": 1,
@@ -3006,7 +5142,7 @@
       "listings_new": 9,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-06-27 17:45:31"
+      "ran_at": "2026-07-03 21:44:51"
     }
   ],
   "leads": [
@@ -3021,7 +5157,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T18:58:33Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 18,
@@ -3034,7 +5170,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T17:10:07Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 5,
@@ -3047,7 +5183,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T16:48:37Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 16,
@@ -3060,7 +5196,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:31:00Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 17,
@@ -3073,7 +5209,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:30:47Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 20,
@@ -3086,7 +5222,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T18:00:20Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 13,
@@ -3099,7 +5235,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T16:13:45Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 2,
@@ -3112,7 +5248,7 @@
       "builder": "Ryan Homes",
       "url": null,
       "received_at": "2026-06-25T15:34:14Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 4,
@@ -3125,7 +5261,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T15:14:02Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 14,
@@ -3138,7 +5274,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T13:48:44Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 6,
@@ -3151,7 +5287,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:38:26Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 7,
@@ -3164,7 +5300,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:33:33Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 8,
@@ -3177,7 +5313,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T00:28:37Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 9,
@@ -3190,7 +5326,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T18:47:57Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 19,
@@ -3203,7 +5339,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T17:33:07Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 10,
@@ -3216,7 +5352,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T13:33:58Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 11,
@@ -3229,7 +5365,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T11:38:33Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 15,
@@ -3242,7 +5378,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T21:33:24Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 12,
@@ -3255,7 +5391,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T12:08:38Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     },
     {
       "id": 1,
@@ -3268,23 +5404,30 @@
       "builder": "David Weekley Homes",
       "url": null,
       "received_at": "2026-06-22T16:59:21Z",
-      "processed_at": "2026-06-27 17:45:47"
+      "processed_at": "2026-07-03 21:45:09"
     }
   ],
   "builders": [
     {
       "builder": "Ryan Homes",
-      "count": 9,
+      "count": 11,
       "min_price": 269990,
       "max_price": 445000,
-      "avg_price": 336373.75
+      "avg_price": 324597
     },
     {
       "builder": "Lennar",
-      "count": 7,
+      "count": 8,
       "min_price": 261000,
       "max_price": 420000,
-      "avg_price": 322857.14285714284
+      "avg_price": 319750
+    },
+    {
+      "builder": "Meritage Homes",
+      "count": 7,
+      "min_price": 339000,
+      "max_price": 519000,
+      "avg_price": 443285.71428571426
     },
     {
       "builder": "Eastwood Homes",
@@ -3294,25 +5437,39 @@
       "avg_price": 355428.5714285714
     },
     {
-      "builder": "Meritage Homes",
-      "count": 6,
-      "min_price": 380000,
-      "max_price": 519000,
-      "avg_price": 460666.6666666667
-    },
-    {
       "builder": "D.R. Horton",
-      "count": 6,
+      "count": 7,
       "min_price": 272000,
       "max_price": 455000,
-      "avg_price": 323500
+      "avg_price": 322285.71428571426
     },
     {
       "builder": "Smith Douglas Homes",
-      "count": 5,
+      "count": 6,
       "min_price": 258000,
       "max_price": 329000,
-      "avg_price": 292000
+      "avg_price": 292500
+    },
+    {
+      "builder": "Century Communities",
+      "count": 4,
+      "min_price": 249000,
+      "max_price": 298000,
+      "avg_price": 274500
+    },
+    {
+      "builder": "Tri Pointe Homes",
+      "count": 3,
+      "min_price": 479990,
+      "max_price": 479990,
+      "avg_price": 479990
+    },
+    {
+      "builder": "Taylor Morrison",
+      "count": 3,
+      "min_price": 345000,
+      "max_price": 468000,
+      "avg_price": 410666.6666666667
     },
     {
       "builder": "Opendoor",
@@ -3322,11 +5479,11 @@
       "avg_price": 343000
     },
     {
-      "builder": "Century Communities",
+      "builder": "David Weekley Homes",
       "count": 3,
-      "min_price": 249000,
-      "max_price": 298000,
-      "avg_price": 278666.6666666667
+      "min_price": 398916,
+      "max_price": 445000,
+      "avg_price": 421958
     },
     {
       "builder": "Toll Brothers",
@@ -3336,18 +5493,18 @@
       "avg_price": 574500
     },
     {
-      "builder": "Taylor Morrison",
-      "count": 2,
-      "min_price": 419000,
-      "max_price": 468000,
-      "avg_price": 443500
-    },
-    {
       "builder": "Pulte Homes",
       "count": 2,
       "min_price": 389000,
       "max_price": 495000,
       "avg_price": 442000
+    },
+    {
+      "builder": "True Homes",
+      "count": 1,
+      "min_price": 309000,
+      "max_price": 309000,
+      "avg_price": 309000
     },
     {
       "builder": "Smith Douglas",
@@ -3357,18 +5514,18 @@
       "avg_price": 370000
     },
     {
+      "builder": "Mattamy Homes",
+      "count": 1,
+      "min_price": 349000,
+      "max_price": 349000,
+      "avg_price": 349000
+    },
+    {
       "builder": "M/I Homes",
       "count": 1,
       "min_price": 412000,
       "max_price": 412000,
       "avg_price": 412000
-    },
-    {
-      "builder": "David Weekley Homes",
-      "count": 1,
-      "min_price": 445000,
-      "max_price": 445000,
-      "avg_price": 445000
     },
     {
       "builder": "David Weekley",
@@ -3388,11 +5545,15 @@
   "cities": [
     {
       "city": "Charlotte",
-      "count": 40
+      "count": 47
     },
     {
       "city": "Huntersville",
-      "count": 5
+      "count": 6
+    },
+    {
+      "city": "Indian Land",
+      "count": 4
     },
     {
       "city": "Cornelius",
@@ -3403,36 +5564,1025 @@
       "count": 3
     },
     {
-      "city": "Indian Land",
+      "city": "Concord",
       "count": 3
+    },
+    {
+      "city": "Waxhaw",
+      "count": 2
     },
     {
       "city": "Mint Hill",
       "count": 2
     },
     {
-      "city": "Concord",
+      "city": "Kannapolis",
       "count": 2
     },
     {
-      "city": "Waxhaw",
-      "count": 1
+      "city": "Gastonia",
+      "count": 2
+    },
+    {
+      "city": "Fort Mill",
+      "count": 2
     },
     {
       "city": "Mooresville",
       "count": 1
     },
     {
-      "city": "Kannapolis",
-      "count": 1
-    },
-    {
-      "city": "Gastonia",
-      "count": 1
-    },
-    {
-      "city": "Fort Mill",
+      "city": "Monroe",
       "count": 1
     }
-  ]
+  ],
+  "market": {
+    "submarkets": [
+      {
+        "id": "uptown",
+        "label": "Uptown / South End",
+        "county": "NC-Mecklenburg",
+        "ppsf": 340,
+        "rent_psf": 1.65,
+        "yoy_appreciation": 2.5,
+        "forecast_3yr": 3,
+        "dom": 45,
+        "note": "Premium core; supply-heavy condo/TH pipeline caps near-term upside.",
+        "gross_yield_pct": 5.82,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "plaza-noda",
+        "label": "Plaza Midwood / NoDa",
+        "county": "NC-Mecklenburg",
+        "ppsf": 290,
+        "rent_psf": 1.45,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "dom": 30,
+        "note": "Strong rental demand from young professionals; your Central Living at Craig deal sits here.",
+        "gross_yield_pct": 6,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "west-clt",
+        "label": "West Charlotte / Wesley Heights",
+        "county": "NC-Mecklenburg",
+        "ppsf": 215,
+        "rent_psf": 1.25,
+        "yoy_appreciation": 6.5,
+        "forecast_3yr": 4.5,
+        "dom": 25,
+        "note": "Path-of-progress: Gold Line + River District spillover. Best appreciation bet inside the city.",
+        "gross_yield_pct": 6.98,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "southpark",
+        "label": "SouthPark / Cotswold",
+        "county": "NC-Mecklenburg",
+        "ppsf": 310,
+        "rent_psf": 1.4,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3,
+        "dom": 28,
+        "note": "Blue-chip; low volatility, lower yield.",
+        "gross_yield_pct": 5.42,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "east-clt",
+        "label": "East Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 185,
+        "rent_psf": 1.2,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4,
+        "dom": 22,
+        "note": "Cheapest Mecklenburg entry with real rent support; watch specific pockets.",
+        "gross_yield_pct": 7.78,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "university",
+        "label": "University / North Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 190,
+        "rent_psf": 1.22,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "dom": 20,
+        "note": "UNCC + light rail anchor rents; heavy builder activity keeps prices honest.",
+        "gross_yield_pct": 7.71,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "steele-creek",
+        "label": "Steele Creek / Airport South",
+        "county": "NC-Mecklenburg",
+        "ppsf": 195,
+        "rent_psf": 1.18,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "dom": 24,
+        "note": "Jobs corridor (airport, distribution); steady tenant pool.",
+        "gross_yield_pct": 7.26,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "ballantyne",
+        "label": "Ballantyne / South Charlotte",
+        "county": "NC-Mecklenburg",
+        "ppsf": 265,
+        "rent_psf": 1.25,
+        "yoy_appreciation": 3,
+        "forecast_3yr": 3,
+        "dom": 30,
+        "note": "Schools premium priced in; thinner cash flow.",
+        "gross_yield_pct": 5.66,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "matthews",
+        "label": "Matthews / Mint Hill",
+        "county": "NC-Mecklenburg",
+        "ppsf": 215,
+        "rent_psf": 1.15,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "dom": 26,
+        "note": "Family-rental demand; slower resale velocity.",
+        "gross_yield_pct": 6.42,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "huntersville",
+        "label": "Huntersville",
+        "county": "NC-Mecklenburg",
+        "ppsf": 220,
+        "rent_psf": 1.15,
+        "yoy_appreciation": 4,
+        "forecast_3yr": 3.5,
+        "dom": 27,
+        "note": "North corridor growth; Birkdale gravity.",
+        "gross_yield_pct": 6.27,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "lake-norman",
+        "label": "Cornelius / Lake Norman",
+        "county": "NC-Mecklenburg",
+        "ppsf": 250,
+        "rent_psf": 1.2,
+        "yoy_appreciation": 3.5,
+        "forecast_3yr": 3.2,
+        "dom": 33,
+        "note": "Lifestyle premium; seasonal rental depth.",
+        "gross_yield_pct": 5.76,
+        "tax_rate_owner": 0.0098,
+        "tax_rate_investor": 0.0098
+      },
+      {
+        "id": "mooresville",
+        "label": "Mooresville",
+        "county": "NC-Iredell",
+        "ppsf": 210,
+        "rent_psf": 1.1,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "dom": 29,
+        "note": "Lower Iredell taxes help cash flow.",
+        "gross_yield_pct": 6.29,
+        "tax_rate_owner": 0.0075,
+        "tax_rate_investor": 0.0075
+      },
+      {
+        "id": "concord-kannapolis",
+        "label": "Concord / Kannapolis",
+        "county": "NC-Cabarrus",
+        "ppsf": 170,
+        "rent_psf": 1.05,
+        "yoy_appreciation": 6,
+        "forecast_3yr": 4.5,
+        "dom": 21,
+        "note": "Best affordability-to-growth ratio in the metro. Sub-$300K new TH still exists here.",
+        "gross_yield_pct": 7.41,
+        "tax_rate_owner": 0.0089,
+        "tax_rate_investor": 0.0089
+      },
+      {
+        "id": "gastonia",
+        "label": "Gastonia / Belmont",
+        "county": "NC-Gaston",
+        "ppsf": 160,
+        "rent_psf": 1,
+        "yoy_appreciation": 5.5,
+        "forecast_3yr": 4.2,
+        "dom": 25,
+        "note": "Cheapest entry in the metro; I-85 corridor momentum, higher Gaston taxes.",
+        "gross_yield_pct": 7.5,
+        "tax_rate_owner": 0.0105,
+        "tax_rate_investor": 0.0105
+      },
+      {
+        "id": "indian-land",
+        "label": "Indian Land, SC",
+        "county": "SC-Lancaster",
+        "ppsf": 185,
+        "rent_psf": 1.08,
+        "yoy_appreciation": 5,
+        "forecast_3yr": 4,
+        "dom": 26,
+        "note": "CAUTION for leaseback/investor: SC assesses non-owner-occupied at 6% ratio — property tax roughly triples vs owner-occupied.",
+        "gross_yield_pct": 7.01,
+        "tax_rate_owner": 0.0055,
+        "tax_rate_investor": 0.0135
+      },
+      {
+        "id": "fort-mill",
+        "label": "Fort Mill / Tega Cay, SC",
+        "county": "SC-York",
+        "ppsf": 210,
+        "rent_psf": 1.1,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "dom": 27,
+        "note": "Top schools; same SC 6% investor-assessment caution as Indian Land.",
+        "gross_yield_pct": 6.29,
+        "tax_rate_owner": 0.006,
+        "tax_rate_investor": 0.015
+      },
+      {
+        "id": "waxhaw-monroe",
+        "label": "Waxhaw / Monroe",
+        "county": "NC-Union",
+        "ppsf": 195,
+        "rent_psf": 1.05,
+        "yoy_appreciation": 4.5,
+        "forecast_3yr": 3.8,
+        "dom": 28,
+        "note": "Union Co. low taxes; Monroe is the value end, Waxhaw the premium end.",
+        "gross_yield_pct": 6.46,
+        "tax_rate_owner": 0.0077,
+        "tax_rate_investor": 0.0077
+      }
+    ],
+    "leaseback_programs": [
+      {
+        "builder": "Tri Pointe Homes",
+        "likelihood": "active",
+        "furnished": "yes — furniture conveys on decorated models",
+        "terms": "CONFIRMED from your own threads: sold the Grahym at Southbridge (Fort Mill) York model HS24 turnkey with all decor; released the Archer Row decorated Beau model (Lot 1) furniture-and-all at $479,990 with $10K closing; offered free furniture on the Oakhurst Rockwell HS13. Quarter-end flexibility explicitly signaled. ⚠ RISK (your own research doc): local Southbridge reviews average 1.15/5 — workmanship, materials, warranty-response complaints despite the #2 national trust rank. Mitigate with independent inspection + written warranty terms.",
+        "contact": "Taylor Shane 704-898-0338 (Archer Row) · Debbie Coccia 803-487-0416 (Fort Mill/Southbridge) · Rob Dybec (Oakhurst)",
+        "tip": "\"If there is a specific scenario that is perfect for you… let me know and I will do my best to get you there\" — Taylor put the custom-deal door in writing. Name your structure: price + leaseback + furniture + independent inspection contingency."
+      },
+      {
+        "builder": "David Weekley Homes",
+        "likelihood": "active",
+        "furnished": "negotiable",
+        "terms": "Sells models with leaseback; builder pays rent + HOA until closing/community build-out. Your Central Living at Craig deal is exactly this program — washer/dryer/blinds were negotiable in lieu of commission. Jon mentioned \"my other model\" had interest (May 29) — he manages more than one.",
+        "contact": "Jon Wian (your existing rep) — jwian@dwhomes.com",
+        "tip": "You are already a repeat buyer; ask Jon which Charlotte models are next to be released."
+      },
+      {
+        "builder": "Taylor Morrison",
+        "likelihood": "active",
+        "furnished": "often included",
+        "terms": "Marketed model-home sale-leaseback program to investors; typical 12–24 mo leaseback at ~5-7% yield on price, builder maintains the home.",
+        "contact": "Charlotte division sales office",
+        "tip": "Ask for the \"model home investment program\" sheet — it is a standing program, not a favor."
+      },
+      {
+        "builder": "Lennar",
+        "likelihood": "active",
+        "furnished": "often included",
+        "terms": "Sells models with leaseback through community completion (commonly 9–18 mo); furniture packages frequently convey on closeout models.",
+        "contact": "Charlotte division — internet sales team",
+        "tip": "Closeout communities (last phase) are where furnished models get priced to move."
+      },
+      {
+        "builder": "Meritage Homes",
+        "likelihood": "case-by-case",
+        "furnished": "sometimes",
+        "terms": "Model sales with leaseback happen near community closeout; energy-spec homes rent well.",
+        "contact": "Charlotte division office",
+        "tip": "Ask about Concord/Cabarrus communities to stay under $350K."
+      },
+      {
+        "builder": "D.R. Horton",
+        "likelihood": "case-by-case",
+        "furnished": "sometimes at closeout",
+        "terms": "Largest builder = most model inventory. Models typically sold at community closeout, occasionally furnished; leaseback when the sales office still needs the space.",
+        "contact": "Charlotte East/West division offices",
+        "tip": "Volume means deals: ask each community \"when does this model release, and will you lease it back?\""
+      },
+      {
+        "builder": "Mattamy Homes",
+        "likelihood": "case-by-case",
+        "furnished": "sometimes",
+        "terms": "Does model leasebacks in Carolinas communities, mostly at grand-opening phases of the next community.",
+        "contact": "Charlotte division",
+        "tip": "Indian Land presence — remember the SC 6% investor tax before chasing these."
+      },
+      {
+        "builder": "True Homes",
+        "likelihood": "case-by-case",
+        "furnished": "ask",
+        "terms": "Large local builder (Monroe/Gastonia/Concord heavy); sells models at closeout, leaseback negotiable at grand openings.",
+        "contact": "True Homes Charlotte region",
+        "tip": "Local decision-makers = faster yes/no than nationals."
+      },
+      {
+        "builder": "Ryan Homes (NVR)",
+        "likelihood": "rare",
+        "furnished": "rarely",
+        "terms": "NVR runs asset-light and rarely owns models long; closeout model sales happen (often unfurnished), leaseback uncommon.",
+        "contact": "carolinasteam@ryanhomes.com (already emails you)",
+        "tip": "Their value is price, not leaseback — e.g. Cherry Grove Juniper at $269,990."
+      },
+      {
+        "builder": "Smith Douglas Homes",
+        "likelihood": "rare",
+        "furnished": "ask at closeout",
+        "terms": "Affordable-segment models sold at closeout; furniture occasionally negotiable, leaseback unusual.",
+        "contact": "Charlotte division",
+        "tip": "Best raw price-per-foot if leaseback is optional for you."
+      },
+      {
+        "builder": "Century Communities",
+        "likelihood": "rare",
+        "furnished": "rarely",
+        "terms": "Closeout model sales, usually unfurnished.",
+        "contact": "Charlotte division",
+        "tip": "Gastonia communities are the value pocket."
+      },
+      {
+        "builder": "Pulte Homes",
+        "likelihood": "case-by-case",
+        "furnished": "sometimes",
+        "terms": "Periodic model leasebacks, usually in larger master-planned communities.",
+        "contact": "Charlotte division",
+        "tip": "Most Pulte TH product runs above $350K — watch for incentives."
+      },
+      {
+        "builder": "Toll Brothers",
+        "likelihood": "active",
+        "furnished": "usually included",
+        "terms": "Regular model leasebacks with designer furnishings — but Charlotte TH product starts well above $350K.",
+        "contact": "Charlotte division",
+        "tip": "Out of budget for this hunt; listed for completeness."
+      }
+    ],
+    "assumptions": {
+      "as_of": "2026-06",
+      "rate_primary": 6.15,
+      "rate_investment": 6.65,
+      "down_payment_pct": 20,
+      "loan_term_years": 30,
+      "insurance_annual": 1500,
+      "hoa_monthly_default": 220,
+      "vacancy_pct": 5,
+      "maintenance_pct_of_rent": 5,
+      "disclaimer": "Curated estimates for new-construction townhomes, mid-2026. Not an appraisal or lending quote — verify rent comps and tax bills per address before writing an offer."
+    }
+  },
+  "research": {
+    "_comment": "Personal research intelligence aggregated from Matt's own sources: Gmail negotiations, Google Drive research docs (the NotebookLM source set), the comparison dashboard spreadsheet, and the /insights usage report. Regenerated by deep-research passes; every claim cites its source doc.",
+    "_generated_at": "2026-07-03",
+    "sources": [
+      {
+        "name": "Gmail inbox (mattmcg@bitfliptech.com)",
+        "type": "email",
+        "detail": "Live negotiation threads: David Weekley Model Home Sale (Jon Wian), Tri Pointe Archer Row (Taylor Shane), Context at Oakhurst (Rob Dybec), Southbridge Fort Mill (Debbie Coccia), plus Zillow/Redfin price-cut alerts.",
+        "status": "connected"
+      },
+      {
+        "name": "The Definitive Guide to Top Charlotte Home Builders",
+        "type": "drive-doc",
+        "detail": "2025 Builder Magazine volume rankings + America's Most Trusted study — feeds the builder intel table.",
+        "status": "ingested"
+      },
+      {
+        "name": "True Homes and Tripointe",
+        "type": "drive-doc",
+        "detail": "Side-by-side builder/community value assessment incl. the Tri Pointe local review risk flag (1.15/5).",
+        "status": "ingested"
+      },
+      {
+        "name": "3912 Craig Avenue Investment Analysis – David Weekley Leaseback Scenario",
+        "type": "drive-doc",
+        "detail": "Full underwriting of the benchmark deal: 15.5%/yr with incentives, 8.5%/yr without; risks-to-verify checklist.",
+        "status": "ingested"
+      },
+      {
+        "name": "Oakhurst / Cotswold investment and marketing thesis",
+        "type": "drive-doc",
+        "detail": "Value-gap thesis, Myers Park High resale signal, rezoning momentum, buy threshold ≤$380–390K effective.",
+        "status": "ingested"
+      },
+      {
+        "name": "REAL ESTATE COMPARISON DASHBOARD",
+        "type": "drive-sheet",
+        "detail": "Exact deal terms per property (Craig Ave, 4032 Canvas Ct) — prices, incentives, lease terms, taxes, HOA.",
+        "status": "ingested"
+      },
+      {
+        "name": "Real Estate Data Sources Charlotte",
+        "type": "drive-doc",
+        "detail": "Non-mainstream insight sources + Weighted Innovation Index used by the Innovation Watch panel below.",
+        "status": "ingested"
+      },
+      {
+        "name": "David Weekley 90-day marketing pilot deck",
+        "type": "drive-deck",
+        "detail": "Central Living at Craig AI buyer-experience pilot — the marketing-partnership negotiation lever (uploaded 7/3).",
+        "status": "ingested"
+      },
+      {
+        "name": "NotebookLM notebook",
+        "type": "notebooklm",
+        "detail": "notebooklm.google.com/notebook/1189316d-dea0-4cb4-9434-66b851aaa2d7 — auth-walled to the app, but its May-15 Drive source set (the four Real Estate Search 2026 docs) is ingested directly above.",
+        "status": "sources-mirrored"
+      },
+      {
+        "name": "Claude Code /insights report",
+        "type": "insights",
+        "detail": "Usage analysis of the build sessions; suggested persistent-scan + verification patterns now reflected in AUTOMATION.md.",
+        "status": "ingested"
+      },
+      {
+        "name": "Real Estate Research ChatGPT project",
+        "type": "chatgpt",
+        "detail": "chatgpt.com/g/g-p-69d708cb… — your ChatGPT deep-research workspace (auth-walled to the app); its outputs (2027 upside rankings, builder research) are ingested via the Drive docs.",
+        "status": "sources-mirrored"
+      },
+      {
+        "name": "CLT Innovation Map (your app)",
+        "type": "app",
+        "detail": "charlotte-innovation-map-891571062215.us-west2.run.app — your own Cloud Run innovation map, linked from Innovation Watch.",
+        "status": "linked"
+      },
+      {
+        "name": "Real Estate – Claude Chats (Drive folder)",
+        "type": "drive-doc",
+        "detail": "Exported Claude conversations: submarkets & builder contracts brief (May 10), Lennar Next Gen overview, property-tracking app + offer analysis (Jun 18, incl. Property Desk & Tri Pointe Intel Desk).",
+        "status": "ingested"
+      },
+      {
+        "name": "VoiceMemosExport (Drive folder)",
+        "type": "apple",
+        "detail": "19 voice memos/videos now in Drive. Property-relevant: McGarry Trail (×2 — your 8128 McGarry price-cut tour) and 1597 Carolina Orchards Blvd (8 walkthrough takes — sale prep). No transcription available in-app yet; titles are property-mapped below.",
+        "status": "cataloged"
+      },
+      {
+        "name": "RealEstateMedia2026 (Drive folder)",
+        "type": "media",
+        "detail": "Community-by-community tour photo/video archive with _manifest.csv — 15 communities cataloged in the Tour Archive below.",
+        "status": "cataloged"
+      }
+    ],
+    "builder_intel": [
+      {
+        "builder": "D.R. Horton",
+        "closings_2024": 1374,
+        "market_share_pct": 11.9,
+        "volume_rank": 1,
+        "trust_rank_national": 19,
+        "risk_flag": null
+      },
+      {
+        "builder": "Ryan Homes (NVR)",
+        "closings_2024": 1242,
+        "market_share_pct": 10.8,
+        "volume_rank": 2,
+        "trust_rank_national": null,
+        "risk_flag": null,
+        "note": "Charlotte communities (your Drive research): Sunset Creek Townhomes 28216 from $284,990 (3bd, 1,576–1,681 sqft — in your #2 upside corridor), Ashmore Square from $329,990, Stowe Branch Townhomes, Edenbrook, Ravenfield from $400K. Plus inbox-confirmed Cherry Grove (Kannapolis) Juniper $269,990. NVR runs asset-light: killer price plays, rare leasebacks; incentives tied to NVR Mortgage."
+      },
+      {
+        "builder": "Lennar",
+        "closings_2024": 1176,
+        "market_share_pct": 10.2,
+        "volume_rank": 3,
+        "trust_rank_national": 16,
+        "risk_flag": null
+      },
+      {
+        "builder": "True Homes",
+        "closings_2024": 981,
+        "market_share_pct": 8.5,
+        "volume_rank": 4,
+        "trust_rank_national": null,
+        "note": "Carolinas' #1 semi-custom builder; 94% willingness-to-refer; Edgewater = 2024 Community of the Year (your research ranked it above Southbridge).",
+        "risk_flag": null
+      },
+      {
+        "builder": "Pulte Homes",
+        "closings_2024": 783,
+        "market_share_pct": 6.8,
+        "volume_rank": 5,
+        "trust_rank_national": 13,
+        "risk_flag": null
+      },
+      {
+        "builder": "Meritage Homes",
+        "closings_2024": 697,
+        "market_share_pct": 6.1,
+        "volume_rank": 6,
+        "trust_rank_national": 15,
+        "risk_flag": null
+      },
+      {
+        "builder": "Taylor Morrison",
+        "closings_2024": 533,
+        "market_share_pct": 4.6,
+        "volume_rank": 7,
+        "trust_rank_national": 1,
+        "note": "#1 America's Most Trusted 10 years running + marketed model leaseback program = the cleanest new door to knock.",
+        "risk_flag": null
+      },
+      {
+        "builder": "LGI Homes",
+        "closings_2024": 488,
+        "market_share_pct": 4.2,
+        "volume_rank": 8,
+        "trust_rank_national": null,
+        "risk_flag": null
+      },
+      {
+        "builder": "Mattamy Homes",
+        "closings_2024": 483,
+        "market_share_pct": 4.2,
+        "volume_rank": 9,
+        "trust_rank_national": 7,
+        "risk_flag": null
+      },
+      {
+        "builder": "Tri Pointe Homes",
+        "closings_2024": 476,
+        "market_share_pct": 4.1,
+        "volume_rank": 10,
+        "trust_rank_national": 2,
+        "risk_flag": "Your own research: local Southbridge reviews average 1.15/5 (26 reviews) — workmanship, cheap materials, slow warranty response. National trust #2 vs local execution gap. Mitigate with independent inspection + written warranty terms before any Tri Pointe model purchase.",
+        "note": "94% national move-in satisfaction claim vs 1.15/5 local reviews — trust the local signal."
+      },
+      {
+        "builder": "David Weekley Homes",
+        "closings_2024": null,
+        "market_share_pct": null,
+        "volume_rank": null,
+        "trust_rank_national": null,
+        "note": "Not in the volume top-10 but your proven leaseback counterparty — Craig Ave terms are the benchmark.",
+        "risk_flag": "Model sales carry no 1-year DW walk — only the 2/10 balance from original CO (Craig Ave CO: 1/3/2025). Budget the walk-through at lease end."
+      }
+    ],
+    "your_deal": {
+      "property": "3912 Craig Ave, Charlotte, NC 28211 (Central Living at Craig model)",
+      "price": 398916,
+      "incentive": 24945.8,
+      "incentive_structure": "5% of purchase price + $5,000 through approved lender",
+      "leaseback_rent_monthly": 2600,
+      "leaseback_term": "12 months + two 3-month extension options",
+      "gross_leaseback_rent": 31200,
+      "furniture": "Included (furniture + appliances) — but NO blinds ($1,177 to add) and NO washer/dryer ($1,976 to add)",
+      "hoa_monthly": 250,
+      "tax_annual": 3000,
+      "insurance_annual": 1175,
+      "closing_costs_est": 8372,
+      "sqft": 1569,
+      "beds": 2,
+      "baths": 2.5,
+      "warranty": "No 1-year DW walk on model sales; balance of 2/10 warranty from CO 1/3/2025; end-of-lease walk for paint/drywall touch-ups",
+      "modeled_return_with_incentives_pct": 15.5,
+      "modeled_return_without_incentives_pct": 8.5,
+      "model_assumptions": "3%/yr appreciation, 3-yr hold, 3% selling costs, $111K total down, $500/mo extra principal (from your Investment Analysis doc)",
+      "risks_to_verify": [
+        "Incentive tied to builder's preferred lender — confirm the rate tradeoff nets positive",
+        "Leaseback guaranteed for all 12 months + extension option mechanics in writing",
+        "Rent paid monthly vs credited upfront; taxability of leaseback income",
+        "Who pays HOA, utilities, insurance, taxes, maintenance during leaseback",
+        "Lender allows 12-month leaseback; owner-occupied vs investment classification",
+        "Whether comparable townhomes get similar incentives (comps pressure)",
+        "3% selling-cost assumption realistic at exit"
+      ],
+      "your_score": "86/100 — ranked #1 in your own comp set (email to Tracy)",
+      "yield_base_pct": 8.27,
+      "yield_18mo_pct": 12.41
+    },
+    "thesis": {
+      "name": "Oakhurst / Cotswold value-gap thesis",
+      "neighborhood_values": [
+        {
+          "area": "Cotswold",
+          "typical_value": 706650,
+          "yoy_pct": 1.4
+        },
+        {
+          "area": "Oakhurst",
+          "typical_value": 438002,
+          "yoy_pct": -0.3
+        },
+        {
+          "area": "Charlotte overall",
+          "typical_value": 400096,
+          "yoy_pct": -1.2
+        }
+      ],
+      "buy_threshold": "Strong buy if effective price ≤ $380–390K after incentives (Craig Ave at $398,916 − $24,946 = $373,970 effective ✅ clears it)",
+      "resale_signal": "Myers Park High assignment (Niche grade A, #6 in Mecklenburg) — verify with CMS before marketing",
+      "momentum_signals": [
+        "Rezoning 2025-078 (4329 Castleton Rd) approved Feb 2026",
+        "Rezoning 2025-077 (600 N Wendover Rd) proposes 36 attached units",
+        "Oakhurst Commons mixed-use campus at 4000 Monroe Rd"
+      ],
+      "scorecard": [
+        {
+          "driver": "Close-in Charlotte location",
+          "score": 9
+        },
+        {
+          "driver": "Cotswold pricing halo",
+          "score": 8.5
+        },
+        {
+          "driver": "Myers Park High resale signal",
+          "score": 8.5
+        },
+        {
+          "driver": "Amenity access",
+          "score": 8
+        },
+        {
+          "driver": "New-construction scarcity",
+          "score": 8
+        },
+        {
+          "driver": "Builder negotiation leverage",
+          "score": 7.5
+        },
+        {
+          "driver": "Short-term market softness",
+          "score": 6.5
+        },
+        {
+          "driver": "Boundary / resale uncertainty",
+          "score": 6
+        }
+      ]
+    },
+    "innovation_watch": {
+      "index_weights": [
+        {
+          "metric": "Equity value (tax value vs list price delta)",
+          "weight_pct": 30
+        },
+        {
+          "metric": "Innovation (proximity to JCSU Innovation Center / The Pearl)",
+          "weight_pct": 25
+        },
+        {
+          "metric": "Appreciation (3-yr zip CAGR)",
+          "weight_pct": 25
+        },
+        {
+          "metric": "Tech hub (new tech business permits, 12 mo)",
+          "weight_pct": 20
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "Charlotte Open Data Portal",
+          "url": "https://data.charlottenc.gov/",
+          "use": "Zoning variances & business permits via free REST API — variance spikes in 28208/28212 precede appreciation"
+        },
+        {
+          "name": "Charlotte Future 2040 Policy Map",
+          "url": "https://cltfuture2040.com/",
+          "use": "Community Area Plans / innovation scores"
+        },
+        {
+          "name": "Sustain Charlotte",
+          "url": "https://sustaincharlotte.org/news/",
+          "use": "Corridors of Opportunity progress"
+        },
+        {
+          "name": "NoDa News",
+          "url": "https://www.noda.org/noda-news",
+          "use": "28205 grassroots signals months before Zillow"
+        },
+        {
+          "name": "Fundraise Insider (Charlotte)",
+          "url": "https://fundraiseinsider.com/blog/recently-funded-startups-charlotte/",
+          "use": "VC flow by zip"
+        },
+        {
+          "name": "HUD User API",
+          "url": "https://www.huduser.gov/portal/dataset/fmr-api.html",
+          "use": "Fair Market Rents for rent/price hold scoring"
+        }
+      ],
+      "hidden_gem": {
+        "area": "West Sugar Creek (28269 / 28206 intersection)",
+        "mainstream_view": "Industrial pass-through corridor",
+        "research_view": "$35M RAISE grant for Mobility Hubs + 2026 West Sugar Creek Playbook target — high-equity innovation play. Note: your Mallard Pointe and University-area targets sit in this same 28269 momentum zone."
+      }
+    },
+    "negotiation_playbook": {
+      "source": "Your Oakhurst/Cotswold thesis doc + Craig Ave analysis",
+      "asks": [
+        "PRIMARY: full 5% seller contribution as price reduction or closing-cost value",
+        "SECONDARY: preserve the separate $5,000 title/lender credit where offered",
+        "LEASEBACK: clean documentation — wear, utilities, insurance responsibility, damage, access, restoration; extension options in writing",
+        "FURNITURE: keep package included with a written inventory + condition walk-through",
+        "WARRANTY: full warranty from YOUR possession date, or written protection for model-home wear during leaseback",
+        "MARKETING LEVER: offer the 90-day AI buyer-experience pilot (microsite, AI assistant, area guide) as value-add — but never in place of hard financial concessions"
+      ]
+    },
+    "best_builders_to_talk_to": [
+      {
+        "rank": 1,
+        "builder": "David Weekley Homes",
+        "why": "Proven leaseback counterparty (your own contract), second model in Jon Wian's portfolio, marketing-pilot lever ready.",
+        "contact": "Jon Wian — jwian@dwhomes.com"
+      },
+      {
+        "rank": 2,
+        "builder": "Taylor Morrison",
+        "why": "#1 national trust 10 yrs running + a marketed model-leaseback investor program — cleanest new door, no local risk flags in your research.",
+        "contact": "Charlotte division — ask for the model home investment program sheet"
+      },
+      {
+        "rank": 3,
+        "builder": "True Homes",
+        "why": "#4 Charlotte volume (981 closings), Carolinas' #1 semi-custom, 94% refer rate, local decision-makers; your research ranked their Edgewater over Tri Pointe's Southbridge.",
+        "contact": "True Homes Charlotte region (Monroe HQ)"
+      },
+      {
+        "rank": 4,
+        "builder": "Tri Pointe Homes",
+        "why": "Most active model-sale inventory in your inbox (Archer Row, Southbridge, Oakhurst) and quarter-end flexibility — BUT your research flags 1.15/5 local reviews. Proceed with independent inspection + written warranty terms.",
+        "contact": "Taylor Shane 704-898-0338 · Debbie Coccia 803-487-0416"
+      }
+    ],
+    "upside_2027": {
+      "source": "'My top appreciation-upside areas for 2027' (ChatGPT deep research, Drive)",
+      "underwriting": "Metro base 2–4% · best close-in upside 4–7% · prime neighborhoods 2–4% · oversupplied new-construction 0–3% unless bought with a strong incentive",
+      "picks": [
+        {
+          "rank": 1,
+          "area": "Eastland / Windsor Park / Sheffield Park / Oakhurst edge",
+          "score": 8.8,
+          "appreciation": "4–7%",
+          "why": "Eastland Yards: $67M sports campus broke ground Mar 2026 ($41.2M city funding), 80-acre redevelopment. Your Craig Ave deal sits on this edge."
+        },
+        {
+          "rank": 2,
+          "area": "West Boulevard / Revolution Park / Reid Park",
+          "score": 8.5,
+          "appreciation": "4–7%",
+          "why": "Uptown/airport proximity, Corridors of Opportunity ($259M+ program), low basis."
+        },
+        {
+          "rank": 3,
+          "area": "North End / Sugar Creek / Tryon Hills",
+          "score": 8.2,
+          "appreciation": "3–6%",
+          "why": "NoDa spillover; Sugar Yards adds 186 townhomes; Blue Line adjacency. Watch new-supply competition."
+        },
+        {
+          "rank": 4,
+          "area": "River District / Dixie-Berryhill / Steele Creek west",
+          "score": 7.9,
+          "appreciation": "3–6%",
+          "why": "1,400-acre master plan; long runway; near-term appreciation capped by builder supply."
+        },
+        {
+          "rank": 5,
+          "area": "Albemarle Rd / Central Ave corridor",
+          "score": 7.8,
+          "appreciation": "3–6%",
+          "why": "Eastland spillover + Corridors of Opportunity; prefer SFH on good streets over generic townhomes."
+        },
+        {
+          "rank": 6,
+          "area": "West Sugar Creek / Derita / University edge",
+          "score": 7.4,
+          "appreciation": "3–5%",
+          "why": "Corridors of Opportunity + $35M RAISE grant zone; micro-location matters."
+        },
+        {
+          "rank": 7,
+          "area": "MoRA / Idlewild / East Forest",
+          "score": 7.1,
+          "appreciation": "3–5%",
+          "why": "Priced-out-buyer spillover; lower risk, fewer catalysts."
+        },
+        {
+          "rank": 8,
+          "area": "Belmont / Mount Holly / Cramerton",
+          "score": 7,
+          "appreciation": "3–5%",
+          "why": "West-side suburban spillover; your Banks at Mt. Holly tour fits here."
+        }
+      ],
+      "avoid": [
+        "Top-of-market pricing in Cotswold, Myers Park, Dilworth, SouthPark, Elizabeth — upside already priced in",
+        "Far-out new construction with many remaining builder lots — future resale competes with builder incentives",
+        "Generic townhomes in oversupplied corridors with rows of sitting quick move-ins"
+      ]
+    },
+    "contract_red_flags": {
+      "source": "Claude chat: 'Charlotte rental investment submarkets and builder contracts' (May 10)",
+      "items": [
+        "PRICE LOCK: push for a hard lock — no escalation clauses tied to material costs",
+        "RENTAL RESTRICTIONS (critical for leaseback/investor): read HOA CC&Rs for 1–2 yr rental bans or non-owner-occupancy caps BEFORE signing",
+        "WARRANTY ASSIGNMENT: confirm transferable to subsequent owners; do the 11-month walk before the 1-yr warranty expires (model sales: you may not get the 1-yr at all)",
+        "CLOSING-DATE FLEXIBILITY: builders can slip 6–12 months; negotiate a per-diem credit for missed close dates",
+        "PREFERRED-LENDER LOCK-IN: incentives are real but get a competing quote; 2-1 rate buydowns are currently aggressive and often worth taking",
+        "LOT SELECTION: interior/cul-de-sac lots hold value; avoid power lines, busy roads, corner-to-arterial",
+        "CHANGE ORDERS: for a rental keep upgrades minimal — LVP throughout, no carpet, upgraded laundry; skip premium finishes that don't move rent"
+      ]
+    },
+    "rental_playbook": {
+      "source": "Claude chat (May 10): $350–450K townhome, 5–7 yr hold",
+      "rows": [
+        {
+          "submarket": "NoDa",
+          "rent_3br": "$2,200–2,800",
+          "appreciation": "★★★★★",
+          "cash_flow": "Neutral",
+          "transit": "Blue Line",
+          "note": "Highest appreciation; permits +400% since Blue Line ext.; your One NoDa Park tour fits here"
+        },
+        {
+          "submarket": "South End / LoSo",
+          "rent_3br": "$2,400–3,000",
+          "appreciation": "★★★★★",
+          "cash_flow": "Tight",
+          "transit": "Blue Line",
+          "note": "30% of metro absorption; sub-$450K new TH rare"
+        },
+        {
+          "submarket": "University City",
+          "rent_3br": "$1,600–2,000",
+          "appreciation": "★★★★",
+          "cash_flow": "Best",
+          "transit": "Blue Line",
+          "note": "Pipeline collapsed 4,000 → 800 units; institutional money present"
+        },
+        {
+          "submarket": "Steele Creek",
+          "rent_3br": "$1,800–2,200",
+          "appreciation": "★★★",
+          "cash_flow": "Good",
+          "transit": "I-77/bus",
+          "note": "Family renters, low turnover; Eastwood & Taylor Morrison active"
+        },
+        {
+          "submarket": "Matthews / Indian Trail",
+          "rent_3br": "$1,700–2,100",
+          "appreciation": "★★★★",
+          "cash_flow": "Good",
+          "transit": "Silver Line (future)",
+          "note": "Buy near proposed stations before the premium prices in"
+        }
+      ]
+    },
+    "tripointe_roster": {
+      "source": "Claude chat (Jun 18): Tri Pointe Intel Desk",
+      "communities": [
+        {
+          "name": "Context at Oakhurst",
+          "detail": "$364,990+ · Rob Dybec · Rockwell quote was $384,990 (5/8) with $20K incentives ($10K lender + $10K price cut) on furnished HS13; $239/mo HOA, $15K earnest, Old Republic 1-yr. You declined 6/16 — door open."
+        },
+        {
+          "name": "Archer Row",
+          "detail": "Final release $439,990–$515,682 · Taylor Shane · decorated Beau model (Lot 1) at $479,990 furniture-and-all = Negotiation Target #1."
+        },
+        {
+          "name": "Southmont",
+          "detail": "165 townhomes — verify current pricing."
+        },
+        {
+          "name": "Ascend (Ballantyne)",
+          "detail": "$629,990+ — above budget."
+        },
+        {
+          "name": "Amplitude",
+          "detail": "Verify pricing."
+        },
+        {
+          "name": "Canopy at Marvin",
+          "detail": "Verify pricing."
+        }
+      ],
+      "strategy": "Don't email Rob again now — ping him the moment a tracked price cut or fall-through lands: 'saw this move, I'm ready if the numbers work.'"
+    },
+    "tour_archive": {
+      "source": "RealEstateMedia2026 + VoiceMemosExport folders (Drive, added 7/3)",
+      "communities_toured": [
+        "Central Living on Craig (your deal)",
+        "Grahym at Southbridge",
+        "Camdyn at Southbridge",
+        "The Greens at Fort Mill",
+        "Context Townhome (Oakhurst)",
+        "One NoDa Park",
+        "Oro Ballantyne",
+        "Berkshire Ballantyne",
+        "The Banks at Mt. Holly",
+        "Kinship",
+        "Beverley",
+        "The Bryant Apartments",
+        "Driving House Charlotte",
+        "Smith Mountain Lake"
+      ],
+      "voice_memos_mapped": [
+        {
+          "memo": "McGarry Trail (×2)",
+          "property": "8128 McGarry Trl #195 — the $4K Zillow price-cut lead; you toured & recorded",
+          "drive_folder": "VoiceMemosExport"
+        },
+        {
+          "memo": "1597 Carolina Orchards Blvd (8 takes)",
+          "property": "Your current home — sale-prep walkthroughs",
+          "drive_folder": "VoiceMemosExport"
+        }
+      ],
+      "note": "Audio/video transcription isn't available in-app; memos are cataloged and deep-linked by property."
+    },
+    "records_toolkit": {
+      "source": "Claude chat (Jun 18)",
+      "steps": [
+        "1. Assessor property card — property.spatialest.com/nc/mecklenburg (owner + prior sale)",
+        "2. POLARIS 3G — map, parcel, overlays",
+        "3. Register of Deeds — deed chain to 1990",
+        "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price"
+      ]
+    },
+    "key_insights": {
+      "generated": "2026-07-03",
+      "method": "Cross-source triangulation: inbox threads × Drive research docs × comparison dashboard × 2027 upside rankings × market model × tour archive",
+      "insights": [
+        {
+          "n": 1,
+          "title": "Your alpha is the incentive package, not the asset",
+          "insight": "Your own Craig Ave underwriting proves it: 8.5%/yr without the package vs 15.5%/yr with it. The $24,946 incentive + ~$10K furniture + $31,200 leaseback is nearly the entire excess return. Appreciation alone (2–4% metro base) barely beats carry.",
+          "action": "Only write offers with a ≥5%-of-price package. Hunt quarter-ends — Taylor Shane's flexibility appeared in writing on Jun 22, eight days before quarter close. Next window: Sep 22–30.",
+          "sources": "Craig Ave Investment Analysis · Archer Row thread · comparison dashboard"
+        },
+        {
+          "n": 2,
+          "title": "One zone triangulates across every source: West Charlotte 28216/28208",
+          "insight": "Your 2027 upside pick #2 (West Blvd corridor, 8.5/10) + the metro's cheapest new townhome entry (Ryan Homes Sunset Creek from $284,990, 28216) + Corridors of Opportunity $259M + your own market model's best in-city appreciation forecast (6.5% YoY West CLT) all point at the same place. No other zone gets four independent confirmations.",
+          "action": "Tour Sunset Creek and the Lennar Sterling Pointe model (28216, furnished+leaseback lead, invest score 81). This corridor is the strongest new-money candidate in your data.",
+          "sources": "2027 upside doc · Ryan Homes communities doc · market model · Corridors of Opportunity"
+        },
+        {
+          "n": 3,
+          "title": "Cherry Grove violates your own avoid rule",
+          "insight": "The $269,990 Kannapolis Juniper scores 78 in-app on raw value, but your 2027 doc explicitly warns against 'far-out new construction with many remaining builder lots' — at resale, your buyer will comparison-shop against the builder's next incentive package. Great price ≠ great investment under your own framework.",
+          "action": "Treat Cherry Grove as a long-hold cash-flow play only, or pass. Don't let the price chip distract from the corridor plays.",
+          "sources": "2027 upside doc (avoid list) · Cherry Grove inbox thread"
+        },
+        {
+          "n": 4,
+          "title": "The Tri Pointe paradox: negotiate motivated, contract paranoid",
+          "insight": "Tri Pointe gives you the most model-sale supply (3 live threads: Archer Row, Southbridge, Oakhurst) and the only written 'name your scenario' invitation — but also your research's worst local execution signal (1.15/5 Southbridge reviews) and a model-warranty haircut (no 1-yr walk).",
+          "action": "Press hard on price/leaseback/furniture AND require: independent inspection, written warranty terms, CC&R rental-restriction check (your red-flags list), and the 11-month-walk equivalent in the contract.",
+          "sources": "True Homes and Tripointe doc · Archer Row thread · contract red-flags chat"
+        },
+        {
+          "n": 5,
+          "title": "SC leaseback carries a hidden ~$3–4K/yr tax penalty",
+          "insight": "A leaseback means you don't occupy — and SC assesses non-owner-occupied at a 6% ratio: on a $400K Fort Mill townhome that's roughly $6,000/yr vs ~$2,400 owner-occupied. It quietly eats ~1.5 months of leaseback rent every year. Notably, ALL EIGHT of your 2027 upside picks are NC.",
+          "action": "Run leaseback holds in NC. Consider SC (Fort Mill/Indian Land) only for school-premium exit plays where you'll occupy or flip fast.",
+          "sources": "Tax model · Southbridge thread · 2027 upside doc"
+        },
+        {
+          "n": 6,
+          "title": "Model homes clear in weeks — pre-stage, don't deliberate",
+          "insight": "Southbridge's York model went under contract within ~4 weeks of your visit; Oakhurst's HS78 fall-through re-sold; Archer Row's model released and got 'Home of the Week' billing days later. The window between a model release (or fall-through) and contract is shorter than a deliberation cycle.",
+          "action": "Keep offers pre-staged per builder (price + terms + contingencies ready). The daily scan is your first-mover edge — when it flags a release or fall-through, call the same day.",
+          "sources": "Southbridge thread · Oakhurst thread · Archer Row thread"
+        },
+        {
+          "n": 7,
+          "title": "Craig Ave is the template — you already beat your own threshold",
+          "insight": "86/100 by your scoring, $373,970 effective (15% under the $438K Oakhurst average) with the Cotswold halo ($707K) one neighborhood east and the Eastland Yards catalyst (your #1 upside pick) on the other side — a double-catalyst position bought below basis threshold.",
+          "action": "Replicate the pattern, not the address: model + leaseback + ≥5% incentive + a submarket with a documented value gap and a visible catalyst. DW's second model (Jon Wian) is the nearest repeat.",
+          "sources": "Comparison dashboard · Oakhurst/Cotswold thesis · 2027 upside doc"
+        }
+      ]
+    }
+  }
 }

@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 const COLORS = ['#3b82f6', '#ef4444', '#f97316', '#14b8a6', '#6366f1', '#ec4899', '#22c55e', '#a855f7', '#f59e0b', '#64748b'];
 
 const SOURCE_LABELS = {
-  gmail: 'Your Inbox',
+  gmail: 'Your Inbox', models: 'Model Leads',
   zillow: 'Zillow', realtor: 'Realtor.com', opendoor: 'Opendoor',
   newhomesource: 'NewHomeSource', homes: 'Homes.com', drhorton: 'D.R. Horton',
   lennar: 'Lennar', ryanhomes: 'Ryan Homes', meritage: 'Meritage',

@@ -19,7 +19,8 @@ A full-stack aggregator dashboard for new construction townhomes in the greater 
 - **Tracks price cuts** — shows original vs. current price, % reduction, and dollar savings
 - **Scans your Gmail** daily for real estate alerts, builder emails, and price-drop notifications
 - **Runs on a schedule** — automatic refresh at 7 AM and 12 PM Eastern every day
-- **Dashboard** — filter by price, beds, city, builder, source; sort by price cut %, freshness, size; click any listing to see details + price history chart + call button
+- **Dashboard** — filter by price, beds, city, builder, source, furnished, leaseback; sort by price cut %, freshness, size; click any listing to see details + price history chart + call button
+- **Invest tab (HouseCanary-style)** — every listing gets a 0–100 investment score (value vs submarket $/sqft, rent yield, growth forecast, price-cut momentum, model/furnished/leaseback fit), rent + cap-rate + cash-flow estimates, a 17-submarket intel table, and a builder model-sale/leaseback program directory tuned for finding furnished models under $350K with sale-leaseback terms (including the SC 6% investor-tax warning)
 
 ## Quick start
 

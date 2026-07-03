@@ -22,8 +22,22 @@ function loadGmailListings() {
   }
 }
 
+// Curated model-home / furnished / leaseback opportunities
+function loadModelHomes() {
+  const file = path.join(__dirname, '..', 'data', 'model-homes.json');
+  try {
+    if (!fs.existsSync(file)) return [];
+    const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return (raw.listings || []).filter(l => l.id && l.address);
+  } catch (err) {
+    console.error('[Aggregate] Could not read model-homes.json:', err.message);
+    return [];
+  }
+}
+
 const SOURCES = [
   { name: 'gmail', fn: async () => loadGmailListings(), label: 'Your Gmail Inbox' },
+  { name: 'models', fn: async () => loadModelHomes(), label: 'Model Home Leads' },
   { name: 'zillow', fn: scrapeZillow, label: 'Zillow' },
   { name: 'realtor', fn: scrapeRealtor, label: 'Realtor.com' },
   { name: 'opendoor', fn: scrapeOpendoor, label: 'Opendoor' },
