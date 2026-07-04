@@ -2,6 +2,12 @@
 
 > Research status: Reputation research complete via secondary sources (2026-07-05). No first-person contact yet — Nichols Landing (NW Charlotte) is the actionable lead requiring a site visit.
 
+## Scope
+
+- **Relevant market/community:** Charlotte, NC — Nichols Landing (NW Charlotte) and Lakeview Village townhome communities
+- **Profile updated:** 2026-07-05
+- **Research owner:** Claude research pass (secondary sources only; no first-person evidence yet)
+
 ## Snapshot
 
 | Field | Information |
@@ -25,6 +31,7 @@
 
 ## Questions, risks, and next actions
 
+- **Strengths:** Berkshire/Clayton balance-sheet stability; large multi-phase Charlotte townhome pipeline (Nichols Landing ~300 homes) in the buyer's highest-conviction corridor; 70-year family-founded operating history.
 - **Nichols Landing is the action item**: ~300 townhomes in the 28216-adjacent corridor is a large, multi-phase community — that means model homes on site for years and multiple closeout windows. Visit, get pricing, and ask when the first model releases and whether Mungo does leasebacks (no public evidence either way).
 - The warranty-complaint pattern (validated-then-ignored claims) is the sharpest risk signal here — worse in character than volume. Any Mungo offer should carry the same protections as the Tri Pointe playbook: independent inspection, written warranty response timelines, and escrowed punch-list items.
 - 53% employee-recommend is the weakest internal signal of any profiled builder — probe subcontractor consistency for the specific community.
