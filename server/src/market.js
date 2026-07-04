@@ -103,6 +103,7 @@ const LEASEBACK_PROGRAMS = [
   { builder: 'Century Communities', likelihood: 'rare', furnished: 'rarely', terms: 'Closeout model sales, usually unfurnished.', contact: 'Charlotte division', tip: 'Gastonia communities are the value pocket.' },
   { builder: 'Pulte Homes', likelihood: 'case-by-case', furnished: 'sometimes', terms: 'Periodic model leasebacks, usually in larger master-planned communities.', contact: 'Charlotte division', tip: 'Most Pulte TH product runs above $350K — watch for incentives.' },
   { builder: 'Toll Brothers', likelihood: 'active', furnished: 'usually included', terms: 'Regular model leasebacks with designer furnishings — but Charlotte TH product starts well above $350K.', contact: 'Charlotte division', tip: 'Out of budget for this hunt; listed for completeness.' },
+  { builder: 'Mungo Homes', likelihood: 'case-by-case', furnished: 'ask', terms: 'NEW (researched 7/5): Clayton Properties Group (Berkshire) since 2018. No public leaseback program, but Nichols Landing (~300 townhomes, NW Charlotte) is a multi-phase community — models will sit on site for years, giving multiple release + leaseback windows. ⚠ Buyer reviews 1.6/5 with a validated-then-ignored warranty complaint pattern — contract protections mandatory.', contact: 'Nichols Landing sales office (mungo.com/communities/charlotte)', tip: 'Visit early in the community lifecycle: first-phase model buyers get the longest leaseback runway. Bring the Tri Pointe-style protections checklist.' },
 ];
 
 function submarketFor(listing) {
@@ -118,12 +119,44 @@ function monthlyPI(principal, annualRatePct, years) {
   return principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
 }
 
+// Lifestyle-fit scoring: plug-and-play readiness, tech spec, uniqueness.
+// Tuned to the buyer's stated criteria: "plug and play, high tech, good deal, unique."
+const TECH_KEYWORDS = ['smart', 'wi-fi', 'wifi', 'ring', 'thermostat', 'energy star', 'solar', 'ev charg', 'tankless', 'certified', 'automation'];
+const UNIQUE_KEYWORDS = ['decorated', 'designer', 'model', 'rooftop', 'end unit', 'corner', '3-story', 'three-story', 'turnkey', 'penthouse'];
+
+function fitScores(listing) {
+  let features = listing.features || [];
+  if (typeof features === 'string') { try { features = JSON.parse(features); } catch { features = []; } }
+  const text = (features.join(' ') + ' ' + (listing.description || '') + ' ' + (listing.status || '')).toLowerCase();
+
+  let plugPlay = 0;
+  if (listing.is_model) plugPlay += 30;
+  if (listing.is_furnished) plugPlay += 30;
+  if (listing.is_new_construction) plugPlay += 20;
+  if (/move-in|ready|turnkey/.test(text)) plugPlay += 20;
+
+  let tech = 0;
+  for (const k of TECH_KEYWORDS) if (text.includes(k)) tech += 15;
+
+  let unique = 0;
+  if (listing.leaseback) unique += 30;
+  for (const k of UNIQUE_KEYWORDS) if (text.includes(k)) unique += 15;
+
+  const clamp = n => Math.min(100, n);
+  return {
+    plug_play: clamp(plugPlay),
+    tech: clamp(tech),
+    unique: clamp(unique),
+    score: Math.round(0.4 * clamp(plugPlay) + 0.3 * clamp(tech) + 0.3 * clamp(unique)),
+  };
+}
+
 // Compute the full investment picture for one listing. Pure function.
 function enrichListing(listing) {
   const key = submarketFor(listing);
   const sub = key ? SUBMARKETS[key] : null;
   if (!sub || !listing.price || listing.price <= 0) {
-    return { submarket: key, submarket_label: sub?.label || null, score: null };
+    return { submarket: key, submarket_label: sub?.label || null, score: null, fit: fitScores(listing) };
   }
 
   const sqft = listing.sqft || Math.round(listing.price / sub.ppsf);
@@ -178,6 +211,7 @@ function enrichListing(listing) {
     yoy_appreciation: sub.yoy_appreciation,
     forecast_3yr: sub.forecast_3yr,
     score,
+    fit: fitScores(listing),
   };
 }
 

@@ -23,8 +23,15 @@ export default function ResearchTab({ research }) {
     sources = [], builder_intel = [], your_deal, thesis, innovation_watch,
     negotiation_playbook, best_builders_to_talk_to = [],
     upside_2027, contract_red_flags, rental_playbook, tripointe_roster, tour_archive, records_toolkit,
-    key_insights,
+    key_insights, deal_programs, api_catalog, monetization,
   } = research;
+
+  const API_STATUS_STYLE = {
+    'ready-to-wire': 'bg-green-100 text-green-800',
+    'if-monetized': 'bg-amber-100 text-amber-800',
+    'needs-partner': 'bg-blue-100 text-blue-800',
+    'caution-tos': 'bg-red-100 text-red-700',
+  };
 
   return (
     <div className="space-y-6">
@@ -335,6 +342,79 @@ export default function ResearchTab({ research }) {
           </section>
         )}
       </div>
+
+      {/* Deal programs across portals/iBuyers */}
+      {deal_programs && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">💰 Special deal programs — portals & iBuyers <span className="text-xs font-normal text-gray-400">(researched {deal_programs.researched})</span></h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+            {deal_programs.programs.map(p => (
+              <div key={p.name} className={`rounded-lg border p-3 ${p.fit === 'high' ? 'border-green-200 bg-green-50/50' : p.fit === 'verify' ? 'border-gray-200 bg-gray-50' : 'border-gray-200'}`}>
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <span className="text-xs font-semibold text-gray-800">{p.name}</span>
+                  <span className="text-[10px] text-gray-400">{p.platform}</span>
+                </div>
+                <p className="text-xs text-gray-600 leading-relaxed">{p.what}</p>
+                <p className="text-xs font-medium text-blue-700 mt-1.5">→ {p.action}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* API catalog */}
+      {api_catalog && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-4 py-3 border-b border-gray-100">
+            <h3 className="text-sm font-semibold text-gray-700">🔌 Data APIs the app can consume <span className="text-xs font-normal text-gray-400">(researched {api_catalog.researched})</span></h3>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-xs text-gray-500 border-b border-gray-100">
+                  <th className="text-left font-medium px-4 py-2">API</th>
+                  <th className="text-left font-medium px-3 py-2">Cost</th>
+                  <th className="text-left font-medium px-3 py-2">Status</th>
+                  <th className="text-left font-medium px-4 py-2">What it powers</th>
+                </tr>
+              </thead>
+              <tbody>
+                {api_catalog.apis.map(a => (
+                  <tr key={a.name} className="border-b border-gray-50 hover:bg-gray-50">
+                    <td className="px-4 py-2 font-medium whitespace-nowrap">
+                      <a href={a.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{a.name}</a>
+                    </td>
+                    <td className="px-3 py-2 text-xs text-gray-600 whitespace-nowrap">{a.cost}</td>
+                    <td className="px-3 py-2"><span className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${API_STATUS_STYLE[a.status] || 'bg-gray-100 text-gray-600'}`}>{a.status}</span></td>
+                    <td className="px-4 py-2 text-xs text-gray-500">{a.powers}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="px-4 py-2.5 text-xs text-green-800 bg-green-50 border-t border-green-100">→ {api_catalog.recommendation}</p>
+        </section>
+      )}
+
+      {/* Monetization plan */}
+      {monetization && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-1.5">💳 Monetization path (if you open it up)</h3>
+          <p className="text-xs text-gray-600 mb-2">{monetization.verdict}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+            {monetization.tiers.map(t => (
+              <div key={t.tier} className="bg-gray-50 rounded-lg p-2.5">
+                <p className="text-xs font-bold text-gray-800">{t.tier}</p>
+                <p className="text-xs text-gray-500 mt-0.5">{t.gets}</p>
+              </div>
+            ))}
+          </div>
+          <ol className="text-xs text-gray-600 space-y-0.5 mb-2">
+            {monetization.path.map(s => <li key={s}>{s}</li>)}
+          </ol>
+          <p className="text-xs text-red-700 bg-red-50 rounded-lg p-2">⚖️ {monetization.legal_caution}</p>
+        </section>
+      )}
 
       {/* Sources */}
       <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">

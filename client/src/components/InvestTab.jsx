@@ -39,7 +39,14 @@ function TargetCard({ listing, onOpen }) {
             <span className="text-xs line-through text-gray-400">{fmt(listing.original_price)}</span>
           )}
         </div>
-        <ScoreChip score={i.score} />
+        <span className="flex items-center gap-1">
+          <ScoreChip score={i.score} />
+          {i.fit && (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold border bg-indigo-50 text-indigo-700 border-indigo-200" title="Matt-Fit: plug-and-play · tech · unique">
+              Fit {i.fit.score}
+            </span>
+          )}
+        </span>
       </div>
       <p className="text-sm text-gray-700 font-medium leading-tight mb-1">{listing.community || listing.address}</p>
       <p className="text-xs text-gray-500 mb-2">{listing.builder} · {i.submarket_label || listing.city}</p>

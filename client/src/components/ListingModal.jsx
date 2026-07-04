@@ -187,6 +187,7 @@ export default function ListingModal({ listing, onClose, trackedRecord, onSaveTr
                 ['$/sqft vs submarket', `$${inv.ppsf} vs $${inv.market_ppsf} (${inv.ppsf_vs_market_pct > 0 ? '+' : ''}${inv.ppsf_vs_market_pct}%)`],
                 ['Submarket appreciation', `${inv.yoy_appreciation}% YoY · ${inv.forecast_3yr}%/yr 3-yr forecast`],
                 ['Property tax (investor)', `${fmtN(inv.tax_annual_investor)}/yr`],
+                ...(inv.fit ? [['Matt-Fit (plug-play · tech · unique)', `${inv.fit.score}/100 (${inv.fit.plug_play} · ${inv.fit.tech} · ${inv.fit.unique})`]] : []),
               ];
               return (
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
