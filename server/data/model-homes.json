@@ -10,7 +10,7 @@
       "city": "Charlotte",
       "state": "NC",
       "zip": "28211",
-      "price": 398916,
+      "price": 378987,
       "beds": 2,
       "baths": 2.5,
       "sqft": 1569,
@@ -26,15 +26,18 @@
       "is_furnished": 1,
       "leaseback": 1,
       "move_in_date": "Closing ~July 17, 2026",
-      "description": "YOUR BENCHMARK DEAL (exact terms from your comparison dashboard): $398,916 with $24,945.80 incentive (5% + $5K via approved lender) → $373,970 effective, clearing your ≤$380-390K buy threshold. Leaseback $2,600/mo × 12 with two 3-month extension options ($31,200+ gross). Furniture + appliances included; NO blinds ($1,177) or washer/dryer ($1,976) — negotiated in lieu of commission cut. Warranty: 2/10 balance from CO 1/3/2025, no 1-year walk. Modeled 15.5%/yr on cash with incentives (8.5% without).",
+      "description": "YOUR DEAL — PRIMARY SOURCE (signed contract, Lot 71, Remely A322/B/N): $398,934 contract (base $395,990 + $2,944 options) reduced to $378,987 on the 6/30 revision — your 5% price-reduction ask EXECUTED — plus $3,153 incentives. Earnest $11,950 paid 7/1 (Skyla FCU). Old Republic NC/SC home warranty (no-limit HVAC) + 2/10 structural balance. Leaseback $2,600/mo × 12 + two 3-mo extensions. ⚠ Verify the Investor Sales Addendum covers the leaseback (rental clause = forfeiture without it). Sales: Jon Wian.",
       "features": [
-        "$24,946 incentive (5% + $5K)",
-        "$2,600/mo × 12 + two 3-mo extensions",
-        "Furniture + appliances included",
-        "Effective $373,970 — clears buy threshold",
-        "Myers Park High assignment (verify w/ CMS)",
-        "HOA $250/mo · tax $3,000/yr"
-      ]
+        "PRIMARY: signed contract on file",
+        "$19,947 price cut executed (6/30 rev)",
+        "Remely plan · Lot 71 · Myers Park High (verify CMS)",
+        "Furniture + appliances included — turnkey",
+        "Old Republic no-limit-HVAC warranty",
+        "Leaseback $2,600/mo ×12 +2 ext",
+        "Smart plug-and-play: furnished decorated model",
+        "⚠ Investor Sales Addendum — verify"
+      ],
+      "original_price": 398934
     },
     {
       "id": "target_tripointe_archer_row_beau",
@@ -175,7 +178,13 @@
       "is_furnished": 0,
       "leaseback": 0,
       "description": "NEW from 7/5 research: Mungo's (Clayton/Berkshire) newest Charlotte townhome community — ~300 homes, 1,471–1,697 sqft, in your triangulated 28216 corridor (2027 upside pick #2 + Corridors of Opportunity). Multi-phase = model homes on site for YEARS = multiple leaseback windows; first-phase model buyers get the longest runway. ⚠ Mungo buyer reviews 1.6/5 with validated-then-ignored warranty pattern — inspection + written warranty timelines mandatory. Pricing unverified; get it in writing on site.",
-      "features": ["~300-home multi-phase community", "28216 triangulated corridor", "Years of model-release windows", "Berkshire/Clayton balance sheet", "⚠ 1.6/5 buyer reviews — contract protections required"]
+      "features": [
+        "~300-home multi-phase community",
+        "28216 triangulated corridor",
+        "Years of model-release windows",
+        "Berkshire/Clayton balance sheet",
+        "⚠ 1.6/5 buyer reviews — contract protections required"
+      ]
     },
     {
       "id": "lead_ryan_sunset_creek",

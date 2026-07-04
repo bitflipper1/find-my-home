@@ -63,6 +63,10 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 | SRC-057 | Mungo Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-05 | https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints | Warranty validated-then-unaddressed pattern | Verified |
 | SRC-058 | Mungo Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | — | 2026-07-05 | https://www.complaintsboard.com/mungo-homes-b134875 | Flooring/HVAC/drainage warranty complaint themes | Verified |
 | SRC-059 | Mungo Homes Reviews | Secondary | Glassdoor | — | 2026-07-05 | https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm | 3.5/5, 49 reviews, 53% recommend — weakest employee signal in set | Verified |
+| SRC-060 | Purchase Agreement — 3912 Craig Ave, Lot 71 (rev 6/29 + 6/30) | Primary | Weekley Homes, LLC / buyer | 2026-06-23 | 2026-07-05 | uploads (private, not in Git) | Signed contract: $398,934 → $378,987 on 6/30 rev; investor-representation clause | Verified |
+| SRC-061 | Homeowner Transaction Summary — Job 36320071 | Primary | David Weekley Homes | 2026-06-29 | 2026-07-05 | uploads (private, not in Git) | Base $395,990 + $2,944 options; $3,153 incentives; Remely A322/B/N; consultant Jonathan Wian | Verified |
+| SRC-062 | Earnest payment confirmation — $11,950 | Primary | David Weekley Homes / Skyla FCU | 2026-07-01 | 2026-07-05 | uploads (private, not in Git) | Earnest paid in full 7/1 | Verified |
+| SRC-063 | Old Republic Home Protection NC/SC plan brochure | Primary (insurer-published) | Old Republic Home Protection | — | 2026-07-05 | uploads (private, not in Git) | No-dollar-limit HVAC; systems/appliances regardless of age; code 12H424 | Verified |
 
 ## Source status
 

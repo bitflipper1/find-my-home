@@ -141,6 +141,10 @@ function fitScores(listing) {
   let unique = 0;
   if (listing.leaseback) unique += 30;
   for (const k of UNIQUE_KEYWORDS) if (text.includes(k)) unique += 15;
+  // School-district signal (e.g. Myers Park High assignment) is a resale + fit differentiator
+  if (/myers park|top-rated school|school district/.test(text)) unique += 15;
+  // The full package — model + leaseback + furnished — is the buyer's exact play
+  if (listing.is_model && listing.leaseback && listing.is_furnished) { plugPlay += 20; unique += 15; }
 
   const clamp = n => Math.min(100, n);
   return {
@@ -192,6 +196,9 @@ function enrichListing(listing) {
   if (listing.is_model) score += 8;
   if (listing.is_furnished) score += 6;
   if (listing.leaseback) score += 6;
+  // Synergy: the model-leaseback-furnished trifecta de-risks carry (builder pays
+  // rent+HOA) and eliminates furnishing cost — worth more than the parts.
+  if (listing.is_model && listing.leaseback && listing.is_furnished) score += 8;
   score = Math.round(Math.max(0, Math.min(100, score)));
 
   return {

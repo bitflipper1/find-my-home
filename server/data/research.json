@@ -91,6 +91,12 @@
       "type": "media",
       "detail": "Community-by-community tour photo/video archive with _manifest.csv — 15 communities cataloged in the Tour Archive below.",
       "status": "cataloged"
+    },
+    {
+      "name": "Signed contract package — 3912 Craig Ave (Lot 71)",
+      "type": "primary-docs",
+      "detail": "Purchase Agreement (rev 6/29 + 6/30), Homeowner Transaction Summary (Job 36320071), earnest payment confirmation ($11,950 paid 7/1), Old Republic NC/SC warranty brochure, community docs. FIRST PRIMARY SOURCES in the evidence base — uploaded 7/5.",
+      "status": "ingested"
     }
   ],
   "builder_intel": [
@@ -198,10 +204,10 @@
     }
   ],
   "your_deal": {
-    "property": "3912 Craig Ave, Charlotte, NC 28211 (Central Living at Craig model)",
-    "price": 398916,
-    "incentive": 24945.8,
-    "incentive_structure": "5% of purchase price + $5,000 through approved lender",
+    "property": "3912 Craig Ave, Charlotte, NC 28211 — Lot 71, Remely plan (A322/B/N), Central Living at Craig 16/20, Phase 01",
+    "price": 378987,
+    "incentive": 23100,
+    "incentive_structure": "PRIMARY SOURCE (signed contract): ~5% price reduction baked into contract on 6/30 revision + $3,153 incentives/discounts per Homeowner Transaction Summary",
     "leaseback_rent_monthly": 2600,
     "leaseback_term": "12 months + two 3-month extension options",
     "gross_leaseback_rent": 31200,
@@ -213,12 +219,12 @@
     "sqft": 1569,
     "beds": 2,
     "baths": 2.5,
-    "warranty": "No 1-year DW walk on model sales; balance of 2/10 warranty from CO 1/3/2025; end-of-lease walk for paint/drywall touch-ups",
+    "warranty": "Old Republic Home Protection NC/SC plan (primary: ORHP brochure + contract) — no dollar limit on HVAC, systems/appliances covered regardless of age; PLUS 2/10 structural balance from CO 1/3/2025. No 1-year DW walk on model sales.",
     "modeled_return_with_incentives_pct": 15.5,
     "modeled_return_without_incentives_pct": 8.5,
     "model_assumptions": "3%/yr appreciation, 3-yr hold, 3% selling costs, $111K total down, $500/mo extra principal (from your Investment Analysis doc)",
     "risks_to_verify": [
-      "Incentive tied to builder's preferred lender — confirm the rate tradeoff nets positive",
+      "⚠ NEW FROM CONTRACT: investor-representation clause — rental use = forfeiture of earnest money UNLESS an Investor Sales Addendum is executed. With a builder leaseback, confirm in writing which addendum covers it BEFORE closing.",
       "Leaseback guaranteed for all 12 months + extension option mechanics in writing",
       "Rent paid monthly vs credited upfront; taxability of leaseback income",
       "Who pays HOA, utilities, insurance, taxes, maintenance during leaseback",
@@ -228,7 +234,12 @@
     ],
     "your_score": "86/100 — ranked #1 in your own comp set (email to Tracy)",
     "yield_base_pct": 8.27,
-    "yield_18mo_pct": 12.41
+    "yield_18mo_pct": 12.41,
+    "price_history_contract": "Base $395,990 + $2,944 financed options = $398,934 (rev 6/29) → $378,987 (rev 6/30) = $19,947 price reduction executed + $3,153 listed incentives",
+    "earnest_money": 11950,
+    "earnest_paid": "2026-07-01 via Skyla Federal Credit Union (payment confirmation on file)",
+    "sales_consultant": "Jonathan Wian (contract)",
+    "evidence_grade": "PRIMARY — signed purchase agreement, Homeowner Transaction Summary, payment confirmation, ORHP warranty brochure (uploaded 7/5)"
   },
   "thesis": {
     "name": "Oakhurst / Cotswold value-gap thesis",
@@ -577,7 +588,8 @@
       "1. Assessor property card — property.spatialest.com/nc/mecklenburg (owner + prior sale)",
       "2. POLARIS 3G — map, parcel, overlays",
       "3. Register of Deeds — deed chain to 1990",
-      "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price"
+      "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price",
+      "4. Foreclosures: Meck Clerk of Court sale calendar · Rezonings: charlotteud.com/rezoning · Crime: CMPD open data — all free, all wired into the Deal Room links"
     ]
   },
   "key_insights": {
@@ -674,11 +686,11 @@
         "fit": "high"
       },
       {
-        "name": "HomeScout / 'Scout' apps",
-        "platform": "HomeScout",
-        "what": "White-label MLS search apps (agent-sponsored) with direct-MLS freshness — sometimes faster than portals. UNVERIFIED which 'Scout' you meant; if it's a specific app, name it and it gets folded in.",
-        "action": "Ask Tracy for her brokerage's HomeScout-style app for raw-MLS speed.",
-        "fit": "verify"
+        "name": "RealScout (Tracy's platform)",
+        "platform": "RealScout",
+        "what": "CONFIRMED: the agent-collaboration search platform your realtor uses — direct-MLS freshness (faster than portals), agent-curated matches, and buyer-activity signals agents see. Listings Tracy 'scores' arrive here before Zillow alerts.",
+        "action": "Ask Tracy to widen your RealScout saved-search to the 28216/28208 corridor + model/quick-move-in tags; forward RealScout alert emails so the daily scan ingests them.",
+        "fit": "high"
       }
     ]
   },
@@ -756,6 +768,30 @@
         "powers": "Python scraper for Realtor.com/Zillow/Redfin — same ToS caveat; personal-use replacement for the blocked scrapers",
         "status": "caution-tos",
         "url": "https://github.com/Bunsly/HomeHarvest"
+      },
+      {
+        "name": "CMPD Crime Open Data",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "Incident-level crime via ArcGIS REST — street-level risk check before any offer",
+        "status": "ready-to-wire",
+        "url": "https://data.charlottenc.gov/datasets/cmpd-incidents"
+      },
+      {
+        "name": "Charlotte Rezoning Petitions (RZ portal)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "Live rezoning petitions — your thesis's momentum signal (2025-077/078 pattern), automated",
+        "status": "ready-to-wire",
+        "url": "https://charlotteud.com/rezoning/"
+      },
+      {
+        "name": "Mecklenburg Foreclosure Notices",
+        "cost": "Free",
+        "auth": "None (courthouse listings)",
+        "powers": "Upcoming foreclosure sales — distressed-entry pipeline in target zips",
+        "status": "manual-check",
+        "url": "https://www.mecknc.gov/CountyClerkOfCourt/Pages/Foreclosures.aspx"
       }
     ],
     "recommendation": "Wire the four free ones (RentCast free tier, HUD, Census, Charlotte Open Data) — they're legally clean, cover rent + fundamentals + leading indicators, and cost $0. ATTOM/MLS Grid only if the app becomes a paid product."
