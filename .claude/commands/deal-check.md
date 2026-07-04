@@ -1,0 +1,2 @@
+Underwrite this property against my benchmark: $ARGUMENTS
+Use my ***REDACTED-ADDRESS*** template (86/100, $373,970 effective, 15.5%/yr with package): compute effective price after incentives, rent estimate, gross yield, cash flow at 20%/investor rate, $/sqft vs submarket, fit score, and the SC-tax penalty if applicable. Then verdict: beat/meets/below benchmark, and the three negotiation asks that would close the gap. Check it against my avoid rules (far-out with remaining lots, oversupplied corridors, top-of-market pricing).
