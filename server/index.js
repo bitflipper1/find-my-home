@@ -181,6 +181,29 @@ app.get('/api/live/rent', async (req, res) => {
 });
 app.get('/api/live/fmr/:zip', async (req, res) => res.json(await live.hudFmr(req.params.zip)));
 
+// Official Charlotte/Meck REST layers — the corridor screen, one call each.
+// Usage: /api/live/policy-map?lat=35.19&lng=-80.83 (same for rezonings/crime/pipeline)
+for (const [route, fn] of [['policy-map', 'policyMapNear'], ['rezonings', 'rezoningsNear'], ['crime', 'crimeNear'], ['pipeline', 'pipelineNear']]) {
+  app.get(`/api/live/${route}`, async (req, res) => {
+    const { lat, lng } = req.query;
+    if (!lat || !lng) return res.status(400).json({ ok: false, reason: 'lat and lng required' });
+    res.json(await live[fn](parseFloat(lat), parseFloat(lng)));
+  });
+}
+app.get('/api/live/parcel/:pid', async (req, res) => res.json(await live.parcelByPid(req.params.pid)));
+
+// The corridor screen: run all official layers for a point in one shot —
+// the boom-signal test (policy ∩ entitlements ∩ pipeline) plus crime context.
+app.get('/api/live/corridor', async (req, res) => {
+  const { lat, lng } = req.query;
+  if (!lat || !lng) return res.status(400).json({ ok: false, reason: 'lat and lng required' });
+  const [policy, rezonings, crime, pipeline] = await Promise.all([
+    live.policyMapNear(+lat, +lng), live.rezoningsNear(+lat, +lng), live.crimeNear(+lat, +lng), live.pipelineNear(+lat, +lng),
+  ]);
+  const boom = (policy.ok && policy.boom_signal_types?.length > 0) && (rezonings.ok && rezonings.count > 0) && (pipeline.ok && pipeline.count > 0);
+  res.json({ ok: true, boom_signal: boom, note: boom ? 'Policy ∩ entitlements ∩ pipeline all present — verify infrastructure (CAP) + flood before pursuing' : 'Not all three boom conditions present (or a layer was unreachable)', policy, rezonings, crime, pipeline });
+});
+
 // --- Tracked places (personal tour tracker) ---
 app.get('/api/tracked', (req, res) => {
   try {

@@ -62,4 +62,73 @@ async function hudFmr(zip) {
   return { ok: true, source: 'HUD FMR', data: r.data?.data?.basicdata };
 }
 
-module.exports = { censusMecklenburg, permitsNear, rentEstimate, hudFmr };
+// ---- Official Charlotte/Meck REST layers (documented endpoints from the
+// public-data-stack research). All keyless; all degrade gracefully. ----
+
+// Charlotte Future 2040 Policy Map — place types near a point (the official
+// future-growth intent layer; policy guidance, not entitlement).
+async function policyMapNear(lat, lng, radiusMeters = 800) {
+  const base = 'https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Charlotte_Future_2040_Policy_Map/FeatureServer/0/query';
+  const r = await safeGet(base, { params: {
+    geometry: `${lng},${lat}`, geometryType: 'esriGeometryPoint', inSR: 4326,
+    distance: radiusMeters, units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+    outFields: 'PlaceTypeFullTxt,PlaceTypeCde', returnGeometry: false, f: 'json',
+  }});
+  if (!r.ok) return r;
+  const types = [...new Set((r.data?.features || []).map(f => f.attributes.PlaceTypeFullTxt))];
+  const boom = types.filter(t => /Activity Center|Neighborhood Center|Innovation/i.test(t || ''));
+  return { ok: true, source: '2040 Policy Map', place_types: types, boom_signal_types: boom };
+}
+
+// Pending rezonings near a point — the live entitlement-change pipeline.
+async function rezoningsNear(lat, lng, radiusMeters = 1609) {
+  const base = 'https://gis.charlottenc.gov/arcgis/rest/services/PLN/Rezonings/MapServer/0/query';
+  const r = await safeGet(base, { params: {
+    geometry: `${lng},${lat}`, geometryType: 'esriGeometryPoint', inSR: 4326,
+    distance: radiusMeters, units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+    outFields: '*', returnGeometry: false, f: 'json', resultRecordCount: 50,
+  }});
+  if (!r.ok) return r;
+  return { ok: true, source: 'PLN Rezonings', count: (r.data?.features || []).length, petitions: (r.data?.features || []).slice(0, 15).map(f => f.attributes) };
+}
+
+// CMPD incidents near a point — property-crime screen (last 12 months).
+async function crimeNear(lat, lng, radiusMeters = 800) {
+  const since = new Date(Date.now() - 365 * 86400000).toISOString().slice(0, 10);
+  const base = 'https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0/query';
+  const r = await safeGet(base, { params: {
+    geometry: `${lng},${lat}`, geometryType: 'esriGeometryPoint', inSR: 4326,
+    distance: radiusMeters, units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+    where: `DATE_REPORTED >= DATE '${since}'`,
+    outFields: 'DATE_REPORTED,NPA,HIGHEST_NIBRS_DESCRIPTION,CLEARANCE_STATUS',
+    returnGeometry: false, f: 'json', resultRecordCount: 500,
+  }});
+  if (!r.ok) return r;
+  const feats = (r.data?.features || []).map(f => f.attributes);
+  const byType = {};
+  feats.forEach(a => { const k = a.HIGHEST_NIBRS_DESCRIPTION || 'UNKNOWN'; byType[k] = (byType[k] || 0) + 1; });
+  return { ok: true, source: 'CMPD incidents (12 mo)', total: feats.length, by_type: byType };
+}
+
+// Land-development commercial pipeline near a point — Active/Pre-Submittal
+// projects are the earliest supply signal.
+async function pipelineNear(lat, lng, radiusMeters = 1609) {
+  const base = 'https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Land_Development_Commercial_Projects/FeatureServer/0/query';
+  const r = await safeGet(base, { params: {
+    geometry: `${lng},${lat}`, geometryType: 'esriGeometryPoint', inSR: 4326,
+    distance: radiusMeters, units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+    outFields: '*', returnGeometry: false, f: 'json', resultRecordCount: 50,
+  }});
+  if (!r.ok) return r;
+  return { ok: true, source: 'Land Dev Commercial Projects', count: (r.data?.features || []).length, projects: (r.data?.features || []).slice(0, 15).map(f => f.attributes) };
+}
+
+// Parcel zoning lookup by PID.
+async function parcelByPid(pid) {
+  const base = 'https://gis.charlottenc.gov/arcgis/rest/services/ODP/Parcel_Zoning_Lookup/MapServer/0/query';
+  const r = await safeGet(base, { params: { where: `PID='${String(pid).replace(/[^0-9A-Za-z]/g, '')}'`, outFields: '*', returnGeometry: false, f: 'json' } });
+  if (!r.ok) return r;
+  return { ok: true, source: 'Parcel Zoning Lookup', parcel: r.data?.features?.[0]?.attributes || null };
+}
+
+module.exports = { censusMecklenburg, permitsNear, rentEstimate, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid };

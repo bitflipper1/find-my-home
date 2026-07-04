@@ -97,6 +97,12 @@
       "type": "primary-docs",
       "detail": "Purchase Agreement (rev 6/29 + 6/30), Homeowner Transaction Summary (Job 36320071), earnest payment confirmation ($11,950 paid 7/1), Old Republic NC/SC warranty brochure, community docs. FIRST PRIMARY SOURCES in the evidence base — uploaded 7/5.",
       "status": "ingested"
+    },
+    {
+      "name": "Charlotte-Mecklenburg Public Data Stack (deep research)",
+      "type": "research-doc",
+      "detail": "User-supplied source inventory: Policy Map, rezonings, permits/CO, POLARIS, deeds, tax foreclosures, CAP, flood/wetlands, CMPD/QOL, CMS, CCP/Axios/CBJ, Terra Vista. Full doc: public-data-stack.md; endpoints wired into /api/live/*.",
+      "status": "ingested"
     }
   ],
   "builder_intel": [
@@ -691,6 +697,13 @@
         "what": "CONFIRMED: the agent-collaboration search platform your realtor uses — direct-MLS freshness (faster than portals), agent-curated matches, and buyer-activity signals agents see. Listings Tracy 'scores' arrive here before Zillow alerts.",
         "action": "Ask Tracy to widen your RealScout saved-search to the 28216/28208 corridor + model/quick-move-in tags; forward RealScout alert emails so the daily scan ingests them.",
         "fit": "high"
+      },
+      {
+        "name": "Terra Vista Realty new-home rebate",
+        "platform": "Terra Vista (private brokerage)",
+        "what": "One of the few public-facing Charlotte pages offering a buyer-side rebate on new construction. Private brokerage program, NOT a public subsidy — and it would replace Tracy as your representation, so weigh the relationship cost.",
+        "action": "Read terravistarealty.com/new-home-rebate.cfm for the rebate structure; if material, ask Tracy whether her brokerage matches rebates before switching anything.",
+        "fit": "verify"
       }
     ]
   },
@@ -773,9 +786,9 @@
         "name": "CMPD Crime Open Data",
         "cost": "Free",
         "auth": "None",
-        "powers": "Incident-level crime via ArcGIS REST — street-level risk check before any offer",
+        "powers": "Incident-level crime with NPA + patrol-division fields (DATE_REPORTED, HIGHEST_NIBRS_DESCRIPTION, CLEARANCE_STATUS) — micro-location screening; wired at /api/live/crime",
         "status": "ready-to-wire",
-        "url": "https://data.charlottenc.gov/datasets/cmpd-incidents"
+        "url": "https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0"
       },
       {
         "name": "Charlotte Rezoning Petitions (RZ portal)",
@@ -792,6 +805,70 @@
         "powers": "Upcoming foreclosure sales — distressed-entry pipeline in target zips",
         "status": "manual-check",
         "url": "https://www.mecknc.gov/CountyClerkOfCourt/Pages/Foreclosures.aspx"
+      },
+      {
+        "name": "Charlotte Future 2040 Policy Map (REST)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "Place-type per parcel/corridor (PlaceTypeFullTxt) — the official future-growth intent layer; wired at /api/live/policy-map",
+        "status": "ready-to-wire",
+        "url": "https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Charlotte_Future_2040_Policy_Map/FeatureServer/0"
+      },
+      {
+        "name": "Pending Rezonings + History (REST)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "Live entitlement-change pipeline (petition, acreage, conditional type); wired at /api/live/rezonings",
+        "status": "ready-to-wire",
+        "url": "https://gis.charlottenc.gov/arcgis/rest/services/PLN/Rezonings/MapServer"
+      },
+      {
+        "name": "Land Development Commercial Projects (REST)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "Approved/Active/Pre-Submittal pipeline — catches supply earlier than listing sites; wired at /api/live/pipeline",
+        "status": "ready-to-wire",
+        "url": "https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Land_Development_Commercial_Projects/FeatureServer"
+      },
+      {
+        "name": "Parcel Zoning Lookup by PID (REST)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "PID → zoning, rezone date, districts; wired at /api/live/parcel",
+        "status": "ready-to-wire",
+        "url": "https://gis.charlottenc.gov/arcgis/rest/services/ODP/Parcel_Zoning_Lookup/MapServer/0"
+      },
+      {
+        "name": "Quality of Life Explorer (REST)",
+        "cost": "Free",
+        "auth": "None",
+        "powers": "NPA-level income/health/education/crime context profiles",
+        "status": "ready-to-wire",
+        "url": "https://gis.charlottenc.gov/arcgis/rest/services/QOL/Quality_of_Life_Latest_Profile_Data/MapServer"
+      },
+      {
+        "name": "Charlotte Water Capacity Assurance (CAP)",
+        "cost": "Free",
+        "auth": "None (manual)",
+        "powers": "Sewer-capacity feasibility — the false-boom killer; CAP approval reserves capacity 2 yrs but doesn't guarantee downstream builds",
+        "status": "manual-check",
+        "url": "https://www.charlottenc.gov/water/Commercial-Development/Commercial-Customer-Services/Capacity-Assurance-Program"
+      },
+      {
+        "name": "FRIS flood + FWS Wetlands + DEQ Brownfields",
+        "cost": "Free",
+        "auth": "None (manual)",
+        "powers": "Lot-feasibility kill screen — ~20K acres regulatory floodplain in Meck; check adjacent parcels too",
+        "status": "manual-check",
+        "url": "https://fris.nc.gov"
+      },
+      {
+        "name": "CMS boundary maps + enrollment planning",
+        "cost": "Free",
+        "auth": "None (manual)",
+        "powers": "School assignment + 5–10 yr enrollment forecasts; redistricting = resale/political risk signal",
+        "status": "manual-check",
+        "url": "https://www.cmsk12.org/academics/planning-services/student-boundary-maps"
       }
     ],
     "recommendation": "Wire the four free ones (RentCast free tier, HUD, Census, Charlotte Open Data) — they're legally clean, cover rent + fundamentals + leading indicators, and cost $0. ATTOM/MLS Grid only if the app becomes a paid product."
@@ -819,5 +896,93 @@
       "4. The unique sellable asset: builder risk flags + leaseback program intel — nobody aggregates that"
     ],
     "legal_caution": "MLS data licensing and portal ToS prohibit reselling their listing data. Monetize your analysis, scores, and curated intel — never raw scraped listings."
+  },
+  "public_data_stack": {
+    "ingested": "2026-07-05",
+    "doc": "server/data/public-data-stack.md (full source inventory, query patterns, limitations)",
+    "boom_signal": "Next-booming-area = Policy Map intensity designation ∩ active rezoning/land-dev pipeline ∩ committed capital/utility investment. False boom = policy support without infrastructure, or developer interest blocked by floodplain/sewer-capacity/opposition. Charlotte Water CAP approval ≠ downstream infrastructure guarantee.",
+    "builder_leverage_proxy": "Permit/CO clusters = supply bulge = negotiability. Watch daily permit issuance, final inspections, CO acceleration, and Active/Pre-Submittal land-dev projects per corridor — public data prices your leverage and timing, not the incentive terms.",
+    "workflow": [
+      "1. Growth path: Policy Map place type + Community Area Plan",
+      "2. Entitlements: current zoning + pending rezonings + staff analyses",
+      "3. Ownership: POLARIS/GeoPortal triage → Assessor → Register of Deeds (deeds are dispositive, GIS is reference)",
+      "4. Live supply: land-development project search + permit/CO dashboards",
+      "5. Infrastructure: Capital Projects, STIP/TIP, CATS, Charlotte Water CAP",
+      "6. Kill the lot before the lot kills the deal: floodplain/wetlands/buffers/brownfields — test ADJACENT parcels too",
+      "7. Neighborhood risk: CMPD incidents (property vs violent, 12–24 mo) + Quality of Life Explorer",
+      "8. Only then price the leverage: builder/brokerage incentives last"
+    ],
+    "matrix": [
+      {
+        "family": "Policy Map + CAPs",
+        "incentives": "Low",
+        "growth": "Very high",
+        "risk": "Med",
+        "diligence": "Med"
+      },
+      {
+        "family": "Zoning / rezonings stack",
+        "incentives": "Low",
+        "growth": "Very high",
+        "risk": "Med",
+        "diligence": "High"
+      },
+      {
+        "family": "Parcel / assessor / deeds / tax-foreclosure",
+        "incentives": "Low",
+        "growth": "Med",
+        "risk": "High",
+        "diligence": "Very high"
+      },
+      {
+        "family": "Permit / CO systems",
+        "incentives": "High",
+        "growth": "High",
+        "risk": "Med",
+        "diligence": "Very high"
+      },
+      {
+        "family": "Capital projects + transit + Water CAP",
+        "incentives": "Med",
+        "growth": "Very high",
+        "risk": "Very high",
+        "diligence": "High"
+      },
+      {
+        "family": "CMPD + Quality of Life",
+        "incentives": "Low",
+        "growth": "Med",
+        "risk": "Very high",
+        "diligence": "Med"
+      },
+      {
+        "family": "Flood / wetlands / brownfields",
+        "incentives": "Low",
+        "growth": "Low",
+        "risk": "Very high",
+        "diligence": "Very high"
+      },
+      {
+        "family": "CMS boundaries / capacity",
+        "incentives": "Low",
+        "growth": "Med",
+        "risk": "Med",
+        "diligence": "Med"
+      },
+      {
+        "family": "CCP / Axios / CBJ Crane Watch",
+        "incentives": "Med",
+        "growth": "High",
+        "risk": "Low",
+        "diligence": "Low"
+      },
+      {
+        "family": "Terra Vista rebates",
+        "incentives": "Very high",
+        "growth": "Low",
+        "risk": "Low",
+        "diligence": "Low"
+      }
+    ]
   }
 }
