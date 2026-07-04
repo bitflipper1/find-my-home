@@ -167,6 +167,20 @@ app.get('/api/builder-profiles', (req, res) => {
   }
 });
 
+// --- Live external data (Census, permits, RentCast, HUD) ---
+const live = require('./src/liveapis');
+app.get('/api/live/census', async (req, res) => res.json(await live.censusMecklenburg()));
+app.get('/api/live/permits', async (req, res) => {
+  const { lat, lng } = req.query;
+  if (!lat || !lng) return res.status(400).json({ ok: false, reason: 'lat and lng required' });
+  res.json(await live.permitsNear(parseFloat(lat), parseFloat(lng)));
+});
+app.get('/api/live/rent', async (req, res) => {
+  if (!req.query.address) return res.status(400).json({ ok: false, reason: 'address required' });
+  res.json(await live.rentEstimate(req.query.address));
+});
+app.get('/api/live/fmr/:zip', async (req, res) => res.json(await live.hudFmr(req.params.zip)));
+
 // --- Tracked places (personal tour tracker) ---
 app.get('/api/tracked', (req, res) => {
   try {

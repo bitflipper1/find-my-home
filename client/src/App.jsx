@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2 } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock } from 'lucide-react';
 import InvestTab from './components/InvestTab';
 import ResearchTab from './components/ResearchTab';
+import DealRoom from './components/DealRoom';
 import BuilderProfilesTab from './components/BuilderProfilesTab';
 import StatsBar from './components/StatsBar';
 import FilterPanel from './components/FilterPanel';
@@ -20,6 +21,7 @@ const TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
   { id: 'invest', label: 'Invest', icon: Target },
   { id: 'research', label: 'Research', icon: BookOpen },
+  { id: 'dealroom', label: 'Deal Room', icon: Lock },
   { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
   { id: 'analytics', label: 'Analytics', icon: Activity },
@@ -308,6 +310,10 @@ export default function App() {
 
         {tab === 'invest' && (
           <InvestTab listings={allListings} market={market} onOpen={setSelected} />
+        )}
+
+        {tab === 'dealroom' && (
+          <DealRoom market={market} research={research} />
         )}
 
         {tab === 'research' && (

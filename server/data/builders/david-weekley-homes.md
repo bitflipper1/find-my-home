@@ -1,6 +1,6 @@
 # David Weekley Homes
 
-> Research status: Reputation research complete via secondary sources (2026-07-04). Primary evidence exists as a first-person source (buyer's own signed contract) but is not transcribed into this profile — see the app's `research.json` `your_deal` object for those figures.
+> Research status: PRIMARY EVIDENCE INGESTED (2026-07-05): signed Purchase Agreement, Homeowner Transaction Summary, payment confirmation, and warranty brochure for the ***REDACTED-LOT*** / ***REDACTED-ADDRESS*** model-leaseback purchase — the first primary-source profile in this knowledge base.
 
 ## Snapshot
 
@@ -21,6 +21,10 @@
 | Employee-review rating 4.4/5 across 595+ reviews; 89% would recommend employer | Opinion aggregate | SRC-002 | Medium — larger sample, but employee sentiment ≠ buyer sentiment | 2026-07-04 |
 | Recurring buyer complaints: warranty limitations, craftsmanship, communication gaps | Opinion aggregate | SRC-001, SRC-003 | Medium | 2026-07-04 |
 | Model-home sales carry only the warranty balance from original CO date, not a fresh 1-year term | Assumption (pattern inferred from Tri Pointe's disclosed practice; not independently confirmed as a David Weekley-wide policy) | SRC-027 (analogous Tri Pointe disclosure), buyer's own contract terms | Low — inferred by analogy, not confirmed for David Weekley specifically | 2026-07-04 |
+| ***REDACTED-LOT*** (***REDACTED-ADDRESS***, Remely plan A322/B/N) contracted 6/23/2026 at $***; revised to $*** on 6/30 — a $19,947 price reduction — plus $3,153 listed incentives | Fact (primary) | SRC-060, SRC-061 | High — signed contract + transaction summary | 2026-07-05 |
+| Earnest money $*** paid in full 7/1/2026 | Fact (primary) | SRC-062 | High | 2026-07-05 |
+| Model sale includes Old Republic Home Protection NC/SC warranty (no-dollar-limit HVAC, age-independent coverage) | Fact (primary) | SRC-063 | High | 2026-07-05 |
+| Contract contains an investor-representation clause: rental use = cancellation + earnest forfeiture UNLESS an Investor Sales Addendum is executed — critical with a builder leaseback | Fact (primary) | SRC-060 | High — verbatim contract language | 2026-07-05 |
 
 ## Questions, risks, and next actions
 
@@ -30,6 +34,10 @@
 
 ## Sources
 
+- SRC-060 — Purchase Agreement, ***REDACTED-ADDRESS*** ***REDACTED-LOT*** (primary, private)
+- SRC-061 — Homeowner Transaction Summary, Job ***REDACTED-JOB-ID*** (primary, private)
+- SRC-062 — Earnest payment confirmation (primary, private)
+- SRC-063 — Old Republic NC/SC warranty brochure (primary)
 - SRC-001 — [Weekley Homes, LLC — BBB Reviews](https://www.bbb.org/us/tx/houston/profile/home-builders/weekley-homes-llc-0915-31528/customer-reviews)
 - SRC-002 — [David Weekley Homes Reviews (Glassdoor)](https://www.glassdoor.com/Reviews/David-Weekley-Homes-Reviews-E6633.htm)
 - SRC-003 — [David Weekley Homes Homebuyers Reviews 2026 (ComplaintsBoard)](https://www.complaintsboard.com/david-weekley-homes-b115919)
