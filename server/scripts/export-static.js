@@ -7,6 +7,7 @@ const fs = require('fs');
 const { runAllScrapers } = require('../src/aggregate');
 const { getListings, getStats, getScrapeLogs, db } = require('../src/db');
 const { getMarketIntel } = require('../src/market');
+const { getBuilderProfiles } = require('../src/builderProfiles');
 
 async function main() {
   const count = db.prepare('SELECT COUNT(*) as c FROM listings WHERE is_active=1').get().c;
@@ -42,6 +43,7 @@ async function main() {
       const f = path.join(__dirname, '..', 'data', 'research.json');
       return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
     })(),
+    builder_profiles: getBuilderProfiles(),
   };
 
   const outPath = path.join(__dirname, '..', '..', 'client', 'public', 'data.json');

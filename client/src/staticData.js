@@ -81,6 +81,9 @@ export const staticApi = {
   async fetchResearch() {
     return (await loadSnapshot()).research || null;
   },
+  async fetchBuilderProfiles() {
+    return (await loadSnapshot()).builder_profiles || { profiles: [], rankings: null, source_index: null, builders_index: null };
+  },
   async triggerRefresh() {
     return { status: 'static', message: 'This is a static (read-only) snapshot — data refreshes when the site is rebuilt.' };
   },
