@@ -157,6 +157,16 @@ app.get('/api/research', (req, res) => {
   }
 });
 
+// --- Builder knowledge base (markdown, mirrors Real-Estate-Knowledge/builders structure) ---
+const { getBuilderProfiles } = require('./src/builderProfiles');
+app.get('/api/builder-profiles', (req, res) => {
+  try {
+    res.json(getBuilderProfiles());
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // --- Tracked places (personal tour tracker) ---
 app.get('/api/tracked', (req, res) => {
   try {
