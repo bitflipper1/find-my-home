@@ -1,0 +1,1 @@
+Set up (or re-arm) the recurring monitors: the daily Gmail scan at ~6:53 AM, and remind me about quarter-end windows 12 days before each quarter closes. Confirm what's armed and when it fires next. Remember recurring tasks expire after 7 days — tell me the expiry date.

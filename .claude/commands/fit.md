@@ -1,0 +1,1 @@
+Rank every active listing by Matt-Fit (plug-and-play + high-tech + unique) combined with the investment score. Show the top 10 as a table: address, price, fit breakdown (plug-play/tech/unique), invest score, submarket, and the one action per listing. Call out anything scoring 70+ on both dimensions — those are the "drop everything and call" candidates.
