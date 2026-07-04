@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2 } from 'lucide-react';
 import InvestTab from './components/InvestTab';
 import ResearchTab from './components/ResearchTab';
+import BuilderProfilesTab from './components/BuilderProfilesTab';
 import StatsBar from './components/StatsBar';
 import FilterPanel from './components/FilterPanel';
 import ListingCard from './components/ListingCard';
@@ -12,13 +13,14 @@ import ActivityLog from './components/ActivityLog';
 import MyTours from './components/MyTours';
 import {
   fetchListings, fetchStats, triggerRefresh, fetchLogs, fetchBuilders, fetchCities, fetchEmailLeads,
-  fetchTracked, saveTracked, deleteTracked, fetchMarket, fetchResearch,
+  fetchTracked, saveTracked, deleteTracked, fetchMarket, fetchResearch, fetchBuilderProfiles,
 } from './api';
 
 const TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
   { id: 'invest', label: 'Invest', icon: Target },
   { id: 'research', label: 'Research', icon: BookOpen },
+  { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
   { id: 'analytics', label: 'Analytics', icon: Activity },
   { id: 'email', label: 'Email Leads', icon: Mail },
@@ -39,6 +41,7 @@ export default function App() {
   const [market, setMarket] = useState(null);
   const [allListings, setAllListings] = useState([]);
   const [research, setResearch] = useState(null);
+  const [builderProfiles, setBuilderProfiles] = useState(null);
   const [filters, setFilters] = useState({});
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -74,10 +77,13 @@ export default function App() {
 
   const loadInvest = useCallback(async () => {
     try {
-      const [m, all, r] = await Promise.allSettled([fetchMarket(), fetchListings({ limit: 1000 }), fetchResearch()]);
+      const [m, all, r, bp] = await Promise.allSettled([
+        fetchMarket(), fetchListings({ limit: 1000 }), fetchResearch(), fetchBuilderProfiles(),
+      ]);
       if (m.status === 'fulfilled') setMarket(m.value);
       if (all.status === 'fulfilled') setAllListings(all.value.listings || []);
       if (r.status === 'fulfilled') setResearch(r.value);
+      if (bp.status === 'fulfilled') setBuilderProfiles(bp.value);
     } catch {}
   }, []);
 
@@ -306,6 +312,10 @@ export default function App() {
 
         {tab === 'research' && (
           <ResearchTab research={research} />
+        )}
+
+        {tab === 'builders' && (
+          <BuilderProfilesTab data={builderProfiles} />
         )}
 
         {tab === 'tours' && (

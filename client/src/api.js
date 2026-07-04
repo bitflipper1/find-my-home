@@ -81,6 +81,12 @@ export async function fetchResearch() {
   return data;
 }
 
+export async function fetchBuilderProfiles() {
+  if (S) return S.fetchBuilderProfiles();
+  const { data } = await api.get('/builder-profiles');
+  return data;
+}
+
 // --- Tracked places (personal tour tracker) ---
 export async function fetchTracked() {
   if (S) return S.fetchTracked();
