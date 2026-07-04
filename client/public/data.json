@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T03:01:33.601Z",
+  "generated_at": "2026-07-04T15:28:23.845Z",
   "listings": [
     {
       "id": "builder_drhorton_1",
@@ -39,9 +39,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.6,
@@ -62,7 +62,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 78
+        "score": 78,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -103,9 +109,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -126,7 +132,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 37
+        "score": 37,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -167,9 +179,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.3,
@@ -190,7 +202,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 57
+        "score": 57,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -231,9 +249,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -254,7 +272,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 42
+        "score": 42,
+        "fit": {
+          "plug_play": 20,
+          "tech": 45,
+          "unique": 0,
+          "score": 22
+        }
       }
     },
     {
@@ -295,9 +319,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4,
@@ -318,7 +342,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 53
+        "score": 53,
+        "fit": {
+          "plug_play": 20,
+          "tech": 45,
+          "unique": 0,
+          "score": 22
+        }
       }
     },
     {
@@ -359,9 +389,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -382,7 +412,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6,
         "forecast_3yr": 4.5,
-        "score": 29
+        "score": 29,
+        "fit": {
+          "plug_play": 20,
+          "tech": 45,
+          "unique": 0,
+          "score": 22
+        }
       }
     },
     {
@@ -423,9 +459,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.1,
@@ -446,7 +482,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 75
+        "score": 75,
+        "fit": {
+          "plug_play": 20,
+          "tech": 45,
+          "unique": 0,
+          "score": 22
+        }
       }
     },
     {
@@ -487,9 +529,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.1,
@@ -510,7 +552,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 55
+        "score": 55,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -551,9 +599,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -574,7 +622,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 34
+        "score": 34,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -615,9 +669,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.6,
@@ -638,7 +692,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 70
+        "score": 70,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -679,9 +739,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -702,7 +762,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 46
+        "score": 46,
+        "fit": {
+          "plug_play": 40,
+          "tech": 75,
+          "unique": 0,
+          "score": 39
+        }
       }
     },
     {
@@ -743,9 +809,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.3,
@@ -766,7 +832,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3.2,
-        "score": 61
+        "score": 61,
+        "fit": {
+          "plug_play": 40,
+          "tech": 75,
+          "unique": 0,
+          "score": 39
+        }
       }
     },
     {
@@ -807,9 +879,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -830,7 +902,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3.2,
-        "score": 50
+        "score": 50,
+        "fit": {
+          "plug_play": 40,
+          "tech": 75,
+          "unique": 0,
+          "score": 39
+        }
       }
     },
     {
@@ -871,9 +949,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.3,
@@ -894,7 +972,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 47
+        "score": 47,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -935,9 +1019,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -958,7 +1042,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 36
+        "score": 36,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -999,9 +1089,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.9,
@@ -1022,7 +1112,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 46
+        "score": 46,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -1063,9 +1159,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1086,7 +1182,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3,
         "forecast_3yr": 3,
-        "score": 52
+        "score": 52,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -1127,9 +1229,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1150,7 +1252,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 64
+        "score": 64,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1191,9 +1299,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.3,
@@ -1214,7 +1322,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 50
+        "score": 50,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1255,9 +1369,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:07",
-      "updated_at": "2026-07-03 21:45:07",
-      "last_seen": "2026-07-03 21:45:07",
+      "created_at": "2026-07-04 15:19:23",
+      "updated_at": "2026-07-04 15:19:23",
+      "last_seen": "2026-07-04 15:19:23",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1278,7 +1392,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 63
+        "score": 63,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1314,9 +1434,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1337,7 +1457,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 37
+        "score": 37,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1373,9 +1499,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 5.9,
@@ -1396,7 +1522,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6,
         "forecast_3yr": 4.5,
-        "score": 45
+        "score": 45,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1432,9 +1564,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1455,7 +1587,13 @@
         "sc_investor_tax_warning": true,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 29
+        "score": 29,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1491,9 +1629,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1514,7 +1652,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 59
+        "score": 59,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1550,9 +1694,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 6.7,
@@ -1573,7 +1717,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4.2,
-        "score": 45
+        "score": 45,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1609,9 +1759,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:05",
-      "updated_at": "2026-07-03 21:45:05",
-      "last_seen": "2026-07-03 21:45:05",
+      "created_at": "2026-07-04 15:19:20",
+      "updated_at": "2026-07-04 15:19:20",
+      "last_seen": "2026-07-04 15:19:20",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1632,7 +1782,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 30
+        "score": 30,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -1673,9 +1829,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.5,
@@ -1696,7 +1852,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 56
+        "score": 56,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -1737,9 +1899,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1760,7 +1922,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 51
+        "score": 51,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -1801,9 +1969,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -1824,7 +1992,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 55
+        "score": 55,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -1865,9 +2039,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -1888,7 +2062,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 37
+        "score": 37,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -1929,9 +2109,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -1952,7 +2132,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 71
+        "score": 71,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -1993,9 +2179,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2016,7 +2202,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 47
+        "score": 47,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2057,9 +2249,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.8,
@@ -2080,7 +2272,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 79
+        "score": 79,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2121,9 +2319,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2144,7 +2342,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3.2,
-        "score": 52
+        "score": 52,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2185,9 +2389,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.9,
@@ -2208,7 +2412,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 45
+        "score": 45,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2249,9 +2459,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2272,7 +2482,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 44
+        "score": 44,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2313,9 +2529,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.2,
@@ -2336,7 +2552,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 61
+        "score": 61,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2377,9 +2599,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:02",
-      "updated_at": "2026-07-03 21:45:02",
-      "last_seen": "2026-07-03 21:45:02",
+      "created_at": "2026-07-04 15:19:18",
+      "updated_at": "2026-07-04 15:19:18",
+      "last_seen": "2026-07-04 15:19:18",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2400,7 +2622,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 64
+        "score": 64,
+        "fit": {
+          "plug_play": 20,
+          "tech": 30,
+          "unique": 0,
+          "score": 17
+        }
       }
     },
     {
@@ -2436,9 +2664,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:00",
-      "updated_at": "2026-07-03 21:45:00",
-      "last_seen": "2026-07-03 21:45:00",
+      "created_at": "2026-07-04 15:19:16",
+      "updated_at": "2026-07-04 15:19:16",
+      "last_seen": "2026-07-04 15:19:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 5.2,
@@ -2459,7 +2687,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 79
+        "score": 79,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -2495,9 +2729,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:00",
-      "updated_at": "2026-07-03 21:45:00",
-      "last_seen": "2026-07-03 21:45:00",
+      "created_at": "2026-07-04 15:19:16",
+      "updated_at": "2026-07-04 15:19:16",
+      "last_seen": "2026-07-04 15:19:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.7,
@@ -2518,7 +2752,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 70
+        "score": 70,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -2554,9 +2794,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:45:00",
-      "updated_at": "2026-07-03 21:45:00",
-      "last_seen": "2026-07-03 21:45:00",
+      "created_at": "2026-07-04 15:19:16",
+      "updated_at": "2026-07-04 15:19:16",
+      "last_seen": "2026-07-04 15:19:16",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2577,7 +2817,13 @@
         "sc_investor_tax_warning": true,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 35
+        "score": 35,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -2618,9 +2864,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.6,
@@ -2641,7 +2887,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 73
+        "score": 73,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -2682,9 +2934,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2705,7 +2957,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 36
+        "score": 36,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -2746,9 +3004,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2769,7 +3027,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3.2,
-        "score": 46
+        "score": 46,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -2810,9 +3074,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2833,7 +3097,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 33
+        "score": 33,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -2874,9 +3144,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.5,
@@ -2897,7 +3167,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3,
         "forecast_3yr": 3,
-        "score": 61
+        "score": 61,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -2938,9 +3214,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:58",
-      "updated_at": "2026-07-03 21:44:58",
-      "last_seen": "2026-07-03 21:44:58",
+      "created_at": "2026-07-04 15:19:14",
+      "updated_at": "2026-07-04 15:19:14",
+      "last_seen": "2026-07-04 15:19:14",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -2961,7 +3237,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 46
+        "score": 46,
+        "fit": {
+          "plug_play": 20,
+          "tech": 15,
+          "unique": 0,
+          "score": 13
+        }
       }
     },
     {
@@ -3004,9 +3286,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 4.7,
@@ -3027,7 +3309,13 @@
         "sc_investor_tax_warning": true,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 72
+        "score": 72,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3070,9 +3358,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3093,7 +3381,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 35
+        "score": 35,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3136,9 +3430,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3159,7 +3453,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 2.5,
         "forecast_3yr": 3,
-        "score": 60
+        "score": 60,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3202,9 +3502,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.8,
@@ -3225,7 +3525,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 2.5,
         "forecast_3yr": 3,
-        "score": 71
+        "score": 71,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3268,9 +3574,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3291,7 +3597,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 2.5,
         "forecast_3yr": 3,
-        "score": 60
+        "score": 60,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3334,9 +3646,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3357,7 +3669,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 61
+        "score": 61,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3400,9 +3718,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.2,
@@ -3423,7 +3741,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 71
+        "score": 71,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3466,9 +3790,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:55",
-      "updated_at": "2026-07-03 21:44:55",
-      "last_seen": "2026-07-03 21:44:55",
+      "created_at": "2026-07-04 15:19:11",
+      "updated_at": "2026-07-04 15:19:11",
+      "last_seen": "2026-07-04 15:19:11",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3489,7 +3813,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 28
+        "score": 28,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -3501,8 +3831,8 @@
       "state": "NC",
       "zip": "28211",
       "neighborhood": null,
-      "price": 398916,
-      "original_price": null,
+      "price": 378987,
+      "original_price": 398934,
       "price_history": [],
       "beds": 2,
       "baths": 2.5,
@@ -3513,14 +3843,16 @@
       "status": "UNDER CONTRACT — YOUR DEAL",
       "builder": "David Weekley Homes",
       "community": "Central Living at Craig",
-      "description": "YOUR BENCHMARK DEAL (exact terms from your comparison dashboard): $398,916 with $24,945.80 incentive (5% + $5K via approved lender) → $373,970 effective, clearing your ≤$380-390K buy threshold. Leaseback $2,600/mo × 12 with two 3-month extension options ($31,200+ gross). Furniture + appliances included; NO blinds ($1,177) or washer/dryer ($1,976) — negotiated in lieu of commission cut. Warranty: 2/10 balance from CO 1/3/2025, no 1-year walk. Modeled 15.5%/yr on cash with incentives (8.5% without).",
+      "description": "YOUR DEAL — PRIMARY SOURCE (signed contract, Lot 71, Remely A322/B/N): $398,934 contract (base $395,990 + $2,944 options) reduced to $378,987 on the 6/30 revision — your 5% price-reduction ask EXECUTED — plus $3,153 incentives. Earnest $11,950 paid 7/1 (Skyla FCU). Old Republic NC/SC home warranty (no-limit HVAC) + 2/10 structural balance. Leaseback $2,600/mo × 12 + two 3-mo extensions. ⚠ Verify the Investor Sales Addendum covers the leaseback (rental clause = forfeiture without it). Sales: Jon Wian.",
       "features": [
-        "$24,946 incentive (5% + $5K)",
-        "$2,600/mo × 12 + two 3-mo extensions",
-        "Furniture + appliances included",
-        "Effective $373,970 — clears buy threshold",
-        "Myers Park High assignment (verify w/ CMS)",
-        "HOA $250/mo · tax $3,000/yr"
+        "PRIMARY: signed contract on file",
+        "$19,947 price cut executed (6/30 rev)",
+        "Remely plan · Lot 71 · Myers Park High (verify CMS)",
+        "Furniture + appliances included — turnkey",
+        "Old Republic no-limit-HVAC warranty",
+        "Leaseback $2,600/mo ×12 +2 ext",
+        "Smart plug-and-play: furnished decorated model",
+        "⚠ Investor Sales Addendum — verify"
       ],
       "images": [],
       "latitude": null,
@@ -3532,30 +3864,36 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": "Closing ~July 17, 2026",
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
-      "price_cut_pct": null,
-      "price_cut_amt": null,
+      "price_cut_pct": 5,
+      "price_cut_amt": 19947,
       "invest": {
         "submarket": "southpark",
         "submarket_label": "SouthPark / Cotswold",
         "county": "NC-Mecklenburg",
-        "ppsf": 254,
+        "ppsf": 242,
         "market_ppsf": 310,
-        "ppsf_vs_market_pct": -18,
+        "ppsf_vs_market_pct": -22.1,
         "rent_estimate": 2197,
-        "gross_yield_pct": 6.61,
-        "cap_rate_pct": 3.93,
-        "piti_monthly": 2720,
-        "cash_flow_monthly": -742,
-        "tax_annual_investor": 3909,
+        "gross_yield_pct": 6.96,
+        "cap_rate_pct": 4.19,
+        "piti_monthly": 2601,
+        "cash_flow_monthly": -624,
+        "tax_annual_investor": 3714,
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 71
+        "score": 97,
+        "fit": {
+          "plug_play": 100,
+          "tech": 15,
+          "unique": 100,
+          "score": 75
+        }
       }
     },
     {
@@ -3597,9 +3935,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3620,7 +3958,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 42
+        "score": 50,
+        "fit": {
+          "plug_play": 100,
+          "tech": 0,
+          "unique": 75,
+          "score": 63
+        }
       }
     },
     {
@@ -3661,9 +4005,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3671,7 +4015,13 @@
       "invest": {
         "submarket": "plaza-noda",
         "submarket_label": "Plaza Midwood / NoDa",
-        "score": null
+        "score": null,
+        "fit": {
+          "plug_play": 100,
+          "tech": 0,
+          "unique": 60,
+          "score": 58
+        }
       }
     },
     {
@@ -3713,9 +4063,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3723,7 +4073,13 @@
       "invest": {
         "submarket": "fort-mill",
         "submarket_label": "Fort Mill / Tega Cay, SC",
-        "score": null
+        "score": null,
+        "fit": {
+          "plug_play": 100,
+          "tech": 15,
+          "unique": 90,
+          "score": 72
+        }
       }
     },
     {
@@ -3764,9 +4120,9 @@
       "is_model": 0,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3774,7 +4130,71 @@
       "invest": {
         "submarket": "plaza-noda",
         "submarket_label": "Plaza Midwood / NoDa",
-        "score": null
+        "score": null,
+        "fit": {
+          "plug_play": 50,
+          "tech": 0,
+          "unique": 15,
+          "score": 25
+        }
+      }
+    },
+    {
+      "id": "lead_mungo_nichols_landing",
+      "source": "models",
+      "url": "https://www.mungo.com/communities/charlotte",
+      "address": "Nichols Landing, Northwest Charlotte, NC 28216",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28216",
+      "neighborhood": null,
+      "price": null,
+      "original_price": null,
+      "price_history": [],
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1580,
+      "lot_size": null,
+      "year_built": null,
+      "type": "Townhome",
+      "status": "NEW LEAD — researched 7/5, visit needed",
+      "builder": "Mungo Homes",
+      "community": "Nichols Landing",
+      "description": "NEW from 7/5 research: Mungo's (Clayton/Berkshire) newest Charlotte townhome community — ~300 homes, 1,471–1,697 sqft, in your triangulated 28216 corridor (2027 upside pick #2 + Corridors of Opportunity). Multi-phase = model homes on site for YEARS = multiple leaseback windows; first-phase model buyers get the longest runway. ⚠ Mungo buyer reviews 1.6/5 with validated-then-ignored warranty pattern — inspection + written warranty timelines mandatory. Pricing unverified; get it in writing on site.",
+      "features": [
+        "~300-home multi-phase community",
+        "28216 triangulated corridor",
+        "Years of model-release windows",
+        "Berkshire/Clayton balance sheet",
+        "⚠ 1.6/5 buyer reviews — contract protections required"
+      ],
+      "images": [],
+      "latitude": null,
+      "longitude": null,
+      "phone": null,
+      "email": null,
+      "days_on_market": 0,
+      "is_new_construction": 1,
+      "is_model": 1,
+      "is_furnished": 0,
+      "move_in_date": null,
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
+      "is_active": 1,
+      "leaseback": 0,
+      "price_cut_pct": null,
+      "price_cut_amt": null,
+      "invest": {
+        "submarket": "west-clt",
+        "submarket_label": "West Charlotte / Wesley Heights",
+        "score": null,
+        "fit": {
+          "plug_play": 50,
+          "tech": 0,
+          "unique": 15,
+          "score": 25
+        }
       }
     },
     {
@@ -3815,9 +4235,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -3838,7 +4258,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 64
+        "score": 64,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 15,
+          "score": 13
+        }
       }
     },
     {
@@ -3879,9 +4305,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": "Spring move-in",
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.8,
@@ -3902,7 +4328,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6,
         "forecast_3yr": 4.5,
-        "score": 78
+        "score": 78,
+        "fit": {
+          "plug_play": 50,
+          "tech": 0,
+          "unique": 0,
+          "score": 20
+        }
       }
     },
     {
@@ -3943,9 +4375,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -3966,7 +4398,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6.5,
         "forecast_3yr": 4.5,
-        "score": 81
+        "score": 89,
+        "fit": {
+          "plug_play": 100,
+          "tech": 0,
+          "unique": 60,
+          "score": 58
+        }
       }
     },
     {
@@ -4007,9 +4445,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4030,7 +4468,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4,
         "forecast_3yr": 3.5,
-        "score": 71
+        "score": 79,
+        "fit": {
+          "plug_play": 100,
+          "tech": 0,
+          "unique": 75,
+          "score": 63
+        }
       }
     },
     {
@@ -4070,9 +4514,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4093,7 +4537,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 52
+        "score": 52,
+        "fit": {
+          "plug_play": 80,
+          "tech": 0,
+          "unique": 15,
+          "score": 37
+        }
       }
     },
     {
@@ -4133,9 +4583,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.3,
@@ -4156,7 +4606,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 48
+        "score": 48,
+        "fit": {
+          "plug_play": 70,
+          "tech": 0,
+          "unique": 15,
+          "score": 33
+        }
       }
     },
     {
@@ -4196,9 +4652,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4219,7 +4675,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 4.5,
         "forecast_3yr": 3.8,
-        "score": 64
+        "score": 72,
+        "fit": {
+          "plug_play": 100,
+          "tech": 0,
+          "unique": 60,
+          "score": 58
+        }
       }
     },
     {
@@ -4259,9 +4721,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4282,7 +4744,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6,
         "forecast_3yr": 4.5,
-        "score": 50
+        "score": 58,
+        "fit": {
+          "plug_play": 100,
+          "tech": 15,
+          "unique": 60,
+          "score": 63
+        }
       }
     },
     {
@@ -4322,9 +4790,9 @@
       "is_model": 1,
       "is_furnished": 1,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 1,
       "price_cut_pct": null,
@@ -4345,7 +4813,13 @@
         "sc_investor_tax_warning": true,
         "yoy_appreciation": 5,
         "forecast_3yr": 4,
-        "score": 48
+        "score": 56,
+        "fit": {
+          "plug_play": 100,
+          "tech": 15,
+          "unique": 60,
+          "score": 63
+        }
       }
     },
     {
@@ -4385,9 +4859,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:53",
-      "updated_at": "2026-07-03 21:44:53",
-      "last_seen": "2026-07-03 21:44:53",
+      "created_at": "2026-07-04 15:19:09",
+      "updated_at": "2026-07-04 15:19:09",
+      "last_seen": "2026-07-04 15:19:09",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4408,7 +4882,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4.2,
-        "score": 35
+        "score": 35,
+        "fit": {
+          "plug_play": 50,
+          "tech": 0,
+          "unique": 15,
+          "score": 25
+        }
       }
     },
     {
@@ -4451,9 +4931,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": "Spring 2026",
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1.8,
@@ -4474,7 +4954,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 6,
         "forecast_3yr": 4.5,
-        "score": 78
+        "score": 78,
+        "fit": {
+          "plug_play": 70,
+          "tech": 0,
+          "unique": 0,
+          "score": 28
+        }
       }
     },
     {
@@ -4514,9 +5000,9 @@
       "is_model": 1,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4524,7 +5010,13 @@
       "invest": {
         "submarket": "indian-land",
         "submarket_label": "Indian Land, SC",
-        "score": null
+        "score": null,
+        "fit": {
+          "plug_play": 50,
+          "tech": 0,
+          "unique": 0,
+          "score": 20
+        }
       }
     },
     {
@@ -4564,9 +5056,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4587,7 +5079,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 48
+        "score": 48,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4627,9 +5125,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4650,7 +5148,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 59
+        "score": 59,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4690,9 +5194,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4713,7 +5217,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 3.5,
         "forecast_3yr": 3,
-        "score": 58
+        "score": 58,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4749,9 +5259,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4772,7 +5282,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 13
+        "score": 13,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4808,9 +5324,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": null,
@@ -4831,7 +5347,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 51
+        "score": 51,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4869,9 +5391,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 1,
@@ -4892,7 +5414,13 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 22
+        "score": 22,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     },
     {
@@ -4930,9 +5458,9 @@
       "is_model": 0,
       "is_furnished": 0,
       "move_in_date": null,
-      "created_at": "2026-07-03 21:44:51",
-      "updated_at": "2026-07-03 21:44:51",
-      "last_seen": "2026-07-03 21:44:51",
+      "created_at": "2026-07-04 15:19:07",
+      "updated_at": "2026-07-04 15:19:07",
+      "last_seen": "2026-07-04 15:19:07",
       "is_active": 1,
       "leaseback": 0,
       "price_cut_pct": 3.8,
@@ -4953,15 +5481,21 @@
         "sc_investor_tax_warning": false,
         "yoy_appreciation": 5.5,
         "forecast_3yr": 4,
-        "score": 35
+        "score": 35,
+        "fit": {
+          "plug_play": 20,
+          "tech": 0,
+          "unique": 0,
+          "score": 8
+        }
       }
     }
   ],
   "stats": {
-    "total": 79,
-    "price_cuts": 30,
-    "new_today": 0,
-    "avg_price": 361092.08,
+    "total": 80,
+    "price_cuts": 31,
+    "new_today": 80,
+    "avg_price": 360826.36,
     "by_source": [
       {
         "source": "drhorton",
@@ -4989,7 +5523,7 @@
       },
       {
         "source": "models",
-        "count": 15
+        "count": 16
       },
       {
         "source": "newhomesource",
@@ -5072,7 +5606,7 @@
       "listings_new": 20,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:45:07"
+      "ran_at": "2026-07-04 15:19:23"
     },
     {
       "id": 7,
@@ -5082,7 +5616,7 @@
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:45:05"
+      "ran_at": "2026-07-04 15:19:20"
     },
     {
       "id": 6,
@@ -5092,7 +5626,7 @@
       "listings_new": 12,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:45:02"
+      "ran_at": "2026-07-04 15:19:18"
     },
     {
       "id": 5,
@@ -5102,7 +5636,7 @@
       "listings_new": 3,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:45:00"
+      "ran_at": "2026-07-04 15:19:16"
     },
     {
       "id": 4,
@@ -5112,7 +5646,7 @@
       "listings_new": 6,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:44:58"
+      "ran_at": "2026-07-04 15:19:14"
     },
     {
       "id": 3,
@@ -5122,17 +5656,17 @@
       "listings_new": 8,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:44:55"
+      "ran_at": "2026-07-04 15:19:11"
     },
     {
       "id": 2,
       "source": "models",
       "status": "success",
-      "listings_found": 15,
-      "listings_new": 15,
+      "listings_found": 16,
+      "listings_new": 16,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:44:53"
+      "ran_at": "2026-07-04 15:19:09"
     },
     {
       "id": 1,
@@ -5142,7 +5676,7 @@
       "listings_new": 9,
       "listings_updated": 0,
       "error": null,
-      "ran_at": "2026-07-03 21:44:51"
+      "ran_at": "2026-07-04 15:19:07"
     }
   ],
   "leads": [
@@ -5157,7 +5691,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T18:58:33Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 18,
@@ -5170,7 +5704,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T17:10:07Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 5,
@@ -5183,7 +5717,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-26T16:48:37Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 16,
@@ -5196,7 +5730,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:31:00Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 17,
@@ -5209,7 +5743,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T21:30:47Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 20,
@@ -5222,7 +5756,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T18:00:20Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 13,
@@ -5235,7 +5769,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T16:13:45Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 2,
@@ -5248,7 +5782,7 @@
       "builder": "Ryan Homes",
       "url": null,
       "received_at": "2026-06-25T15:34:14Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 4,
@@ -5261,7 +5795,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T15:14:02Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 14,
@@ -5274,7 +5808,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T13:48:44Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 6,
@@ -5287,7 +5821,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:38:26Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 7,
@@ -5300,7 +5834,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T01:33:33Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 8,
@@ -5313,7 +5847,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-25T00:28:37Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 9,
@@ -5326,7 +5860,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T18:47:57Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 19,
@@ -5339,7 +5873,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T17:33:07Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 10,
@@ -5352,7 +5886,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T13:33:58Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 11,
@@ -5365,7 +5899,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-24T11:38:33Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 15,
@@ -5378,7 +5912,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T21:33:24Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 12,
@@ -5391,7 +5925,7 @@
       "builder": null,
       "url": null,
       "received_at": "2026-06-23T12:08:38Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     },
     {
       "id": 1,
@@ -5404,7 +5938,7 @@
       "builder": "David Weekley Homes",
       "url": null,
       "received_at": "2026-06-22T16:59:21Z",
-      "processed_at": "2026-07-03 21:45:09"
+      "processed_at": "2026-07-04 15:19:25"
     }
   ],
   "builders": [
@@ -5481,9 +6015,9 @@
     {
       "builder": "David Weekley Homes",
       "count": 3,
-      "min_price": 398916,
+      "min_price": 378987,
       "max_price": 445000,
-      "avg_price": 421958
+      "avg_price": 411993.5
     },
     {
       "builder": "Toll Brothers",
@@ -5512,6 +6046,13 @@
       "min_price": 370000,
       "max_price": 370000,
       "avg_price": 370000
+    },
+    {
+      "builder": "Mungo Homes",
+      "count": 1,
+      "min_price": null,
+      "max_price": null,
+      "avg_price": null
     },
     {
       "builder": "Mattamy Homes",
@@ -5545,7 +6086,7 @@
   "cities": [
     {
       "city": "Charlotte",
-      "count": 47
+      "count": 48
     },
     {
       "city": "Huntersville",
@@ -5941,6 +6482,14 @@
         "terms": "Regular model leasebacks with designer furnishings — but Charlotte TH product starts well above $350K.",
         "contact": "Charlotte division",
         "tip": "Out of budget for this hunt; listed for completeness."
+      },
+      {
+        "builder": "Mungo Homes",
+        "likelihood": "case-by-case",
+        "furnished": "ask",
+        "terms": "NEW (researched 7/5): Clayton Properties Group (Berkshire) since 2018. No public leaseback program, but Nichols Landing (~300 townhomes, NW Charlotte) is a multi-phase community — models will sit on site for years, giving multiple release + leaseback windows. ⚠ Buyer reviews 1.6/5 with a validated-then-ignored warranty complaint pattern — contract protections mandatory.",
+        "contact": "Nichols Landing sales office (mungo.com/communities/charlotte)",
+        "tip": "Visit early in the community lifecycle: first-phase model buyers get the longest leaseback runway. Bring the Tri Pointe-style protections checklist."
       }
     ],
     "assumptions": {
@@ -5958,7 +6507,7 @@
   },
   "research": {
     "_comment": "Personal research intelligence aggregated from Matt's own sources: Gmail negotiations, Google Drive research docs (the NotebookLM source set), the comparison dashboard spreadsheet, and the /insights usage report. Regenerated by deep-research passes; every claim cites its source doc.",
-    "_generated_at": "2026-07-03",
+    "_generated_at": "2026-07-05",
     "sources": [
       {
         "name": "Gmail inbox (mattmcg@bitfliptech.com)",
@@ -6049,6 +6598,18 @@
         "type": "media",
         "detail": "Community-by-community tour photo/video archive with _manifest.csv — 15 communities cataloged in the Tour Archive below.",
         "status": "cataloged"
+      },
+      {
+        "name": "Signed contract package — 3912 Craig Ave (Lot 71)",
+        "type": "primary-docs",
+        "detail": "Purchase Agreement (rev 6/29 + 6/30), Homeowner Transaction Summary (Job 36320071), earnest payment confirmation ($11,950 paid 7/1), Old Republic NC/SC warranty brochure, community docs. FIRST PRIMARY SOURCES in the evidence base — uploaded 7/5.",
+        "status": "ingested"
+      },
+      {
+        "name": "Charlotte-Mecklenburg Public Data Stack (deep research)",
+        "type": "research-doc",
+        "detail": "User-supplied source inventory: Policy Map, rezonings, permits/CO, POLARIS, deeds, tax foreclosures, CAP, flood/wetlands, CMPD/QOL, CMS, CCP/Axios/CBJ, Terra Vista. Full doc: public-data-stack.md; endpoints wired into /api/live/*.",
+        "status": "ingested"
       }
     ],
     "builder_intel": [
@@ -6144,13 +6705,22 @@
         "trust_rank_national": null,
         "note": "Not in the volume top-10 but your proven leaseback counterparty — Craig Ave terms are the benchmark.",
         "risk_flag": "Model sales carry no 1-year DW walk — only the 2/10 balance from original CO (Craig Ave CO: 1/3/2025). Budget the walk-through at lease end."
+      },
+      {
+        "builder": "Mungo Homes",
+        "closings_2024": null,
+        "market_share_pct": null,
+        "volume_rank": null,
+        "trust_rank_national": null,
+        "note": "NEW (researched 7/5): Clayton Properties Group / Berkshire Hathaway since 2018, family-founded 1954. Charlotte townhomes: Nichols Landing (~300 homes, 1,471–1,697 sqft, NW Charlotte — inside your triangulated 28216 corridor) and Lakeview Village (41 sites). Big multi-phase community = years of model-home windows.",
+        "risk_flag": "Buyer reviews 1.6/5 (PissedConsumer, 25 reviews); BBB complaint pattern: warranty claims validated on visit then unaddressed; only 53% of employees would recommend (weakest in set). Same protections as Tri Pointe playbook: inspection + written warranty timelines + escrowed punch list."
       }
     ],
     "your_deal": {
-      "property": "3912 Craig Ave, Charlotte, NC 28211 (Central Living at Craig model)",
-      "price": 398916,
-      "incentive": 24945.8,
-      "incentive_structure": "5% of purchase price + $5,000 through approved lender",
+      "property": "3912 Craig Ave, Charlotte, NC 28211 — Lot 71, Remely plan (A322/B/N), Central Living at Craig 16/20, Phase 01",
+      "price": 378987,
+      "incentive": 23100,
+      "incentive_structure": "PRIMARY SOURCE (signed contract): ~5% price reduction baked into contract on 6/30 revision + $3,153 incentives/discounts per Homeowner Transaction Summary",
       "leaseback_rent_monthly": 2600,
       "leaseback_term": "12 months + two 3-month extension options",
       "gross_leaseback_rent": 31200,
@@ -6162,12 +6732,12 @@
       "sqft": 1569,
       "beds": 2,
       "baths": 2.5,
-      "warranty": "No 1-year DW walk on model sales; balance of 2/10 warranty from CO 1/3/2025; end-of-lease walk for paint/drywall touch-ups",
+      "warranty": "Old Republic Home Protection NC/SC plan (primary: ORHP brochure + contract) — no dollar limit on HVAC, systems/appliances covered regardless of age; PLUS 2/10 structural balance from CO 1/3/2025. No 1-year DW walk on model sales.",
       "modeled_return_with_incentives_pct": 15.5,
       "modeled_return_without_incentives_pct": 8.5,
       "model_assumptions": "3%/yr appreciation, 3-yr hold, 3% selling costs, $111K total down, $500/mo extra principal (from your Investment Analysis doc)",
       "risks_to_verify": [
-        "Incentive tied to builder's preferred lender — confirm the rate tradeoff nets positive",
+        "⚠ NEW FROM CONTRACT: investor-representation clause — rental use = forfeiture of earnest money UNLESS an Investor Sales Addendum is executed. With a builder leaseback, confirm in writing which addendum covers it BEFORE closing.",
         "Leaseback guaranteed for all 12 months + extension option mechanics in writing",
         "Rent paid monthly vs credited upfront; taxability of leaseback income",
         "Who pays HOA, utilities, insurance, taxes, maintenance during leaseback",
@@ -6177,7 +6747,12 @@
       ],
       "your_score": "86/100 — ranked #1 in your own comp set (email to Tracy)",
       "yield_base_pct": 8.27,
-      "yield_18mo_pct": 12.41
+      "yield_18mo_pct": 12.41,
+      "price_history_contract": "Base $395,990 + $2,944 financed options = $398,934 (rev 6/29) → $378,987 (rev 6/30) = $19,947 price reduction executed + $3,153 listed incentives",
+      "earnest_money": 11950,
+      "earnest_paid": "2026-07-01 via Skyla Federal Credit Union (payment confirmation on file)",
+      "sales_consultant": "Jonathan Wian (contract)",
+      "evidence_grade": "PRIMARY — signed purchase agreement, Homeowner Transaction Summary, payment confirmation, ORHP warranty brochure (uploaded 7/5)"
     },
     "thesis": {
       "name": "Oakhurst / Cotswold value-gap thesis",
@@ -6526,7 +7101,8 @@
         "1. Assessor property card — property.spatialest.com/nc/mecklenburg (owner + prior sale)",
         "2. POLARIS 3G — map, parcel, overlays",
         "3. Register of Deeds — deed chain to 1990",
-        "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price"
+        "Trick: NC excise stamps = $1 per $500 of sale price → stamp amount × 500 = actual price",
+        "4. Foreclosures: Meck Clerk of Court sale calendar · Rezonings: charlotteud.com/rezoning · Crime: CMPD open data — all free, all wired into the Deal Room links"
       ]
     },
     "key_insights": {
@@ -6583,6 +7159,338 @@
           "sources": "Comparison dashboard · Oakhurst/Cotswold thesis · 2027 upside doc"
         }
       ]
+    },
+    "deal_programs": {
+      "researched": "2026-07-05",
+      "programs": [
+        {
+          "name": "Opendoor Exclusives",
+          "platform": "Opendoor",
+          "what": "Private off-MLS marketplace: 14-day exclusive listings before MLS. For BUYERS: appraisal-gap coverage up to $50K and pre-MLS access to homes at committed prices — a genuine early-look edge on Charlotte resale townhomes.",
+          "action": "Browse the Exclusives inventory for Charlotte weekly; these don't hit Zillow alerts.",
+          "fit": "high"
+        },
+        {
+          "name": "Opendoor × Redfin offer integration",
+          "platform": "Redfin",
+          "what": "Cash-offer requests via Redfin's apps (live in Phoenix/Atlanta, expanding). Relevant later as a SELL-side tool for Carolina Orchards.",
+          "action": "Watch for Charlotte market activation.",
+          "fit": "medium"
+        },
+        {
+          "name": "Redfin Hot Homes flag",
+          "platform": "Redfin",
+          "what": "Algorithmic likely-to-sell-fast flag — useful inverted: townhomes WITHOUT the flag + 30+ days on market are your negotiation pool.",
+          "action": "The daily scan already catches Redfin alerts; filter for stale non-hot listings.",
+          "fit": "medium"
+        },
+        {
+          "name": "Realtor.com new-construction hub",
+          "platform": "Realtor.com",
+          "what": "Builder-fed inventory incl. quick move-in filters; often surfaces builder incentives portals miss.",
+          "action": "Covered by existing scraper; check quick-move-in filter manually at quarter-end.",
+          "fit": "medium"
+        },
+        {
+          "name": "Builder quarter-end quick-move-in pushes",
+          "platform": "All builders",
+          "what": "The single most reliable 'special deal' in the data: written flexibility appears in the last ~10 days of each quarter (proven 6/22 in your own inbox).",
+          "action": "Next window Sep 22–30 — pre-staged offers ready.",
+          "fit": "high"
+        },
+        {
+          "name": "RealScout (Tracy's platform)",
+          "platform": "RealScout",
+          "what": "CONFIRMED: the agent-collaboration search platform your realtor uses — direct-MLS freshness (faster than portals), agent-curated matches, and buyer-activity signals agents see. Listings Tracy 'scores' arrive here before Zillow alerts.",
+          "action": "Ask Tracy to widen your RealScout saved-search to the 28216/28208 corridor + model/quick-move-in tags; forward RealScout alert emails so the daily scan ingests them.",
+          "fit": "high"
+        },
+        {
+          "name": "Terra Vista Realty new-home rebate",
+          "platform": "Terra Vista (private brokerage)",
+          "what": "One of the few public-facing Charlotte pages offering a buyer-side rebate on new construction. Private brokerage program, NOT a public subsidy — and it would replace Tracy as your representation, so weigh the relationship cost.",
+          "action": "Read terravistarealty.com/new-home-rebate.cfm for the rebate structure; if material, ask Tracy whether her brokerage matches rebates before switching anything.",
+          "fit": "verify"
+        }
+      ]
+    },
+    "api_catalog": {
+      "researched": "2026-07-05",
+      "apis": [
+        {
+          "name": "RentCast",
+          "cost": "Free tier: 50 calls/mo; paid from $74/mo",
+          "auth": "API key (instant signup)",
+          "powers": "Rent estimates + comps per address — would replace the app's $/sqft rent model with address-level AVM rents",
+          "status": "ready-to-wire",
+          "url": "https://www.rentcast.io/api"
+        },
+        {
+          "name": "HUD Fair Market Rents API",
+          "cost": "Free",
+          "auth": "Free token",
+          "powers": "Official FMR by zip — sanity-check floor for rent assumptions",
+          "status": "ready-to-wire",
+          "url": "https://www.huduser.gov/portal/dataset/fmr-api.html"
+        },
+        {
+          "name": "US Census ACS",
+          "cost": "Free",
+          "auth": "None (keyless under 500 calls/day)",
+          "powers": "Tract-level income/values/growth — feeds the Innovation Index equity metric",
+          "status": "ready-to-wire",
+          "url": "https://api.census.gov"
+        },
+        {
+          "name": "Charlotte Open Data Portal",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Building permits + zoning variances via ArcGIS REST — your leading-indicator signal (permit spikes precede appreciation)",
+          "status": "ready-to-wire",
+          "url": "https://data.charlottenc.gov"
+        },
+        {
+          "name": "Mecklenburg POLARIS / Assessor",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Parcel data, tax values, sale history — the excise-stamp price trick, automated",
+          "status": "ready-to-wire",
+          "url": "https://polaris3g.mecklenburgcountync.gov"
+        },
+        {
+          "name": "ATTOM Data",
+          "cost": "Paid (~$500+/mo)",
+          "auth": "API key",
+          "powers": "The HouseCanary-class option: AVMs, sales comps, foreclosure, school data nationally",
+          "status": "if-monetized",
+          "url": "https://api.developer.attomdata.com"
+        },
+        {
+          "name": "Zillow Bridge / MLS Grid",
+          "cost": "Partner/broker agreements",
+          "auth": "Licensed access",
+          "powers": "Real MLS-grade listing feeds — requires broker relationship (Tracy's brokerage could sponsor IDX access)",
+          "status": "needs-partner",
+          "url": "https://www.zillowgroup.com/developers/"
+        },
+        {
+          "name": "RapidAPI Zillow/Realtor wrappers",
+          "cost": "$10–50/mo",
+          "auth": "RapidAPI key",
+          "powers": "Unofficial listing pulls — works but violates portal ToS; fine for personal use, NOT for a paid product",
+          "status": "caution-tos",
+          "url": "https://rapidapi.com"
+        },
+        {
+          "name": "HomeHarvest (open source)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Python scraper for Realtor.com/Zillow/Redfin — same ToS caveat; personal-use replacement for the blocked scrapers",
+          "status": "caution-tos",
+          "url": "https://github.com/Bunsly/HomeHarvest"
+        },
+        {
+          "name": "CMPD Crime Open Data",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Incident-level crime with NPA + patrol-division fields (DATE_REPORTED, HIGHEST_NIBRS_DESCRIPTION, CLEARANCE_STATUS) — micro-location screening; wired at /api/live/crime",
+          "status": "ready-to-wire",
+          "url": "https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0"
+        },
+        {
+          "name": "Charlotte Rezoning Petitions (RZ portal)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Live rezoning petitions — your thesis's momentum signal (2025-077/078 pattern), automated",
+          "status": "ready-to-wire",
+          "url": "https://charlotteud.com/rezoning/"
+        },
+        {
+          "name": "Mecklenburg Foreclosure Notices",
+          "cost": "Free",
+          "auth": "None (courthouse listings)",
+          "powers": "Upcoming foreclosure sales — distressed-entry pipeline in target zips",
+          "status": "manual-check",
+          "url": "https://www.mecknc.gov/CountyClerkOfCourt/Pages/Foreclosures.aspx"
+        },
+        {
+          "name": "Charlotte Future 2040 Policy Map (REST)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Place-type per parcel/corridor (PlaceTypeFullTxt) — the official future-growth intent layer; wired at /api/live/policy-map",
+          "status": "ready-to-wire",
+          "url": "https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Charlotte_Future_2040_Policy_Map/FeatureServer/0"
+        },
+        {
+          "name": "Pending Rezonings + History (REST)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Live entitlement-change pipeline (petition, acreage, conditional type); wired at /api/live/rezonings",
+          "status": "ready-to-wire",
+          "url": "https://gis.charlottenc.gov/arcgis/rest/services/PLN/Rezonings/MapServer"
+        },
+        {
+          "name": "Land Development Commercial Projects (REST)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "Approved/Active/Pre-Submittal pipeline — catches supply earlier than listing sites; wired at /api/live/pipeline",
+          "status": "ready-to-wire",
+          "url": "https://services.arcgis.com/9Nl857LBlQVyzq54/arcgis/rest/services/Land_Development_Commercial_Projects/FeatureServer"
+        },
+        {
+          "name": "Parcel Zoning Lookup by PID (REST)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "PID → zoning, rezone date, districts; wired at /api/live/parcel",
+          "status": "ready-to-wire",
+          "url": "https://gis.charlottenc.gov/arcgis/rest/services/ODP/Parcel_Zoning_Lookup/MapServer/0"
+        },
+        {
+          "name": "Quality of Life Explorer (REST)",
+          "cost": "Free",
+          "auth": "None",
+          "powers": "NPA-level income/health/education/crime context profiles",
+          "status": "ready-to-wire",
+          "url": "https://gis.charlottenc.gov/arcgis/rest/services/QOL/Quality_of_Life_Latest_Profile_Data/MapServer"
+        },
+        {
+          "name": "Charlotte Water Capacity Assurance (CAP)",
+          "cost": "Free",
+          "auth": "None (manual)",
+          "powers": "Sewer-capacity feasibility — the false-boom killer; CAP approval reserves capacity 2 yrs but doesn't guarantee downstream builds",
+          "status": "manual-check",
+          "url": "https://www.charlottenc.gov/water/Commercial-Development/Commercial-Customer-Services/Capacity-Assurance-Program"
+        },
+        {
+          "name": "FRIS flood + FWS Wetlands + DEQ Brownfields",
+          "cost": "Free",
+          "auth": "None (manual)",
+          "powers": "Lot-feasibility kill screen — ~20K acres regulatory floodplain in Meck; check adjacent parcels too",
+          "status": "manual-check",
+          "url": "https://fris.nc.gov"
+        },
+        {
+          "name": "CMS boundary maps + enrollment planning",
+          "cost": "Free",
+          "auth": "None (manual)",
+          "powers": "School assignment + 5–10 yr enrollment forecasts; redistricting = resale/political risk signal",
+          "status": "manual-check",
+          "url": "https://www.cmsk12.org/academics/planning-services/student-boundary-maps"
+        }
+      ],
+      "recommendation": "Wire the four free ones (RentCast free tier, HUD, Census, Charlotte Open Data) — they're legally clean, cover rent + fundamentals + leading indicators, and cost $0. ATTOM/MLS Grid only if the app becomes a paid product."
+    },
+    "monetization": {
+      "verdict": "Viable as a niche paid tool, but the moat is the ANALYSIS + curated builder intel, not the listing data (reselling scraped portal data violates ToS and MLS licensing — that's the line to never cross).",
+      "tiers": [
+        {
+          "tier": "Free",
+          "gets": "Public Pages site: listings browser, market model, submarket table"
+        },
+        {
+          "tier": "Pro ($19–29/mo)",
+          "gets": "Daily scan alerts, investment scores + fit scores, builder KB with risk flags, negotiation playbooks, leaseback program directory"
+        },
+        {
+          "tier": "Deal Room ($99/mo or per-deal)",
+          "gets": "Per-address underwriting (RentCast comps + POLARIS tax history + deed chain), pre-staged offer packs, quarter-end deal windows"
+        }
+      ],
+      "path": [
+        "1. Move backend to a $5/mo VPS or Fly.io (Pages stays as free tier)",
+        "2. Stripe Payment Links + simple magic-link auth (no password infra)",
+        "3. Replace scraped portal data with licensed/free sources before charging (RentCast+HUD+Census+Open Data are clean)",
+        "4. The unique sellable asset: builder risk flags + leaseback program intel — nobody aggregates that"
+      ],
+      "legal_caution": "MLS data licensing and portal ToS prohibit reselling their listing data. Monetize your analysis, scores, and curated intel — never raw scraped listings."
+    },
+    "public_data_stack": {
+      "ingested": "2026-07-05",
+      "doc": "server/data/public-data-stack.md (full source inventory, query patterns, limitations)",
+      "boom_signal": "Next-booming-area = Policy Map intensity designation ∩ active rezoning/land-dev pipeline ∩ committed capital/utility investment. False boom = policy support without infrastructure, or developer interest blocked by floodplain/sewer-capacity/opposition. Charlotte Water CAP approval ≠ downstream infrastructure guarantee.",
+      "builder_leverage_proxy": "Permit/CO clusters = supply bulge = negotiability. Watch daily permit issuance, final inspections, CO acceleration, and Active/Pre-Submittal land-dev projects per corridor — public data prices your leverage and timing, not the incentive terms.",
+      "workflow": [
+        "1. Growth path: Policy Map place type + Community Area Plan",
+        "2. Entitlements: current zoning + pending rezonings + staff analyses",
+        "3. Ownership: POLARIS/GeoPortal triage → Assessor → Register of Deeds (deeds are dispositive, GIS is reference)",
+        "4. Live supply: land-development project search + permit/CO dashboards",
+        "5. Infrastructure: Capital Projects, STIP/TIP, CATS, Charlotte Water CAP",
+        "6. Kill the lot before the lot kills the deal: floodplain/wetlands/buffers/brownfields — test ADJACENT parcels too",
+        "7. Neighborhood risk: CMPD incidents (property vs violent, 12–24 mo) + Quality of Life Explorer",
+        "8. Only then price the leverage: builder/brokerage incentives last"
+      ],
+      "matrix": [
+        {
+          "family": "Policy Map + CAPs",
+          "incentives": "Low",
+          "growth": "Very high",
+          "risk": "Med",
+          "diligence": "Med"
+        },
+        {
+          "family": "Zoning / rezonings stack",
+          "incentives": "Low",
+          "growth": "Very high",
+          "risk": "Med",
+          "diligence": "High"
+        },
+        {
+          "family": "Parcel / assessor / deeds / tax-foreclosure",
+          "incentives": "Low",
+          "growth": "Med",
+          "risk": "High",
+          "diligence": "Very high"
+        },
+        {
+          "family": "Permit / CO systems",
+          "incentives": "High",
+          "growth": "High",
+          "risk": "Med",
+          "diligence": "Very high"
+        },
+        {
+          "family": "Capital projects + transit + Water CAP",
+          "incentives": "Med",
+          "growth": "Very high",
+          "risk": "Very high",
+          "diligence": "High"
+        },
+        {
+          "family": "CMPD + Quality of Life",
+          "incentives": "Low",
+          "growth": "Med",
+          "risk": "Very high",
+          "diligence": "Med"
+        },
+        {
+          "family": "Flood / wetlands / brownfields",
+          "incentives": "Low",
+          "growth": "Low",
+          "risk": "Very high",
+          "diligence": "Very high"
+        },
+        {
+          "family": "CMS boundaries / capacity",
+          "incentives": "Low",
+          "growth": "Med",
+          "risk": "Med",
+          "diligence": "Med"
+        },
+        {
+          "family": "CCP / Axios / CBJ Crane Watch",
+          "incentives": "Med",
+          "growth": "High",
+          "risk": "Low",
+          "diligence": "Low"
+        },
+        {
+          "family": "Terra Vista rebates",
+          "incentives": "Very high",
+          "growth": "Low",
+          "risk": "Low",
+          "diligence": "Low"
+        }
+      ]
     }
   },
   "builder_profiles": {
@@ -6590,7 +7498,7 @@
       {
         "slug": "david-weekley-homes",
         "title": "David Weekley Homes",
-        "content": "# David Weekley Homes\n\n> Research status: Reputation research complete via secondary sources (2026-07-04). Primary evidence exists as a first-person source (buyer's own signed contract) but is not transcribed into this profile — see the app's `research.json` `your_deal` object for those figures.\n\n## Snapshot\n\n| Field | Information |\n|---|---|\n| Relevant communities | Central Living at Craig (Charlotte, Cotswold/Plaza Midwood submarket) |\n| Product and price range | Model-home townhome purchase, $398,916 list (buyer's contract, first-person) |\n| Contract structure | Model-home sale with builder leaseback; buyer's contract is the primary evidence, not independently re-verified here |\n| Incentives | 5% of price + $5,000 via approved lender (buyer's contract, first-person) |\n| Warranty and service | Balance of 10-year structural warranty from original CO date; no fresh 1-year builder walk on model-home sales |\n\n## Evidence-backed findings\n\n| Claim or observation | Type | Evidence/citation | Confidence | As of |\n|---|---|---|---|---|\n| Operates in 19 markets, 13 states; 125,000+ homes built since founding in 1976 | Fact (company claim) | SRC-004 | Medium — company-published, not independently audited | 2026-07-04 |\n| Buyer-review aggregate rating 2.9/5 (3 reviews, 44 complaints) | Opinion aggregate | SRC-003 | Low — very small review sample | 2026-07-04 |\n| Employee-review rating 4.4/5 across 595+ reviews; 89% would recommend employer | Opinion aggregate | SRC-002 | Medium — larger sample, but employee sentiment ≠ buyer sentiment | 2026-07-04 |\n| Recurring buyer complaints: warranty limitations, craftsmanship, communication gaps | Opinion aggregate | SRC-001, SRC-003 | Medium | 2026-07-04 |\n| Model-home sales carry only the warranty balance from original CO date, not a fresh 1-year term | Assumption (pattern inferred from Tri Pointe's disclosed practice; not independently confirmed as a David Weekley-wide policy) | SRC-027 (analogous Tri Pointe disclosure), buyer's own contract terms | Low — inferred by analogy, not confirmed for David Weekley specifically | 2026-07-04 |\n\n## Questions, risks, and next actions\n\n- The gap between weak buyer reviews (2.9/5) and strong employee reviews (4.4/5) suggests inconsistent field/subcontractor execution rather than a management problem — worth probing directly with the sales rep about which subcontractors serve this specific community.\n- Confirm in writing whether the model-home warranty truly starts from original CO date or from the buyer's closing date — this profile currently treats that as an unconfirmed assumption, not a verified fact.\n- A second model in this builder's Charlotte portfolio was referenced informally (buyer's own inbox, not a public source) — treat as a lead requiring direct confirmation, not a verified fact.\n\n## Sources\n\n- SRC-001 — [Weekley Homes, LLC — BBB Reviews](https://www.bbb.org/us/tx/houston/profile/home-builders/weekley-homes-llc-0915-31528/customer-reviews)\n- SRC-002 — [David Weekley Homes Reviews (Glassdoor)](https://www.glassdoor.com/Reviews/David-Weekley-Homes-Reviews-E6633.htm)\n- SRC-003 — [David Weekley Homes Homebuyers Reviews 2026 (ComplaintsBoard)](https://www.complaintsboard.com/david-weekley-homes-b115919)\n- SRC-004 — [David Weekley Homes — Reviews page](https://www.davidweekleyhomes.com/page/reviews)\n\nFull citation detail: [../sources/source-index.md](../sources/source-index.md)\n"
+        "content": "# David Weekley Homes\n\n> Research status: PRIMARY EVIDENCE INGESTED (2026-07-05): signed Purchase Agreement, Homeowner Transaction Summary, payment confirmation, and warranty brochure for the Lot 71 / 3912 Craig Ave model-leaseback purchase — the first primary-source profile in this knowledge base.\n\n## Snapshot\n\n| Field | Information |\n|---|---|\n| Relevant communities | Central Living at Craig (Charlotte, Cotswold/Plaza Midwood submarket) |\n| Product and price range | Model-home townhome purchase, $398,916 list (buyer's contract, first-person) |\n| Contract structure | Model-home sale with builder leaseback; buyer's contract is the primary evidence, not independently re-verified here |\n| Incentives | 5% of price + $5,000 via approved lender (buyer's contract, first-person) |\n| Warranty and service | Balance of 10-year structural warranty from original CO date; no fresh 1-year builder walk on model-home sales |\n\n## Evidence-backed findings\n\n| Claim or observation | Type | Evidence/citation | Confidence | As of |\n|---|---|---|---|---|\n| Operates in 19 markets, 13 states; 125,000+ homes built since founding in 1976 | Fact (company claim) | SRC-004 | Medium — company-published, not independently audited | 2026-07-04 |\n| Buyer-review aggregate rating 2.9/5 (3 reviews, 44 complaints) | Opinion aggregate | SRC-003 | Low — very small review sample | 2026-07-04 |\n| Employee-review rating 4.4/5 across 595+ reviews; 89% would recommend employer | Opinion aggregate | SRC-002 | Medium — larger sample, but employee sentiment ≠ buyer sentiment | 2026-07-04 |\n| Recurring buyer complaints: warranty limitations, craftsmanship, communication gaps | Opinion aggregate | SRC-001, SRC-003 | Medium | 2026-07-04 |\n| Model-home sales carry only the warranty balance from original CO date, not a fresh 1-year term | Assumption (pattern inferred from Tri Pointe's disclosed practice; not independently confirmed as a David Weekley-wide policy) | SRC-027 (analogous Tri Pointe disclosure), buyer's own contract terms | Low — inferred by analogy, not confirmed for David Weekley specifically | 2026-07-04 |\n| Lot 71 (3912 Craig Ave, Remely plan A322/B/N) contracted 6/23/2026 at $398,934; revised to $378,987 on 6/30 — a $19,947 price reduction — plus $3,153 listed incentives | Fact (primary) | SRC-060, SRC-061 | High — signed contract + transaction summary | 2026-07-05 |\n| Earnest money $11,950 paid in full 7/1/2026 | Fact (primary) | SRC-062 | High | 2026-07-05 |\n| Model sale includes Old Republic Home Protection NC/SC warranty (no-dollar-limit HVAC, age-independent coverage) | Fact (primary) | SRC-063 | High | 2026-07-05 |\n| Contract contains an investor-representation clause: rental use = cancellation + earnest forfeiture UNLESS an Investor Sales Addendum is executed — critical with a builder leaseback | Fact (primary) | SRC-060 | High — verbatim contract language | 2026-07-05 |\n\n## Questions, risks, and next actions\n\n- The gap between weak buyer reviews (2.9/5) and strong employee reviews (4.4/5) suggests inconsistent field/subcontractor execution rather than a management problem — worth probing directly with the sales rep about which subcontractors serve this specific community.\n- Confirm in writing whether the model-home warranty truly starts from original CO date or from the buyer's closing date — this profile currently treats that as an unconfirmed assumption, not a verified fact.\n- A second model in this builder's Charlotte portfolio was referenced informally (buyer's own inbox, not a public source) — treat as a lead requiring direct confirmation, not a verified fact.\n\n## Sources\n\n- SRC-060 — Purchase Agreement, 3912 Craig Ave Lot 71 (primary, private)\n- SRC-061 — Homeowner Transaction Summary, Job 36320071 (primary, private)\n- SRC-062 — Earnest payment confirmation (primary, private)\n- SRC-063 — Old Republic NC/SC warranty brochure (primary)\n- SRC-001 — [Weekley Homes, LLC — BBB Reviews](https://www.bbb.org/us/tx/houston/profile/home-builders/weekley-homes-llc-0915-31528/customer-reviews)\n- SRC-002 — [David Weekley Homes Reviews (Glassdoor)](https://www.glassdoor.com/Reviews/David-Weekley-Homes-Reviews-E6633.htm)\n- SRC-003 — [David Weekley Homes Homebuyers Reviews 2026 (ComplaintsBoard)](https://www.complaintsboard.com/david-weekley-homes-b115919)\n- SRC-004 — [David Weekley Homes — Reviews page](https://www.davidweekleyhomes.com/page/reviews)\n\nFull citation detail: [../sources/source-index.md](../sources/source-index.md)\n"
       },
       {
         "slug": "dr-horton",
@@ -6616,6 +7524,11 @@
         "slug": "meritage-homes",
         "title": "Meritage Homes",
         "content": "# Meritage Homes\n\n> Research status: Reputation research complete via secondary sources (2026-07-04). No primary contract documents supplied.\n\n## Snapshot\n\n| Field | Information |\n|---|---|\n| Relevant communities | Moss Creek (Concord, NC), The Cove at Cornelius, Peninsula Crossing, Birkdale Pointe |\n| Product and price range | \"Everything's Included\" production model bundling typical upgrades into base price; specific price data not supplied in this pass |\n| Contract structure | Not yet supplied |\n| Incentives | Not yet supplied |\n| Warranty and service | Multi-tier: 1-year full-home, 2-year mechanical systems, 10-year structural (secondary source) |\n\n## Evidence-backed findings\n\n| Claim or observation | Type | Evidence/citation | Confidence | As of |\n|---|---|---|---|---|\n| M.R.E.S. energy package: spray-foam insulation (attic + exterior walls), high-efficiency HVAC, sealed ductwork | Fact (company-marketed feature, corroborated by homeowner reports) | SRC-037 | Medium | 2026-07-04 |\n| Homeowners report utility bills meaningfully lower than comparable resale homes; HERS scores in the mid-50s to mid-60s reported | Opinion aggregate (homeowner-reported, not third-party HERS-audit-verified in this pass) | SRC-037 | Low-Medium — self-reported utility savings, not independently metered/verified | 2026-07-04 |\n| Multiple reviews describe the warranty process as \"a joke\"; report Meritage declining subcontractor-caused repairs | Opinion aggregate | SRC-034, SRC-036 | Medium | 2026-07-04 |\n| Warranty-department responsiveness reported as slow, often requiring multiple follow-ups over months | Opinion aggregate | SRC-034, SRC-035 | Medium | 2026-07-04 |\n| Reviewers describe a profit-over-quality orientation | Opinion aggregate | SRC-034 | Low-Medium — characterization/opinion rather than a specific factual claim | 2026-07-04 |\n\n## Questions, risks, and next actions\n\n- \"Warranty is a joke\" is a specific, repeated phrase across multiple review sources rather than a generic complaint — treat warranty responsiveness as a known, documented risk for this builder, not a surprise if it materializes.\n- The energy-efficiency claims (M.R.E.S., HERS mid-50s–60s) are a genuine potential differentiator for a rental-yield calculation (lower utility costs can support higher achievable rent or better tenant retention) — but they rest on self-reported homeowner data in this pass, not an independent HERS audit. Request the actual HERS certificate for any specific home before relying on this in an investment model.\n- Get an independent inspection regardless of the energy-efficiency marketing, given the repeated quality/warranty complaint pattern.\n\n## Sources\n\n- SRC-034 — [Meritage Homes Reviews (ConsumerAffairs)](https://www.consumeraffairs.com/housing/meritage_homes.html)\n- SRC-035 — [Meritage Homes Corporation — BBB Reviews](https://www.bbb.org/us/az/scottsdale/profile/home-builders/meritage-homes-corporation-1126-83001055/customer-reviews)\n- SRC-036 — [Meritage Homes Homebuyers Reviews 2026 (ComplaintsBoard)](https://www.complaintsboard.com/meritage-homes-b120683)\n- SRC-037 — [Meritage Homes Reviews: Quality, Process, and Warranty (Engineer Fix)](https://engineerfix.com/meritage-homes-reviews-quality-process-and-warranty/)\n\nFull citation detail: [../sources/source-index.md](../sources/source-index.md)\n"
+      },
+      {
+        "slug": "mungo-homes",
+        "title": "Mungo Homes",
+        "content": "# Mungo Homes\n\n> Research status: Reputation research complete via secondary sources (2026-07-05). No first-person contact yet — Nichols Landing (NW Charlotte) is the actionable lead requiring a site visit.\n\n## Scope\n\n- **Relevant market/community:** Charlotte, NC — Nichols Landing (NW Charlotte) and Lakeview Village townhome communities\n- **Profile updated:** 2026-07-05\n- **Research owner:** Claude research pass (secondary sources only; no first-person evidence yet)\n\n## Snapshot\n\n| Field | Information |\n|---|---|\n| Relevant communities | Nichols Landing (Northwest Charlotte — ~300 townhomes, 1,471–1,697 sqft, in the buyer's triangulated 28216 upside corridor); Lakeview Village (41-homesite townhome community, 1,456–1,530 sqft, 3bd/2.5ba, 1-car garage) |\n| Product and price range | Townhomes at the affordable end; Charlotte pricing to be confirmed on site visit (Columbia-market equivalents run high $200s–$300s) |\n| Contract structure | Standard new-construction purchase; part of Clayton Properties Group (Berkshire Hathaway) since 2018, family-founded 1954, Irmo SC |\n| Incentives | Unknown for Charlotte communities — ask; Clayton-affiliated builders commonly tie incentives to affiliated lending |\n| Warranty and service | Recurring complaint theme: warranty claims validated on visit but unaddressed afterward; partial completions then denial after warranty expiry |\n\n## Evidence-backed findings\n\n| Claim or observation | Type | Evidence/citation | Confidence | As of |\n|---|---|---|---|---|\n| Family-founded 1954 (Irmo, SC); part of Clayton Properties Group (Berkshire Hathaway) since 2018; Steven Mungo remains Executive Chairman | Fact (company claim) | SRC-055 | Medium — company-published | 2026-07-05 |\n| Nichols Landing is Mungo's newest Charlotte townhome community: ~300 homes, 1,471–1,697 sqft, Northwest Charlotte | Fact (company claim) | SRC-055 | Medium — company-published; location places it in the buyer's 28216/28214 momentum corridor | 2026-07-05 |\n| Buyer-review aggregate 1.6/5 across 25 reviews (PissedConsumer); Yelp similarly dissatisfied | Opinion aggregate | SRC-056 | Low–Medium — small sample, complaint-biased platform | 2026-07-05 |\n| Recurring complaints: flooring replaced multiple times, unresolved warranty claims (HVAC, roofing, plumbing, drainage), builder attention shifting to new communities before finishing established ones | Opinion aggregate | SRC-057, SRC-058 | Medium — consistent theme across BBB complaints and ComplaintsBoard | 2026-07-05 |\n| Employee rating 3.5/5 across 49 Glassdoor reviews; only 53% would recommend as employer | Opinion aggregate | SRC-059 | Medium — lowest employee-recommend rate among profiled builders, weak internal-culture signal | 2026-07-05 |\n| Berkshire/Clayton ownership provides balance-sheet stability but has not translated into strong buyer-review outcomes | Assumption (synthesis of SRC-055 vs SRC-056/057) | SRC-055, SRC-056, SRC-057 | Low — inference, not measured | 2026-07-05 |\n\n## Questions, risks, and next actions\n\n- **Strengths:** Berkshire/Clayton balance-sheet stability; large multi-phase Charlotte townhome pipeline (Nichols Landing ~300 homes) in the buyer's highest-conviction corridor; 70-year family-founded operating history.\n- **Nichols Landing is the action item**: ~300 townhomes in the 28216-adjacent corridor is a large, multi-phase community — that means model homes on site for years and multiple closeout windows. Visit, get pricing, and ask when the first model releases and whether Mungo does leasebacks (no public evidence either way).\n- The warranty-complaint pattern (validated-then-ignored claims) is the sharpest risk signal here — worse in character than volume. Any Mungo offer should carry the same protections as the Tri Pointe playbook: independent inspection, written warranty response timelines, and escrowed punch-list items.\n- 53% employee-recommend is the weakest internal signal of any profiled builder — probe subcontractor consistency for the specific community.\n- Pricing gap: no Charlotte-specific pricing evidence yet; treat any \"from the $290s\"-style marketing as unverified until quoted in writing.\n\n## Sources\n\n- SRC-055 — [Mungo Homes — Charlotte communities & The Mungo Difference](https://www.mungo.com/communities/charlotte)\n- SRC-056 — [Mungo Homes Reviews (PissedConsumer)](https://mungo-homes.pissedconsumer.com/review.html)\n- SRC-057 — [Mungo Homes — BBB Complaints](https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints)\n- SRC-058 — [Mungo Homes Homebuyers Reviews 2026 (ComplaintsBoard)](https://www.complaintsboard.com/mungo-homes-b134875)\n- SRC-059 — [Mungo Homes Reviews (Glassdoor)](https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm)\n\nFull citation detail: [../sources/source-index.md](../sources/source-index.md)\n"
       },
       {
         "slug": "pulte-homes",
@@ -6649,7 +7562,7 @@
       }
     ],
     "rankings": "# Builder Rankings\n\n> Rankings are relative to the buying criteria, not universal judgments. Structure mirrors [bitflipper1/Real-Estate-Knowledge/03-Builder-Rankings.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/03-Builder-Rankings.md).\n\n**Scoring honesty note:** this pass only produced evidence for 2 of the 8 weighted criteria in that repo's `01-Buying-Criteria.md` — **Construction quality (20%)** and **Builder warranty/service (15%)**, 35% of total weight. Per that repo's own scoring rule (\"use N/A when evidence is missing; do not treat missing evidence as a zero\"), all other criteria (location/commute, appreciation, total cost of ownership, floor plan, community/amenities, resale flexibility) are property- and community-specific, not builder-specific, and are marked N/A here rather than guessed. Scores below are **partial weighted scores out of 35**, not full 100-point scores.\n\n| Rank | Builder | Partial weighted score (of 35) | Evidence coverage | Main strength | Main concern | Profile |\n|---:|---|---:|---|---|---|---|\n| 1 | True Homes | 25 | Construction + warranty scored; local/regional volume and trust data | BuildZoom top 3% of NC contractors; local decision-makers | BBB complaints on subcontractor-repair disputes | [true-homes.md](builders/true-homes.md) |\n| 2 | David Weekley Homes | 21 | Construction + warranty scored; first-person contract on file | Proven leaseback structure via buyer's own contract | Buyer-review/employee-review gap suggests inconsistent field execution | [david-weekley-homes.md](builders/david-weekley-homes.md) |\n| 2 | Smith Douglas Homes | 21 | Construction + warranty scored | 4.3/5 on one platform; in-house warranty handling | Structural-warranty denials reported for exactly the categories the warranty covers | [smith-douglas-homes.md](builders/smith-douglas-homes.md) |\n| 2 | Eastwood Homes | 21 | Construction + warranty scored; Charlotte-specific data | 4.1/5, A+ BBB — best Charlotte-local signal | Specific severe systems-failure reports (HVAC, drainage, plumbing) despite good average | [eastwood-homes.md](builders/eastwood-homes.md) |\n| 5 | Ryan Homes (NVR) | 17 | Construction + warranty scored | Best raw price-per-foot in this app's listings | \"Cut corners, cheapest contractors\" repeated theme | [ryan-homes.md](builders/ryan-homes.md) |\n| 6 | Lennar | 14 | Construction + warranty scored | Active, marketed model-leaseback program | Worst buyer-review numbers of the majors (1.5–1.6/5) | [lennar.md](builders/lennar.md) |\n| 6 | Tri Pointe Homes | 14 | Construction + warranty scored; extensive first-person deal data | Most model-sale inventory + only written custom-scenario offer | Reputation-execution gap (unverified 1.15/5 local figure) + no 1/2/10 on model sales | [tri-pointe-homes.md](builders/tri-pointe-homes.md) |\n| 6 | Meritage Homes | 14 | Construction + warranty scored | Genuine energy-efficiency differentiator (M.R.E.S.) | \"Warranty is a joke\" repeated verbatim across reviews | [meritage-homes.md](builders/meritage-homes.md) |\n| 6 | Pulte Homes (PulteGroup) | 14 | Construction + warranty scored | Some strongly positive individual experiences reported | Sales-phase warranty promises inconsistent with post-close reality | [pulte-homes.md](builders/pulte-homes.md) |\n| 10 | Mattamy Homes | 11 | Construction + warranty scored; Charlotte-specific data | Largest privately-owned builder in North America | Charlotte-specific: warranty office reported as unreachable | [mattamy-homes.md](builders/mattamy-homes.md) |\n| 11 | D.R. Horton | 10 | Construction + warranty scored | Largest model-sale inventory (most communities) | Lowest buyer-satisfaction scores (1.3–1.7/5) of any builder researched | [dr-horton.md](builders/dr-horton.md) |\n| — | Taylor Morrison | Insufficient evidence to score | No complaint-platform data located in this pass (gap, not a clean bill of health) | #1 America's Most Trusted, 11 years running; marketed leaseback program | No buyer-complaint data found — construction/warranty dimensions unscored | [taylor-morrison.md](builders/taylor-morrison.md) |\n\n## Method\n\n- Score against the weight definitions in [Real-Estate-Knowledge/01-Buying-Criteria.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/01-Buying-Criteria.md).\n- Evidence cited in each builder profile under [`builders/`](builders/); full source list in [`sources/source-index.md`](sources/source-index.md).\n- This pass distinguishes local-division performance from national reputation where evidence allowed (notably Tri Pointe, Mattamy, Eastwood, Smith Douglas — all have Charlotte/regional-specific data; the rest are national-aggregate only).\n- Sample size and date range: all review-platform data gathered 2026-07-04 in a single pass; no historical trend data collected. Complaint counts and star ratings are noted per-builder in each profile rather than repeated here.\n- Taylor Morrison is listed last/unranked rather than assumed best — its strong trust-award signal is real but this pass did not locate the buyer-complaint-platform data used to score every other builder, so it isn't comparable on the same basis.\n",
-    "source_index": "# Source Index\n\nMirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-index.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/sources/source-index.md). All entries below are **secondary** (aggregate review platforms, company newsrooms, SEC filings) gathered via web search on 2026-07-04. None are primary documents (contracts, lender worksheets, tax records) — those must come from your own files and would get their own SRC IDs when supplied.\n\n| Source ID | Title/description | Type | Author/publisher | Published/effective | Accessed/received | Local path or URL | Reliability/notes | Status |\n|---|---|---|---|---|---|---|---|---|\n| SRC-001 | Weekley Homes, LLC — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/tx/houston/profile/home-builders/weekley-homes-llc-0915-31528/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-002 | David Weekley Homes Reviews | Secondary | Glassdoor | — | 2026-07-04 | https://www.glassdoor.com/Reviews/David-Weekley-Homes-Reviews-E6633.htm | Employee reviews, not buyer reviews | Verified |\n| SRC-003 | David Weekley Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/david-weekley-homes-b115919 | Aggregate complaint volume | Verified |\n| SRC-004 | David Weekley Homes — Reviews page | Secondary (builder-published) | David Weekley Homes | — | 2026-07-04 | https://www.davidweekleyhomes.com/page/reviews | Builder-curated, positive-selection bias likely | Verified |\n| SRC-005 | Ryan Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/ryan.html | Aggregate buyer reviews | Verified |\n| SRC-006 | NVR, Inc — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/va/reston/profile/home-builders/nvr-inc-0241-13439/complaints | Parent-company complaint record | Verified |\n| SRC-007 | NVR, Inc corporate site | Primary (corporate) | NVR, Inc. | — | 2026-07-04 | https://www.nvrinc.com/ | Company self-description | Verified |\n| SRC-008 | Ryan Homes Review 2026: Quality, Costs, and What Buyers Should Know | Secondary | ok.com | 2026 | 2026-07-04 | https://us.ok.com/ask_news/ryan-homes-review-2026-quality-costs-and-what-buyers-should-know/ | Buyer-guidance summary | Verified |\n| SRC-009 | Lennar Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/lennar-b116665 | Aggregate — 1.6/5, 207 complaints | Verified |\n| SRC-010 | Lennar Reviews | Secondary | Trustpilot | — | 2026-07-04 | https://www.trustpilot.com/review/lennar.com | Aggregate — 1.5/5, 185 reviews | Verified |\n| SRC-011 | Lennar Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/homeowners/lennar-homes.html | Aggregate buyer reviews | Verified |\n| SRC-012 | Lennar Reviews: What Homeowners Have to Say | Secondary | NewHomeSource | — | 2026-07-04 | https://www.newhomesource.com/builder/lennar/reviews/644 | Aggregate buyer reviews | Verified |\n| SRC-013 | Lennar Corp — Form 8-K FY2026 | Primary (regulatory filing) | SEC EDGAR | 2026 | 2026-07-04 | https://www.sec.gov/Archives/edgar/data/0000920760/000162828026042551/ex991-2026531x8kq1.htm | Not analyzed for financial detail in this pass | Verified (unanalyzed) |\n| SRC-014 | Taylor Morrison Recognized as America's Most Trusted Home Builder — 11th Consecutive Year | Primary (investor relations) | Taylor Morrison Home Corp. | 2026-01-06 | 2026-07-04 | https://investors.taylormorrison.com/news-and-events/news/news-details/2026/Taylor-Morrison-Recognized-as-Americas-Most-Trusted-Home-Builder-for-the-Eleventh-Consecutive-Year/default.aspx | Company press release citing Lifestory Research | Verified |\n| SRC-015 | Same announcement, wire distribution | Secondary | PR Newswire | 2026 | 2026-07-04 | https://www.prnewswire.com/news-releases/taylor-morrison-recognized-as-americas-most-trusted-home-builder-for-the-eleventh-consecutive-year-302653445.html | Duplicate of SRC-014 | Verified |\n| SRC-016 | Homebuilder trust rankings 2026 | Secondary | HousingWire | 2026 | 2026-07-04 | https://www.housingwire.com/articles/homebuilder-trust-rankings-2026/ | Industry trade press | Verified |\n| SRC-017 | Taylor Morrison | Secondary | Wikipedia | — | 2026-07-04 | https://en.wikipedia.org/wiki/Taylor_Morrison | Company background | Verified |\n| SRC-018 | True Homes — official site | Primary (corporate) | True Homes | — | 2026-07-04 | https://www.truehomes.com/ | Company self-description | Verified |\n| SRC-019 | True Homes, LLC — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/monroe/profile/home-builders/true-homes-llc-0473-212333/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-020 | True Homes — BuildZoom profile | Secondary | BuildZoom | — | 2026-07-04 | https://www.buildzoom.com/contractor/true-homes | Contractor-licensing-based score, top 3% of NC | Verified |\n| SRC-021 | The True Homes Experience: Exploring Our Five Thriving Markets | Primary (corporate) | True Homes | — | 2026-07-04 | https://www.truehomes.com/the-true-homes-experience-exploring-our-five-thriving-markets | Market coverage claim | Verified |\n| SRC-022 | True Homes, LLC — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/monroe/profile/home-builders/true-homes-llc-0473-212333/complaints | Warranty/subcontractor dispute pattern | Verified |\n| SRC-023 | TRI Pointe Homes Inc — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ca/irvine/profile/home-builders/tri-pointe-homes-inc-1126-5713/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-024 | TRI Pointe Homes Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/tri-pointe-homes-b134706 | 3.7/5, 13 complaints, 24% unresolved as of 2026-05-27 | Verified |\n| SRC-025 | Tri Pointe Homes Reviews: Pros & Cons | Secondary | ConsumerAffairs (listed under Pardee) | — | 2026-07-04 | https://www.consumeraffairs.com/housing/pardee.html | Construction-quality complaint detail | Verified |\n| SRC-026 | Tri Pointe Homes Lawsuit: Colorado Defect Guide | Secondary (legal-marketing) | Hollington Law Firm | — | 2026-07-04 | https://hollingtonlawfirm.com/articles/tri-pointe-homes-construction-issues | Colorado-specific litigation context; law-firm authored, treat as advocacy-adjacent | Verified |\n| SRC-027 | Your Gmail inbox — Taylor Shane, Debbie Coccia, Rob Dybec threads | First-person | Tri Pointe Homes sales reps (via buyer's inbox) | 2026-05 to 2026-06 | ongoing | mattmcg@bitfliptech.com inbox | Direct negotiation record — highest-confidence source for deal terms | Verified |\n| SRC-028 | \"True Homes and Tripointe\" Drive doc | First-person / secondary synthesis | Buyer's own research (Drive) | 2026-05-19 | 2026-06-26 | Google Drive: Real Estate Search 2026 folder | Source of the 1.15/5 Southbridge local-review figure — original citation for that figure not re-verified in this pass | Unverified (figure not independently re-confirmed) |\n| SRC-029 | D.R. Horton Homes Reviews (From Verified Customers) | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/dr_horton.html | Aggregate buyer reviews | Verified |\n| SRC-030 | Drhorton Reviews | Secondary | Trustpilot | — | 2026-07-04 | https://www.trustpilot.com/review/www.drhorton.com | Aggregate buyer reviews | Verified |\n| SRC-031 | D.R. Horton Reviews 2026: What Homebuyers Are Saying | Secondary | RatingFacts | 2026 | 2026-07-04 | https://ratingfacts.com/blogs/dr-horton-reviews-what-homebuyers-are-saying | Synthesis of review platforms | Verified |\n| SRC-032 | D.R. Horton America's Builder — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/tx/arlington/profile/home-builders/dr-horton-americas-builder-0825-1000147885/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-033 | D.R. Horton Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/dr-horton-b121718 | Aggregate complaint volume | Verified |\n| SRC-034 | Meritage Homes Reviews (From First-hand Experiences) | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/meritage_homes.html | Aggregate buyer reviews | Verified |\n| SRC-035 | Meritage Homes Corporation — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/az/scottsdale/profile/home-builders/meritage-homes-corporation-1126-83001055/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-036 | Meritage Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/meritage-homes-b120683 | Aggregate complaint volume | Verified |\n| SRC-037 | Meritage Homes Reviews: Quality, Process, and Warranty | Secondary | Engineer Fix | — | 2026-07-04 | https://engineerfix.com/meritage-homes-reviews-quality-process-and-warranty/ | Includes M.R.E.S. energy-package detail | Verified |\n| SRC-038 | Smith Douglas Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ga/woodstock/profile/home-builders/smith-douglas-homes-0443-27509629/complaints | Aggregate complaint volume | Verified |\n| SRC-039 | Smith Douglas Homes Homebuyers Reviews and Complaints | Secondary | ComplaintsBoard | — | 2026-07-04 | https://www.complaintsboard.com/smith-douglas-homes-b133894 | Aggregate complaint volume | Verified |\n| SRC-040 | Smith Douglas Homes Reviews: Are They Worth It? | Secondary | Engineer Fix | — | 2026-07-04 | https://engineerfix.com/smith-douglas-homes-reviews-are-they-worth-it/ | Synthesis review | Verified |\n| SRC-041 | Homebuyer Reviews | Primary (builder-published) | Smith Douglas Homes | — | 2026-07-04 | https://www.smithdouglas.com/homebuyer-reviews | Builder-curated, positive-selection bias likely | Verified |\n| SRC-042 | Pulte Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/pulte-homes.html | Aggregate buyer reviews | Verified |\n| SRC-043 | Pulte Group — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ga/atlanta/profile/home-builders/pulte-group-0443-7076/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-044 | Pulte Homes Reviews | Secondary | PissedConsumer | — | 2026-07-04 | https://pulte-homes.pissedconsumer.com/review.html | Complaint-oriented platform, negative-selection bias likely | Verified |\n| SRC-045 | Pulte Homes Reviews: What Homeowners Have to Say | Secondary | NewHomeSource | — | 2026-07-04 | https://www.newhomesource.com/builder/pulte-homes/reviews/3 | Aggregate buyer reviews | Verified |\n| SRC-046 | Mattamy Homes — BBB Reviews (Charlotte) | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/mattamy-homes-0473-263204/customer-reviews | Charlotte-specific aggregate reviews | Verified |\n| SRC-047 | Mattamy Homes — BBB Business Profile (Charlotte) | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/mattamy-homes-0473-263204 | Charlotte-specific profile | Verified |\n| SRC-048 | Mattamy Homes — 34 Reviews | Secondary | Birdeye | — | 2026-07-04 | https://reviews.birdeye.com/mattamy-homes-146831444255535 | Charlotte-specific aggregate reviews | Verified |\n| SRC-049 | Mattamy Homes — Warranty department, customer service satisfaction | Secondary | Comparably | — | 2026-07-04 | https://www.comparably.com/companies/mattamy-homes/reviews/2621367/warranty-department-customer-service-satisfaction | Employee-side warranty-department perspective | Verified |\n| SRC-050 | Eastwood Homes — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/eastwood-homes-0473-100329/customer-reviews | A+ BBB rating, aggregate reviews | Verified |\n| SRC-051 | Eastwood Homes — BBB Business Profile | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/eastwood-homes-0473-100329 | Accreditation status | Verified |\n| SRC-052 | Eastwood Homes — 274 Reviews | Secondary | Birdeye | — | 2026-07-04 | https://reviews.birdeye.com/eastwood-homes-159108730415960 | 4.1/5 aggregate | Verified |\n| SRC-053 | EASTWOOD HOMES — 69 Reviews | Secondary | Yelp | 2026-04 | 2026-07-04 | https://www.yelp.com/biz/eastwood-homes-charlotte-11 | Charlotte HQ location reviews | Verified |\n| SRC-054 | Reviews | Primary (builder-published) | Eastwood Homes | — | 2026-07-04 | https://www.eastwoodhomes.com/reviews | Builder-curated, positive-selection bias likely | Verified |\n\n## Source status\n\n- **Primary:** original contract, official disclosure, lender quote, tax record, or first-party document (includes company newsrooms/investor relations and regulatory filings here).\n- **Secondary:** reputable analysis, reporting, or aggregate review platform that interprets or aggregates primary information.\n- **First-person:** buyer, agent, salesperson, homeowner, or chat account; useful but perspective-dependent.\n- **Lead only:** uncited statement requiring verification.\n\n## Known limitations of this source set\n\n- All SRC-001 through SRC-054 entries are aggregate review-platform data gathered in a single 2026-07-04 web-research pass — none are primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Per the evidence standard, treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.\n- Review-platform ratings (BBB, ComplaintsBoard, ConsumerAffairs, Trustpilot, Yelp, Birdeye) carry inherent selection bias in both directions — dissatisfied customers are more likely to post complaints; builder-published review pages (SRC-004, SRC-041, SRC-054) are curated and carry positive-selection bias. Treat all star ratings as directional, not statistically representative.\n- SRC-028's 1.15/5 Southbridge figure originates from the buyer's own prior Drive research and was not independently re-derived or re-verified against the original review platform in this pass.\n",
+    "source_index": "# Source Index\n\nMirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-index.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/sources/source-index.md). All entries below are **secondary** (aggregate review platforms, company newsrooms, SEC filings) gathered via web search on 2026-07-04. None are primary documents (contracts, lender worksheets, tax records) — those must come from your own files and would get their own SRC IDs when supplied.\n\n| Source ID | Title/description | Type | Author/publisher | Published/effective | Accessed/received | Local path or URL | Reliability/notes | Status |\n|---|---|---|---|---|---|---|---|---|\n| SRC-001 | Weekley Homes, LLC — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/tx/houston/profile/home-builders/weekley-homes-llc-0915-31528/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-002 | David Weekley Homes Reviews | Secondary | Glassdoor | — | 2026-07-04 | https://www.glassdoor.com/Reviews/David-Weekley-Homes-Reviews-E6633.htm | Employee reviews, not buyer reviews | Verified |\n| SRC-003 | David Weekley Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/david-weekley-homes-b115919 | Aggregate complaint volume | Verified |\n| SRC-004 | David Weekley Homes — Reviews page | Secondary (builder-published) | David Weekley Homes | — | 2026-07-04 | https://www.davidweekleyhomes.com/page/reviews | Builder-curated, positive-selection bias likely | Verified |\n| SRC-005 | Ryan Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/ryan.html | Aggregate buyer reviews | Verified |\n| SRC-006 | NVR, Inc — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/va/reston/profile/home-builders/nvr-inc-0241-13439/complaints | Parent-company complaint record | Verified |\n| SRC-007 | NVR, Inc corporate site | Primary (corporate) | NVR, Inc. | — | 2026-07-04 | https://www.nvrinc.com/ | Company self-description | Verified |\n| SRC-008 | Ryan Homes Review 2026: Quality, Costs, and What Buyers Should Know | Secondary | ok.com | 2026 | 2026-07-04 | https://us.ok.com/ask_news/ryan-homes-review-2026-quality-costs-and-what-buyers-should-know/ | Buyer-guidance summary | Verified |\n| SRC-009 | Lennar Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/lennar-b116665 | Aggregate — 1.6/5, 207 complaints | Verified |\n| SRC-010 | Lennar Reviews | Secondary | Trustpilot | — | 2026-07-04 | https://www.trustpilot.com/review/lennar.com | Aggregate — 1.5/5, 185 reviews | Verified |\n| SRC-011 | Lennar Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/homeowners/lennar-homes.html | Aggregate buyer reviews | Verified |\n| SRC-012 | Lennar Reviews: What Homeowners Have to Say | Secondary | NewHomeSource | — | 2026-07-04 | https://www.newhomesource.com/builder/lennar/reviews/644 | Aggregate buyer reviews | Verified |\n| SRC-013 | Lennar Corp — Form 8-K FY2026 | Primary (regulatory filing) | SEC EDGAR | 2026 | 2026-07-04 | https://www.sec.gov/Archives/edgar/data/0000920760/000162828026042551/ex991-2026531x8kq1.htm | Not analyzed for financial detail in this pass | Verified (unanalyzed) |\n| SRC-014 | Taylor Morrison Recognized as America's Most Trusted Home Builder — 11th Consecutive Year | Primary (investor relations) | Taylor Morrison Home Corp. | 2026-01-06 | 2026-07-04 | https://investors.taylormorrison.com/news-and-events/news/news-details/2026/Taylor-Morrison-Recognized-as-Americas-Most-Trusted-Home-Builder-for-the-Eleventh-Consecutive-Year/default.aspx | Company press release citing Lifestory Research | Verified |\n| SRC-015 | Same announcement, wire distribution | Secondary | PR Newswire | 2026 | 2026-07-04 | https://www.prnewswire.com/news-releases/taylor-morrison-recognized-as-americas-most-trusted-home-builder-for-the-eleventh-consecutive-year-302653445.html | Duplicate of SRC-014 | Verified |\n| SRC-016 | Homebuilder trust rankings 2026 | Secondary | HousingWire | 2026 | 2026-07-04 | https://www.housingwire.com/articles/homebuilder-trust-rankings-2026/ | Industry trade press | Verified |\n| SRC-017 | Taylor Morrison | Secondary | Wikipedia | — | 2026-07-04 | https://en.wikipedia.org/wiki/Taylor_Morrison | Company background | Verified |\n| SRC-018 | True Homes — official site | Primary (corporate) | True Homes | — | 2026-07-04 | https://www.truehomes.com/ | Company self-description | Verified |\n| SRC-019 | True Homes, LLC — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/monroe/profile/home-builders/true-homes-llc-0473-212333/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-020 | True Homes — BuildZoom profile | Secondary | BuildZoom | — | 2026-07-04 | https://www.buildzoom.com/contractor/true-homes | Contractor-licensing-based score, top 3% of NC | Verified |\n| SRC-021 | The True Homes Experience: Exploring Our Five Thriving Markets | Primary (corporate) | True Homes | — | 2026-07-04 | https://www.truehomes.com/the-true-homes-experience-exploring-our-five-thriving-markets | Market coverage claim | Verified |\n| SRC-022 | True Homes, LLC — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/monroe/profile/home-builders/true-homes-llc-0473-212333/complaints | Warranty/subcontractor dispute pattern | Verified |\n| SRC-023 | TRI Pointe Homes Inc — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ca/irvine/profile/home-builders/tri-pointe-homes-inc-1126-5713/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-024 | TRI Pointe Homes Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/tri-pointe-homes-b134706 | 3.7/5, 13 complaints, 24% unresolved as of 2026-05-27 | Verified |\n| SRC-025 | Tri Pointe Homes Reviews: Pros & Cons | Secondary | ConsumerAffairs (listed under Pardee) | — | 2026-07-04 | https://www.consumeraffairs.com/housing/pardee.html | Construction-quality complaint detail | Verified |\n| SRC-026 | Tri Pointe Homes Lawsuit: Colorado Defect Guide | Secondary (legal-marketing) | Hollington Law Firm | — | 2026-07-04 | https://hollingtonlawfirm.com/articles/tri-pointe-homes-construction-issues | Colorado-specific litigation context; law-firm authored, treat as advocacy-adjacent | Verified |\n| SRC-027 | Your Gmail inbox — Taylor Shane, Debbie Coccia, Rob Dybec threads | First-person | Tri Pointe Homes sales reps (via buyer's inbox) | 2026-05 to 2026-06 | ongoing | mattmcg@bitfliptech.com inbox | Direct negotiation record — highest-confidence source for deal terms | Verified |\n| SRC-028 | \"True Homes and Tripointe\" Drive doc | First-person / secondary synthesis | Buyer's own research (Drive) | 2026-05-19 | 2026-06-26 | Google Drive: Real Estate Search 2026 folder | Source of the 1.15/5 Southbridge local-review figure — original citation for that figure not re-verified in this pass | Unverified (figure not independently re-confirmed) |\n| SRC-029 | D.R. Horton Homes Reviews (From Verified Customers) | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/dr_horton.html | Aggregate buyer reviews | Verified |\n| SRC-030 | Drhorton Reviews | Secondary | Trustpilot | — | 2026-07-04 | https://www.trustpilot.com/review/www.drhorton.com | Aggregate buyer reviews | Verified |\n| SRC-031 | D.R. Horton Reviews 2026: What Homebuyers Are Saying | Secondary | RatingFacts | 2026 | 2026-07-04 | https://ratingfacts.com/blogs/dr-horton-reviews-what-homebuyers-are-saying | Synthesis of review platforms | Verified |\n| SRC-032 | D.R. Horton America's Builder — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/tx/arlington/profile/home-builders/dr-horton-americas-builder-0825-1000147885/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-033 | D.R. Horton Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/dr-horton-b121718 | Aggregate complaint volume | Verified |\n| SRC-034 | Meritage Homes Reviews (From First-hand Experiences) | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/meritage_homes.html | Aggregate buyer reviews | Verified |\n| SRC-035 | Meritage Homes Corporation — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/az/scottsdale/profile/home-builders/meritage-homes-corporation-1126-83001055/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-036 | Meritage Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/meritage-homes-b120683 | Aggregate complaint volume | Verified |\n| SRC-037 | Meritage Homes Reviews: Quality, Process, and Warranty | Secondary | Engineer Fix | — | 2026-07-04 | https://engineerfix.com/meritage-homes-reviews-quality-process-and-warranty/ | Includes M.R.E.S. energy-package detail | Verified |\n| SRC-038 | Smith Douglas Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ga/woodstock/profile/home-builders/smith-douglas-homes-0443-27509629/complaints | Aggregate complaint volume | Verified |\n| SRC-039 | Smith Douglas Homes Homebuyers Reviews and Complaints | Secondary | ComplaintsBoard | — | 2026-07-04 | https://www.complaintsboard.com/smith-douglas-homes-b133894 | Aggregate complaint volume | Verified |\n| SRC-040 | Smith Douglas Homes Reviews: Are They Worth It? | Secondary | Engineer Fix | — | 2026-07-04 | https://engineerfix.com/smith-douglas-homes-reviews-are-they-worth-it/ | Synthesis review | Verified |\n| SRC-041 | Homebuyer Reviews | Primary (builder-published) | Smith Douglas Homes | — | 2026-07-04 | https://www.smithdouglas.com/homebuyer-reviews | Builder-curated, positive-selection bias likely | Verified |\n| SRC-042 | Pulte Homes Reviews: Written By Customers | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/pulte-homes.html | Aggregate buyer reviews | Verified |\n| SRC-043 | Pulte Group — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/ga/atlanta/profile/home-builders/pulte-group-0443-7076/customer-reviews | Aggregate buyer reviews | Verified |\n| SRC-044 | Pulte Homes Reviews | Secondary | PissedConsumer | — | 2026-07-04 | https://pulte-homes.pissedconsumer.com/review.html | Complaint-oriented platform, negative-selection bias likely | Verified |\n| SRC-045 | Pulte Homes Reviews: What Homeowners Have to Say | Secondary | NewHomeSource | — | 2026-07-04 | https://www.newhomesource.com/builder/pulte-homes/reviews/3 | Aggregate buyer reviews | Verified |\n| SRC-046 | Mattamy Homes — BBB Reviews (Charlotte) | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/mattamy-homes-0473-263204/customer-reviews | Charlotte-specific aggregate reviews | Verified |\n| SRC-047 | Mattamy Homes — BBB Business Profile (Charlotte) | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/mattamy-homes-0473-263204 | Charlotte-specific profile | Verified |\n| SRC-048 | Mattamy Homes — 34 Reviews | Secondary | Birdeye | — | 2026-07-04 | https://reviews.birdeye.com/mattamy-homes-146831444255535 | Charlotte-specific aggregate reviews | Verified |\n| SRC-049 | Mattamy Homes — Warranty department, customer service satisfaction | Secondary | Comparably | — | 2026-07-04 | https://www.comparably.com/companies/mattamy-homes/reviews/2621367/warranty-department-customer-service-satisfaction | Employee-side warranty-department perspective | Verified |\n| SRC-050 | Eastwood Homes — BBB Reviews | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/eastwood-homes-0473-100329/customer-reviews | A+ BBB rating, aggregate reviews | Verified |\n| SRC-051 | Eastwood Homes — BBB Business Profile | Secondary | Better Business Bureau | — | 2026-07-04 | https://www.bbb.org/us/nc/charlotte/profile/home-builders/eastwood-homes-0473-100329 | Accreditation status | Verified |\n| SRC-052 | Eastwood Homes — 274 Reviews | Secondary | Birdeye | — | 2026-07-04 | https://reviews.birdeye.com/eastwood-homes-159108730415960 | 4.1/5 aggregate | Verified |\n| SRC-053 | EASTWOOD HOMES — 69 Reviews | Secondary | Yelp | 2026-04 | 2026-07-04 | https://www.yelp.com/biz/eastwood-homes-charlotte-11 | Charlotte HQ location reviews | Verified |\n| SRC-054 | Reviews | Primary (builder-published) | Eastwood Homes | — | 2026-07-04 | https://www.eastwoodhomes.com/reviews | Builder-curated, positive-selection bias likely | Verified |\n| SRC-055 | Charlotte communities & The Mungo Difference | Primary (builder-published) | Mungo Homes | — | 2026-07-05 | https://www.mungo.com/communities/charlotte | Company claims: Clayton Properties Group since 2018, Nichols Landing ~300 TH NW Charlotte | Verified |\n| SRC-056 | Mungo Homes Reviews | Secondary | PissedConsumer | — | 2026-07-05 | https://mungo-homes.pissedconsumer.com/review.html | 1.6/5 across 25 reviews; complaint-biased platform | Verified |\n| SRC-057 | Mungo Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-05 | https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints | Warranty validated-then-unaddressed pattern | Verified |\n| SRC-058 | Mungo Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | — | 2026-07-05 | https://www.complaintsboard.com/mungo-homes-b134875 | Flooring/HVAC/drainage warranty complaint themes | Verified |\n| SRC-059 | Mungo Homes Reviews | Secondary | Glassdoor | — | 2026-07-05 | https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm | 3.5/5, 49 reviews, 53% recommend — weakest employee signal in set | Verified |\n| SRC-060 | Purchase Agreement — 3912 Craig Ave, Lot 71 (rev 6/29 + 6/30) | Primary | Weekley Homes, LLC / buyer | 2026-06-23 | 2026-07-05 | uploads (private, not in Git) | Signed contract: $398,934 → $378,987 on 6/30 rev; investor-representation clause | Verified |\n| SRC-061 | Homeowner Transaction Summary — Job 36320071 | Primary | David Weekley Homes | 2026-06-29 | 2026-07-05 | uploads (private, not in Git) | Base $395,990 + $2,944 options; $3,153 incentives; Remely A322/B/N; consultant Jonathan Wian | Verified |\n| SRC-062 | Earnest payment confirmation — $11,950 | Primary | David Weekley Homes / Skyla FCU | 2026-07-01 | 2026-07-05 | uploads (private, not in Git) | Earnest paid in full 7/1 | Verified |\n| SRC-063 | Old Republic Home Protection NC/SC plan brochure | Primary (insurer-published) | Old Republic Home Protection | — | 2026-07-05 | uploads (private, not in Git) | No-dollar-limit HVAC; systems/appliances regardless of age; code 12H424 | Verified |\n\n## Source status\n\n- **Primary:** original contract, official disclosure, lender quote, tax record, or first-party document (includes company newsrooms/investor relations and regulatory filings here).\n- **Secondary:** reputable analysis, reporting, or aggregate review platform that interprets or aggregates primary information.\n- **First-person:** buyer, agent, salesperson, homeowner, or chat account; useful but perspective-dependent.\n- **Lead only:** uncited statement requiring verification.\n\n## Known limitations of this source set\n\n- All SRC-001 through SRC-054 entries (2026-07-04 pass) and SRC-055 through SRC-059 (Mungo Homes, 2026-07-05 pass) are aggregate review-platform data gathered in a single 2026-07-04 web-research pass — none are primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Per the evidence standard, treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.\n- Review-platform ratings (BBB, ComplaintsBoard, ConsumerAffairs, Trustpilot, Yelp, Birdeye) carry inherent selection bias in both directions — dissatisfied customers are more likely to post complaints; builder-published review pages (SRC-004, SRC-041, SRC-054) are curated and carry positive-selection bias. Treat all star ratings as directional, not statistically representative.\n- SRC-028's 1.15/5 Southbridge figure originates from the buyer's own prior Drive research and was not independently re-derived or re-verified against the original review platform in this pass.\n",
     "builders_index": "# Builder Profiles\n\nProfiles are evidence containers, not rankings. Structure mirrors [bitflipper1/Real-Estate-Knowledge/builders](https://github.com/bitflipper1/Real-Estate-Knowledge/tree/8fbc132f201ec5bab37adf2d819b394ca09e7187/builders) at commit `8fbc132`. See [`../rankings.md`](../rankings.md) for the scored comparison and [`../sources/source-index.md`](../sources/source-index.md) for full citations.\n\n- [David Weekley Homes](david-weekley-homes.md)\n- [Ryan Homes (NVR)](ryan-homes.md)\n- [Lennar](lennar.md)\n- [Taylor Morrison](taylor-morrison.md)\n- [True Homes](true-homes.md)\n- [Tri Pointe Homes](tri-pointe-homes.md)\n- [D.R. Horton](dr-horton.md)\n- [Meritage Homes](meritage-homes.md)\n- [Smith Douglas Homes](smith-douglas-homes.md)\n- [Pulte Homes (PulteGroup)](pulte-homes.md)\n- [Mattamy Homes](mattamy-homes.md)\n- [Eastwood Homes](eastwood-homes.md)\n\n## Note on source-repo access\n\n`bitflipper1/Real-Estate-Knowledge` was private and outside this app's GitHub session scope for most of this research pass; access opened up mid-pass via an anonymous `git clone`, which is read-only. These profiles were authored to match that repo's exact structure and evidence discipline (Snapshot table → Evidence-backed findings with source IDs, claim type, confidence, and as-of dates → Questions/risks → Sources), but the underlying research here is Charlotte-market secondary-source review data (BBB, ComplaintsBoard, ConsumerAffairs, etc.), not the primary-document evidence (contracts, lender worksheets) that repo's standard calls for. Nothing here has been pushed to that repo — this app has no write credentials to it.\n"
   }
 }

@@ -58,6 +58,15 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 | SRC-052 | Eastwood Homes — 274 Reviews | Secondary | Birdeye | — | 2026-07-04 | https://reviews.birdeye.com/eastwood-homes-159108730415960 | 4.1/5 aggregate | Verified |
 | SRC-053 | EASTWOOD HOMES — 69 Reviews | Secondary | Yelp | 2026-04 | 2026-07-04 | https://www.yelp.com/biz/eastwood-homes-charlotte-11 | Charlotte HQ location reviews | Verified |
 | SRC-054 | Reviews | Primary (builder-published) | Eastwood Homes | — | 2026-07-04 | https://www.eastwoodhomes.com/reviews | Builder-curated, positive-selection bias likely | Verified |
+| SRC-055 | Charlotte communities & The Mungo Difference | Primary (builder-published) | Mungo Homes | — | 2026-07-05 | https://www.mungo.com/communities/charlotte | Company claims: Clayton Properties Group since 2018, Nichols Landing ~300 TH NW Charlotte | Verified |
+| SRC-056 | Mungo Homes Reviews | Secondary | PissedConsumer | — | 2026-07-05 | https://mungo-homes.pissedconsumer.com/review.html | 1.6/5 across 25 reviews; complaint-biased platform | Verified |
+| SRC-057 | Mungo Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-05 | https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints | Warranty validated-then-unaddressed pattern | Verified |
+| SRC-058 | Mungo Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | — | 2026-07-05 | https://www.complaintsboard.com/mungo-homes-b134875 | Flooring/HVAC/drainage warranty complaint themes | Verified |
+| SRC-059 | Mungo Homes Reviews | Secondary | Glassdoor | — | 2026-07-05 | https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm | 3.5/5, 49 reviews, 53% recommend — weakest employee signal in set | Verified |
+| SRC-060 | Purchase Agreement — 3912 Craig Ave, Lot 71 (rev 6/29 + 6/30) | Primary | Weekley Homes, LLC / buyer | 2026-06-23 | 2026-07-05 | uploads (private, not in Git) | Signed contract: $398,934 → $378,987 on 6/30 rev; investor-representation clause | Verified |
+| SRC-061 | Homeowner Transaction Summary — Job 36320071 | Primary | David Weekley Homes | 2026-06-29 | 2026-07-05 | uploads (private, not in Git) | Base $395,990 + $2,944 options; $3,153 incentives; Remely A322/B/N; consultant Jonathan Wian | Verified |
+| SRC-062 | Earnest payment confirmation — $11,950 | Primary | David Weekley Homes / Skyla FCU | 2026-07-01 | 2026-07-05 | uploads (private, not in Git) | Earnest paid in full 7/1 | Verified |
+| SRC-063 | Old Republic Home Protection NC/SC plan brochure | Primary (insurer-published) | Old Republic Home Protection | — | 2026-07-05 | uploads (private, not in Git) | No-dollar-limit HVAC; systems/appliances regardless of age; code 12H424 | Verified |
 
 ## Source status
 
@@ -68,6 +77,6 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 
 ## Known limitations of this source set
 
-- All SRC-001 through SRC-054 entries are aggregate review-platform data gathered in a single 2026-07-04 web-research pass — none are primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Per the evidence standard, treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.
+- All SRC-001 through SRC-054 entries (2026-07-04 pass) and SRC-055 through SRC-059 (Mungo Homes, 2026-07-05 pass) are aggregate review-platform data gathered in a single 2026-07-04 web-research pass — none are primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Per the evidence standard, treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.
 - Review-platform ratings (BBB, ComplaintsBoard, ConsumerAffairs, Trustpilot, Yelp, Birdeye) carry inherent selection bias in both directions — dissatisfied customers are more likely to post complaints; builder-published review pages (SRC-004, SRC-041, SRC-054) are curated and carry positive-selection bias. Treat all star ratings as directional, not statistically representative.
 - SRC-028's 1.15/5 Southbridge figure originates from the buyer's own prior Drive research and was not independently re-derived or re-verified against the original review platform in this pass.
