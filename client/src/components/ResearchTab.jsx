@@ -23,8 +23,10 @@ export default function ResearchTab({ research }) {
     sources = [], builder_intel = [], your_deal, thesis, innovation_watch,
     negotiation_playbook, best_builders_to_talk_to = [],
     upside_2027, contract_red_flags, rental_playbook, tripointe_roster, tour_archive, records_toolkit,
-    key_insights, deal_programs, api_catalog, monetization,
+    key_insights, deal_programs, api_catalog, monetization, public_data_stack,
   } = research;
+
+  const RATING_STYLE = { 'Very high': 'bg-green-100 text-green-800 font-semibold', 'High': 'bg-green-50 text-green-700', 'Med': 'bg-gray-100 text-gray-600', 'Low': 'bg-gray-50 text-gray-400' };
 
   const API_STATUS_STYLE = {
     'ready-to-wire': 'bg-green-100 text-green-800',
@@ -342,6 +344,39 @@ export default function ResearchTab({ research }) {
           </section>
         )}
       </div>
+
+      {/* Official public-data stack */}
+      {public_data_stack && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-1.5">🏛️ Charlotte-Meck public data stack <span className="text-xs font-normal text-gray-400">(ingested {public_data_stack.ingested} · endpoints live at /api/live/*)</span></h3>
+          <p className="text-xs font-medium text-green-800 bg-green-50 rounded-lg p-2.5 mb-2">🎯 {public_data_stack.boom_signal}</p>
+          <p className="text-xs text-gray-600 bg-gray-50 rounded-lg p-2.5 mb-3">🔨 {public_data_stack.builder_leverage_proxy}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div>
+              <p className="text-xs font-semibold text-gray-600 mb-1.5">The 8-step workflow</p>
+              <ol className="space-y-1">
+                {public_data_stack.workflow.map(s => <li key={s} className="text-xs text-gray-600">{s}</li>)}
+              </ol>
+            </div>
+            <div className="overflow-x-auto">
+              <p className="text-xs font-semibold text-gray-600 mb-1.5">What each source family is good for</p>
+              <table className="w-full text-xs">
+                <thead><tr className="text-gray-400"><th className="text-left font-medium py-1">Family</th><th className="font-medium">Incentives</th><th className="font-medium">Growth</th><th className="font-medium">Risk</th><th className="font-medium">Diligence</th></tr></thead>
+                <tbody>
+                  {public_data_stack.matrix.map(m => (
+                    <tr key={m.family} className="border-t border-gray-50">
+                      <td className="py-1 pr-2 text-gray-700">{m.family}</td>
+                      {[m.incentives, m.growth, m.risk, m.diligence].map((v, i) => (
+                        <td key={i} className="text-center px-1"><span className={`px-1.5 py-0.5 rounded text-[10px] ${RATING_STYLE[v] || ''}`}>{v}</span></td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Deal programs across portals/iBuyers */}
       {deal_programs && (
