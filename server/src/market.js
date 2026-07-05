@@ -54,7 +54,7 @@ const CITY_SUBMARKET = {
 // New-construction townhome submarket intel (curated estimates, mid-2026)
 const SUBMARKETS = {
   'uptown': { label: 'Uptown / South End', county: 'NC-Mecklenburg', ppsf: 340, rent_psf: 1.65, yoy_appreciation: 2.5, forecast_3yr: 3.0, dom: 45, note: 'Premium core; supply-heavy condo/TH pipeline caps near-term upside.' },
-  'plaza-noda': { label: 'Plaza Midwood / NoDa', county: 'NC-Mecklenburg', ppsf: 290, rent_psf: 1.45, yoy_appreciation: 4.0, forecast_3yr: 3.5, dom: 30, note: 'Strong rental demand from young professionals; your Central Living at Craig deal sits here.' },
+  'plaza-noda': { label: 'Plaza Midwood / NoDa', county: 'NC-Mecklenburg', ppsf: 290, rent_psf: 1.45, yoy_appreciation: 4.0, forecast_3yr: 3.5, dom: 30, note: 'Strong rental demand from young professionals; verify address-level rent and sales comps.' },
   'west-clt': { label: 'West Charlotte / Wesley Heights', county: 'NC-Mecklenburg', ppsf: 215, rent_psf: 1.25, yoy_appreciation: 6.5, forecast_3yr: 4.5, dom: 25, note: 'Path-of-progress: Gold Line + River District spillover. Best appreciation bet inside the city.' },
   'southpark': { label: 'SouthPark / Cotswold', county: 'NC-Mecklenburg', ppsf: 310, rent_psf: 1.40, yoy_appreciation: 3.5, forecast_3yr: 3.0, dom: 28, note: 'Blue-chip; low volatility, lower yield.' },
   'east-clt': { label: 'East Charlotte', county: 'NC-Mecklenburg', ppsf: 185, rent_psf: 1.20, yoy_appreciation: 5.5, forecast_3yr: 4.0, dom: 22, note: 'Cheapest Mecklenburg entry with real rent support; watch specific pockets.' },
@@ -90,15 +90,15 @@ const ASSUMPTIONS = {
 // likelihood: 'active' = marketed program, 'case-by-case' = happens on ask,
 // 'rare' = mostly closeout sales without leaseback.
 const LEASEBACK_PROGRAMS = [
-  { builder: 'Tri Pointe Homes', likelihood: 'active', furnished: 'yes — furniture conveys on decorated models', terms: 'CONFIRMED from your own threads: sold the Grahym at Southbridge (Fort Mill) York model HS24 turnkey with all decor; released the Archer Row decorated Beau model (Lot 1) furniture-and-all at $479,990 with $10K closing; offered free furniture on the Oakhurst Rockwell HS13. Quarter-end flexibility explicitly signaled. ⚠ RISK (your own research doc): local Southbridge reviews average 1.15/5 — workmanship, materials, warranty-response complaints despite the #2 national trust rank. Mitigate with independent inspection + written warranty terms.', contact: 'the sales rep ***REDACTED-PHONE*** (Archer Row) · the sales rep ***REDACTED-PHONE*** (Fort Mill/Southbridge) · the sales rep (Oakhurst)', tip: '"If there is a specific scenario that is perfect for you… let me know and I will do my best to get you there" — Taylor put the custom-deal door in writing. Name your structure: price + leaseback + furniture + independent inspection contingency.' },
-  { builder: 'David Weekley Homes', likelihood: 'active', furnished: 'negotiable', terms: 'Sells models with leaseback; builder pays rent + HOA until closing/community build-out. Your Central Living at Craig deal is exactly this program — washer/dryer/blinds were negotiable in lieu of commission. Jon mentioned "my other model" had interest (May 29) — he manages more than one.', contact: 'the sales consultant (your existing rep) — ***REDACTED-EMAIL***', tip: 'You are already a repeat buyer; ask Jon which Charlotte models are next to be released.' },
+  { builder: 'Tri Pointe Homes', likelihood: 'case-by-case', furnished: 'verify per model', terms: 'No current public Charlotte leaseback program was verified for this snapshot. Model-home terms vary by community and release timing.', contact: 'Charlotte-area sales office', tip: 'Request price, furniture conveyance, leaseback, warranty, and inspection terms in writing.' },
+  { builder: 'David Weekley Homes', likelihood: 'case-by-case', furnished: 'negotiable', terms: 'Model-home sale and leaseback terms may be available by community; no buyer-specific terms are included in this public dataset.', contact: 'Charlotte division sales office', tip: 'Ask which models are scheduled for release and request the complete term sheet in writing.' },
   { builder: 'Taylor Morrison', likelihood: 'active', furnished: 'often included', terms: 'Marketed model-home sale-leaseback program to investors; typical 12–24 mo leaseback at ~5-7% yield on price, builder maintains the home.', contact: 'Charlotte division sales office', tip: 'Ask for the "model home investment program" sheet — it is a standing program, not a favor.' },
   { builder: 'Lennar', likelihood: 'active', furnished: 'often included', terms: 'Sells models with leaseback through community completion (commonly 9–18 mo); furniture packages frequently convey on closeout models.', contact: 'Charlotte division — internet sales team', tip: 'Closeout communities (last phase) are where furnished models get priced to move.' },
   { builder: 'Meritage Homes', likelihood: 'case-by-case', furnished: 'sometimes', terms: 'Model sales with leaseback happen near community closeout; energy-spec homes rent well.', contact: 'Charlotte division office', tip: 'Ask about Concord/Cabarrus communities to stay under $350K.' },
   { builder: 'D.R. Horton', likelihood: 'case-by-case', furnished: 'sometimes at closeout', terms: 'Largest builder = most model inventory. Models typically sold at community closeout, occasionally furnished; leaseback when the sales office still needs the space.', contact: 'Charlotte East/West division offices', tip: 'Volume means deals: ask each community "when does this model release, and will you lease it back?"' },
   { builder: 'Mattamy Homes', likelihood: 'case-by-case', furnished: 'sometimes', terms: 'Does model leasebacks in Carolinas communities, mostly at grand-opening phases of the next community.', contact: 'Charlotte division', tip: 'Indian Land presence — remember the SC 6% investor tax before chasing these.' },
   { builder: 'True Homes', likelihood: 'case-by-case', furnished: 'ask', terms: 'Large local builder (Monroe/Gastonia/Concord heavy); sells models at closeout, leaseback negotiable at grand openings.', contact: 'True Homes Charlotte region', tip: 'Local decision-makers = faster yes/no than nationals.' },
-  { builder: 'Ryan Homes (NVR)', likelihood: 'rare', furnished: 'rarely', terms: 'NVR runs asset-light and rarely owns models long; closeout model sales happen (often unfurnished), leaseback uncommon.', contact: 'carolinasteam@ryanhomes.com (already emails you)', tip: 'Their value is price, not leaseback — e.g. Cherry Grove Juniper at $269,990.' },
+  { builder: 'Ryan Homes (NVR)', likelihood: 'rare', furnished: 'rarely', terms: 'NVR runs asset-light and rarely owns models long; closeout model sales happen (often unfurnished), leaseback uncommon.', contact: 'Charlotte-area sales team', tip: 'Treat this primarily as a price play and verify current inventory directly.' },
   { builder: 'Smith Douglas Homes', likelihood: 'rare', furnished: 'ask at closeout', terms: 'Affordable-segment models sold at closeout; furniture occasionally negotiable, leaseback unusual.', contact: 'Charlotte division', tip: 'Best raw price-per-foot if leaseback is optional for you.' },
   { builder: 'Century Communities', likelihood: 'rare', furnished: 'rarely', terms: 'Closeout model sales, usually unfurnished.', contact: 'Charlotte division', tip: 'Gastonia communities are the value pocket.' },
   { builder: 'Pulte Homes', likelihood: 'case-by-case', furnished: 'sometimes', terms: 'Periodic model leasebacks, usually in larger master-planned communities.', contact: 'Charlotte division', tip: 'Most Pulte TH product runs above $350K — watch for incentives.' },
@@ -120,7 +120,7 @@ function monthlyPI(principal, annualRatePct, years) {
 }
 
 // Lifestyle-fit scoring: plug-and-play readiness, tech spec, uniqueness.
-// Tuned to the buyer's stated criteria: "plug and play, high tech, good deal, unique."
+// Tuned to the product criteria: plug-and-play, high tech, value, and uniqueness.
 const TECH_KEYWORDS = ['smart', 'wi-fi', 'wifi', 'ring', 'thermostat', 'energy star', 'solar', 'ev charg', 'tankless', 'certified', 'automation'];
 const UNIQUE_KEYWORDS = ['decorated', 'designer', 'model', 'rooftop', 'end unit', 'corner', '3-story', 'three-story', 'turnkey', 'penthouse'];
 
@@ -143,7 +143,7 @@ function fitScores(listing) {
   for (const k of UNIQUE_KEYWORDS) if (text.includes(k)) unique += 15;
   // School-district signal (e.g. Myers Park High assignment) is a resale + fit differentiator
   if (/myers park|top-rated school|school district/.test(text)) unique += 15;
-  // The full package — model + leaseback + furnished — is the buyer's exact play
+  // The full package — model + leaseback + furnished — receives a synergy bonus.
   if (listing.is_model && listing.leaseback && listing.is_furnished) { plugPlay += 20; unique += 15; }
 
   const clamp = n => Math.min(100, n);

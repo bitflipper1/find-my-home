@@ -16,17 +16,29 @@ import {
   fetchListings, fetchStats, triggerRefresh, fetchLogs, fetchBuilders, fetchCities, fetchEmailLeads,
   fetchTracked, saveTracked, deleteTracked, fetchMarket, fetchResearch, fetchBuilderProfiles,
 } from './api';
+import { IS_STATIC } from './staticData';
 
-const TABS = [
+const PUBLIC_TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
   { id: 'invest', label: 'Invest', icon: Target },
-  { id: 'research', label: 'Research', icon: BookOpen },
-  { id: 'dealroom', label: 'Deal Room', icon: Lock },
   { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
   { id: 'analytics', label: 'Analytics', icon: Activity },
-  { id: 'email', label: 'Email Leads', icon: Mail },
   { id: 'log', label: 'Activity Log', icon: Info },
+];
+
+const PRIVATE_TABS = [
+  { id: 'research', label: 'Research', icon: BookOpen },
+  { id: 'dealroom', label: 'Deal Room', icon: Lock },
+  { id: 'email', label: 'Email Leads', icon: Mail },
+];
+
+const TABS = IS_STATIC ? PUBLIC_TABS : [
+  ...PUBLIC_TABS.slice(0, 2),
+  ...PRIVATE_TABS.slice(0, 2),
+  ...PUBLIC_TABS.slice(2, 5),
+  PRIVATE_TABS[2],
+  ...PUBLIC_TABS.slice(5),
 ];
 
 export default function App() {
@@ -340,7 +352,7 @@ export default function App() {
         {tab === 'email' && (
           <div className="space-y-4">
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-sm text-rose-800">
-              <strong>📧 Gmail connector is live.</strong> A scheduled daily scan reads your inbox (***REDACTED-EMAIL***) for
+              <strong>📧 Private Gmail connector is live.</strong> A scheduled daily scan reads the configured inbox for
               Zillow/Redfin price-cut alerts, builder emails (Ryan Homes, David Weekley), and open houses — then feeds them
               straight into your listings and the leads below. No credentials or setup needed; it runs on its own.
             </div>

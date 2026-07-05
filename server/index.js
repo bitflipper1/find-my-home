@@ -7,12 +7,20 @@ const {
 } = require('./src/db');
 const { runAllScrapers } = require('./src/aggregate');
 const { startScheduler, getIsRunning } = require('./src/scheduler');
+const { configuredCorsOrigins, privateLocalOnly } = require('./src/privacy');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const HOST = process.env.HOST || '127.0.0.1';
+const allowedOrigins = new Set(configuredCorsOrigins());
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.has(origin)) return callback(null, true);
+    return callback(new Error('Origin not allowed by CORS policy'));
+  },
+}));
+app.use(express.json({ limit: '100kb' }));
 
 // --- Listings ---
 app.get('/api/listings', (req, res) => {
@@ -68,7 +76,7 @@ app.get('/api/stats', (req, res) => {
 });
 
 // --- Manual refresh ---
-app.post('/api/refresh', async (req, res) => {
+app.post('/api/refresh', privateLocalOnly, async (req, res) => {
   if (getIsRunning()) {
     return res.json({ status: 'already_running', message: 'Scrape already in progress' });
   }
@@ -77,7 +85,7 @@ app.post('/api/refresh', async (req, res) => {
 });
 
 // --- Scrape logs ---
-app.get('/api/logs', (req, res) => {
+app.get('/api/logs', privateLocalOnly, (req, res) => {
   try {
     res.json(getScrapeLogs(req.query.limit ? parseInt(req.query.limit) : 50));
   } catch (err) {
@@ -86,7 +94,7 @@ app.get('/api/logs', (req, res) => {
 });
 
 // --- Email leads ---
-app.get('/api/email-leads', (req, res) => {
+app.get('/api/email-leads', privateLocalOnly, (req, res) => {
   try {
     const leads = db.prepare('SELECT * FROM email_leads ORDER BY received_at DESC LIMIT 100').all();
     res.json({ leads, count: leads.length });
@@ -148,7 +156,7 @@ app.get('/api/market', (req, res) => {
 // --- Personal research intelligence (Drive docs, inbox, insights) ---
 const fs = require('fs');
 const path = require('path');
-app.get('/api/research', (req, res) => {
+app.get('/api/research', privateLocalOnly, (req, res) => {
   try {
     const file = path.join(__dirname, 'data', 'research.json');
     res.json(fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {});
@@ -205,7 +213,7 @@ app.get('/api/live/corridor', async (req, res) => {
 });
 
 // --- Tracked places (personal tour tracker) ---
-app.get('/api/tracked', (req, res) => {
+app.get('/api/tracked', privateLocalOnly, (req, res) => {
   try {
     res.json({ tracked: getTrackedPlaces(), ids: getTrackedIds(), stats: getTrackedStats() });
   } catch (err) {
@@ -213,7 +221,7 @@ app.get('/api/tracked', (req, res) => {
   }
 });
 
-app.post('/api/tracked', (req, res) => {
+app.post('/api/tracked', privateLocalOnly, (req, res) => {
   try {
     if (!req.body.listing_id && !req.body.address) {
       return res.status(400).json({ error: 'A listing_id or an address is required' });
@@ -225,7 +233,7 @@ app.post('/api/tracked', (req, res) => {
   }
 });
 
-app.put('/api/tracked/:id', (req, res) => {
+app.put('/api/tracked/:id', privateLocalOnly, (req, res) => {
   try {
     const result = saveTrackedPlace({ ...req.body, id: parseInt(req.params.id) });
     res.json(result);
@@ -234,7 +242,7 @@ app.put('/api/tracked/:id', (req, res) => {
   }
 });
 
-app.delete('/api/tracked/:id', (req, res) => {
+app.delete('/api/tracked/:id', privateLocalOnly, (req, res) => {
   try {
     const changes = deleteTrackedPlace(parseInt(req.params.id));
     res.json({ deleted: changes });
@@ -250,8 +258,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', scraping: getIsRunning(), time: new Date().toISOString() });
 });
 
-app.listen(PORT, async () => {
-  console.log(`Charlotte Townhome Aggregator API running on port ${PORT}`);
+app.listen(PORT, HOST, async () => {
+  console.log(`Charlotte Townhome Aggregator API running at http://${HOST}:${PORT}`);
   startScheduler();
 
   // Seed with data on first startup if DB is empty

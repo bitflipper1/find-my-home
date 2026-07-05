@@ -5,9 +5,10 @@
 const path = require('path');
 const fs = require('fs');
 const { runAllScrapers } = require('../src/aggregate');
-const { getListings, getStats, getScrapeLogs, db } = require('../src/db');
+const { getListings, getScrapeLogs, db } = require('../src/db');
 const { getMarketIntel } = require('../src/market');
 const { getBuilderProfiles } = require('../src/builderProfiles');
+const { createPublicSnapshot } = require('../src/publicSnapshot');
 
 async function main() {
   const count = db.prepare('SELECT COUNT(*) as c FROM listings WHERE is_active=1').get().c;
@@ -17,39 +18,20 @@ async function main() {
   }
 
   const listings = getListings({ limit: 1000 });
-  const stats = getStats();
   const logs = getScrapeLogs(50);
-  const leads = db.prepare('SELECT * FROM email_leads ORDER BY received_at DESC LIMIT 100').all();
-  const builders = db.prepare(`
-    SELECT builder, COUNT(*) as count, MIN(price) as min_price, MAX(price) as max_price, AVG(price) as avg_price
-    FROM listings WHERE is_active=1 AND builder IS NOT NULL
-    GROUP BY builder ORDER BY count DESC
-  `).all();
-  const cities = db.prepare(`
-    SELECT city, COUNT(*) as count FROM listings
-    WHERE is_active=1 AND city IS NOT NULL GROUP BY city ORDER BY count DESC
-  `).all();
 
-  const snapshot = {
-    generated_at: new Date().toISOString(),
+  const snapshot = createPublicSnapshot({
+    generatedAt: new Date().toISOString(),
     listings,
-    stats,
     logs,
-    leads,
-    builders,
-    cities,
     market: getMarketIntel(),
-    research: (() => {
-      const f = path.join(__dirname, '..', 'data', 'research.json');
-      return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
-    })(),
-    builder_profiles: getBuilderProfiles(),
-  };
+    builderProfiles: getBuilderProfiles(),
+  });
 
   const outPath = path.join(__dirname, '..', '..', 'client', 'public', 'data.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(snapshot, null, 2));
-  console.log(`[export] Wrote ${listings.length} listings, ${leads.length} leads to ${outPath}`);
+  console.log(`[export] Wrote ${snapshot.listings.length} public listings to ${outPath}`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
