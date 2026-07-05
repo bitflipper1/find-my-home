@@ -26,15 +26,14 @@ const LIKELIHOOD_STYLE = {
 
 function TargetCard({ listing, onOpen }) {
   const i = listing.invest || {};
-  const isBenchmark = (listing.status || '').includes('YOUR DEAL');
   return (
     <div
-      className={`rounded-xl border p-4 cursor-pointer transition hover:shadow-md ${isBenchmark ? 'bg-blue-50 border-blue-300' : 'bg-white border-gray-200'}`}
+      className="rounded-xl border p-4 cursor-pointer transition hover:shadow-md bg-white border-gray-200"
       onClick={() => onOpen(listing)}
     >
       <div className="flex items-start justify-between gap-2 mb-1.5">
         <div className="flex items-baseline gap-2 min-w-0">
-          <span className="text-lg font-bold text-gray-900">{listing.price ? fmt(listing.price) : (isBenchmark ? 'Your deal' : 'Price TBD — call')}</span>
+          <span className="text-lg font-bold text-gray-900">{listing.price ? fmt(listing.price) : 'Price TBD — call'}</span>
           {listing.original_price > 0 && listing.price < listing.original_price && (
             <span className="text-xs line-through text-gray-400">{fmt(listing.original_price)}</span>
           )}
@@ -52,7 +51,6 @@ function TargetCard({ listing, onOpen }) {
       <p className="text-xs text-gray-500 mb-2">{listing.builder} · {i.submarket_label || listing.city}</p>
 
       <div className="flex flex-wrap gap-1 mb-2.5">
-        {isBenchmark && <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-600 text-white">Your benchmark deal</span>}
         {listing.is_furnished === 1 && <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800"><Sofa className="w-3 h-3" /> Furnished</span>}
         {listing.leaseback === 1 && <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-teal-100 text-teal-800"><KeyRound className="w-3 h-3" /> Leaseback</span>}
         {i.sc_investor_tax_warning && <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"><AlertTriangle className="w-3 h-3" /> SC 6% investor tax</span>}
@@ -99,11 +97,7 @@ export default function InvestTab({ listings, market, onOpen }) {
       .filter(l => !l.price || l.price <= maxPrice)
       .filter(l => !needFurnished || l.is_furnished === 1)
       .filter(l => !needLeaseback || l.leaseback === 1)
-      .sort((a, b) => {
-        const bench = ((b.status || '').includes('YOUR DEAL') ? 1 : 0) - ((a.status || '').includes('YOUR DEAL') ? 1 : 0);
-        if (bench) return bench;
-        return (b.invest?.score ?? -1) - (a.invest?.score ?? -1);
-      })
+      .sort((a, b) => (b.invest?.score ?? -1) - (a.invest?.score ?? -1))
       .filter(l => {
         const key = (l.community || l.address || '').toLowerCase().slice(0, 30);
         if (seen.has(key)) return false;

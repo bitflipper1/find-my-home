@@ -7,7 +7,7 @@
 | Field | Information |
 |---|---|
 | Relevant communities | Cherry Grove Townhomes (Kannapolis), Sunset Creek Townhomes (Charlotte 28216), Ashmore Square, Stowe Branch, Edenbrook, Ravenfield |
-| Product and price range | Cherry Grove "Juniper" plan $269,990 (buyer's inbox, first-person); Sunset Creek from $284,990, 1,576–1,681 sqft (secondary/builder-listing data, not independently verified in this pass) |
+| Product and price range | Sunset Creek was listed from $284,990 for 1,576–1,681 sqft in prior public builder-listing research; re-verify before use |
 | Contract structure | Not yet supplied |
 | Incentives | Incentives consistently tied to NVR Mortgage (pattern observed across multiple reviews, not a specific Charlotte quote) |
 | Warranty and service | 2-year warranty on plumbing/systems; structural coverage for an unspecified "set period" beyond that per one secondary source — exact term not yet supplied |

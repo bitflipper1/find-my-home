@@ -1,6 +1,6 @@
 # Charlotte Townhome Finder
 
-A full-stack aggregator dashboard for new construction townhomes in the greater Charlotte, NC area — like Jome.com but built for you, focused on Charlotte, and connected to your Gmail.
+A full-stack aggregator dashboard for new construction townhomes in the greater Charlotte, NC area, with an optional private Gmail ingestion mode.
 
 ## Screenshots
 
@@ -17,7 +17,7 @@ A full-stack aggregator dashboard for new construction townhomes in the greater 
 
 - **Aggregates** listings from Zillow, Realtor.com, Opendoor, Homes.com, NewHomeSource, and direct builder websites (D.R. Horton, Lennar, Ryan Homes, Meritage, Eastwood, Smith Douglas, and more)
 - **Tracks price cuts** — shows original vs. current price, % reduction, and dollar savings
-- **Scans your Gmail** daily for real estate alerts, builder emails, and price-drop notifications
+- **Optionally scans Gmail locally** for real estate alerts, builder emails, and price-drop notifications; inbox-derived data is excluded from Git and public builds
 - **Runs on a schedule** — automatic refresh at 7 AM and 12 PM Eastern every day
 - **Dashboard** — filter by price, beds, city, builder, source, furnished, leaseback; sort by price cut %, freshness, size; click any listing to see details + price history chart + call button
 - **Invest tab (HouseCanary-style)** — every listing gets a 0–100 investment score (value vs submarket $/sqft, rent yield, growth forecast, price-cut momentum, model/furnished/leaseback fit), rent + cap-rate + cash-flow estimates, a 17-submarket intel table, and a builder model-sale/leaseback program directory tuned for finding furnished models under $350K with sale-leaseback terms (including the SC 6% investor-tax warning)
@@ -29,17 +29,26 @@ A full-stack aggregator dashboard for new construction townhomes in the greater 
 npm run setup
 
 # Start both server (port 3001) + client (port 5173) together
-npm run dev
+ALLOW_PRIVATE_LOCAL=true npm run dev
 ```
 
 Then open **http://localhost:5173**
 
+The backend binds to `127.0.0.1` by default. `ALLOW_PRIVATE_LOCAL=true` enables
+the private refresh, logs, email-lead, research, and tracked-place endpoints for
+loopback requests only. Do not expose that mode to a network; production private
+features require real server-side authentication.
+
 ## Hosting on GitHub Pages (static, read-only)
 
-GitHub Pages can't run the Node/SQLite backend, so there's a **static build**
-that bakes the current data into `client/public/data.json` and stores your tour
+GitHub Pages can't run the Node/SQLite backend, so there's a **public static build**
+that generates an allowlisted snapshot in `client/public/data.json` and stores your tour
 tracker in the browser's `localStorage`. A GitHub Actions workflow
 (`.github/workflows/deploy-pages.yml`) builds and publishes it automatically.
+
+The public snapshot excludes Gmail listings, email leads, tracked places,
+private research, private model-home leads, and deal-room material. The generated
+`data.json` is ignored by Git so a local snapshot is not committed accidentally.
 
 **One-time setup** (you only do this once, in the GitHub UI):
 
@@ -57,28 +66,27 @@ npm run build:static
 npx serve client/dist   # or any static server
 ```
 
-**What works in the static version:** browsing/filtering/sorting all listings,
-price-cut highlights, the listing detail modal with price history, the Email
-Leads tab, analytics, and the full **My Tours** tracker (saved per-browser).
-**What doesn't:** the live "Refresh" button and the daily Gmail/scraper updates —
+**What works in the static version:** browsing/filtering/sorting public listings,
+price-cut highlights, the listing detail modal with price history, analytics,
+the public builder knowledge base, and the full **My Tours** tracker (saved per-browser).
+**What doesn't:** private Research, Deal Room, Email Leads, live "Refresh", or Gmail updates —
 those need the backend. The data refreshes whenever the site is rebuilt (every
 push, or on demand from the Actions tab).
 
 For the always-fresh experience, run the full stack (`npm run dev`) or host the
 server somewhere that can run Node (Render, Railway, Fly.io, a VPS).
 
-## Gmail — already wired up (no setup)
+## Gmail — private local mode
 
-This app reads your inbox through the **Gmail connector**, so there are no OAuth
-credentials to configure. A scheduled daily scan reads
-`mattmcg@bitfliptech.com` for builder emails (Ryan Homes, David Weekley…),
-Zillow/Redfin price-cut alerts, and open houses, then writes the results to:
+The application can ingest a Gmail connector export or use direct OAuth. Private
+connector output is written to:
 
 - `server/data/gmail-listings.json` — full listings (price, beds/baths/sqft, builder, phone) → shown in the dashboard as the **📧 Your Inbox** source
 - `server/data/gmail-leads.json` — price-cut / open-house / builder alerts → shown in the **Email Leads** tab
 
-The server ingests these files on every scrape, so your real inbox data flows
-straight into the listings grid alongside the other sources. See
+Both files are gitignored. The server can ingest them locally, but the public
+snapshot exporter rejects their listing source and never publishes email leads.
+See
 [`AUTOMATION.md`](AUTOMATION.md) for how the daily scan is scheduled.
 
 ### Optional: direct OAuth mode
@@ -86,6 +94,13 @@ If you'd rather have the server hit the Gmail API itself (instead of the
 connector-driven file refresh), copy `server/.env.example` → `server/.env` and
 fill in `GMAIL_CLIENT_ID` / `GMAIL_CLIENT_SECRET` / `GMAIL_REFRESH_TOKEN`. The
 server auto-detects credentials and uses them when present.
+
+## Privacy boundary
+
+- Keep contracts, payment records, negotiation notes, inbox exports, and personal research out of this public repository.
+- Client-side passphrases are not authentication; the Deal Room remains disabled until server-side authentication exists.
+- The public exporter is allowlist-based and covered by tests. Run `npm test` before publishing.
+- Removing a file from the current branch does not remove it from Git history. If sensitive material was previously committed, treat history cleanup and repository visibility as a separate incident-response step.
 
 ## Data sources
 
@@ -157,4 +172,3 @@ Charlotte proper · Matthews · Huntersville · Cornelius · Mooresville · Mint
 Most aggregator sites (Zillow, Realtor.com, etc.) block automated requests — the server gracefully falls back to curated sample data so the dashboard always has content. As those sites update their bot-protection policies, the scrapers automatically get the real data when available. Builder sites (D.R. Horton, Lennar, etc.) tend to be more accessible.
 
 For production use, consider adding a RapidAPI key for enhanced Zillow/Realtor.com access.
-
