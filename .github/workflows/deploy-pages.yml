@@ -32,7 +32,8 @@ jobs:
         with:
           node-version: 20
 
-      # Build the data snapshot from the committed scrapers + Gmail data files
+      # Build a public allowlisted snapshot. Private connector files are neither
+      # committed nor included by the exporter.
       - name: Install server deps
         working-directory: server
         run: npm ci || npm install
@@ -40,6 +41,10 @@ jobs:
       - name: Export static data snapshot
         working-directory: server
         run: node scripts/export-static.js --refresh
+
+      - name: Verify privacy boundary
+        working-directory: server
+        run: npm test
 
       # Build the static frontend with the Pages base path
       - name: Install client deps

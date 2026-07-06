@@ -72,14 +72,13 @@ export const staticApi = {
   async fetchBuilders() { return (await loadSnapshot()).builders; },
   async fetchCities() { return (await loadSnapshot()).cities; },
   async fetchEmailLeads() {
-    const snap = await loadSnapshot();
-    return { leads: snap.leads || [], count: (snap.leads || []).length };
+    return { leads: [], count: 0 };
   },
   async fetchMarket() {
     return (await loadSnapshot()).market || { submarkets: [], leaseback_programs: [], assumptions: {} };
   },
   async fetchResearch() {
-    return (await loadSnapshot()).research || null;
+    return null;
   },
   async fetchBuilderProfiles() {
     return (await loadSnapshot()).builder_profiles || { profiles: [], rankings: null, source_index: null, builders_index: null };

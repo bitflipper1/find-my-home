@@ -1,6 +1,6 @@
 # Source Index
 
-Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-index.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/sources/source-index.md). All entries below are **secondary** (aggregate review platforms, company newsrooms, SEC filings) gathered via web search on 2026-07-04. None are primary documents (contracts, lender worksheets, tax records) — those must come from your own files and would get their own SRC IDs when supplied.
+Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-index.md](https://github.com/bitflipper1/Real-Estate-Knowledge/blob/8fbc132f201ec5bab37adf2d819b394ca09e7187/sources/source-index.md). Entries in this public repository are limited to public web sources. Contracts, lender worksheets, inbox threads, payment records, tax records, and other buyer-specific material must remain in private storage.
 
 | Source ID | Title/description | Type | Author/publisher | Published/effective | Accessed/received | Local path or URL | Reliability/notes | Status |
 |---|---|---|---|---|---|---|---|---|
@@ -30,8 +30,6 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 | SRC-024 | TRI Pointe Homes Homebuyers Reviews and Complaints 2026 | Secondary | ComplaintsBoard | 2026 | 2026-07-04 | https://www.complaintsboard.com/tri-pointe-homes-b134706 | 3.7/5, 13 complaints, 24% unresolved as of 2026-05-27 | Verified |
 | SRC-025 | Tri Pointe Homes Reviews: Pros & Cons | Secondary | ConsumerAffairs (listed under Pardee) | — | 2026-07-04 | https://www.consumeraffairs.com/housing/pardee.html | Construction-quality complaint detail | Verified |
 | SRC-026 | Tri Pointe Homes Lawsuit: Colorado Defect Guide | Secondary (legal-marketing) | Hollington Law Firm | — | 2026-07-04 | https://hollingtonlawfirm.com/articles/tri-pointe-homes-construction-issues | Colorado-specific litigation context; law-firm authored, treat as advocacy-adjacent | Verified |
-| SRC-027 | Your Gmail inbox — the sales rep, the sales rep, the sales rep threads | First-person | Tri Pointe Homes sales reps (via buyer's inbox) | 2026-05 to 2026-06 | ongoing | ***REDACTED-EMAIL*** inbox | Direct negotiation record — highest-confidence source for deal terms | Verified |
-| SRC-028 | "True Homes and Tripointe" Drive doc | First-person / secondary synthesis | Buyer's own research (Drive) | 2026-05-19 | 2026-06-26 | Google Drive: Real Estate Search 2026 folder | Source of the 1.15/5 Southbridge local-review figure — original citation for that figure not re-verified in this pass | Unverified (figure not independently re-confirmed) |
 | SRC-029 | D.R. Horton Homes Reviews (From Verified Customers) | Secondary | ConsumerAffairs | — | 2026-07-04 | https://www.consumeraffairs.com/housing/dr_horton.html | Aggregate buyer reviews | Verified |
 | SRC-030 | Drhorton Reviews | Secondary | Trustpilot | — | 2026-07-04 | https://www.trustpilot.com/review/www.drhorton.com | Aggregate buyer reviews | Verified |
 | SRC-031 | D.R. Horton Reviews 2026: What Homebuyers Are Saying | Secondary | RatingFacts | 2026 | 2026-07-04 | https://ratingfacts.com/blogs/dr-horton-reviews-what-homebuyers-are-saying | Synthesis of review platforms | Verified |
@@ -63,20 +61,15 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 | SRC-057 | Mungo Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-05 | https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints | Warranty validated-then-unaddressed pattern | Verified |
 | SRC-058 | Mungo Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | — | 2026-07-05 | https://www.complaintsboard.com/mungo-homes-b134875 | Flooring/HVAC/drainage warranty complaint themes | Verified |
 | SRC-059 | Mungo Homes Reviews | Secondary | Glassdoor | — | 2026-07-05 | https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm | 3.5/5, 49 reviews, 53% recommend — weakest employee signal in set | Verified |
-| SRC-060 | Purchase Agreement — ***REDACTED-ADDRESS***, ***REDACTED-LOT*** (rev 6/29 + 6/30) | Primary | Weekley Homes, LLC / buyer | 2026-06-23 | 2026-07-05 | uploads (private, not in Git) | Signed contract: $*** → $*** on 6/30 rev; investor-representation clause | Verified |
-| SRC-061 | Homeowner Transaction Summary — Job ***REDACTED-JOB-ID*** | Primary | David Weekley Homes | 2026-06-29 | 2026-07-05 | uploads (private, not in Git) | Base $395,990 + $2,944 options; $3,153 incentives; Remely A322/B/N; consultant the sales consultant | Verified |
-| SRC-062 | Earnest payment confirmation — $*** | Primary | David Weekley Homes / ***REDACTED-BANK*** FCU | 2026-07-01 | 2026-07-05 | uploads (private, not in Git) | Earnest paid in full 7/1 | Verified |
-| SRC-063 | Old Republic Home Protection NC/SC plan brochure | Primary (insurer-published) | Old Republic Home Protection | — | 2026-07-05 | uploads (private, not in Git) | No-dollar-limit HVAC; systems/appliances regardless of age; code 12H424 | Verified |
 
 ## Source status
 
 - **Primary:** original contract, official disclosure, lender quote, tax record, or first-party document (includes company newsrooms/investor relations and regulatory filings here).
 - **Secondary:** reputable analysis, reporting, or aggregate review platform that interprets or aggregates primary information.
-- **First-person:** buyer, agent, salesperson, homeowner, or chat account; useful but perspective-dependent.
+- **First-person:** useful but private by default; do not add buyer, agent, salesperson, inbox, or chat records to this public index.
 - **Lead only:** uncited statement requiring verification.
 
 ## Known limitations of this source set
 
-- All SRC-001 through SRC-054 entries (2026-07-04 pass) and SRC-055 through SRC-059 (Mungo Homes, 2026-07-05 pass) are aggregate review-platform data gathered in a single 2026-07-04 web-research pass — none are primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Per the evidence standard, treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.
+- The entries are public-source reputation research, not primary contracts, lender worksheets, or tax records specific to a Charlotte transaction. Treat every builder profile's findings as **reputation signal**, not verified fact about any specific home or community.
 - Review-platform ratings (BBB, ComplaintsBoard, ConsumerAffairs, Trustpilot, Yelp, Birdeye) carry inherent selection bias in both directions — dissatisfied customers are more likely to post complaints; builder-published review pages (SRC-004, SRC-041, SRC-054) are curated and carry positive-selection bias. Treat all star ratings as directional, not statistically representative.
-- SRC-028's 1.15/5 Southbridge figure originates from the buyer's own prior Drive research and was not independently re-derived or re-verified against the original review platform in this pass.

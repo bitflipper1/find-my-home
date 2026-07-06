@@ -8,6 +8,7 @@
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "build:static": "cd server && node scripts/export-static.js --refresh && cd ../client && VITE_STATIC=true VITE_BASE=/find-my-home/ npm run build",
+    "test": "cd server && npm test",
     "start": "cd server && npm start",
     "setup": "cd server && npm install && cd ../client && npm install"
   },

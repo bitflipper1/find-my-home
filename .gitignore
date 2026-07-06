@@ -4,5 +4,10 @@ server/data/*.db-shm
 server/data/*.db-wal
 server/.env
 client/dist/
+client/public/data.json
+server/data/gmail-leads.json
+server/data/gmail-listings.json
+server/data/model-homes.json
+server/data/research.json
 .DS_Store
 *.log
