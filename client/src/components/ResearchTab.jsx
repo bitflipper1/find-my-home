@@ -24,12 +24,14 @@ export default function ResearchTab({ research }) {
     negotiation_playbook, best_builders_to_talk_to = [],
     upside_2027, contract_red_flags, rental_playbook, tripointe_roster, tour_archive, records_toolkit,
     key_insights, deal_programs, api_catalog, monetization, public_data_stack,
+    premium_data, competitive_edge, product_roadmap,
   } = research;
 
   const RATING_STYLE = { 'Very high': 'bg-green-100 text-green-800 font-semibold', 'High': 'bg-green-50 text-green-700', 'Med': 'bg-gray-100 text-gray-600', 'Low': 'bg-gray-50 text-gray-400' };
 
   const API_STATUS_STYLE = {
     'ready-to-wire': 'bg-green-100 text-green-800',
+    'wired-needs-key': 'bg-purple-100 text-purple-800',
     'if-monetized': 'bg-amber-100 text-amber-800',
     'needs-partner': 'bg-blue-100 text-blue-800',
     'caution-tos': 'bg-red-100 text-red-700',
@@ -431,11 +433,88 @@ export default function ResearchTab({ research }) {
         </section>
       )}
 
+      {/* Premium data providers — ATTOM vs HouseCanary */}
+      {premium_data && (
+        <section className="bg-white rounded-xl border border-purple-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-1.5">💎 Premium data tier — ATTOM & HouseCanary <span className="text-xs font-normal text-gray-400">(researched {premium_data.researched} · wired, awaiting keys)</span></h3>
+          <p className="text-xs font-medium text-purple-800 bg-purple-50 rounded-lg p-2.5 mb-3">{premium_data.verdict}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-2">
+            {premium_data.providers.map(p => (
+              <div key={p.name} className="rounded-lg border border-gray-200 p-3">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <span className="text-xs font-bold text-gray-800">{p.name}</span>
+                  <span className="text-[10px] text-gray-400">{p.entry_cost}</span>
+                </div>
+                <p className="text-xs text-gray-600 leading-relaxed mb-1.5">{p.strengths}</p>
+                <p className="text-xs font-medium text-blue-700 mb-1.5">→ {p.best_for}</p>
+                <div className="flex flex-wrap gap-1">
+                  {p.wired.map(w => <code key={w} className="text-[10px] bg-gray-100 text-gray-600 rounded px-1.5 py-0.5">{w}</code>)}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-600 bg-gray-50 rounded-lg p-2.5">{premium_data.strategy}</p>
+        </section>
+      )}
+
+      {/* Competitive edge — why this beats the alternatives */}
+      {competitive_edge && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-1.5">🥊 Competitive edge — what this app does that others don't</h3>
+          <p className="text-xs font-medium text-green-800 bg-green-50 rounded-lg p-2.5 mb-3">{competitive_edge.positioning}</p>
+          <div className="overflow-x-auto mb-3">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-xs text-gray-500 border-b border-gray-100">
+                  <th className="text-left font-medium px-3 py-2">Vs</th>
+                  <th className="text-left font-medium px-3 py-2">Their gap</th>
+                  <th className="text-left font-medium px-3 py-2">Our edge</th>
+                </tr>
+              </thead>
+              <tbody>
+                {competitive_edge.vs.map(c => (
+                  <tr key={c.competitor} className="border-b border-gray-50 align-top">
+                    <td className="px-3 py-2 text-xs font-semibold text-gray-800 whitespace-nowrap">{c.competitor}</td>
+                    <td className="px-3 py-2 text-xs text-gray-500">{c.their_gap}</td>
+                    <td className="px-3 py-2 text-xs text-green-700">{c.our_edge}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5">
+            {competitive_edge.user_benefits.map(b => (
+              <p key={b} className="text-xs text-gray-600 bg-gray-50 rounded-lg px-2.5 py-1.5">✓ {b}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Product roadmap */}
+      {product_roadmap && (
+        <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">🗺️ Roadmap — toward the most analytical new-construction investing app</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {[['Now', product_roadmap.now, 'border-green-200 bg-green-50/40'], ['Next', product_roadmap.next, 'border-blue-200 bg-blue-50/40'], ['Later', product_roadmap.later, 'border-gray-200 bg-gray-50/60']].map(([label, items, cls]) => (
+              <div key={label} className={`rounded-lg border p-3 ${cls}`}>
+                <p className="text-xs font-bold text-gray-800 mb-1.5">{label}</p>
+                <ul className="space-y-1.5">
+                  {items.map(i => <li key={i} className="text-xs text-gray-600 leading-relaxed">• {i}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Monetization plan */}
       {monetization && (
         <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
           <h3 className="text-sm font-semibold text-gray-700 mb-1.5">💳 Monetization path (if you open it up)</h3>
           <p className="text-xs text-gray-600 mb-2">{monetization.verdict}</p>
+          {monetization.gating_status && (
+            <p className="text-xs font-medium text-purple-800 bg-purple-50 rounded-lg p-2.5 mb-2">🔒 {monetization.gating_status}</p>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
             {monetization.tiers.map(t => (
               <div key={t.tier} className="bg-gray-50 rounded-lg p-2.5">
