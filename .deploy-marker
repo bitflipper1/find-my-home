@@ -1,1 +1,1 @@
-Pages deploy retrigger #2 — GitHub's Pages service should have settled after 12 min. Retrying after transient "Deployment failed, try again later" on runs 12 and 13.
+retrigger pages deploy after transient failure (run 25) — privacy-hardened site
