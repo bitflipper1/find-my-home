@@ -61,6 +61,8 @@ Mirrors the convention at [bitflipper1/Real-Estate-Knowledge/sources/source-inde
 | SRC-057 | Mungo Homes — BBB Complaints | Secondary | Better Business Bureau | — | 2026-07-05 | https://www.bbb.org/us/sc/irmo/profile/home-builders/mungo-homes-0663-12000514/complaints | Warranty validated-then-unaddressed pattern | Verified |
 | SRC-058 | Mungo Homes Homebuyers Reviews 2026 | Secondary | ComplaintsBoard | — | 2026-07-05 | https://www.complaintsboard.com/mungo-homes-b134875 | Flooring/HVAC/drainage warranty complaint themes | Verified |
 | SRC-059 | Mungo Homes Reviews | Secondary | Glassdoor | — | 2026-07-05 | https://www.glassdoor.com/Reviews/Mungo-Homes-Reviews-E1002063.htm | 3.5/5, 49 reviews, 53% recommend — weakest employee signal in set | Verified |
+| SRC-064 | ATTOM Developer Platform — API docs, product pages, AVM launch note | Secondary (vendor-published) | ATTOM Data Solutions | 2026 | 2026-07-04 | api.developer.attomdata.com/docs · attomdata.com | 160M+ properties; propertyapi/v1.0.0 base; `apikey` header; expandedprofile/attomavm/saleshistory; from ~$95/mo, 30-day trial; AI AVM launched 2026 | Corroborated (docs + Datarade + third-party reviews) |
+| SRC-065 | HouseCanary — API reference, Data Explorer, pricing, MCP announcement | Secondary (vendor-published) | HouseCanary | 2026 | 2026-07-04 | api-docs.housecanary.com · housecanary.com | v2/property/{value,rental_value,value_forecast}; key:secret basic auth; 100 items/POST; monthly-refresh AVM; 36-mo forecasts; 149-endpoint MCP server | Corroborated (docs + PyPI SDK + third-party comparisons) |
 
 ## Source status
 

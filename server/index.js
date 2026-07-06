@@ -55,9 +55,11 @@ app.get('/api/listings/:id', (req, res) => {
     const row = db.prepare('SELECT * FROM listings WHERE id = ?').get(req.params.id);
     if (!row) return res.status(404).json({ error: 'Not found' });
     const history = db.prepare('SELECT price, recorded_at FROM price_history WHERE listing_id = ? ORDER BY recorded_at').all(row.id);
+    const { listingArt } = require('./src/listingArt');
+    const images = JSON.parse(row.images || '[]');
     res.json({
       ...row,
-      images: JSON.parse(row.images || '[]'),
+      images: images.length ? images : [listingArt(row)],
       features: JSON.parse(row.features || '[]'),
       price_history_detail: history,
     });
@@ -199,6 +201,23 @@ for (const [route, fn] of [['policy-map', 'policyMapNear'], ['rezonings', 'rezon
   });
 }
 app.get('/api/live/parcel/:pid', async (req, res) => res.json(await live.parcelByPid(req.params.pid)));
+
+// Premium providers. ATTOM wants address1 (street) + address2 ("City, ST" or zip);
+// HouseCanary wants address + zipcode. Both return {ok:false} until keys are set.
+for (const [route, fn] of [['attom/profile', 'attomProfile'], ['attom/avm', 'attomAvm'], ['attom/sales-history', 'attomSalesHistory']]) {
+  app.get(`/api/live/${route}`, async (req, res) => {
+    const { address1, address2 } = req.query;
+    if (!address1 || !address2) return res.status(400).json({ ok: false, reason: 'address1 and address2 required' });
+    res.json(await live[fn](address1, address2));
+  });
+}
+for (const [route, fn] of [['hc/value', 'hcValue'], ['hc/rent', 'hcRentalValue'], ['hc/forecast', 'hcValueForecast']]) {
+  app.get(`/api/live/${route}`, async (req, res) => {
+    const { address, zipcode } = req.query;
+    if (!address || !zipcode) return res.status(400).json({ ok: false, reason: 'address and zipcode required' });
+    res.json(await live[fn](address, zipcode));
+  });
+}
 
 // The corridor screen: run all official layers for a point in one shot —
 // the boom-signal test (policy ∩ entitlements ∩ pipeline) plus crime context.

@@ -131,4 +131,68 @@ async function parcelByPid(pid) {
   return { ok: true, source: 'Parcel Zoning Lookup', parcel: r.data?.features?.[0]?.attributes || null };
 }
 
-module.exports = { censusMecklenburg, permitsNear, rentEstimate, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid };
+// ---- Premium data providers (paid keys; both degrade gracefully). ----
+
+// ATTOM Data — 160M+ US properties: expanded profile, AVM, sales history,
+// all-events. Header auth: `apikey`. Base plan ~$95/mo (30-day trial available).
+// Key: ATTOM_API_KEY (api.developer.attomdata.com).
+const ATTOM_BASE = 'https://api.gateway.attomdata.com/propertyapi/v1.0.0';
+
+async function attomCall(resource, params) {
+  if (!process.env.ATTOM_API_KEY) return { ok: false, reason: 'ATTOM_API_KEY not set (trial key: api.developer.attomdata.com)' };
+  return safeGet(`${ATTOM_BASE}/${resource}`, {
+    params, headers: { apikey: process.env.ATTOM_API_KEY, Accept: 'application/json' },
+  });
+}
+
+// Assessor + owner + latest loan/transaction for an address.
+// address1 = street, address2 = "City, ST" or zip.
+async function attomProfile(address1, address2) {
+  const r = await attomCall('property/expandedprofile', { address1, address2 });
+  if (!r.ok) return r;
+  return { ok: true, source: 'ATTOM expanded profile', property: r.data?.property?.[0] || null };
+}
+
+// ATTOM AVM — market-value estimate with high/low band.
+async function attomAvm(address1, address2) {
+  const r = await attomCall('attomavm/detail', { address1, address2 });
+  if (!r.ok) return r;
+  const p = r.data?.property?.[0];
+  return { ok: true, source: 'ATTOM AVM', avm: p?.avm?.amount || null, address: p?.address || null };
+}
+
+// Recorded sales history (10 yrs) — the resale-velocity check for a community.
+async function attomSalesHistory(address1, address2) {
+  const r = await attomCall('saleshistory/detail', { address1, address2 });
+  if (!r.ok) return r;
+  const p = r.data?.property?.[0];
+  return { ok: true, source: 'ATTOM sales history', history: p?.salehistory || [], address: p?.address || null };
+}
+
+// HouseCanary — AVM + rental AVM + 36-month value forecasts, block→state
+// granularity. Basic auth key:secret on api.housecanary.com/v2.
+// Keys: HC_API_KEY + HC_API_SECRET (housecanary.com Data Explorer / API).
+async function hcCall(target, address, zipcode) {
+  if (!process.env.HC_API_KEY || !process.env.HC_API_SECRET) {
+    return { ok: false, reason: 'HC_API_KEY / HC_API_SECRET not set (housecanary.com/products/data-explorer)' };
+  }
+  return safeGet(`https://api.housecanary.com/v2/property/${target}`, {
+    params: { address, zipcode },
+    auth: { username: process.env.HC_API_KEY, password: process.env.HC_API_SECRET },
+  });
+}
+
+const hcResult = (r, target) => {
+  if (!r.ok) return r;
+  const item = Array.isArray(r.data) ? r.data[0] : r.data;
+  return { ok: true, source: `HouseCanary ${target}`, result: item?.[`property/${target}`]?.result ?? item };
+};
+
+async function hcValue(address, zipcode) { return hcResult(await hcCall('value', address, zipcode), 'value'); }
+async function hcRentalValue(address, zipcode) { return hcResult(await hcCall('rental_value', address, zipcode), 'rental_value'); }
+async function hcValueForecast(address, zipcode) { return hcResult(await hcCall('value_forecast', address, zipcode), 'value_forecast'); }
+
+module.exports = {
+  censusMecklenburg, permitsNear, rentEstimate, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid,
+  attomProfile, attomAvm, attomSalesHistory, hcValue, hcRentalValue, hcValueForecast,
+};

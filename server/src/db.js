@@ -122,6 +122,7 @@ db.exec(`
 try { db.exec('ALTER TABLE listings ADD COLUMN leaseback INTEGER DEFAULT 0'); } catch { /* exists */ }
 
 const { enrichListing } = require('./market');
+const { listingArt } = require('./listingArt');
 
 // Upsert a listing, tracking price changes
 function upsertListing(listing) {
@@ -242,13 +243,18 @@ function getListings(filters = {}) {
 
   if (filters.limit) { query += ' LIMIT ?'; params.push(parseInt(filters.limit)); }
 
-  return db.prepare(query).all(...params).map(row => ({
-    ...row,
-    images: JSON.parse(row.images || '[]'),
-    features: JSON.parse(row.features || '[]'),
-    price_history: JSON.parse(row.price_history || '[]'),
-    invest: enrichListing(row),
-  }));
+  return db.prepare(query).all(...params).map(row => {
+    const images = JSON.parse(row.images || '[]');
+    return {
+      ...row,
+      // Listings without photos get a generated render that reflects their
+      // actual attributes (see listingArt.js) — never a blank card.
+      images: images.length ? images : [listingArt(row)],
+      features: JSON.parse(row.features || '[]'),
+      price_history: JSON.parse(row.price_history || '[]'),
+      invest: enrichListing(row),
+    };
+  });
 }
 
 function getStats() {

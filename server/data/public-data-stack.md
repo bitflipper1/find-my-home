@@ -91,6 +91,20 @@ GET services.arcgis.com/9Nl857LBlQVyzq54/.../Land_Development_Commercial_Project
 
 Score = policy support (place type) + entitlement activity (pending rezonings within 1 mi) + supply timing (active/pre-submittal projects within 1 mi) + infrastructure support (funded projects in design/construction nearby) − environmental constraint (floodplain/wetland intersect) ± crime context (NPA property-crime rate). The SQL join pattern is in the original research doc; implementation needs a staged PostGIS or client-side spatial pass.
 
+## Premium overlay: ATTOM + HouseCanary (paid accuracy tier)
+
+The free/official stack above is the always-on base. Two commercial providers are wired
+behind env keys (`/api/live/attom/*`, `/api/live/hc/*`) for when a deal — or a subscriber —
+justifies per-call cost:
+
+| Provider | What it adds over the free stack | Entry cost | Wired endpoints |
+|---|---|---|---|
+| **ATTOM Data** (SRC-064) | One-call diligence: assessor + owner + loan + 10-yr sales history + AVM band + foreclosure/permit events for 160M+ properties — replaces manual POLARIS→deeds→assessor hops | ~$95/mo API (30-day trial) | `attom/profile`, `attom/avm`, `attom/sales-history` (env `ATTOM_API_KEY`) |
+| **HouseCanary** (SRC-065) | Forward-looking science: monthly-refresh AVM, rental AVM, **36-month value forecasts** at block→zip granularity; 149-tool MCP server for agent workflows | Credit-based / custom | `hc/value`, `hc/rent`, `hc/forecast` (env `HC_API_KEY` + `HC_API_SECRET`) |
+
+Order of adoption: ATTOM first (diligence depth per dollar), HouseCanary when the
+Invest tab grows a forecast column. Neither replaces recorded deeds as the dispositive record.
+
 ## Limitations
 
 - Builder incentives are NOT in official data — public systems price leverage/timing, not the 5.99% buydown
