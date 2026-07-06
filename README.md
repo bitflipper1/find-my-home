@@ -2,17 +2,6 @@
 
 A full-stack aggregator dashboard for new construction townhomes in the greater Charlotte, NC area, with an optional private Gmail ingestion mode.
 
-## Screenshots
-
-**Listings — every source in one grid, with live price-cut alerts**
-![Listings](docs-assets/01-listings.png)
-
-**My Tours — a personal board for places you visit or are considering**
-![My Tours](docs-assets/04-my-tours.png)
-
-**Listing detail — price history + one-tap tracking & contact**
-![Detail](docs-assets/03-detail-modal.png)
-
 ## What it does
 
 - **Aggregates** listings from Zillow, Realtor.com, Opendoor, Homes.com, NewHomeSource, and direct builder websites (D.R. Horton, Lennar, Ryan Homes, Meritage, Eastwood, Smith Douglas, and more)
