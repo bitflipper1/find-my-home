@@ -231,6 +231,49 @@ app.get('/api/live/corridor', async (req, res) => {
   res.json({ ok: true, boom_signal: boom, note: boom ? 'Policy ∩ entitlements ∩ pipeline all present — verify infrastructure (CAP) + flood before pursuing' : 'Not all three boom conditions present (or a layer was unreachable)', policy, rezonings, crime, pipeline });
 });
 
+// --- Deal document vault (private: contracts, photos, closing docs) ---
+// Files live in gitignored server/data/deal-files/<slug>/; a manifest.json
+// there indexes the deal's Google Drive folder for link-outs.
+const multer = require('multer');
+const dealFiles = require('./src/dealFiles');
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      try { cb(null, dealFiles.ensureDealDir(req.params.slug)); } catch (e) { cb(e); }
+    },
+    filename: (req, file, cb) => {
+      try { cb(null, dealFiles.safeName(file.originalname)); } catch (e) { cb(e); }
+    },
+  }),
+  limits: { fileSize: 50 * 1024 * 1024, files: 20 },
+});
+
+app.get('/api/deals', privateLocalOnly, (req, res) => {
+  try { res.json({ deals: dealFiles.listDeals() }); } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get('/api/deals/:slug/files', privateLocalOnly, (req, res) => {
+  try { res.json(dealFiles.listDealFiles(req.params.slug)); } catch (err) { res.status(400).json({ error: err.message }); }
+});
+
+app.post('/api/deals/:slug/files', privateLocalOnly, upload.array('files'), (req, res) => {
+  res.json({ uploaded: (req.files || []).map(f => ({ name: f.filename, size: f.size })) });
+});
+
+app.get('/api/deals/:slug/files/:name', privateLocalOnly, (req, res) => {
+  try {
+    const p = dealFiles.filePath(req.params.slug, req.params.name);
+    if (!p) return res.status(404).json({ error: 'Not found' });
+    res.sendFile(p);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+app.delete('/api/deals/:slug/files/:name', privateLocalOnly, (req, res) => {
+  try { res.json({ deleted: dealFiles.deleteFile(req.params.slug, req.params.name) }); } catch (err) { res.status(400).json({ error: err.message }); }
+});
+
 // --- Tracked places (personal tour tracker) ---
 app.get('/api/tracked', privateLocalOnly, (req, res) => {
   try {
