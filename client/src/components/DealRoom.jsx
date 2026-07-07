@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Lock, Unlock, ShieldAlert, Calculator } from 'lucide-react';
 import { IS_STATIC } from '../staticData';
+import DealDocuments from './DealDocuments';
 
 // The public static site never ships underwriting or benchmark data — the
 // private tier requires the local server (research.json is gitignored and its
@@ -125,6 +126,9 @@ export default function DealRoom({ market, research }) {
           )}
         </section>
       </div>
+
+      {/* Per-deal document vault: local uploads + Drive index (private tier) */}
+      <DealDocuments slug="3912-craig-ave" title={yd?.property?.split('—')[0]?.trim() || '3912 Craig Ave'} />
     </div>
   );
 }

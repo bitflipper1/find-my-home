@@ -9,6 +9,7 @@ The following runtime files are private and gitignored:
 - `model-homes.json`
 - `research.json`
 - `*.db`, `*.db-shm`, and `*.db-wal`
+- `deal-files/` (per-deal contracts, photos, closing documents, Drive manifests)
 
 Do not commit contracts, payment records, inbox exports, negotiation notes,
 personal contact details, tracked places, or buyer-specific underwriting.

@@ -11,3 +11,4 @@ server/data/model-homes.json
 server/data/research.json
 .DS_Store
 *.log
+server/data/deal-files/
