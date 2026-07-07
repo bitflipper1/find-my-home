@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock, Sparkles } from 'lucide-react';
+import FeaturedHome from './components/FeaturedHome';
 import InvestTab from './components/InvestTab';
 import ResearchTab from './components/ResearchTab';
 import DealRoom from './components/DealRoom';
@@ -20,6 +21,7 @@ import { IS_STATIC } from './staticData';
 
 const PUBLIC_TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
+  { id: 'featured', label: 'Featured Home', icon: Sparkles },
   { id: 'invest', label: 'Invest', icon: Target },
   { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
@@ -319,6 +321,8 @@ export default function App() {
             )}
           </>
         )}
+
+        {tab === 'featured' && <FeaturedHome />}
 
         {tab === 'invest' && (
           <InvestTab listings={allListings} market={market} onOpen={setSelected} />
