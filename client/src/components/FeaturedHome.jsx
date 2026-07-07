@@ -174,6 +174,46 @@ export default function FeaturedHome() {
         </div>
       </section>
 
+      {/* 3D tour */}
+      <section className="mt-14 px-4 sm:px-0">
+        <Reveal>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-amber-600 mb-3">Walk Through It</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Georgia, serif' }}>Take the 3D tour</h2>
+          <p className="text-gray-600 mb-6 max-w-2xl leading-relaxed">
+            Every room, at your own pace — the full Matterport scan of the home. Click to start, drag to look around,
+            and use the floor selector to move between all three stories.
+          </p>
+        </Reveal>
+        <Reveal delay={150}>
+          <div className="relative overflow-hidden rounded-2xl shadow-lg bg-slate-900" style={{ aspectRatio: '16 / 9' }}>
+            <iframe
+              src="https://my.matterport.com/show/?m=phwXrstWukD"
+              title="3D tour of 3912 Craig Avenue"
+              className="absolute inset-0 w-full h-full border-0"
+              allow="xr-spatial-tracking; fullscreen; vr"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+          <div className="flex flex-wrap items-center gap-3 mt-4">
+            <a
+              href="https://my.matterport.com/show/?m=phwXrstWukD"
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500 text-white text-sm font-semibold hover:bg-amber-600 transition"
+            >
+              <Sparkles className="w-4 h-4" /> Open the tour full screen
+            </a>
+            <a
+              href="https://www.davidweekleyhomes.com/new-homes/nc/charlotte/charlotte/central-living-at-craig/remely"
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition"
+            >
+              <Home className="w-4 h-4" /> The Remely on davidweekleyhomes.com
+            </a>
+          </div>
+        </Reveal>
+      </section>
+
       {/* Features */}
       <section className="mt-14 px-4 sm:px-0">
         <Reveal>
@@ -227,7 +267,7 @@ export default function FeaturedHome() {
           </a>
         </Reveal>
         <p className="text-[11px] text-gray-400 mt-8">
-          Photographs by the owner. Community and plan details from David Weekley Homes public marketing materials and are subject to change.
+          Photographs by the owner. 3D tour and community/plan details © David Weekley Homes, from public marketing materials, subject to change.
         </p>
       </section>
 
