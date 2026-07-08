@@ -202,22 +202,44 @@ for (const [route, fn] of [['policy-map', 'policyMapNear'], ['rezonings', 'rezon
 }
 app.get('/api/live/parcel/:pid', async (req, res) => res.json(await live.parcelByPid(req.params.pid)));
 
-// Premium providers. ATTOM wants address1 (street) + address2 ("City, ST" or zip);
+// Premium providers — loopback-gated: they consume paid API keys and ATTOM
+// returns owner PII, so these are private-tier only, never on the public site.
+// ATTOM wants address1 (street) + address2 ("City, ST" or zip);
 // HouseCanary wants address + zipcode. Both return {ok:false} until keys are set.
 for (const [route, fn] of [['attom/profile', 'attomProfile'], ['attom/avm', 'attomAvm'], ['attom/sales-history', 'attomSalesHistory']]) {
-  app.get(`/api/live/${route}`, async (req, res) => {
+  app.get(`/api/live/${route}`, privateLocalOnly, async (req, res) => {
     const { address1, address2 } = req.query;
     if (!address1 || !address2) return res.status(400).json({ ok: false, reason: 'address1 and address2 required' });
     res.json(await live[fn](address1, address2));
   });
 }
 for (const [route, fn] of [['hc/value', 'hcValue'], ['hc/rent', 'hcRentalValue'], ['hc/forecast', 'hcValueForecast']]) {
-  app.get(`/api/live/${route}`, async (req, res) => {
+  app.get(`/api/live/${route}`, privateLocalOnly, async (req, res) => {
     const { address, zipcode } = req.query;
     if (!address || !zipcode) return res.status(400).json({ ok: false, reason: 'address and zipcode required' });
     res.json(await live[fn](address, zipcode));
   });
 }
+
+// One-shot diligence: ATTOM (AVM + owner/loan + sales history) and HouseCanary
+// (value + rent + 3-yr forecast) for a single address, in parallel. address1 =
+// street, address2 = "City, ST", zipcode = 5-digit. Each provider degrades
+// independently, so a missing HC secret still returns the ATTOM half.
+app.get('/api/live/diligence', privateLocalOnly, async (req, res) => {
+  const { address1, address2, zipcode } = req.query;
+  if (!address1 || !address2) return res.status(400).json({ ok: false, reason: 'address1 and address2 required' });
+  const addr = `${address1}, ${address2}`;
+  const zip = zipcode || (address2.match(/\b(\d{5})\b/) || [])[1] || '';
+  const [avm, profile, sales, hcValue, hcRent, hcForecast] = await Promise.all([
+    live.attomAvm(address1, address2),
+    live.attomProfile(address1, address2),
+    live.attomSalesHistory(address1, address2),
+    zip ? live.hcValue(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
+    zip ? live.hcRentalValue(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
+    zip ? live.hcValueForecast(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
+  ]);
+  res.json({ ok: true, address: addr, attom: { avm, profile, sales }, housecanary: { value: hcValue, rent: hcRent, forecast: hcForecast } });
+});
 
 // The corridor screen: run all official layers for a point in one shot —
 // the boom-signal test (policy ∩ entitlements ∩ pipeline) plus crime context.
