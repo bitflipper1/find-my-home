@@ -137,8 +137,9 @@ async function parcelByPid(pid) {
 // Self-discovering: it reads the layer's field metadata first and locates the
 // owner / address / PID fields by pattern, so it adapts to the layer's actual
 // schema. Override the layer with MECK_PARCEL_LAYER if the default 404s.
+// Default: Mecklenburg County parcels (ownership), not the zoning lookup.
 const MECK_PARCEL_LAYER = process.env.MECK_PARCEL_LAYER
-  || 'https://gis.charlottenc.gov/arcgis/rest/services/ODP/Parcel_Zoning_Lookup/MapServer/0';
+  || 'https://gis.charlottenc.gov/arcgis/rest/services/CountyData/Parcels/MapServer/0';
 
 function pickField(fields, patterns) {
   for (const p of patterns) {
@@ -155,12 +156,13 @@ async function ownerSearch(name) {
   // 1. Discover the layer's fields.
   const meta = await safeGet(MECK_PARCEL_LAYER, { params: { f: 'json' } });
   if (!meta.ok) return { ok: false, reason: `Parcel layer unreachable (${meta.reason}). Set MECK_PARCEL_LAYER to a valid Mecklenburg parcel layer.` };
+  if (meta.data?.error) return { ok: false, reason: `Parcel layer error: ${meta.data.error.message || 'invalid layer'} — check MECK_PARCEL_LAYER (layer index may be wrong).` };
   const fields = meta.data?.fields || [];
-  const ownerField = pickField(fields, [/^owner$/i, /owner.?name/i, /^owner1/i, /taxpayer/i, /^owner/i]);
-  const addrField = pickField(fields, [/full.?add/i, /situs.?add/i, /site.?add/i, /^address$/i, /st.?addr/i, /location/i, /^addr/i]);
-  const pidField = pickField(fields, [/^pid$/i, /parcel.?id/i, /tax.?pid/i, /^gpin/i, /parcelnum/i]);
+  const ownerField = pickField(fields, [/^owner$/i, /owner.?name/i, /^owner1/i, /taxpayer/i, /^owner/i, /^ownr/i, /^name$/i]);
+  const addrField = pickField(fields, [/full.?add/i, /situs.?add/i, /site.?add/i, /prop.?add/i, /loc.?add/i, /^address$/i, /st.?addr/i, /location/i, /^addr/i]);
+  const pidField = pickField(fields, [/^pid$/i, /parcel.?id/i, /tax.?pid/i, /^gpin/i, /parcelnum/i, /^gisid/i]);
   if (!ownerField) {
-    return { ok: false, reason: 'This parcel layer exposes no owner-name field — set MECK_PARCEL_LAYER to an ownership layer.', available_fields: fields.map(f => f.name) };
+    return { ok: false, reason: `Layer "${meta.data?.name || MECK_PARCEL_LAYER}" exposes no owner-name field. Set MECK_PARCEL_LAYER to an ownership layer.`, available_fields: fields.map(f => f.name) };
   }
 
   // 2. Query by owner name (case-insensitive contains).
