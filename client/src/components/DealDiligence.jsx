@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Loader2, Building2, User, TrendingUp, DollarSign, Home, AlertCircle, ChevronDown, ChevronRight } from 'lucide-react';
+import { Search, Loader2, Building2, User, TrendingUp, DollarSign, Home, AlertCircle, ChevronDown, ChevronRight, MapPin } from 'lucide-react';
 
 // Private diligence panel — one address, two providers, in parallel:
 // ATTOM (AVM + owner/records + sales history) and HouseCanary (value + rent +
@@ -44,16 +44,50 @@ function Raw({ data }) {
 }
 
 export default function DealDiligence() {
+  const [mode, setMode] = useState('address'); // 'address' | 'owner'
   const [f, setF] = useState({ address1: '', address2: 'Charlotte, NC', zipcode: '' });
   const [data, setData] = useState(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
 
-  async function run() {
-    if (!f.address1.trim()) { setErr('Enter a street address'); return; }
+  // Owner-name (reverse) search state
+  const [ownerName, setOwnerName] = useState('');
+  const [owners, setOwners] = useState(null);
+  const [ownerBusy, setOwnerBusy] = useState(false);
+  const [ownerErr, setOwnerErr] = useState('');
+
+  async function searchOwner() {
+    if (ownerName.trim().length < 3) { setOwnerErr('Enter at least 3 characters'); return; }
+    setOwnerBusy(true); setOwnerErr(''); setOwners(null);
+    try {
+      const r = await fetch(`/api/live/owner-search?name=${encodeURIComponent(ownerName.trim())}`);
+      const j = await r.json();
+      if (!r.ok || !j.ok) throw new Error(j.reason || j.error || `HTTP ${r.status}`);
+      setOwners(j);
+    } catch (e) {
+      setOwnerErr(`${e.message}${e.message.includes('disabled') ? ' — set ALLOW_PRIVATE_LOCAL=true in server/.env' : ''}`);
+    } finally {
+      setOwnerBusy(false);
+    }
+  }
+
+  // Click a parcel result → prefill the address form and run full diligence.
+  function useResult(res) {
+    const addr = String(res.address || '').trim();
+    const zip = (addr.match(/\b(\d{5})\b/) || [])[1] || '';
+    const street = addr.replace(/,.*$/, '').replace(/\s+\d{5}(-\d{4})?$/, '').trim() || addr;
+    const form = { address1: street, address2: 'Charlotte, NC', zipcode: zip };
+    setF(form);
+    setMode('address');
+    run(form);
+  }
+
+  async function run(form) {
+    const d = form || f;
+    if (!d.address1.trim()) { setErr('Enter a street address'); return; }
     setBusy(true); setErr(''); setData(null);
     try {
-      const q = new URLSearchParams({ address1: f.address1.trim(), address2: f.address2.trim(), zipcode: f.zipcode.trim() });
+      const q = new URLSearchParams({ address1: d.address1.trim(), address2: d.address2.trim(), zipcode: d.zipcode.trim() });
       const r = await fetch(`/api/live/diligence?${q}`);
       const j = await r.json();
       if (!r.ok || !j.ok) throw new Error(j.reason || j.error || `HTTP ${r.status}`);
@@ -79,20 +113,71 @@ export default function DealDiligence() {
       <div>
         <div className="flex items-center gap-2 mb-1">
           <Search className="w-4 h-4 text-blue-600" />
-          <h3 className="text-sm font-semibold text-gray-800">Property diligence — any address</h3>
+          <h3 className="text-sm font-semibold text-gray-800">Property diligence</h3>
         </div>
-        <p className="text-xs text-gray-500">ATTOM records + AVM and HouseCanary value/rent/forecast for any US address — a listing, a resale, or an off-market home you want to research. Owner data is public record; keep it private.</p>
+        <p className="text-xs text-gray-500">ATTOM records + AVM and HouseCanary value/rent/forecast for any US address. Or start from an owner’s name (Mecklenburg County). Owner data is public record; keep it private.</p>
       </div>
 
-      <div className="flex flex-wrap gap-2 items-center">
-        {inp('address1', 'Street address', 'flex-1 min-w-[180px]')}
-        {inp('address2', 'City, ST', 'w-32')}
-        {inp('zipcode', 'ZIP', 'w-20')}
-        <button onClick={run} disabled={busy}
-          className="px-4 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg disabled:opacity-50 flex items-center gap-1.5">
-          {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />} Run diligence
-        </button>
+      {/* Mode toggle */}
+      <div className="inline-flex rounded-lg border border-gray-200 p-0.5 text-xs">
+        {[['address', 'By address'], ['owner', 'By owner name']].map(([m, label]) => (
+          <button key={m} onClick={() => setMode(m)}
+            className={`px-3 py-1.5 rounded-md font-medium transition ${mode === m ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+            {label}
+          </button>
+        ))}
       </div>
+
+      {mode === 'owner' && (
+        <div className="space-y-3">
+          <p className="text-xs text-gray-500">
+            Someone told you they’re selling but didn’t give an address? Search Mecklenburg County parcel records by owner name,
+            then click a result to pull full diligence on it. (Common names return many parcels; owners under an LLC or trust won’t match a personal name.)
+          </p>
+          <div className="flex flex-wrap gap-2 items-center">
+            <input value={ownerName} onChange={e => setOwnerName(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && searchOwner()}
+              placeholder="Owner last name (e.g. Smith)"
+              className="flex-1 min-w-[200px] px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button onClick={searchOwner} disabled={ownerBusy}
+              className="px-4 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg disabled:opacity-50 flex items-center gap-1.5">
+              {ownerBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : <User className="w-4 h-4" />} Search owners
+            </button>
+          </div>
+          {ownerErr && <p className="text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg p-2.5">{ownerErr}</p>}
+          {owners && (
+            <div>
+              <p className="text-xs text-gray-400 mb-1.5">{owners.count} parcel{owners.count === 1 ? '' : 's'} found</p>
+              <div className="divide-y divide-gray-100 border border-gray-200 rounded-lg max-h-72 overflow-y-auto">
+                {owners.results.map((r, i) => (
+                  <button key={i} onClick={() => useResult(r)}
+                    className="w-full text-left px-3 py-2 hover:bg-blue-50 transition flex items-start gap-2">
+                    <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-gray-400" />
+                    <span className="min-w-0">
+                      <span className="block text-sm text-gray-800 truncate">{r.address || '(no address on parcel)'}</span>
+                      <span className="block text-xs text-gray-500 truncate">{r.owner}{r.pid ? ` · PID ${r.pid}` : ''}</span>
+                    </span>
+                    <span className="ml-auto text-xs text-blue-600 font-medium shrink-0 self-center">Run →</span>
+                  </button>
+                ))}
+                {owners.count === 0 && <p className="px-3 py-3 text-xs text-gray-400">No parcels matched. Try a different spelling, or they may own under an LLC/trust or in another county.</p>}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {mode === 'address' && (
+        <div className="flex flex-wrap gap-2 items-center">
+          {inp('address1', 'Street address', 'flex-1 min-w-[180px]')}
+          {inp('address2', 'City, ST', 'w-32')}
+          {inp('zipcode', 'ZIP', 'w-20')}
+          <button onClick={() => run()} disabled={busy}
+            className="px-4 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg disabled:opacity-50 flex items-center gap-1.5">
+            {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />} Run diligence
+          </button>
+        </div>
+      )}
 
       {err && <p className="text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg p-2.5">{err}</p>}
 

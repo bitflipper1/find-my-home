@@ -221,6 +221,13 @@ for (const [route, fn] of [['hc/value', 'hcValue'], ['hc/rent', 'hcRentalValue']
   });
 }
 
+// Reverse owner search (Mecklenburg parcels) — name → addresses. Loopback-gated:
+// returns owner PII. Feeds the diligence panel when you have a name, not an address.
+app.get('/api/live/owner-search', privateLocalOnly, async (req, res) => {
+  if (!req.query.name) return res.status(400).json({ ok: false, reason: 'name required' });
+  res.json(await live.ownerSearch(req.query.name));
+});
+
 // One-shot diligence: ATTOM (AVM + owner/loan + sales history) and HouseCanary
 // (value + rent + 3-yr forecast) for a single address, in parallel. address1 =
 // street, address2 = "City, ST", zipcode = 5-digit. Each provider degrades
