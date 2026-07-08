@@ -131,6 +131,57 @@ async function parcelByPid(pid) {
   return { ok: true, source: 'Parcel Zoning Lookup', parcel: r.data?.features?.[0]?.attributes || null };
 }
 
+// Reverse owner search — name → parcels, from Mecklenburg County parcel data.
+// The right tool for "someone said they're selling but didn't give an address."
+//
+// Self-discovering: it reads the layer's field metadata first and locates the
+// owner / address / PID fields by pattern, so it adapts to the layer's actual
+// schema. Override the layer with MECK_PARCEL_LAYER if the default 404s.
+const MECK_PARCEL_LAYER = process.env.MECK_PARCEL_LAYER
+  || 'https://gis.charlottenc.gov/arcgis/rest/services/ODP/Parcel_Zoning_Lookup/MapServer/0';
+
+function pickField(fields, patterns) {
+  for (const p of patterns) {
+    const f = fields.find(x => p.test(x.name));
+    if (f) return f.name;
+  }
+  return null;
+}
+
+async function ownerSearch(name) {
+  const q = String(name || '').trim();
+  if (q.length < 3) return { ok: false, reason: 'Enter at least 3 characters of an owner name' };
+
+  // 1. Discover the layer's fields.
+  const meta = await safeGet(MECK_PARCEL_LAYER, { params: { f: 'json' } });
+  if (!meta.ok) return { ok: false, reason: `Parcel layer unreachable (${meta.reason}). Set MECK_PARCEL_LAYER to a valid Mecklenburg parcel layer.` };
+  const fields = meta.data?.fields || [];
+  const ownerField = pickField(fields, [/^owner$/i, /owner.?name/i, /^owner1/i, /taxpayer/i, /^owner/i]);
+  const addrField = pickField(fields, [/full.?add/i, /situs.?add/i, /site.?add/i, /^address$/i, /st.?addr/i, /location/i, /^addr/i]);
+  const pidField = pickField(fields, [/^pid$/i, /parcel.?id/i, /tax.?pid/i, /^gpin/i, /parcelnum/i]);
+  if (!ownerField) {
+    return { ok: false, reason: 'This parcel layer exposes no owner-name field — set MECK_PARCEL_LAYER to an ownership layer.', available_fields: fields.map(f => f.name) };
+  }
+
+  // 2. Query by owner name (case-insensitive contains).
+  const safe = q.replace(/'/g, "''").toUpperCase();
+  const outFields = [ownerField, addrField, pidField].filter(Boolean).join(',') || '*';
+  const r = await safeGet(`${MECK_PARCEL_LAYER}/query`, { params: {
+    where: `UPPER(${ownerField}) LIKE '%${safe}%'`,
+    outFields, returnGeometry: false, f: 'json', resultRecordCount: 25,
+  }});
+  if (!r.ok) return r;
+  if (r.data?.error) return { ok: false, reason: r.data.error.message || 'Parcel query error', detail: r.data.error };
+
+  const results = (r.data?.features || []).map(f => ({
+    owner: f.attributes[ownerField],
+    address: addrField ? f.attributes[addrField] : null,
+    pid: pidField ? f.attributes[pidField] : null,
+    attributes: f.attributes,
+  }));
+  return { ok: true, source: 'Mecklenburg parcels', field_map: { owner: ownerField, address: addrField, pid: pidField }, count: results.length, results };
+}
+
 // ---- Premium data providers (paid keys; both degrade gracefully). ----
 
 // ATTOM Data — 160M+ US properties: expanded profile, AVM, sales history,
@@ -194,5 +245,5 @@ async function hcValueForecast(address, zipcode) { return hcResult(await hcCall(
 
 module.exports = {
   censusMecklenburg, permitsNear, rentEstimate, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid,
-  attomProfile, attomAvm, attomSalesHistory, hcValue, hcRentalValue, hcValueForecast,
+  ownerSearch, attomProfile, attomAvm, attomSalesHistory, hcValue, hcRentalValue, hcValueForecast,
 };
