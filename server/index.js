@@ -235,17 +235,25 @@ app.get('/api/live/owner-search', privateLocalOnly, async (req, res) => {
 app.get('/api/live/diligence', privateLocalOnly, async (req, res) => {
   const { address1, address2, zipcode } = req.query;
   if (!address1 || !address2) return res.status(400).json({ ok: false, reason: 'address1 and address2 required' });
-  const addr = `${address1}, ${address2}`;
-  const zip = zipcode || (address2.match(/\b(\d{5})\b/) || [])[1] || '';
+
+  // Be forgiving about where things were typed: pull the ZIP from any field,
+  // and reduce address1 to the street portion (people paste full addresses).
+  const zip = zipcode
+    || (address1.match(/\b(\d{5})(?:-\d{4})?\b/) || [])[1]
+    || (address2.match(/\b(\d{5})(?:-\d{4})?\b/) || [])[1]
+    || '';
+  const street = address1.split(',')[0].replace(/\b\d{5}(-\d{4})?\b/g, '').trim() || address1.trim();
+  const cityState = address2.replace(/\b\d{5}(-\d{4})?\b/g, '').replace(/[ ,]+$/, '').trim();
+
   const [avm, profile, sales, hcValue, hcRent, hcForecast] = await Promise.all([
-    live.attomAvm(address1, address2),
-    live.attomProfile(address1, address2),
-    live.attomSalesHistory(address1, address2),
-    zip ? live.hcValue(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
-    zip ? live.hcRentalValue(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
-    zip ? live.hcValueForecast(addr, zip) : { ok: false, reason: 'zipcode required for HouseCanary' },
+    live.attomAvm(street, `${cityState}${zip ? ' ' + zip : ''}`),
+    live.attomProfile(street, `${cityState}${zip ? ' ' + zip : ''}`),
+    live.attomSalesHistory(street, `${cityState}${zip ? ' ' + zip : ''}`),
+    zip ? live.hcValue(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
+    zip ? live.hcRentalValue(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
+    zip ? live.hcValueForecast(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
   ]);
-  res.json({ ok: true, address: addr, attom: { avm, profile, sales }, housecanary: { value: hcValue, rent: hcRent, forecast: hcForecast } });
+  res.json({ ok: true, address: `${street}, ${cityState} ${zip}`.trim(), attom: { avm, profile, sales }, housecanary: { value: hcValue, rent: hcRent, forecast: hcForecast } });
 });
 
 // The corridor screen: run all official layers for a point in one shot —

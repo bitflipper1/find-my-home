@@ -4,14 +4,54 @@ import { Search, Loader2, Building2, User, TrendingUp, DollarSign, Home, AlertCi
 // Private diligence panel — one address, two providers, in parallel:
 // ATTOM (AVM + owner/records + sales history) and HouseCanary (value + rent +
 // 3-yr forecast). Loopback-gated route; Deal Room (private tier) only.
+// Formatting is tuned to the providers' real response shapes, with a readable
+// key-value fallback for anything unexpected.
 
-const money = n => {
-  const v = typeof n === 'object' && n ? (n.value ?? n.amount ?? n.price) : n;
-  return (v || v === 0) && !isNaN(v) ? `$${Math.round(v).toLocaleString()}` : null;
-};
+const money = v => (v || v === 0) && !isNaN(v) ? `$${Math.round(v).toLocaleString()}` : null;
+const compact = v => (v || v === 0) && !isNaN(v) ? `$${Math.round(v / 1000)}K` : null;
 
-// A block that renders its provider's data or the {ok:false} reason it gave.
-function Provider({ title, icon: Icon, r, children }) {
+// Flatten a nested object into readable "Label: value" rows, skipping noise.
+function flatten(obj, prefix = '', out = []) {
+  if (!obj || typeof obj !== 'object') return out;
+  for (const [k, v] of Object.entries(obj)) {
+    if (v == null || v === '' || k.startsWith('_')) continue;
+    const label = (prefix ? `${prefix} · ` : '') + k.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[_-]/g, ' ');
+    if (Array.isArray(v)) {
+      if (v.length) out.push([label, `${v.length} item${v.length === 1 ? '' : 's'}`]);
+    } else if (typeof v === 'object') {
+      if (Object.keys(v).length) flatten(v, label, out);
+    } else {
+      out.push([label, String(v)]);
+    }
+  }
+  return out;
+}
+
+// Collapsible details — readable rows instead of a JSON dump.
+function Details({ data, label = 'all details' }) {
+  const [open, setOpen] = useState(false);
+  const rows = flatten(data);
+  if (!rows.length) return null;
+  return (
+    <div className="mt-2">
+      <button onClick={() => setOpen(o => !o)} className="text-[11px] text-gray-400 hover:text-gray-600 flex items-center gap-1">
+        {open ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />} {label} ({rows.length})
+      </button>
+      {open && (
+        <dl className="mt-1.5 max-h-64 overflow-y-auto rounded-lg bg-gray-50 p-2.5 space-y-0.5">
+          {rows.map(([k, v], i) => (
+            <div key={i} className="flex justify-between gap-3 text-[11px]">
+              <dt className="text-gray-400 capitalize truncate">{k}</dt>
+              <dd className="text-gray-700 text-right break-all">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </div>
+  );
+}
+
+function Card({ title, icon: Icon, r, children }) {
   if (!r) return null;
   return (
     <div className="rounded-xl border border-gray-200 p-4">
@@ -28,20 +68,12 @@ function Provider({ title, icon: Icon, r, children }) {
   );
 }
 
-// Collapsible raw JSON — the escape hatch so unusual provider shapes are always
-// visible even before we tune field-by-field formatting.
-function Raw({ data }) {
-  const [open, setOpen] = useState(false);
-  if (!data) return null;
-  return (
-    <div className="mt-2">
-      <button onClick={() => setOpen(o => !o)} className="text-[11px] text-gray-400 hover:text-gray-600 flex items-center gap-1">
-        {open ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />} raw data
-      </button>
-      {open && <pre className="mt-1 text-[10px] bg-gray-50 rounded-lg p-2 overflow-x-auto max-h-56 text-gray-600">{JSON.stringify(data, null, 2)}</pre>}
-    </div>
-  );
-}
+const Row = ({ k, v, strong }) => v == null ? null : (
+  <div className="flex justify-between gap-3 text-xs py-0.5">
+    <dt className="text-gray-500">{k}</dt>
+    <dd className={`text-right ${strong ? 'font-semibold text-gray-900' : 'text-gray-700'}`}>{v}</dd>
+  </div>
+);
 
 export default function DealDiligence() {
   const [mode, setMode] = useState('address'); // 'address' | 'owner'
@@ -71,11 +103,10 @@ export default function DealDiligence() {
     }
   }
 
-  // Click a parcel result → prefill the address form and run full diligence.
   function useResult(res) {
     const addr = String(res.address || '').trim();
     const zip = (addr.match(/\b(\d{5})\b/) || [])[1] || '';
-    const street = addr.replace(/,.*$/, '').replace(/\s+\d{5}(-\d{4})?$/, '').trim() || addr;
+    const street = addr.split(',')[0].replace(/\b\d{5}(-\d{4})?\b/g, '').trim() || addr;
     const form = { address1: street, address2: 'Charlotte, NC', zipcode: zip };
     setF(form);
     setMode('address');
@@ -106,7 +137,20 @@ export default function DealDiligence() {
   );
 
   const attom = data?.attom, hc = data?.housecanary;
-  const owner = attom?.profile?.ok ? attom.profile.property : null;
+  const p = attom?.profile?.ok ? attom.profile.property : null;
+  const own = p?.assessment?.owner;
+  const bld = p?.building;
+  const avm = attom?.avm?.ok ? attom.avm.avm : null;
+
+  // Sales entries with an actual recorded amount or date (NC is a
+  // non-disclosure state, so many entries carry no price).
+  const sales = attom?.sales?.ok
+    ? (attom.sales.history || []).filter(s => s.amount?.saleamt || s.saleTransDate || s.amount?.salerecdate)
+    : [];
+
+  const hcVal = hc?.value?.ok ? (hc.value.result?.price ?? hc.value.result?.value ?? hc.value.result) : null;
+  const hcRent = hc?.rent?.ok ? (hc.rent.result?.price ?? hc.rent.result?.value ?? hc.rent.result) : null;
+  const num = x => typeof x === 'object' && x ? (x.mean ?? x.value ?? x.price) : x;
 
   return (
     <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 space-y-4">
@@ -118,7 +162,6 @@ export default function DealDiligence() {
         <p className="text-xs text-gray-500">ATTOM records + AVM and HouseCanary value/rent/forecast for any US address. Or start from an owner’s name (Mecklenburg County). Owner data is public record; keep it private.</p>
       </div>
 
-      {/* Mode toggle */}
       <div className="inline-flex rounded-lg border border-gray-200 p-0.5 text-xs">
         {[['address', 'By address'], ['owner', 'By owner name']].map(([m, label]) => (
           <button key={m} onClick={() => setMode(m)}
@@ -169,7 +212,7 @@ export default function DealDiligence() {
 
       {mode === 'address' && (
         <div className="flex flex-wrap gap-2 items-center">
-          {inp('address1', 'Street address', 'flex-1 min-w-[180px]')}
+          {inp('address1', 'Street address (full address is fine — ZIP is auto-detected)', 'flex-1 min-w-[220px]')}
           {inp('address2', 'City, ST', 'w-32')}
           {inp('zipcode', 'ZIP', 'w-20')}
           <button onClick={() => run()} disabled={busy}
@@ -183,52 +226,69 @@ export default function DealDiligence() {
 
       {data && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <Provider title="ATTOM — value estimate (AVM)" icon={DollarSign} r={attom.avm}>
-            <p className="text-2xl font-bold text-gray-900">{money(attom.avm.avm) || '—'}</p>
-            <p className="text-xs text-gray-400">Independent automated valuation</p>
-            <Raw data={attom.avm.avm} />
-          </Provider>
+          <Card title="ATTOM — value estimate (AVM)" icon={DollarSign} r={attom.avm}>
+            <p className="text-2xl font-bold text-gray-900">{money(avm?.value) || '—'}</p>
+            {avm && (
+              <p className="text-xs text-gray-500 mt-0.5">
+                Range {compact(avm.low)} – {compact(avm.high)}
+                {avm.scr != null && <> · Confidence <span className="font-semibold text-gray-700">{avm.scr}/100</span></>}
+              </p>
+            )}
+            <p className="text-[11px] text-gray-400 mt-1">Independent automated valuation — not an appraisal</p>
+          </Card>
 
-          <Provider title="ATTOM — owner & records" icon={User} r={attom.profile}>
-            <dl className="text-xs space-y-0.5">
-              {owner?.owner && <div className="flex justify-between"><dt className="text-gray-500">Owner</dt><dd className="font-medium text-right">{owner.owner?.owner1?.lastname || owner.owner?.description || '—'}</dd></div>}
-              {owner?.summary?.propclass && <div className="flex justify-between"><dt className="text-gray-500">Type</dt><dd className="text-right">{owner.summary.propclass}</dd></div>}
-              {money(owner?.assessment?.market?.mktttlvalue) && <div className="flex justify-between"><dt className="text-gray-500">Assessed value</dt><dd className="font-medium text-right">{money(owner.assessment.market.mktttlvalue)}</dd></div>}
-              {money(owner?.sale?.amount?.saleamt) && <div className="flex justify-between"><dt className="text-gray-500">Last sale</dt><dd className="font-medium text-right">{money(owner.sale.amount.saleamt)}</dd></div>}
+          <Card title="ATTOM — owner & records" icon={User} r={attom.profile}>
+            <dl>
+              <Row k="Owner of record" v={own?.owner1?.fullName} strong />
+              {own?.corporateIndicator === 'Y' && <Row k="Owner type" v="Company / LLC" />}
+              {own?.absenteeOwnerStatus === 'A' && <Row k="Occupancy" v="Absentee owner" />}
+              <Row k="Owner mailing" v={own?.mailingAddressOneLine} />
+              <Row k="Property type" v={p?.summary?.propertyType || p?.summary?.propClass} />
+              <Row k="Year built" v={p?.summary?.yearBuilt} />
+              <Row k="Size" v={bld?.size?.livingSize ? `${bld.size.livingSize.toLocaleString()} sqft` : null} />
+              <Row k="Beds / baths" v={bld?.rooms?.beds != null ? `${bld.rooms.beds} bd / ${bld.rooms.bathsTotal} ba` : null} />
+              <Row k="Levels" v={bld?.summary?.levels} />
+              <Row k="Tax assessed value" v={money(p?.assessment?.assessed?.assdTtlValue)} strong />
+              <Row k="APN / parcel" v={p?.identifier?.apn} />
             </dl>
-            <Raw data={owner} />
-          </Provider>
+            <Details data={p} />
+          </Card>
 
-          <Provider title="ATTOM — sales history" icon={Building2} r={attom.sales}>
-            {Array.isArray(attom.sales.history) && attom.sales.history.length ? (
+          <Card title="ATTOM — sales history" icon={Building2} r={attom.sales}>
+            {sales.length ? (
               <ul className="text-xs space-y-1">
-                {attom.sales.history.slice(0, 6).map((s, i) => (
+                {sales.slice(0, 6).map((s, i) => (
                   <li key={i} className="flex justify-between">
-                    <span className="text-gray-500">{s.saleTransDate || s.amount?.salerecdate || s.saleSearchDate || '—'}</span>
-                    <span className="font-medium">{money(s.amount?.saleamt) || '—'}</span>
+                    <span className="text-gray-500">{s.saleTransDate || s.amount?.salerecdate || '—'}</span>
+                    <span className="font-medium">{money(s.amount?.saleamt) || 'undisclosed'}</span>
                   </li>
                 ))}
               </ul>
-            ) : <p className="text-xs text-gray-400">No recorded sales returned.</p>}
-            <Raw data={attom.sales.history} />
-          </Provider>
+            ) : (
+              <p className="text-xs text-gray-400">No recorded arms-length sales — typical for new construction still held by the builder. (NC is a non-disclosure state, so recorded sales may omit prices.)</p>
+            )}
+            <Details data={attom.sales.history} label="raw entries" />
+          </Card>
 
-          <Provider title="HouseCanary — value" icon={DollarSign} r={hc.value}>
-            <p className="text-2xl font-bold text-gray-900">{money(hc.value.result?.value?.value ?? hc.value.result?.value) || '—'}</p>
-            <p className="text-xs text-gray-400">HouseCanary AVM</p>
-            <Raw data={hc.value.result} />
-          </Provider>
+          <Card title="HouseCanary — value" icon={DollarSign} r={hc.value}>
+            <p className="text-2xl font-bold text-gray-900">{money(num(hcVal)) || '—'}</p>
+            {hcVal?.price_lwr && <p className="text-xs text-gray-500 mt-0.5">Range {compact(hcVal.price_lwr)} – {compact(hcVal.price_upr)}</p>}
+            <p className="text-[11px] text-gray-400 mt-1">HouseCanary AVM</p>
+            <Details data={hc.value.result} />
+          </Card>
 
-          <Provider title="HouseCanary — rent estimate" icon={Home} r={hc.rent}>
-            <p className="text-2xl font-bold text-gray-900">{money(hc.rent.result?.value?.value ?? hc.rent.result?.value) || '—'}<span className="text-sm font-normal text-gray-400">/mo</span></p>
-            <p className="text-xs text-gray-400">Rental AVM — ground-truth your leaseback yield</p>
-            <Raw data={hc.rent.result} />
-          </Provider>
+          <Card title="HouseCanary — rent estimate" icon={Home} r={hc.rent}>
+            <p className="text-2xl font-bold text-gray-900">
+              {money(num(hcRent)) || '—'}<span className="text-sm font-normal text-gray-400">/mo</span>
+            </p>
+            <p className="text-[11px] text-gray-400 mt-1">Rental AVM — ground-truth your leaseback yield</p>
+            <Details data={hc.rent.result} />
+          </Card>
 
-          <Provider title="HouseCanary — 3-year forecast" icon={TrendingUp} r={hc.forecast}>
+          <Card title="HouseCanary — 3-year forecast" icon={TrendingUp} r={hc.forecast}>
             <p className="text-xs text-gray-500 mb-1">Projected value path (36 months)</p>
-            <Raw data={hc.forecast.result} />
-          </Provider>
+            <Details data={hc.forecast.result} label="forecast detail" />
+          </Card>
         </div>
       )}
     </section>
