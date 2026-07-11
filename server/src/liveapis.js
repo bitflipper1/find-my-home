@@ -238,7 +238,21 @@ async function hcCall(target, address, zipcode) {
 const hcResult = (r, target) => {
   if (!r.ok) return r;
   const item = Array.isArray(r.data) ? r.data[0] : r.data;
-  return { ok: true, source: `HouseCanary ${target}`, result: item?.[`property/${target}`]?.result ?? item };
+  const envelope = item?.[`property/${target}`];
+  // A matched property nests its payload under `property/<target>`. When
+  // HouseCanary has no record for the address (common for brand-new
+  // construction not yet in county/MLS feeds), that key is absent and the
+  // top-level envelope carries only an api_code/description instead.
+  if (envelope) return { ok: true, source: `HouseCanary ${target}`, result: envelope.result ?? envelope };
+  const desc = item?.api_code_description || 'no data';
+  const code = item?.api_code;
+  const matched = item?.address_info?.status?.match;
+  return {
+    ok: false,
+    reason: matched === false
+      ? `HouseCanary has no record for this address yet (common for brand-new construction not yet in county/MLS data) — "${desc}"${code != null ? ` (code ${code})` : ''}.`
+      : `HouseCanary: "${desc}"${code != null ? ` (code ${code})` : ''}.`,
+  };
 };
 
 async function hcValue(address, zipcode) { return hcResult(await hcCall('value', address, zipcode), 'value'); }
