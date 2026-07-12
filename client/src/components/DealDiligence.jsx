@@ -52,7 +52,9 @@ function Details({ data, label = 'all details' }) {
 }
 
 function Card({ title, icon: Icon, r, children }) {
-  if (!r) return null;
+  // Hide providers that simply aren't configured (no key in .env) — an
+  // unsubscribed API is not an error worth a permanent amber card.
+  if (!r || (!r.ok && /not set/i.test(r.reason || ''))) return null;
   return (
     <div className="rounded-xl border border-gray-200 p-4">
       <div className="flex items-center gap-2 mb-2">
@@ -152,6 +154,72 @@ export default function DealDiligence() {
   const hcRent = hc?.rent?.ok ? (hc.rent.result?.price ?? hc.rent.result?.value ?? hc.rent.result) : null;
   const num = x => typeof x === 'object' && x ? (x.mean ?? x.value ?? x.price) : x;
 
+  // ---- Cross-check: one AVM is an opinion, several are a distribution. ----
+  const rc = data?.rentcast;
+  const fmr = data?.hud?.fmr?.ok ? data.hud.fmr.data : null;
+  const fmrData = Array.isArray(fmr) ? fmr[0] : fmr;
+
+  const valueEstimates = [
+    attom?.avm?.ok && avm?.value ? { src: 'ATTOM', v: avm.value, lo: avm.low, hi: avm.high } : null,
+    rc?.value?.ok && rc.value.value ? { src: 'RentCast', v: rc.value.value, lo: rc.value.low, hi: rc.value.high } : null,
+    hc?.value?.ok && num(hcVal) ? { src: 'HouseCanary', v: num(hcVal), lo: hcVal?.price_lwr, hi: hcVal?.price_upr } : null,
+  ].filter(Boolean);
+
+  const rentEstimates = [
+    rc?.rent?.ok && rc.rent.rent ? { src: 'RentCast', v: rc.rent.rent, lo: rc.rent.rent_low, hi: rc.rent.rent_high } : null,
+    hc?.rent?.ok && num(hcRent) ? { src: 'HouseCanary', v: num(hcRent) } : null,
+  ].filter(Boolean);
+
+  // HUD FMR for the unit's bedroom count — a reference floor, not an AVM.
+  const bedKey = { 0: 'Efficiency', 1: 'One-Bedroom', 2: 'Two-Bedroom', 3: 'Three-Bedroom', 4: 'Four-Bedroom' }[
+    Math.min(bld?.rooms?.beds ?? 3, 4)
+  ];
+  const fmrRent = fmrData?.[bedKey] ?? null;
+
+  const median = xs => {
+    const s = [...xs].sort((a, b) => a - b);
+    return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
+  };
+  const spreadPct = xs => xs.length > 1 ? Math.round(((Math.max(...xs) - Math.min(...xs)) / median(xs)) * 100) : 0;
+
+  // Consensus row list + agreement verdict for a set of estimates.
+  const Consensus = ({ title, icon: Icon, estimates, unit, reference }) => {
+    if (!estimates.length && !reference) return null;
+    const vals = estimates.map(e => e.v);
+    const spread = spreadPct(vals);
+    const agree = estimates.length > 1 && spread <= 8;
+    return (
+      <div className="rounded-xl border border-gray-200 p-4 md:col-span-2 bg-gradient-to-br from-blue-50/50 to-white">
+        <div className="flex items-center gap-2 mb-2">
+          <Icon className="w-4 h-4 text-blue-600" />
+          <h4 className="text-sm font-semibold text-gray-800">{title}</h4>
+        </div>
+        {estimates.length > 0 && (
+          <p className="text-2xl font-bold text-gray-900">
+            {money(median(vals))}{unit && <span className="text-sm font-normal text-gray-400">{unit}</span>}
+            <span className="text-xs font-normal text-gray-400 ml-2">consensus (median of {estimates.length})</span>
+          </p>
+        )}
+        <dl className="mt-2">
+          {estimates.map(e => (
+            <Row key={e.src} k={e.src} v={`${money(e.v)}${e.lo && e.hi ? ` (${compact(e.lo)}–${compact(e.hi)})` : ''}`} />
+          ))}
+          {reference}
+        </dl>
+        {estimates.length > 1 && (
+          <p className={`text-xs font-medium rounded-lg px-2.5 py-1.5 mt-2 ${agree ? 'text-green-800 bg-green-100' : 'text-amber-800 bg-amber-100'}`}>
+            {agree
+              ? `✓ Sources agree within ${spread}% — the band is trustworthy`
+              : `Sources diverge ${spread}% — unusual property, stale data, or opportunity; dig deeper`}
+          </p>
+        )}
+        {estimates.length === 1 && (
+          <p className="text-xs text-gray-400 mt-2">Only one source returned an estimate — no cross-check possible for this address.</p>
+        )}
+      </div>
+    );
+  };
+
   return (
     <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 space-y-4">
       <div>
@@ -226,6 +294,12 @@ export default function DealDiligence() {
 
       {data && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <Consensus title="Value cross-check" icon={DollarSign} estimates={valueEstimates} />
+          <Consensus
+            title="Rent cross-check" icon={Home} estimates={rentEstimates} unit="/mo"
+            reference={fmrRent ? <Row k={`HUD fair-market rent (${bedKey}, reference)`} v={money(fmrRent)} /> : null}
+          />
+
           <Card title="ATTOM — value estimate (AVM)" icon={DollarSign} r={attom.avm}>
             <p className="text-2xl font-bold text-gray-900">{money(avm?.value) || '—'}</p>
             {avm && (
