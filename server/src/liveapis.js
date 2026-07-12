@@ -52,6 +52,17 @@ async function rentEstimate(address) {
   return { ok: true, source: 'RentCast AVM', rent: r.data.rent, rent_low: r.data.rentRangeLow, rent_high: r.data.rentRangeHigh };
 }
 
+// RentCast — sale-value AVM on the same key. Second opinion alongside the
+// ATTOM AVM so the diligence panel can cross-check estimates.
+async function rentcastValue(address) {
+  if (!process.env.RENTCAST_API_KEY) return { ok: false, reason: 'RENTCAST_API_KEY not set (free key: rentcast.io/api)' };
+  const r = await safeGet('https://api.rentcast.io/v1/avm/value', {
+    params: { address }, headers: { 'X-Api-Key': process.env.RENTCAST_API_KEY },
+  });
+  if (!r.ok) return r;
+  return { ok: true, source: 'RentCast value AVM', value: r.data.price, low: r.data.priceRangeLow, high: r.data.priceRangeHigh };
+}
+
 // HUD Fair Market Rents by zip (free token: huduser.gov).
 async function hudFmr(zip) {
   if (!process.env.HUD_API_TOKEN) return { ok: false, reason: 'HUD_API_TOKEN not set (free: huduser.gov/portal/dataset/fmr-api.html)' };
@@ -260,6 +271,6 @@ async function hcRentalValue(address, zipcode) { return hcResult(await hcCall('r
 async function hcValueForecast(address, zipcode) { return hcResult(await hcCall('value_forecast', address, zipcode), 'value_forecast'); }
 
 module.exports = {
-  censusMecklenburg, permitsNear, rentEstimate, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid,
+  censusMecklenburg, permitsNear, rentEstimate, rentcastValue, hudFmr, policyMapNear, rezoningsNear, crimeNear, pipelineNear, parcelByPid,
   ownerSearch, attomProfile, attomAvm, attomSalesHistory, hcValue, hcRentalValue, hcValueForecast,
 };

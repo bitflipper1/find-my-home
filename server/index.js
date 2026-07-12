@@ -245,15 +245,28 @@ app.get('/api/live/diligence', privateLocalOnly, async (req, res) => {
   const street = address1.split(',')[0].replace(/\b\d{5}(-\d{4})?\b/g, '').trim() || address1.trim();
   const cityState = address2.replace(/\b\d{5}(-\d{4})?\b/g, '').replace(/[ ,]+$/, '').trim();
 
-  const [avm, profile, sales, hcValue, hcRent, hcForecast] = await Promise.all([
+  const fullAddress = `${street}, ${cityState}${zip ? ' ' + zip : ''}`;
+  const [avm, profile, sales, hcValue, hcRent, hcForecast, rcValue, rcRent, fmr] = await Promise.all([
     live.attomAvm(street, `${cityState}${zip ? ' ' + zip : ''}`),
     live.attomProfile(street, `${cityState}${zip ? ' ' + zip : ''}`),
     live.attomSalesHistory(street, `${cityState}${zip ? ' ' + zip : ''}`),
     zip ? live.hcValue(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
     zip ? live.hcRentalValue(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
     zip ? live.hcValueForecast(street, zip) : { ok: false, reason: 'No ZIP found — add one (HouseCanary needs it)' },
+    // Cross-check providers: RentCast (value + rent) and HUD FMR. Each fails
+    // independently — the panel shows whatever consensus is available.
+    live.rentcastValue(fullAddress),
+    live.rentEstimate(fullAddress),
+    zip ? live.hudFmr(zip) : { ok: false, reason: 'No ZIP found — HUD FMR needs one' },
   ]);
-  res.json({ ok: true, address: `${street}, ${cityState} ${zip}`.trim(), attom: { avm, profile, sales }, housecanary: { value: hcValue, rent: hcRent, forecast: hcForecast } });
+  res.json({
+    ok: true,
+    address: `${street}, ${cityState} ${zip}`.trim(),
+    attom: { avm, profile, sales },
+    housecanary: { value: hcValue, rent: hcRent, forecast: hcForecast },
+    rentcast: { value: rcValue, rent: rcRent },
+    hud: { fmr },
+  });
 });
 
 // The corridor screen: run all official layers for a point in one shot —
