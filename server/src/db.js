@@ -116,6 +116,14 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_listings_active ON listings(is_active);
   CREATE INDEX IF NOT EXISTS idx_price_history_listing ON price_history(listing_id);
   CREATE INDEX IF NOT EXISTS idx_tracked_status ON tracked_places(status);
+
+  -- Metered-API call accounting (e.g. RentCast free tier = 50 calls/month).
+  CREATE TABLE IF NOT EXISTS api_usage (
+    provider TEXT NOT NULL,
+    month TEXT NOT NULL,          -- 'YYYY-MM'
+    calls INTEGER DEFAULT 0,
+    PRIMARY KEY (provider, month)
+  );
 `);
 
 // Migration: leaseback flag for model-home sale-leaseback opportunities
@@ -130,7 +138,8 @@ try { db.exec('ALTER TABLE listings ADD COLUMN leaseback INTEGER DEFAULT 0'); } 
   const sampleCond = `
     id GLOB 'zillow_sample_*' OR id GLOB 'realtor_sample_*' OR
     id GLOB 'nhs_sample_*' OR id GLOB 'opendoor_sample_*' OR
-    id GLOB 'homes_s[0-9]*' OR id GLOB 'builder_*_[0-9]'
+    id GLOB 'homes_s[0-9]*' OR id GLOB 'builder_*_[0-9]' OR
+    id IN ('model_lennar_sterling_pointe','model_drh_mallard_pointe','model_sd_university_townes','model_century_gastonia')
   `;
   db.prepare(`DELETE FROM price_history WHERE listing_id IN (SELECT id FROM listings WHERE ${sampleCond})`).run();
   const purged = db.prepare(`DELETE FROM listings WHERE ${sampleCond}`).run().changes;
@@ -451,7 +460,23 @@ function getTrackedStats() {
   };
 }
 
+// Metered-API accounting: count calls per provider per calendar month so
+// free-tier budgets (RentCast: 50/mo) are visible and never silently blown.
+function bumpApiUsage(provider, n = 1) {
+  const month = new Date().toISOString().slice(0, 7);
+  db.prepare(`
+    INSERT INTO api_usage (provider, month, calls) VALUES (?, ?, ?)
+    ON CONFLICT(provider, month) DO UPDATE SET calls = calls + excluded.calls
+  `).run(provider, month, n);
+}
+
+function getApiUsage(provider) {
+  const month = new Date().toISOString().slice(0, 7);
+  return db.prepare('SELECT calls FROM api_usage WHERE provider = ? AND month = ?').get(provider, month)?.calls || 0;
+}
+
 module.exports = {
   db, upsertListing, getListings, getStats, logScrape, getScrapeLogs, markStaleListings,
   saveTrackedPlace, getTrackedPlaces, getTrackedIds, deleteTrackedPlace, getTrackedStats, TRACK_STATUSES,
+  bumpApiUsage, getApiUsage,
 };

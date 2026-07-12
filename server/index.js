@@ -269,6 +269,23 @@ app.get('/api/live/diligence', privateLocalOnly, async (req, res) => {
   });
 });
 
+// --- RentCast two-county price-cut scanner (manual trigger, metered) ---
+const rentcastScan = require('./src/rentcastScan');
+
+// Zero-cost preview: budget used/remaining and what a scan would spend.
+app.get('/api/live/rentcast-scan/preview', privateLocalOnly, (req, res) => {
+  res.json({ ok: true, ...rentcastScan.scanPreview() });
+});
+
+app.post('/api/live/rentcast-scan', privateLocalOnly, async (req, res) => {
+  try {
+    const result = await rentcastScan.runScan();
+    res.status(result.ok ? 200 : 400).json(result);
+  } catch (err) {
+    res.status(500).json({ ok: false, reason: err.message });
+  }
+});
+
 // The corridor screen: run all official layers for a point in one shot —
 // the boom-signal test (policy ∩ entitlements ∩ pipeline) plus crime context.
 app.get('/api/live/corridor', async (req, res) => {
@@ -299,7 +316,12 @@ const upload = multer({
 });
 
 app.get('/api/deals', privateLocalOnly, (req, res) => {
-  try { res.json({ deals: dealFiles.listDeals() }); } catch (err) { res.status(500).json({ error: err.message }); }
+  try { res.json({ deals: dealFiles.listDealsWithMeta() }); } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// Create a new deal (title/address → slug + empty vault dir).
+app.post('/api/deals', privateLocalOnly, (req, res) => {
+  try { res.json({ ok: true, deal: dealFiles.createDeal(req.body || {}) }); } catch (err) { res.status(400).json({ ok: false, error: err.message }); }
 });
 
 app.get('/api/deals/:slug/files', privateLocalOnly, (req, res) => {

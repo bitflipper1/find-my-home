@@ -18,6 +18,7 @@ import {
   fetchTracked, saveTracked, deleteTracked, fetchMarket, fetchResearch, fetchBuilderProfiles,
 } from './api';
 import { IS_STATIC } from './staticData';
+import RentCastScan from './components/RentCastScan';
 
 const PUBLIC_TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
@@ -238,6 +239,13 @@ export default function App() {
 
         {tab === 'listings' && (
           <>
+            {/* Manual RentCast sweep (private tier only — metered free API) */}
+            {!IS_STATIC && (
+              <div className="mb-4 flex items-center flex-wrap">
+                <RentCastScan onScanned={() => { loadListings(); loadMeta(); }} />
+              </div>
+            )}
+
             {/* Price cut highlight bar */}
             {priceCutListings.length > 0 && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
