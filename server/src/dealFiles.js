@@ -43,6 +43,51 @@ function listDeals() {
     .map(e => e.name);
 }
 
+// Deal metadata (title/address per slug) lives in deals.json at the vault
+// root — private like everything else here.
+const DEALS_META = path.join(ROOT, 'deals.json');
+
+function readDealsMeta() {
+  try { return JSON.parse(fs.readFileSync(DEALS_META, 'utf8')); } catch { return {}; }
+}
+
+function writeDealsMeta(meta) {
+  fs.mkdirSync(ROOT, { recursive: true });
+  fs.writeFileSync(DEALS_META, JSON.stringify(meta, null, 2));
+}
+
+// Slug from a human title/address: "3912 Craig Ave" → "3912-craig-ave".
+function slugify(text) {
+  return safeSlug(String(text || '').toLowerCase().trim()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60));
+}
+
+// Every deal the vault knows about: directories on disk merged with saved
+// metadata, so deals created before metadata existed still show up.
+function listDealsWithMeta() {
+  const meta = readDealsMeta();
+  const slugs = new Set([...listDeals(), ...Object.keys(meta)]);
+  return [...slugs].sort().map(slug => ({
+    slug,
+    title: meta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+    address: meta[slug]?.address || null,
+    created_at: meta[slug]?.created_at || null,
+  }));
+}
+
+function createDeal({ title, address }) {
+  const name = String(title || address || '').trim();
+  if (!name) throw new Error('Deal needs a title or address');
+  const slug = slugify(name);
+  ensureDealDir(slug);
+  const meta = readDealsMeta();
+  if (!meta[slug]) {
+    meta[slug] = { title: name, address: String(address || '').trim() || null, created_at: new Date().toISOString() };
+    writeDealsMeta(meta);
+  }
+  return { slug, ...meta[slug] };
+}
+
 function listDealFiles(slug) {
   const dir = dealDir(slug);
   let uploads = [];
@@ -76,4 +121,7 @@ function deleteFile(slug, name) {
   return true;
 }
 
-module.exports = { ROOT, safeSlug, safeName, ensureDealDir, listDeals, listDealFiles, filePath, deleteFile };
+module.exports = {
+  ROOT, safeSlug, safeName, ensureDealDir, listDeals, listDealFiles, filePath, deleteFile,
+  listDealsWithMeta, createDeal,
+};

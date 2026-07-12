@@ -4,6 +4,7 @@ const { scrapeOpendoor } = require('./scrapers/opendoor');
 const { scrapeNewHomeSource } = require('./scrapers/newhomesource');
 const { scrapeHomes } = require('./scrapers/homes');
 const { scrapeAllBuilders } = require('./scrapers/builders');
+const { scrapeHeadlessBuilders } = require('./scrapers/headless');
 const { searchEmails } = require('./gmail');
 const { upsertListing, logScrape, markStaleListings, db } = require('./db');
 const fs = require('fs');
@@ -22,13 +23,21 @@ function loadGmailListings() {
   }
 }
 
-// Curated model-home / furnished / leaseback opportunities
+// Curated model-home / furnished / leaseback opportunities.
+// Four early entries were traced back to fabricated sample data (their
+// addresses match the old scraper fallbacks and the communities don't
+// exist as named) — filter them even if an older data file is in place.
+const FABRICATED_MODEL_IDS = new Set([
+  'model_lennar_sterling_pointe', 'model_drh_mallard_pointe',
+  'model_sd_university_townes', 'model_century_gastonia',
+]);
+
 function loadModelHomes() {
   const file = path.join(__dirname, '..', 'data', 'model-homes.json');
   try {
     if (!fs.existsSync(file)) return [];
     const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
-    return (raw.listings || []).filter(l => l.id && l.address);
+    return (raw.listings || []).filter(l => l.id && l.address && !FABRICATED_MODEL_IDS.has(l.id));
   } catch (err) {
     console.error('[Aggregate] Could not read model-homes.json:', err.message);
     return [];
@@ -44,6 +53,9 @@ const SOURCES = [
   { name: 'newhomesource', fn: scrapeNewHomeSource, label: 'NewHomeSource' },
   { name: 'homes', fn: scrapeHomes, label: 'Homes.com' },
   { name: 'builders', fn: scrapeAllBuilders, label: 'Builder Sites' },
+  // Real-browser scrapes of David Weekley / Lennar / Tri Pointe / Mungo —
+  // these sites block plain HTTP or render inventory with JavaScript.
+  { name: 'headless', fn: scrapeHeadlessBuilders, label: 'Builder Sites (headless)' },
 ];
 
 async function runAllScrapers() {

@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { Lock, Unlock, ShieldAlert, Calculator } from 'lucide-react';
+import { useState, useMemo, useEffect } from 'react';
+import { Lock, Unlock, ShieldAlert, Calculator, Plus, Briefcase, X, Loader2 } from 'lucide-react';
 import { IS_STATIC } from '../staticData';
 import DealDocuments from './DealDocuments';
 import DealDiligence from './DealDiligence';
@@ -48,8 +48,89 @@ function StaticStub() {
   );
 }
 
+// "My Deals": every deal gets its own document vault. The list + create flow
+// hit loopback-gated routes, so this whole strip only exists on the private tier.
+function MyDeals({ deals, active, onSelect, onCreated }) {
+  const [adding, setAdding] = useState(false);
+  const [form, setForm] = useState({ title: '', address: '' });
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+
+  async function create() {
+    if (!form.title.trim() && !form.address.trim()) return;
+    setBusy(true); setErr('');
+    try {
+      const r = await fetch('/api/deals', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form),
+      });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.error || 'Could not create deal');
+      setAdding(false);
+      setForm({ title: '', address: '' });
+      onCreated(j.deal);
+    } catch (e) {
+      setErr(e.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+      <div className="flex items-center gap-2 mb-3">
+        <Briefcase className="w-4 h-4 text-blue-600" />
+        <h3 className="text-sm font-semibold text-gray-800">My Deals</h3>
+        <button onClick={() => setAdding(a => !a)}
+          className="ml-auto inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-blue-600 border border-blue-200 hover:bg-blue-50 rounded-lg">
+          <Plus className="w-3.5 h-3.5" /> New deal
+        </button>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {deals.map(deal => (
+          <button key={deal.slug} onClick={() => onSelect(deal.slug)}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
+              deal.slug === active ? 'bg-blue-600 text-white border-blue-600' : 'text-gray-600 border-gray-200 hover:bg-gray-50'}`}>
+            {deal.title}
+          </button>
+        ))}
+        {deals.length === 0 && <p className="text-xs text-gray-400">No deals yet — add your first.</p>}
+      </div>
+      {adding && (
+        <div className="mt-3 flex flex-wrap gap-2 items-center">
+          <input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))}
+            placeholder="Deal name (e.g. 123 Main St)" onKeyDown={e => e.key === 'Enter' && create()}
+            className="flex-1 min-w-[180px] px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input value={form.address} onChange={e => setForm(f => ({ ...f, address: e.target.value }))}
+            placeholder="Full address (optional)" onKeyDown={e => e.key === 'Enter' && create()}
+            className="flex-1 min-w-[200px] px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <button onClick={create} disabled={busy || (!form.title.trim() && !form.address.trim())}
+            className="px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg disabled:opacity-50 flex items-center gap-1">
+            {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />} Create
+          </button>
+          <button onClick={() => setAdding(false)} className="p-1.5 text-gray-400 hover:text-gray-600"><X className="w-4 h-4" /></button>
+        </div>
+      )}
+      {err && <p className="text-xs text-red-600 mt-2">{err}</p>}
+    </section>
+  );
+}
+
 export default function DealRoom({ market, research }) {
   const [d, setD] = useState({ address: '', price: 400000, incentive: 0, rent: 2500, leaseMonths: 12, hoa: 250, taxAnnual: 3100, sqft: 1600 });
+  const [deals, setDeals] = useState([]);
+  const [activeSlug, setActiveSlug] = useState('3912-craig-ave');
+
+  useEffect(() => {
+    if (IS_STATIC) return;
+    fetch('/api/deals')
+      .then(r => r.json())
+      .then(j => {
+        const list = j.deals || [];
+        setDeals(list);
+        if (list.length && !list.some(x => x.slug === '3912-craig-ave')) setActiveSlug(list[0].slug);
+      })
+      .catch(() => {});
+  }, []);
 
   const assumptions = market?.assumptions;
   // Benchmark comes from the private research file, served only over loopback.
@@ -128,11 +209,21 @@ export default function DealRoom({ market, research }) {
         </section>
       </div>
 
-      {/* Per-deal document vault: local uploads + Drive index (private tier) */}
-      {/* Live property diligence: ATTOM + HouseCanary for any address (paid keys) */}
+      {/* Live property diligence: ATTOM + RentCast + HouseCanary for any address */}
       <DealDiligence />
 
-      <DealDocuments slug="3912-craig-ave" title={yd?.property?.split('—')[0]?.trim() || '3912 Craig Ave'} />
+      {/* Deal picker + create; each deal gets its own document vault */}
+      <MyDeals
+        deals={deals.length ? deals : [{ slug: '3912-craig-ave', title: yd?.property?.split('—')[0]?.trim() || '3912 Craig Ave' }]}
+        active={activeSlug}
+        onSelect={setActiveSlug}
+        onCreated={deal => { setDeals(ds => [...ds.filter(x => x.slug !== deal.slug), deal].sort((a, b) => a.slug.localeCompare(b.slug))); setActiveSlug(deal.slug); }}
+      />
+
+      <DealDocuments
+        slug={activeSlug}
+        title={deals.find(x => x.slug === activeSlug)?.title || (activeSlug === '3912-craig-ave' ? (yd?.property?.split('—')[0]?.trim() || '3912 Craig Ave') : activeSlug)}
+      />
     </div>
   );
 }
