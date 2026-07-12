@@ -121,6 +121,22 @@ db.exec(`
 // Migration: leaseback flag for model-home sale-leaseback opportunities
 try { db.exec('ALTER TABLE listings ADD COLUMN leaseback INTEGER DEFAULT 0'); } catch { /* exists */ }
 
+// Migration: purge synthetic sample listings. Early scraper versions fell back
+// to hardcoded fake data when a portal/builder blocked them; those rows (and
+// their baked-in "price cuts") polluted stats. Real scraped ids end in an MD5
+// hex slice, so these patterns only ever match the numbered sample rows.
+// GLOB is used because '_' is a wildcard in LIKE.
+{
+  const sampleCond = `
+    id GLOB 'zillow_sample_*' OR id GLOB 'realtor_sample_*' OR
+    id GLOB 'nhs_sample_*' OR id GLOB 'opendoor_sample_*' OR
+    id GLOB 'homes_s[0-9]*' OR id GLOB 'builder_*_[0-9]'
+  `;
+  db.prepare(`DELETE FROM price_history WHERE listing_id IN (SELECT id FROM listings WHERE ${sampleCond})`).run();
+  const purged = db.prepare(`DELETE FROM listings WHERE ${sampleCond}`).run().changes;
+  if (purged > 0) console.log(`[DB] Purged ${purged} synthetic sample listings`);
+}
+
 const { enrichListing } = require('./market');
 const { listingArt } = require('./listingArt');
 
@@ -226,7 +242,14 @@ function getListings(filters = {}) {
   if (filters.minPrice) { query += ' AND l.price >= ?'; params.push(filters.minPrice); }
   if (filters.maxPrice) { query += ' AND l.price <= ?'; params.push(filters.maxPrice); }
   if (filters.beds) { query += ' AND l.beds >= ?'; params.push(filters.beds); }
-  if (filters.priceCut) { query += ' AND l.price < l.original_price AND l.original_price > 0'; }
+  if (filters.priceCut) {
+    // Same reduction rule as getStats: source-reported original price, or a
+    // drop we observed ourselves via tracked price history.
+    query += ` AND (
+      (l.price < l.original_price AND l.original_price > 0)
+      OR l.price < (SELECT ph.price FROM price_history ph WHERE ph.listing_id = l.id ORDER BY ph.id DESC LIMIT 1)
+    )`;
+  }
   if (filters.isModel) { query += ' AND l.is_model = 1'; }
   if (filters.furnished) { query += ' AND l.is_furnished = 1'; }
   if (filters.leaseback) { query += ' AND l.leaseback = 1'; }
@@ -260,7 +283,15 @@ function getListings(filters = {}) {
 function getStats() {
   return {
     total: db.prepare('SELECT COUNT(*) as c FROM listings WHERE is_active=1').get().c,
-    price_cuts: db.prepare('SELECT COUNT(*) as c FROM listings WHERE is_active=1 AND price < original_price AND original_price > 0').get().c,
+    // Active price reductions: the source reported a higher original price,
+    // or we observed the price drop ourselves (latest tracked prior price is
+    // above the current one). Not "cuts today" — a running total.
+    price_cuts: db.prepare(`
+      SELECT COUNT(*) as c FROM listings l WHERE l.is_active=1 AND (
+        (l.original_price > 0 AND l.price < l.original_price)
+        OR l.price < (SELECT ph.price FROM price_history ph WHERE ph.listing_id = l.id ORDER BY ph.id DESC LIMIT 1)
+      )
+    `).get().c,
     new_today: db.prepare("SELECT COUNT(*) as c FROM listings WHERE is_active=1 AND date(created_at) = date('now')").get().c,
     avg_price: db.prepare('SELECT AVG(price) as a FROM listings WHERE is_active=1 AND price > 0').get().a,
     by_source: db.prepare('SELECT source, COUNT(*) as count FROM listings WHERE is_active=1 GROUP BY source').all(),

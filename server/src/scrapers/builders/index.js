@@ -44,29 +44,14 @@ async function scrapeDRHorton() {
       is_new_construction: 1,
       move_in_date: h.moveInDate || h.estimatedCompletion || null,
     }));
-  } catch {
-    return getDRHortonFallback();
+  } catch (err) {
+    // Builder APIs shift or block bots — log it and return nothing rather
+    // than synthetic listings. Only real inventory belongs in the DB.
+    console.error('[D.R. Horton] scrape error:', err.message);
+    return [];
   }
 }
 
-function getDRHortonFallback() {
-  return [
-    { addr: '4215 Tuckaseegee Rd', city: 'Charlotte', zip: '28208', price: 272000, orig: 285000, beds: 3, baths: 2.5, sqft: 1395, community: 'West Charlotte Townes', phone: '(704) 887-1234' },
-    { addr: '9023 Rocky River Rd', city: 'Charlotte', zip: '28215', price: 305000, orig: null, beds: 3, baths: 2.5, sqft: 1542, community: 'Rocky River Crossings', phone: '(704) 887-1234' },
-    { addr: '1811 Westinghouse Blvd', city: 'Charlotte', zip: '28273', price: 291000, orig: 304000, beds: 3, baths: 2.5, sqft: 1476, community: 'Steele Creek Run', phone: '(704) 887-1234' },
-  ].map((l, i) => ({
-    id: `builder_drhorton_${i + 1}`,
-    source: 'drhorton',
-    url: 'https://www.drhorton.com/north-carolina/charlotte',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'D.R. Horton', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['Open concept', 'Smart home package', '1-car garage', 'Patio'],
-  }));
-}
 
 // --- Lennar ---
 async function scrapeLennar() {
@@ -98,30 +83,14 @@ async function scrapeLennar() {
       status: 'for_sale',
       is_new_construction: 1,
     }));
-  } catch {
-    return getLennarFallback();
+  } catch (err) {
+    // Builder APIs shift or block bots — log it and return nothing rather
+    // than synthetic listings. Only real inventory belongs in the DB.
+    console.error('[Lennar] scrape error:', err.message);
+    return [];
   }
 }
 
-function getLennarFallback() {
-  return [
-    { addr: '8245 Arrowood Rd', city: 'Charlotte', zip: '28273', price: 309000, orig: null, beds: 3, baths: 2.5, sqft: 1548, community: 'Arrowood Towns', phone: '(980) 224-5678' },
-    { addr: '415 Griffith Lakes Dr', city: 'Charlotte', zip: '28269', price: 338000, orig: 352000, beds: 3, baths: 3, sqft: 1698, community: 'Griffith Lakes', phone: '(980) 224-5678' },
-    { addr: '105 Canopy Oaks Ln', city: 'Concord', zip: '28027', price: 295000, orig: null, beds: 3, baths: 2.5, sqft: 1490, community: 'Canopy Oaks', phone: '(980) 224-5678' },
-    { addr: '3414 Beatties Ford Rd', city: 'Charlotte', zip: '28216', price: 278000, orig: 290000, beds: 3, baths: 2.5, sqft: 1398, community: 'Sterling Pointe', phone: '(980) 224-5678' },
-  ].map((l, i) => ({
-    id: `builder_lennar_${i + 1}`,
-    source: 'lennar',
-    url: 'https://www.lennar.com/new-homes/north-carolina/charlotte',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'Lennar', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['Stainless appliances', 'Granite counters', 'Ring doorbell', 'Wi-Fi certified'],
-  }));
-}
 
 // --- Ryan Homes ---
 async function scrapeRyanHomes() {
@@ -145,29 +114,14 @@ async function scrapeRyanHomes() {
       phone: c.salesPhone || null,
       type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
     }));
-  } catch {
-    return getRyanHomesFallback();
+  } catch (err) {
+    // Builder APIs shift or block bots — log it and return nothing rather
+    // than synthetic listings. Only real inventory belongs in the DB.
+    console.error('[Ryan Homes] scrape error:', err.message);
+    return [];
   }
 }
 
-function getRyanHomesFallback() {
-  return [
-    { addr: '122 Walnut Creek Blvd', city: 'Matthews', zip: '28105', price: 372000, orig: 388000, beds: 3, baths: 2.5, sqft: 1765, community: 'Walnut Creek Townes', phone: '(704) 814-9900' },
-    { addr: '5701 Albemarle Rd', city: 'Charlotte', zip: '28212', price: 318000, orig: null, beds: 3, baths: 2.5, sqft: 1580, community: 'Albemarle Commons', phone: '(704) 814-9900' },
-    { addr: '2345 Lawyers Rd', city: 'Mint Hill', zip: '28227', price: 349000, orig: 362000, beds: 4, baths: 3, sqft: 1870, community: 'Mint Hill Commons', phone: '(704) 814-9900' },
-  ].map((l, i) => ({
-    id: `builder_ryanhomes_${i + 1}`,
-    source: 'ryanhomes',
-    url: 'https://www.ryanhomes.com/find-a-home/nc/charlotte-area',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'Ryan Homes', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['Quartz counters', 'LVP flooring', 'Stainless appliances', 'Rear-load garage'],
-  }));
-}
 
 // --- Meritage Homes ---
 async function scrapeMeritage() {
@@ -187,29 +141,14 @@ async function scrapeMeritage() {
       phone: c.salesPhone || null,
       type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
     }));
-  } catch {
-    return getMeritageFallback();
+  } catch (err) {
+    // Builder APIs shift or block bots — log it and return nothing rather
+    // than synthetic listings. Only real inventory belongs in the DB.
+    console.error('[Meritage] scrape error:', err.message);
+    return [];
   }
 }
 
-function getMeritageFallback() {
-  return [
-    { addr: '12200 Copper Way', city: 'Huntersville', zip: '28078', price: 419000, orig: null, beds: 3, baths: 3, sqft: 1985, community: 'Birkdale Pointe', phone: '(704) 992-6100' },
-    { addr: '21901 Torrence Chapel Rd', city: 'Cornelius', zip: '28031', price: 498000, orig: 515000, beds: 4, baths: 3.5, sqft: 2245, community: 'The Cove at Cornelius', phone: '(704) 992-6100' },
-    { addr: '18045 W Catawba Ave', city: 'Cornelius', zip: '28031', price: 459000, orig: null, beds: 3, baths: 3, sqft: 2025, community: 'Peninsula Crossing', phone: '(704) 992-6100' },
-  ].map((l, i) => ({
-    id: `builder_meritage_${i + 1}`,
-    source: 'meritage',
-    url: 'https://www.meritagehomes.com/state/nc/charlotte-area',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'Meritage Homes', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['Energy Star certified', 'Solar ready', 'Spray foam insulation', 'Smart thermostat'],
-  }));
-}
 
 // --- Eastwood Homes (Charlotte-based) ---
 async function scrapeEastwoodHomes() {
@@ -226,50 +165,14 @@ async function scrapeEastwoodHomes() {
       price: h.price || 0, builder: 'Eastwood Homes', community: h.community,
       phone: '(704) 376-9700', type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
     }));
-  } catch {
-    return getEastwoodFallback();
+  } catch (err) {
+    // Builder APIs shift or block bots — log it and return nothing rather
+    // than synthetic listings. Only real inventory belongs in the DB.
+    console.error('[Eastwood] scrape error:', err.message);
+    return [];
   }
 }
 
-function getEastwoodFallback() {
-  return [
-    { addr: '5034 Reedy Creek Rd', city: 'Charlotte', zip: '28215', price: 334000, orig: 349000, beds: 3, baths: 2.5, sqft: 1652, community: 'Reedy Creek Reserve', phone: '(704) 376-9700' },
-    { addr: '7128 Idlewild Rd', city: 'Charlotte', zip: '28212', price: 298000, orig: null, beds: 3, baths: 2.5, sqft: 1498, community: 'Idlewild Commons', phone: '(704) 376-9700' },
-    { addr: '6804 Albemarle Rd', city: 'Charlotte', zip: '28212', price: 319000, orig: 332000, beds: 3, baths: 3, sqft: 1585, community: 'Albemarle Townes', phone: '(704) 376-9700' },
-    { addr: '2812 Rea Rd', city: 'Charlotte', zip: '28226', price: 489000, orig: null, beds: 4, baths: 3.5, sqft: 2180, community: 'Rea Farms Village', phone: '(704) 376-9700' },
-  ].map((l, i) => ({
-    id: `builder_eastwood_${i + 1}`,
-    source: 'eastwood',
-    url: 'https://www.eastwoodhomes.com/charlotte',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'Eastwood Homes', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['10-year structural warranty', 'Gas fireplace option', 'Tankless water heater', '2-car garage'],
-  }));
-}
-
-// --- Smith Douglas Homes ---
-function getSmithDouglasFallback() {
-  return [
-    { addr: '7015 Wallace Neel Rd', city: 'Charlotte', zip: '28214', price: 269000, orig: null, beds: 3, baths: 2.5, sqft: 1365, community: 'Steele Creek Point', phone: '(704) 944-0180' },
-    { addr: '4912 Sunset Rd', city: 'Charlotte', zip: '28269', price: 289000, orig: 299000, beds: 3, baths: 2.5, sqft: 1448, community: 'University Townes', phone: '(704) 944-0180' },
-    { addr: '3125 Freedom Dr', city: 'Charlotte', zip: '28208', price: 258000, orig: null, beds: 3, baths: 2, sqft: 1298, community: 'Freedom Commons', phone: '(704) 944-0180' },
-  ].map((l, i) => ({
-    id: `builder_smdi_${i + 1}`,
-    source: 'smithdouglas',
-    url: 'https://www.smithdouglashomes.com/communities/?state=north-carolina',
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city, state: 'NC', zip: l.zip,
-    price: l.price, original_price: l.orig,
-    beds: l.beds, baths: l.baths, sqft: l.sqft,
-    builder: 'Smith Douglas Homes', community: l.community, phone: l.phone,
-    type: 'Townhome', status: 'for_sale', is_new_construction: 1, images: [],
-    features: ['Standard granite', 'Subway tile', 'Vinyl plank floors', 'Patio'],
-  }));
-}
 
 async function scrapeAllBuilders() {
   const [drHorton, lennar, ryanHomes, meritage, eastwood] = await Promise.allSettled([
@@ -282,7 +185,6 @@ async function scrapeAllBuilders() {
     ...(ryanHomes.status === 'fulfilled' ? ryanHomes.value : []),
     ...(meritage.status === 'fulfilled' ? meritage.value : []),
     ...(eastwood.status === 'fulfilled' ? eastwood.value : []),
-    ...getSmithDouglasFallback(),
   ];
 }
 
