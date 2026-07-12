@@ -50,47 +50,18 @@ async function scrapeHomes() {
       });
     });
 
-    return results.length > 0 ? results : getFallbackHomesData();
+    // An empty result set usually means Homes.com changed their markup or
+    // served a bot wall — report reality instead of inventing listings.
+    return results;
   } catch (err) {
     console.error('[Homes] scrape error:', err.message);
-    return getFallbackHomesData();
+    return [];
   }
 }
 
 function extractCity(address) {
   const match = address.match(/,\s*([^,]+),\s*[A-Z]{2}/);
   return match ? match[1].trim() : 'Charlotte';
-}
-
-function getFallbackHomesData() {
-  return [
-    { id: 'homes_s1', city: 'Charlotte', zip: '28278', addr: '15012 Shopton Rd W', price: 319000, beds: 3, baths: 2.5, sqft: 1565, builder: 'D.R. Horton', community: 'Shopton Farms' },
-    { id: 'homes_s2', city: 'Concord', zip: '28027', addr: '2801 Cabarrus Ave NW', price: 287000, beds: 3, baths: 2.5, sqft: 1480, builder: 'Ryan Homes', community: 'Cabarrus Station' },
-    { id: 'homes_s3', city: 'Indian Land', zip: '29707', addr: '6245 Sun Valley Dr', price: 359000, beds: 3, baths: 3, sqft: 1795, builder: 'Lennar', community: 'Sun Valley Towns' },
-    { id: 'homes_s4', city: 'Mint Hill', zip: '28227', addr: '13221 Lawyers Rd', price: 395000, beds: 4, baths: 3.5, sqft: 2095, builder: 'Eastwood Homes', community: 'Mint Hill Townes' },
-    { id: 'homes_s5', city: 'Gastonia', zip: '28054', addr: '4412 Robinwood Rd', price: 249000, beds: 3, baths: 2, sqft: 1355, builder: 'Century Communities', community: 'Robinwood Commons' },
-    { id: 'homes_s6', city: 'Waxhaw', zip: '28173', addr: '901 Waxhaw-Marvin Rd', price: 468000, beds: 4, baths: 3.5, sqft: 2280, builder: 'Taylor Morrison', community: 'Elm Lane' },
-  ].map((l, i) => ({
-    id: l.id,
-    source: 'homes',
-    url: `https://www.homes.com/property/charlotte-nc-${i + 1}`,
-    address: `${l.addr}, ${l.city}, NC ${l.zip}`,
-    city: l.city,
-    state: 'NC',
-    zip: l.zip,
-    price: l.price,
-    original_price: i % 3 === 1 ? l.price + 18000 : null,
-    beds: l.beds,
-    baths: l.baths,
-    sqft: l.sqft,
-    type: 'Townhome',
-    status: 'for_sale',
-    builder: l.builder,
-    community: l.community,
-    images: [],
-    days_on_market: 8 + i * 3,
-    is_new_construction: 1,
-  }));
 }
 
 module.exports = { scrapeHomes };

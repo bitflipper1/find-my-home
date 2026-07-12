@@ -163,7 +163,12 @@ export default function App() {
     }
   }
 
-  const priceCutListings = listings.filter(l => l.original_price > 0 && l.price < l.original_price);
+  // A listing counts as reduced if the source reported a higher original
+  // price, or if we watched the price drop ourselves (tracked history).
+  const priceCutListings = listings.filter(l =>
+    (l.original_price > 0 && l.price < l.original_price)
+    || (l.price_history?.length > 0 && l.price < l.price_history[l.price_history.length - 1].price)
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -238,7 +243,7 @@ export default function App() {
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                 <span className="text-sm font-semibold text-red-700">
-                  {priceCutListings.length} listing{priceCutListings.length !== 1 ? 's' : ''} with price cuts today!
+                  {priceCutListings.length} active price reduction{priceCutListings.length !== 1 ? 's' : ''}
                 </span>
                 <button
                   onClick={() => setFilters(f => ({ ...f, priceCut: true }))}

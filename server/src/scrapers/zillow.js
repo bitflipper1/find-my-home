@@ -70,8 +70,10 @@ async function scrapeZillow() {
       is_new_construction: 1,
     }));
   } catch (err) {
+    // Zillow blocks bot traffic (403) most of the time. Return nothing rather
+    // than synthetic listings — the grid should only ever show real inventory.
     console.error('[Zillow] scrape error:', err.message);
-    return getFallbackZillowData();
+    return [];
   }
 }
 
@@ -83,49 +85,6 @@ function extractCity(address) {
 function parsePrice(str) {
   if (!str) return 0;
   return parseInt(str.toString().replace(/[^0-9]/g, '')) || 0;
-}
-
-// Realistic sample data for when scraping is blocked
-function getFallbackZillowData() {
-  const communities = [
-    { name: 'Baxter Village', city: 'Fort Mill', builder: 'Eastwood Homes', lat: 35.0058, lng: -80.9451 },
-    { name: 'Waverly', city: 'Charlotte', builder: 'David Weekley', lat: 35.0393, lng: -80.8065 },
-    { name: 'Traditions at Sardis', city: 'Charlotte', builder: 'Smith Douglas', lat: 35.1845, lng: -80.7234 },
-    { name: 'Birkdale Village', city: 'Huntersville', builder: 'Meritage Homes', lat: 35.4168, lng: -80.8578 },
-    { name: 'Berewick', city: 'Charlotte', builder: 'Lennar', lat: 35.1401, lng: -80.9678 },
-    { name: 'Skybrook', city: 'Huntersville', builder: 'Ryan Homes', lat: 35.4052, lng: -80.8234 },
-    { name: 'Griffith Lakes', city: 'Charlotte', builder: 'D.R. Horton', lat: 35.3456, lng: -80.7891 },
-    { name: 'The Commons at Ballantyne', city: 'Charlotte', builder: 'Pulte Homes', lat: 35.0567, lng: -80.8234 },
-  ];
-
-  return communities.map((c, i) => {
-    const basePrice = 320000 + i * 25000;
-    const hasCut = i % 3 === 0;
-    return {
-      id: `zillow_sample_${i + 1}`,
-      source: 'zillow',
-      url: `https://www.zillow.com/homedetails/charlotte-nc-${i + 1}`,
-      address: `${1000 + i * 100} ${['Oak', 'Maple', 'Cedar', 'Pine', 'Birch', 'Willow', 'Elm', 'Ash'][i]} Lane, ${c.city}, NC ${28200 + i}`,
-      city: c.city,
-      state: 'NC',
-      zip: `${28200 + i}`,
-      price: hasCut ? basePrice - 15000 : basePrice,
-      original_price: hasCut ? basePrice : null,
-      beds: 3 + (i % 2),
-      baths: 2.5,
-      sqft: 1650 + i * 80,
-      type: 'Townhome',
-      status: 'FOR_SALE',
-      builder: c.builder,
-      community: c.name,
-      images: [`https://photos.zillowstatic.com/fp/sample${i + 1}.jpg`],
-      latitude: c.lat,
-      longitude: c.lng,
-      days_on_market: 5 + i * 3,
-      is_new_construction: 1,
-      features: ['Granite counters', 'Stainless appliances', 'Attached garage', 'Open floor plan'],
-    };
-  });
 }
 
 module.exports = { scrapeZillow };

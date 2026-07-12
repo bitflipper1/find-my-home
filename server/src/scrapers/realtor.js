@@ -77,43 +77,11 @@ async function scrapeRealtor() {
       };
     });
   } catch (err) {
+    // Realtor.com's internal API moved/blocks bots (404). Return nothing
+    // rather than synthetic listings — only real inventory belongs in the DB.
     console.error('[Realtor] scrape error:', err.message);
-    return getFallbackRealtorData();
+    return [];
   }
-}
-
-function getFallbackRealtorData() {
-  const listings = [
-    { addr: '5201 Nolen Ave', city: 'Charlotte', zip: '28209', price: 419000, beds: 3, baths: 3.5, sqft: 1890, builder: 'Taylor Morrison', community: 'SouthPark Townes' },
-    { addr: '204 Walnut Creek Ct', city: 'Matthews', zip: '28105', price: 375000, beds: 3, baths: 2.5, sqft: 1720, builder: 'Ryan Homes', community: 'Walnut Creek' },
-    { addr: '8811 Magnolia Estates Dr', city: 'Cornelius', zip: '28031', price: 489000, beds: 4, baths: 3.5, sqft: 2100, builder: 'Meritage Homes', community: 'Magnolia Estates' },
-    { addr: '3301 Prosperity Church Rd', city: 'Charlotte', zip: '28269', price: 329000, beds: 3, baths: 2.5, sqft: 1580, builder: 'Smith Douglas Homes', community: 'Prosperity Village' },
-    { addr: '12450 Providence Rd', city: 'Charlotte', zip: '28277', price: 550000, beds: 4, baths: 3.5, sqft: 2400, builder: 'Toll Brothers', community: 'Providence Townes' },
-    { addr: '2901 Sandy Porter Rd', city: 'Charlotte', zip: '28273', price: 298000, beds: 3, baths: 2.5, sqft: 1520, builder: 'Century Communities', community: 'Steele Creek Commons' },
-  ];
-
-  return listings.map((l, i) => ({
-    id: `realtor_sample_${i + 1}`,
-    source: 'realtor',
-    url: `https://www.realtor.com/realestateandhomes-detail/sample-${i + 1}`,
-    address: `${l.addr}, ${l.city}, ${l.zip}`,
-    city: l.city,
-    state: 'NC',
-    zip: l.zip,
-    price: l.price,
-    original_price: i % 4 === 0 ? l.price + 20000 : null,
-    beds: l.beds,
-    baths: l.baths,
-    sqft: l.sqft,
-    type: 'Townhome',
-    status: 'for_sale',
-    builder: l.builder,
-    community: l.community,
-    images: [],
-    days_on_market: 10 + i * 5,
-    is_new_construction: 1,
-    features: ['Smart home features', 'Energy efficient', 'Quartz countertops', 'Walk-in closet'],
-  }));
 }
 
 module.exports = { scrapeRealtor };

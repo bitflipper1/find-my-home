@@ -30,7 +30,12 @@ function summarize(listings, generatedAt) {
 
   return {
     total: listings.length,
-    price_cuts: listings.filter(listing => listing.original_price > 0 && listing.price < listing.original_price).length,
+    // Same rule as getStats/App.jsx: source-reported reduction, or a drop we
+    // observed ourselves in tracked price history.
+    price_cuts: listings.filter(listing =>
+      (listing.original_price > 0 && listing.price < listing.original_price)
+      || (listing.price_history?.length > 0 && listing.price < listing.price_history[listing.price_history.length - 1].price)
+    ).length,
     new_today: listings.filter(listing => String(listing.created_at || '').slice(0, 10) === today).length,
     avg_price: prices.length ? prices.reduce((sum, price) => sum + price, 0) / prices.length : null,
     by_source: countBy(listings, 'source'),

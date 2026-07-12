@@ -51,50 +51,10 @@ async function scrapeOpendoor() {
       description: h.description || null,
     }));
   } catch (err) {
+    // Return nothing on failure — only real inventory belongs in the DB.
     console.error('[Opendoor] scrape error:', err.message);
-    return getFallbackOpendoorData();
+    return [];
   }
-}
-
-function getFallbackOpendoorData() {
-  return [
-    {
-      id: 'opendoor_sample_1',
-      source: 'opendoor',
-      url: 'https://www.opendoor.com/homes/charlotte-nc-sample-1',
-      address: '4218 Rozzelles Ferry Rd, Charlotte, NC 28216',
-      city: 'Charlotte', state: 'NC', zip: '28216',
-      price: 289000, original_price: 305000,
-      beds: 3, baths: 2.5, sqft: 1480,
-      type: 'Townhome', status: 'for_sale',
-      builder: 'Opendoor',
-      images: [], days_on_market: 14, is_new_construction: 0,
-    },
-    {
-      id: 'opendoor_sample_2',
-      source: 'opendoor',
-      url: 'https://www.opendoor.com/homes/charlotte-nc-sample-2',
-      address: '7701 Caldwell Rd, Huntersville, NC 28078',
-      city: 'Huntersville', state: 'NC', zip: '28078',
-      price: 342000, original_price: 359000,
-      beds: 3, baths: 3, sqft: 1720,
-      type: 'Townhome', status: 'for_sale',
-      builder: 'Opendoor',
-      images: [], days_on_market: 7, is_new_construction: 0,
-    },
-    {
-      id: 'opendoor_sample_3',
-      source: 'opendoor',
-      url: 'https://www.opendoor.com/homes/charlotte-nc-sample-3',
-      address: '2214 Somersby Blvd, Indian Land, SC 29707',
-      city: 'Indian Land', state: 'SC', zip: '29707',
-      price: 398000, original_price: null,
-      beds: 4, baths: 3.5, sqft: 2050,
-      type: 'Townhome', status: 'for_sale',
-      builder: 'Opendoor',
-      images: [], days_on_market: 3, is_new_construction: 0,
-    },
-  ];
 }
 
 module.exports = { scrapeOpendoor };
