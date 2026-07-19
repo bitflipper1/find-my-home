@@ -14,15 +14,19 @@ Before writing any code, ask me:
 1. Should this live as a new route/page in find-my-home or a standalone tool linked from it?
 2. Confirm the current stack of the repo (framework, styling approach) so you match it instead of inventing one.
 3. Anything about the reference deal below that has changed.
+4. Which analyzer inputs should prefill from the existing data layer, and which stay manual? The private tier already serves: the signed-deal benchmark (price, incentive, leaseback rent, HOA, annual tax, sqft) from research.json via /api/research; live ATTOM records, tax assessment, and AVM plus RentCast value/rent and HouseCanary (while subscribed) via /api/live/diligence; and financing/operating assumptions (rates, insurance default, HOA default) from /api/market. None of that exists on the static public build. Tell me field by field what wires to which source, what stays manual (lender quotes, penalty structure, credits, dates), and what the analyzer should do when a prefill source is unavailable.
 
 Do not start building until I answer.
 
 ## CONSTRAINTS
 
-- Static site, client-side only. No backend, no API keys, no server calls. All math runs in the browser.
-- All state persists to the URL (shareable deal links) or localStorage if URL gets unwieldy. A deal I model today should survive a refresh.
+- The repo is a two-tier monorepo, not a static site. `client/` is React 18 + Vite + Tailwind; `server/` is Express + better-sqlite3 with scrapers (portal + Playwright headless), a cron scheduler, and provider connectors in `server/src/liveapis.js` (ATTOM, RentCast, HouseCanary, HUD, Census, Charlotte/Meck ArcGIS). Match this stack; do not invent one.
+- Two deployment modes, and the analyzer must work in both. Local full-stack: Express on 3001, private routes gated by `privateLocalOnly` (loopback + `ALLOW_PRIVATE_LOCAL`). Public GitHub Pages: `npm run build:static` runs `server/scripts/export-static.js` to bake an allowlisted `data.json` snapshot, then builds the client with `VITE_STATIC=true`; the `IS_STATIC` flag in `client/src/staticData.js` gates private features down to stubs (see DealRoom for the pattern).
+- The analyzer's math still runs fully in the browser as a pure module. That is a design choice for testability and reuse, not a platform limitation.
+- Respect the public/private data boundary. API keys live in `server/.env` and never reach the client. Personal deal terms served at runtime (research.json benchmark, diligence results) come only from loopback-gated routes and must never be baked into the public snapshot or committed. Prefill lives behind `IS_STATIC` guards; the public build gets manual entry only.
+- All analyzer state persists to the URL (shareable deal links) or localStorage if URL gets unwieldy. A deal I model today should survive a refresh.
 - Mobile-first. I will use this standing in a model home.
-- Match the existing find-my-home visual language. Dark, high-contrast, engineered feel. No template energy.
+- Match the existing find-my-home visual language: light theme, Tailwind utility classes, white cards on gray-50, blue-600 primary with amber/emerald accents, lucide-react icons. No template energy.
 - Voice in all UI copy: direct, plain, slightly irreverent. No corporate filler. No em dashes anywhere in copy or code comments.
 
 ## DOMAIN MODEL
@@ -106,10 +110,11 @@ Include a "copy deal summary" button that produces a clean plain-text summary su
 ## VERIFICATION
 
 Before declaring done:
-1. Run the test suite; the reference fixture assertions must pass, especially the ~89-month breakeven.
-2. Open the built page in the browser, walk the full flow on a 390px viewport, and screenshot the three output zones.
-3. Lighthouse: 90+ performance and accessibility on the deployed page.
-4. Confirm zero network requests after load (static, client-side only).
+1. Run the test suite. The server workspace already runs `node --test` via `npm test` (see `server/test/`); write the math-module tests so that runner picks them up, and the reference fixture assertions must pass, especially the ~89-month breakeven.
+2. Both builds must pass: `cd client && npx vite build` (local mode) and `npm run build:static` from the repo root (Pages mode, exercises the export script and `VITE_STATIC` path).
+3. Walk the full flow in both modes on a 390px viewport and screenshot the three output zones: once against the local dev stack (server on 3001 + client), once against the static build (`vite preview`), confirming private-tier prefill appears in the first and degrades to manual entry in the second. Headless Chromium via the server's Playwright dependency is the established pattern for this.
+4. Network discipline, not network silence: in the static build the analyzer page must make no requests to `/api/*` or any external provider (all provider calls belong to the server tier). In local mode, requests may go only to loopback `/api/*` routes; the client never talks to ATTOM/RentCast/HouseCanary directly and never sees a key.
+5. Lighthouse: 90+ performance and accessibility on the deployed Pages page.
 
 ## WORKFLOW NOTES
 
