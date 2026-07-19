@@ -16,12 +16,21 @@ const STATS = [
   { icon: Car, value: 'Attached', label: 'Garage' },
 ];
 
+// Index 4 (balcony) anchors the narrative figure — keep its position stable.
 const GALLERY = [
   { src: 'kitchen.jpg', caption: 'Granite island kitchen, open to the living room', wide: true },
   { src: 'dining.jpg', caption: 'Sun-filled dining with oversized windows' },
   { src: 'bedroom.jpg', caption: 'Designer primary suite' },
   { src: 'bedroom2.jpg', caption: 'Guest bedroom with en-suite bath' },
-  { src: 'balcony.jpg', caption: 'Covered balcony over the community greenbelt' },
+  { src: 'balcony.jpg', caption: 'Covered balcony over the community greenbelt', narrativeOnly: true },
+  { src: 'living.jpg', caption: 'The living room, styled by the design studio', wide: true },
+  { src: 'primary.jpg', caption: 'Primary suite with treetop views on two sides' },
+  { src: 'media.jpg', caption: 'Media wall off the main living space' },
+  { src: 'nook.jpg', caption: 'Breakfast nook by the balcony door' },
+  { src: 'dining2.jpg', caption: 'Dining room set for company' },
+  { src: 'sitting.jpg', caption: 'Reading corner in the front room' },
+  { src: 'stairs.jpg', caption: 'The gallery staircase between floors' },
+  { src: 'bedroom3.jpg', caption: 'Second suite, bright end of the plan' },
 ];
 
 const FEATURES = [
@@ -161,8 +170,8 @@ export default function FeaturedHome() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Georgia, serif' }}>A designer’s walk-through</h2>
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {GALLERY.slice(0, 4).map((g, i) => (
-            <Reveal key={g.src} delay={i * 120} className={g.wide ? 'sm:col-span-2' : ''}>
+          {GALLERY.map((g, i) => g.narrativeOnly ? null : (
+            <Reveal key={g.src} delay={(i % 4) * 120} className={g.wide ? 'sm:col-span-2' : ''}>
               <figure className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer group" onClick={() => setLightbox(i)}>
                 <img src={img(g.src)} alt={g.caption} className={`w-full object-cover group-hover:scale-105 transition-transform duration-700 ${g.wide ? 'h-72 sm:h-[28rem]' : 'h-64 sm:h-80'}`} />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 to-transparent text-white text-sm px-4 pt-10 pb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -267,7 +276,7 @@ export default function FeaturedHome() {
           </a>
         </Reveal>
         <p className="text-[11px] text-gray-400 mt-8">
-          Photographs by the owner. 3D tour and community/plan details © David Weekley Homes, from public marketing materials, subject to change.
+          Photographs from owner and professional walkthroughs of the home. 3D tour and community/plan details © David Weekley Homes, from public marketing materials, subject to change.
         </p>
       </section>
 
