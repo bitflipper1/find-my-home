@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock, Sparkles, TreePine } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock, Sparkles, TreePine, Calculator } from 'lucide-react';
 import FeaturedHome from './components/FeaturedHome';
 import FeaturedCommunity from './components/FeaturedCommunity';
+import LeasebackAnalyzer from './components/analyzer/LeasebackAnalyzer';
 import InvestTab from './components/InvestTab';
 import ResearchTab from './components/ResearchTab';
 import DealRoom from './components/DealRoom';
@@ -25,6 +26,7 @@ const PUBLIC_TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
   { id: 'featured', label: 'Featured Home', icon: Sparkles },
   { id: 'community', label: 'Featured Community', icon: TreePine },
+  { id: 'analyzer', label: 'Leaseback', icon: Calculator },
   { id: 'invest', label: 'Invest', icon: Target },
   { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
@@ -39,15 +41,16 @@ const PRIVATE_TABS = [
 ];
 
 const TABS = IS_STATIC ? PUBLIC_TABS : [
-  ...PUBLIC_TABS.slice(0, 3),
+  ...PUBLIC_TABS.slice(0, 4),
   ...PRIVATE_TABS.slice(0, 2),
-  ...PUBLIC_TABS.slice(3, 6),
+  ...PUBLIC_TABS.slice(4, 7),
   PRIVATE_TABS[2],
-  ...PUBLIC_TABS.slice(6),
+  ...PUBLIC_TABS.slice(7),
 ];
 
 export default function App() {
-  const [tab, setTab] = useState('listings');
+  const [tab, setTab] = useState(() => location.hash.startsWith('#/analyzer') ? 'analyzer' : 'listings');
+  const [analyzerSeed, setAnalyzerSeed] = useState(null);
   const [listings, setListings] = useState([]);
   const [stats, setStats] = useState(null);
   const [logs, setLogs] = useState([]);
@@ -118,6 +121,27 @@ export default function App() {
   useEffect(() => { loadListings(); }, [loadListings]);
   useEffect(() => { loadMeta(); }, [loadMeta]);
   useEffect(() => { loadTracked(); }, [loadTracked]);
+
+  // Hash routing scoped to the analyzer only: #/analyzer is directly linkable
+  // (and carries share payloads), while every other tab keeps plain state.
+  useEffect(() => {
+    const onHash = () => { if (location.hash.startsWith('#/analyzer')) setTab('analyzer'); };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  useEffect(() => {
+    if (tab === 'analyzer' && !location.hash.startsWith('#/analyzer')) {
+      history.replaceState(null, '', '#/analyzer');
+    } else if (tab !== 'analyzer' && location.hash.startsWith('#/analyzer')) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }, [tab]);
+
+  const openAnalyzer = useCallback(seed => {
+    setAnalyzerSeed(seed);
+    setSelected(null);
+    setTab('analyzer');
+  }, []);
   useEffect(() => { loadInvest(); }, [loadInvest]);
 
   // Save/update a tracked place, then refresh the board
@@ -341,12 +365,21 @@ export default function App() {
 
         {tab === 'community' && <FeaturedCommunity />}
 
+        {tab === 'analyzer' && (
+          <LeasebackAnalyzer
+            seed={analyzerSeed}
+            research={research}
+            market={market}
+            onSeedConsumed={() => setAnalyzerSeed(null)}
+          />
+        )}
+
         {tab === 'invest' && (
           <InvestTab listings={allListings} market={market} onOpen={setSelected} />
         )}
 
         {tab === 'dealroom' && (
-          <DealRoom market={market} research={research} />
+          <DealRoom market={market} research={research} onAnalyze={() => openAnalyzer({ type: 'benchmark' })} />
         )}
 
         {tab === 'research' && (
@@ -401,6 +434,7 @@ export default function App() {
           trackedRecord={tracked.find(t => t.listing_id === selected.id) || null}
           onSaveTrack={handleSaveTrack}
           onRemoveTrack={handleRemoveTrack}
+          onAnalyze={IS_STATIC ? null : listing => openAnalyzer({ type: 'listing', listing })}
         />
       )}
     </div>

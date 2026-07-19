@@ -72,7 +72,33 @@ function listDealsWithMeta() {
     title: meta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
     address: meta[slug]?.address || null,
     created_at: meta[slug]?.created_at || null,
+    analysis: analysisSummary(slug),
   }));
+}
+
+// Saved leaseback analyses live as analysis.json inside the deal's vault dir
+// (private like everything else here). Versioned so the future deal-scoring
+// engine can read them.
+const ANALYSIS = 'analysis.json';
+
+function readAnalysis(slug) {
+  try { return JSON.parse(fs.readFileSync(path.join(dealDir(slug), ANALYSIS), 'utf8')); } catch { return null; }
+}
+
+function writeAnalysis(slug, data) {
+  const dir = ensureDealDir(slug);
+  fs.writeFileSync(path.join(dir, ANALYSIS), JSON.stringify(data, null, 2));
+  return true;
+}
+
+function analysisSummary(slug) {
+  const a = readAnalysis(slug);
+  if (!a) return null;
+  return {
+    savedAt: a.savedAt,
+    headlineBase: a.headline?.base ?? null,
+    firedFlags: (a.flags || []).filter(f => f.fired && f.severity !== 'standing').length,
+  };
 }
 
 function createDeal({ title, address }) {
@@ -123,5 +149,5 @@ function deleteFile(slug, name) {
 
 module.exports = {
   ROOT, safeSlug, safeName, ensureDealDir, listDeals, listDealFiles, filePath, deleteFile,
-  listDealsWithMeta, createDeal,
+  listDealsWithMeta, createDeal, readAnalysis, writeAnalysis,
 };

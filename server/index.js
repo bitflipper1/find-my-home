@@ -324,6 +324,19 @@ app.post('/api/deals', privateLocalOnly, (req, res) => {
   try { res.json({ ok: true, deal: dealFiles.createDeal(req.body || {}) }); } catch (err) { res.status(400).json({ ok: false, error: err.message }); }
 });
 
+// Saved leaseback analysis per deal (analysis.json in the private vault).
+app.get('/api/deals/:slug/analysis', privateLocalOnly, (req, res) => {
+  try {
+    const a = dealFiles.readAnalysis(req.params.slug);
+    if (!a) return res.status(404).json({ error: 'No saved analysis' });
+    res.json(a);
+  } catch (err) { res.status(400).json({ error: err.message }); }
+});
+
+app.put('/api/deals/:slug/analysis', privateLocalOnly, (req, res) => {
+  try { res.json({ ok: dealFiles.writeAnalysis(req.params.slug, req.body || {}) }); } catch (err) { res.status(400).json({ ok: false, error: err.message }); }
+});
+
 app.get('/api/deals/:slug/files', privateLocalOnly, (req, res) => {
   try { res.json(dealFiles.listDealFiles(req.params.slug)); } catch (err) { res.status(400).json({ error: err.message }); }
 });

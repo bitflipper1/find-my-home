@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, Calendar, TrendingDown, Star, Hammer, CheckCircle2 } from 'lucide-react';
+import { X, Phone, ExternalLink, MapPin, BedDouble, Bath, Ruler, Calendar, TrendingDown, Star, Hammer, CheckCircle2, Calculator } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { fetchListing } from '../api';
 import TrackEditor from './TrackEditor';
@@ -8,7 +8,7 @@ import { AlertTriangle } from 'lucide-react';
 
 const fmt = n => n ? `$${parseInt(n).toLocaleString()}` : 'N/A';
 
-export default function ListingModal({ listing, onClose, trackedRecord, onSaveTrack, onRemoveTrack }) {
+export default function ListingModal({ listing, onClose, trackedRecord, onSaveTrack, onRemoveTrack, onAnalyze }) {
   const [detail, setDetail] = useState(null);
   const [imgIdx, setImgIdx] = useState(0);
 
@@ -238,6 +238,16 @@ export default function ListingModal({ listing, onClose, trackedRecord, onSaveTr
 
           {/* Right col: actions */}
           <div className="space-y-3">
+            {/* Leaseback analyzer hand-off (private tier only) */}
+            {onAnalyze && (
+              <button
+                onClick={() => onAnalyze(d)}
+                className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold text-slate-900 bg-amber-400 hover:bg-amber-500 rounded-xl transition"
+              >
+                <Calculator className="w-4 h-4" /> Analyze this deal
+              </button>
+            )}
+
             {/* Tour tracker */}
             {onSaveTrack && (
               <div className="bg-rose-50 border border-rose-100 rounded-xl p-3">

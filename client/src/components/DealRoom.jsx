@@ -91,6 +91,12 @@ function MyDeals({ deals, active, onSelect, onCreated }) {
             className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
               deal.slug === active ? 'bg-blue-600 text-white border-blue-600' : 'text-gray-600 border-gray-200 hover:bg-gray-50'}`}>
             {deal.title}
+            {deal.analysis && (
+              <span className={`ml-1.5 text-[10px] font-semibold ${deal.slug === active ? 'text-blue-100' : 'text-gray-400'}`}
+                title={`Saved leaseback analysis: effective cost $${Math.round(Math.abs(deal.analysis.headlineBase || 0)).toLocaleString()}, ${deal.analysis.firedFlags} open flag${deal.analysis.firedFlags === 1 ? '' : 's'}`}>
+                · ${Math.round(Math.abs(deal.analysis.headlineBase || 0) / 1000)}K / {deal.analysis.firedFlags}⚑
+              </span>
+            )}
           </button>
         ))}
         {deals.length === 0 && <p className="text-xs text-gray-400">No deals yet — add your first.</p>}
@@ -115,7 +121,7 @@ function MyDeals({ deals, active, onSelect, onCreated }) {
   );
 }
 
-export default function DealRoom({ market, research }) {
+export default function DealRoom({ market, research, onAnalyze }) {
   const [d, setD] = useState({ address: '', price: 400000, incentive: 0, rent: 2500, leaseMonths: 12, hoa: 250, taxAnnual: 3100, sqft: 1600 });
   const [deals, setDeals] = useState([]);
   const [activeSlug, setActiveSlug] = useState('3912-craig-ave');
@@ -158,6 +164,13 @@ export default function DealRoom({ market, research }) {
       <div className="flex items-center gap-2">
         <Unlock className="w-4 h-4 text-green-600" />
         <h2 className="text-base font-bold text-gray-900">Deal Room — private underwriting (local server only)</h2>
+        {onAnalyze && (
+          <button onClick={onAnalyze}
+            className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-900 bg-amber-400 hover:bg-amber-500 rounded-lg transition"
+            title="Open the Leaseback Analyzer prefilled from your signed-deal benchmark">
+            <Calculator className="w-3.5 h-3.5" /> Analyze in Leaseback Analyzer
+          </button>
+        )}
       </div>
 
       {!yd && (
