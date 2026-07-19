@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock, Sparkles } from 'lucide-react';
+import { Home, LayoutGrid, List, MapPin, Mail, Activity, Info, ClipboardList, Target, BookOpen, Building2, Lock, Sparkles, TreePine } from 'lucide-react';
 import FeaturedHome from './components/FeaturedHome';
+import FeaturedCommunity from './components/FeaturedCommunity';
 import InvestTab from './components/InvestTab';
 import ResearchTab from './components/ResearchTab';
 import DealRoom from './components/DealRoom';
@@ -23,6 +24,7 @@ import RentCastScan from './components/RentCastScan';
 const PUBLIC_TABS = [
   { id: 'listings', label: 'Listings', icon: LayoutGrid },
   { id: 'featured', label: 'Featured Home', icon: Sparkles },
+  { id: 'community', label: 'Featured Community', icon: TreePine },
   { id: 'invest', label: 'Invest', icon: Target },
   { id: 'builders', label: 'Builder KB', icon: Building2 },
   { id: 'tours', label: 'My Tours', icon: ClipboardList },
@@ -37,11 +39,11 @@ const PRIVATE_TABS = [
 ];
 
 const TABS = IS_STATIC ? PUBLIC_TABS : [
-  ...PUBLIC_TABS.slice(0, 2),
+  ...PUBLIC_TABS.slice(0, 3),
   ...PRIVATE_TABS.slice(0, 2),
-  ...PUBLIC_TABS.slice(2, 5),
+  ...PUBLIC_TABS.slice(3, 6),
   PRIVATE_TABS[2],
-  ...PUBLIC_TABS.slice(5),
+  ...PUBLIC_TABS.slice(6),
 ];
 
 export default function App() {
@@ -336,6 +338,8 @@ export default function App() {
         )}
 
         {tab === 'featured' && <FeaturedHome />}
+
+        {tab === 'community' && <FeaturedCommunity />}
 
         {tab === 'invest' && (
           <InvestTab listings={allListings} market={market} onOpen={setSelected} />
