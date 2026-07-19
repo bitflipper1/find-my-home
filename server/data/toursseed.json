@@ -1,0 +1,68 @@
+{
+  "source": "Real Estate Search 2026 Drive folder — tour recordings & consultation summaries, imported 2026-07-12",
+  "places": [
+    {
+      "address": "The Vines — 4501 Amos Smith Rd, Charlotte, NC 28214",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28214",
+      "price": 326999,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1450,
+      "builder": "Lennar",
+      "community": "The Vines",
+      "url": "https://www.lennar.com/new-homes/north-carolina/charlotte/charlotte/the-vines",
+      "status": "visited",
+      "visit_date": "2026-06-27",
+      "notes": "Toured Lakeview model with James (3bd/3ba, 1,450 sqft, ground-floor primary). Comparing vs Taggart (1,983 sqft) and Jordan next door. Kitchen felt smaller unfurnished — get room dimensions before deciding. Community: pool, playground, dog park; ~9 mi to Uptown, near airport/destination district. Range $327K–$384K. Audio + consultation summary in Drive (Real Estate Search 2026)."
+    },
+    {
+      "address": "Sloan Station — 5809 Tuckaseegee Rd, Charlotte, NC 28208",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28208",
+      "price": 267190,
+      "beds": 3,
+      "baths": 2.5,
+      "sqft": 1200,
+      "builder": "Mungo Homes",
+      "community": "Sloan Station",
+      "url": "https://www.mungo.com/communities/charlotte/charlotte-nc/sloan-station",
+      "status": "visited",
+      "visit_date": "2026-06-27",
+      "notes": "Visited 6/27 — discussed purchase and incentives (recording in Drive). Two-story townhomes, 1-car garage, 1,200–1,697 sqft, $267K–$334K. 27-home community; easy access to Uptown, South End, airport, Whitewater Center."
+    },
+    {
+      "address": "Redhawk Townes — 1555 Swallow Tail Dr, Belmont, NC 28012",
+      "city": "Belmont",
+      "state": "NC",
+      "zip": "28012",
+      "price": 316000,
+      "beds": 3,
+      "baths": 2.5,
+      "builder": "Lennar",
+      "community": "Redhawk Townes",
+      "url": "https://www.lennar.com/new-homes/north-carolina/charlotte/belmont/redhawk-townes",
+      "status": "visited",
+      "visit_date": "2026-06-27",
+      "notes": "Consultation on townhome purchase 6/27 (recording in Drive). $316K–$331K, HOA $295/mo — clubhouse, two pools, bocce/tennis/pickleball. Gaston County (Belmont) — cheaper entry, higher Gaston taxes; check rental restrictions given amenity-heavy HOA."
+    },
+    {
+      "address": "Greenway Overlook — 2039 Near Point Rd, Charlotte, NC 28208",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28208",
+      "price": 331900,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1601,
+      "builder": "DRB Homes",
+      "community": "Greenway Overlook",
+      "url": "https://www.drbhomes.com/drbhomes/find-your-home/communities/north-carolina/charlotte/greenway-overlook/overview",
+      "status": "visited",
+      "visit_date": "2026-06-28",
+      "notes": "New-construction townhome tour 6/28 (recording in Drive). Boutique 58-unit community, $332K–$470K, 3bd/3ba, 1,601–2,302 sqft, 1–2 car garages. 10 min to Uptown; near I-77/I-85, airport, Whitewater Center."
+    }
+  ]
+}
