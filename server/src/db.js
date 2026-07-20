@@ -124,6 +124,18 @@ db.exec(`
     calls INTEGER DEFAULT 0,
     PRIMARY KEY (provider, month)
   );
+
+  -- Status flips (Available -> Pending, etc.) recorded like price changes,
+  -- so the digest can report them run over run.
+  CREATE TABLE IF NOT EXISTS status_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    listing_id TEXT NOT NULL,
+    from_status TEXT,
+    to_status TEXT,
+    changed_at TEXT DEFAULT (datetime('now')),
+    FOREIGN KEY (listing_id) REFERENCES listings(id)
+  );
+  CREATE INDEX IF NOT EXISTS idx_status_history_listing ON status_history(listing_id);
 `);
 
 // Migration: leaseback flag for model-home sale-leaseback opportunities
@@ -151,7 +163,14 @@ const { listingArt } = require('./listingArt');
 
 // Upsert a listing, tracking price changes
 function upsertListing(listing) {
-  const existing = db.prepare('SELECT id, price FROM listings WHERE id = ?').get(listing.id);
+  const existing = db.prepare('SELECT id, price, status FROM listings WHERE id = ?').get(listing.id);
+
+  // Record status flips (Available -> Pending etc.) the same way price
+  // changes are recorded, so the digest can surface them.
+  if (existing && listing.status && existing.status && listing.status !== existing.status) {
+    db.prepare('INSERT INTO status_history (listing_id, from_status, to_status) VALUES (?, ?, ?)')
+      .run(existing.id, existing.status, listing.status);
+  }
 
   if (existing) {
     if (existing.price !== listing.price && listing.price) {
@@ -182,9 +201,10 @@ function upsertListing(listing) {
       );
     } else {
       db.prepare(`
-        UPDATE listings SET last_seen = datetime('now'), is_active = 1, updated_at = datetime('now')
+        UPDATE listings SET last_seen = datetime('now'), is_active = 1, updated_at = datetime('now'),
+          status = COALESCE(?, status)
         WHERE id = ?
-      `).run(existing.id);
+      `).run(listing.status || null, existing.id);
     }
     return { action: 'updated', id: existing.id };
   } else {

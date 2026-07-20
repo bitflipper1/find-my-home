@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy to thesis.json (gitignored) and edit. Corridors, price band, and required criteria — the digest ranks matches (★) first. thesis.json stays private because it encodes your strategy.",
+  "corridors": [
+    { "name": "West Charlotte / path-of-progress", "zips": ["28208", "28214", "28216"], "cities": [] },
+    { "name": "University / North", "zips": ["28213", "28262", "28269"], "cities": [] },
+    { "name": "Gaston entry", "zips": ["28012", "28052", "28054", "28056"], "cities": ["Belmont", "Gastonia"] }
+  ],
+  "price_min": 250000,
+  "price_max": 400000,
+  "criteria": {
+    "is_new_construction": true,
+    "is_model": false,
+    "leaseback": false
+  }
+}

@@ -269,6 +269,21 @@ app.get('/api/live/diligence', privateLocalOnly, async (req, res) => {
   });
 });
 
+// --- Change digest: new / price-change / status-flip / went-dark since a
+// timestamp, ranked by the private thesis. Private tier: the digest includes
+// gmail- and model-sourced listings that never reach the public snapshot. ---
+const { getDigest, digestText } = require('./src/digest');
+
+app.get('/api/digest', privateLocalOnly, (req, res) => {
+  try {
+    const d = getDigest(req.query.since);
+    if (req.query.format === 'text') return res.type('text/plain').send(digestText(d));
+    res.json(d);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // --- RentCast two-county price-cut scanner (manual trigger, metered) ---
 const rentcastScan = require('./src/rentcastScan');
 
