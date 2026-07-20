@@ -36,7 +36,7 @@ export default function RateDecisions({ analysis, refiMonths }) {
                 </td>
                 <td className="text-right text-gray-700">{usd(o.pi)}</td>
                 <td className="text-right text-gray-700">{o.upfrontCost ? usd(o.upfrontCost) : '—'}</td>
-                <td className={`text-right ${o.penaltyCostAtRefi ? 'font-semibold text-red-700' : 'text-gray-400'}`}>
+                <td className={`text-right ${o.penaltyCostAtRefi ? 'font-semibold text-red-700' : 'text-gray-500'}`}>
                   {o.penaltyCostAtRefi ? usd(o.penaltyCostAtRefi) : '—'}
                 </td>
                 <td className="text-right text-gray-700">{o.breakevenMonths ? `${Math.round(o.breakevenMonths)} mo` : '—'}</td>

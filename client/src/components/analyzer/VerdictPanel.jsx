@@ -38,15 +38,15 @@ export default function VerdictPanel({ deal, analysis }) {
     <section className="bg-slate-900 text-white rounded-xl p-5">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-slate-400">Effective cost, base term</p>
+          <p className="text-xs uppercase tracking-widest text-slate-400">Effective cost, base term</p>
           <p className="text-3xl font-bold mt-1">{signed(h.base)}</p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-slate-400">All extensions exercised</p>
+          <p className="text-xs uppercase tracking-widest text-slate-400">All extensions exercised</p>
           <p className="text-3xl font-bold mt-1">{signed(h.fullExtension)}</p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-slate-400">Net cash flow during lease</p>
+          <p className="text-xs uppercase tracking-widest text-slate-400">Net cash flow during lease</p>
           <p className={`text-3xl font-bold mt-1 ${h.netMonthly >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
             {h.netMonthly >= 0 ? '+' : '-'}{usd(h.netMonthly)}<span className="text-base font-normal text-slate-400">/mo</span>
           </p>
@@ -59,7 +59,7 @@ export default function VerdictPanel({ deal, analysis }) {
           {copied === 'summary' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} Copy deal summary
         </button>
         <button onClick={() => setShareWarn(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium border border-slate-600 text-slate-200 rounded-lg hover:bg-slate-800">
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium border border-slate-500 text-slate-200 rounded-lg hover:bg-slate-800">
           {copied === 'link' ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />} Copy share link
         </button>
       </div>

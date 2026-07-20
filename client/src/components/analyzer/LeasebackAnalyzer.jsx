@@ -185,7 +185,7 @@ export default function LeasebackAnalyzer({ seed, research, market, onSeedConsum
       <div className="flex items-center gap-2">
         <Calculator className="w-4 h-4 text-blue-600" />
         <h2 className="text-base font-bold text-gray-900">Model-Home Leaseback Analyzer</h2>
-        <span className="text-xs text-gray-400 hidden sm:inline">The builder rents your house. Know exactly what that costs.</span>
+        <span className="text-xs text-gray-500 hidden sm:inline">The builder rents your house. Know exactly what that costs.</span>
       </div>
 
       {!IS_STATIC && (

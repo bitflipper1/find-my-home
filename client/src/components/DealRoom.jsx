@@ -92,7 +92,7 @@ function MyDeals({ deals, active, onSelect, onCreated }) {
               deal.slug === active ? 'bg-blue-600 text-white border-blue-600' : 'text-gray-600 border-gray-200 hover:bg-gray-50'}`}>
             {deal.title}
             {deal.analysis && (
-              <span className={`ml-1.5 text-[10px] font-semibold ${deal.slug === active ? 'text-blue-100' : 'text-gray-400'}`}
+              <span className={`ml-1.5 text-xs font-semibold ${deal.slug === active ? 'text-blue-50' : 'text-gray-500'}`}
                 title={`Saved leaseback analysis: effective cost $${Math.round(Math.abs(deal.analysis.headlineBase || 0)).toLocaleString()}, ${deal.analysis.firedFlags} open flag${deal.analysis.firedFlags === 1 ? '' : 's'}`}>
                 · ${Math.round(Math.abs(deal.analysis.headlineBase || 0) / 1000)}K / {deal.analysis.firedFlags}⚑
               </span>

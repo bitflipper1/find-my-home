@@ -13,7 +13,7 @@ const CHIP = {
 function Chip({ origin }) {
   const c = CHIP[origin];
   if (!c) return null;
-  return <span className={`text-[10px] px-1.5 py-0.5 rounded-full border font-medium ${c.cls}`}>{c.label}</span>;
+  return <span className={`text-xs px-1.5 py-0.5 rounded-full border font-medium ${c.cls}`}>{c.label}</span>;
 }
 
 function Field({ label, path, value, onChange, sources, type = 'number', step, placeholder, note }) {
@@ -23,9 +23,9 @@ function Field({ label, path, value, onChange, sources, type = 'number', step, p
       <input
         type={type} step={step} value={value ?? ''} placeholder={placeholder}
         onChange={e => onChange(path, type === 'number' ? (e.target.value === '' ? null : parseFloat(e.target.value)) : e.target.value)}
-        className="w-full px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-2.5 py-1.5 text-sm border border-[#8C95A7] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      {note && <span className="block text-[10px] text-gray-400 mt-0.5">{note}</span>}
+      {note && <span className="block text-xs text-gray-500 mt-0.5">{note}</span>}
     </label>
   );
 }
@@ -78,7 +78,7 @@ export default function DealInputs({ deal, sources, onChange }) {
           <label className="block col-span-2">
             <span className="text-xs text-gray-500">Loan type</span>
             <select value={p.loanType} onChange={e => set('purchase.loanType', e.target.value)}
-              className="w-full px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg">
+              className="w-full px-2.5 py-1.5 text-sm border border-[#8C95A7] rounded-lg">
               <option value="conventional-investment">Conventional investment</option>
               <option value="dscr-nonqm">DSCR / non-QM</option>
               <option value="other">Other</option>
@@ -95,14 +95,14 @@ export default function DealInputs({ deal, sources, onChange }) {
           {p.sellerCredits.map((cr, i) => (
             <div key={i} className="flex items-center gap-2 mt-1.5">
               <input value={cr.label} onChange={e => setCredit(i, 'label', e.target.value)}
-                className="flex-1 px-2 py-1 text-xs border border-gray-200 rounded-lg" />
+                className="flex-1 px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" />
               <input type="number" value={cr.amount ?? ''} onChange={e => setCredit(i, 'amount', parseFloat(e.target.value) || 0)}
-                className="w-24 px-2 py-1 text-xs border border-gray-200 rounded-lg text-right" />
-              <label className="flex items-center gap-1 text-[10px] text-gray-500" title="Written confirmation the credit survives re-underwriting">
+                className="w-24 px-2 py-1 text-xs border border-[#8C95A7] rounded-lg text-right" />
+              <label className="flex items-center gap-1 text-xs text-gray-500" title="Written confirmation the credit survives re-underwriting">
                 <input type="checkbox" checked={cr.confirmedAfterReclass === true} onChange={e => setCredit(i, 'confirmedAfterReclass', e.target.checked)} /> confirmed
               </label>
               <button onClick={() => set('purchase.sellerCredits', p.sellerCredits.filter((_, j) => j !== i))}
-                className="text-gray-300 hover:text-red-500"><X className="w-3.5 h-3.5" /></button>
+                className="text-gray-500 hover:text-red-600"><X className="w-3.5 h-3.5" /></button>
             </div>
           ))}
         </div>
@@ -121,7 +121,7 @@ export default function DealInputs({ deal, sources, onChange }) {
           <label className="block">
             <span className="text-xs text-gray-500">Utilities during lease</span>
             <select value={lb.utilitiesPaidBy} onChange={e => set('leaseback.utilitiesPaidBy', e.target.value)}
-              className="w-full px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg">
+              className="w-full px-2.5 py-1.5 text-sm border border-[#8C95A7] rounded-lg">
               <option value="builder">Builder pays</option>
               <option value="buyer">Buyer pays</option>
             </select>
@@ -144,38 +144,38 @@ export default function DealInputs({ deal, sources, onChange }) {
                 <input type="radio" name="selectedRate" checked={deal.selectedRateOptionId === o.id}
                   onChange={() => set('selectedRateOptionId', o.id)} title="Model the deal on this option" />
                 <input value={o.label} onChange={e => setOption(i, 'label', e.target.value)}
-                  className="flex-1 px-2 py-1 text-xs border border-gray-200 rounded-lg" />
+                  className="flex-1 px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" />
                 <button onClick={() => set('rateOptions', deal.rateOptions.filter((_, j) => j !== i))}
-                  className="text-gray-300 hover:text-red-500"><X className="w-3.5 h-3.5" /></button>
+                  className="text-gray-500 hover:text-red-600"><X className="w-3.5 h-3.5" /></button>
               </div>
               <div className="grid grid-cols-3 gap-2 mt-2">
-                <label className="block"><span className="text-[10px] text-gray-500">Rate %</span>
+                <label className="block"><span className="text-xs text-gray-500">Rate %</span>
                   <input type="number" step="0.001" value={o.ratePct ?? ''} onChange={e => setOption(i, 'ratePct', parseFloat(e.target.value) || 0)}
-                    className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg" /></label>
-                <label className="block"><span className="text-[10px] text-gray-500">Upfront cost $</span>
+                    className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" /></label>
+                <label className="block"><span className="text-xs text-gray-500">Upfront cost $</span>
                   <input type="number" value={o.upfrontCost ?? ''} onChange={e => setOption(i, 'upfrontCost', parseFloat(e.target.value) || 0)}
-                    className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg" /></label>
-                <label className="block"><span className="text-[10px] text-gray-500">Penalty</span>
+                    className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" /></label>
+                <label className="block"><span className="text-xs text-gray-500">Penalty</span>
                   <select value={o.penalty?.type || 'none'} onChange={e => setPenalty(i, { type: e.target.value })}
-                    className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg">
+                    className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg">
                     {PENALTY_TYPES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
                   </select></label>
               </div>
               {o.penalty?.type === 'flat' && (
                 <div className="grid grid-cols-2 gap-2 mt-2">
-                  <label className="block"><span className="text-[10px] text-gray-500">Penalty %</span>
+                  <label className="block"><span className="text-xs text-gray-500">Penalty %</span>
                     <input type="number" step="0.1" value={o.penalty.pct ?? ''} onChange={e => setPenalty(i, { pct: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg" /></label>
-                  <label className="block"><span className="text-[10px] text-gray-500">Window (months)</span>
+                      className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" /></label>
+                  <label className="block"><span className="text-xs text-gray-500">Window (months)</span>
                     <input type="number" value={o.penalty.windowMonths ?? ''} onChange={e => setPenalty(i, { windowMonths: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg" /></label>
+                      className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" /></label>
                 </div>
               )}
               {o.penalty?.type === 'stepdown' && (
-                <label className="block mt-2"><span className="text-[10px] text-gray-500">Steps, % per loan year (comma-separated, e.g. 3,2,1)</span>
+                <label className="block mt-2"><span className="text-xs text-gray-500">Steps, % per loan year (comma-separated, e.g. 3,2,1)</span>
                   <input value={(o.penalty.steps || []).join(',')}
                     onChange={e => setPenalty(i, { steps: e.target.value.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n)) })}
-                    className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg" /></label>
+                    className="w-full px-2 py-1 text-xs border border-[#8C95A7] rounded-lg" /></label>
               )}
             </div>
           ))}
@@ -193,7 +193,7 @@ export default function DealInputs({ deal, sources, onChange }) {
           <label className="block">
             <span className="text-xs text-gray-500">Policy type</span>
             <select value={c.insuranceType} onChange={e => set('carrying.insuranceType', e.target.value)}
-              className="w-full px-2.5 py-1.5 text-sm border border-gray-200 rounded-lg">
+              className="w-full px-2.5 py-1.5 text-sm border border-[#8C95A7] rounded-lg">
               <option value="surplus-lines">Surplus-lines dwelling</option>
               <option value="standard-ho">Standard homeowners</option>
               <option value="other">Other</option>

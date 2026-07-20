@@ -29,7 +29,7 @@ export default function RedFlags({ flags }) {
                 className={`w-full flex items-center gap-2 px-3 py-2.5 text-left ${p.text}`}>
                 <Icon className="w-4 h-4 shrink-0" />
                 <span className="text-sm font-semibold flex-1">{f.title}</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider">{f.severity}</span>
+                <span className="text-xs font-bold uppercase tracking-wider">{f.severity}</span>
                 {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
               </button>
               {isOpen && <p className={`px-3 pb-3 text-xs leading-relaxed ${p.text}`}>{f.why}</p>}
@@ -38,7 +38,7 @@ export default function RedFlags({ flags }) {
         })}
       </div>
       <button onClick={() => setShowClear(s => !s)}
-        className="mt-3 text-xs text-gray-400 hover:text-gray-600 flex items-center gap-1">
+        className="mt-3 text-xs text-gray-500 hover:text-gray-700 flex items-center gap-1">
         {showClear ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
         Checked and clear ({clear.length})
       </button>
@@ -46,7 +46,7 @@ export default function RedFlags({ flags }) {
         <ul className="mt-2 space-y-1">
           {clear.map(f => (
             <li key={f.id} className="flex items-center gap-2 text-xs text-gray-500">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> {f.title}
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> {f.title}
             </li>
           ))}
         </ul>
